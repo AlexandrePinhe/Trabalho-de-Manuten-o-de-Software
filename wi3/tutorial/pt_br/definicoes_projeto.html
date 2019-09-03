@@ -1,0 +1,96 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+   <title>Defini&ccedil;&otilde;es do Projeto</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Projeto">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?definicoes_projeto.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>Defini&#231;&#245;es do Projeto
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.2',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.4',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Para come&#231;armos o desenvolvimento do projeto proposto primeiramente vamos fazer as defini&#231;&#245;es gerais do nosso projeto informando que tipo de conex&#227;o com banco de dados vamos usar, qual banco de dados vai ser acessado entre outras coisas.
+<br>
+
+<br>
+Perceba que nesta mesma tela, no canto esquerdo, aparecem as op&#231;&#245;es <span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF"><b>Banco de dados</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF"><b>Servidores</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. A op&#231;&#227;o </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF"><b>Banco de dados</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> leva &#224; p&#225;gina de configura&#231;&#227;o de conex&#245;es com bancos de dados e a op&#231;&#227;o </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF"><b>Servidores</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> leva &#224; p&#225;gina de configura&#231;&#227;o de servidores de FTP, POP3, SMTP ou web services que por ventura venham a ser utilizados pelo projeto.
+<br>
+
+<br>
+Para o projeto que estamos desenvolvendo iremos precisar configurar uma conex&#227;o com um banco de dados. Para isso clique no link </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF"><b>Banco de dados</b></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, preencha o campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Identificador</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> com o valor </span><span style="font-family:Courier New; font-size:9pt; color:#000000">agenda</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Conex&#227;o</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> escolha o tipo de conex&#227;o que dever&#225; ser estabelecido de acordo com o SGBD escolhido. Como explicado no in&#237;cio do tutorial sugerimos que sempre seja dada extrema prefer&#234;ncia a conex&#245;es via JDBC, assim se voc&#234; estiver utilizando o SGBD MySQL escolha alguma das op&#231;&#245;es JDBC relativas ao MySQL, se estiver utilizando o SGBD PostgreSQL escolha a op&#231;&#227;o relativa a ele. As op&#231;&#245;es do campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Conex&#227;o</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> que estiverem delimitadas pelo sinal de asterisco indicam que o respectivo driver JDBC n&#227;o se encontra instalado no ambiente.
+<br>
+
+<br>
+Baseando-se que o SGBD escolhido para uso com o projeto tenha sido o MySQL selecione no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Conex&#227;o</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> a op&#231;&#227;o JDBC relativa ao MySQL (se voc&#234; escolheu algum outro SGBD assegure-se de ter escolhido a op&#231;&#227;o correspondente a ele). O campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Alias</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> deve ser preenchido com uma string de conex&#227;o correspondente com o tipo de conex&#227;o escolhido, para auxiliar o preenchimento desse campo com a string correta clique no &#237;cone <img src="wisql.png" width="15" height="11" border="0" alt="wisql"> que aparece no lado direito do r&#243;tulo. 
+<br>
+Na janela a seguir preencha o campo <span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF">Servidor</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> com o nome ou IP da m&#225;quina onde est&#225; instalado o SGBD, e no campo <span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF">Base de dados</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> com banco de dados a ser acessado, e em seguida clique no bot&#227;o "gravar".</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+Para finalizar a configura&#231;&#227;o de conex&#227;o do banco de dados preencha os campos </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Usu&#225;rio</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Senha</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> com um usu&#225;rio e senha que tenha permiss&#227;o de acesso ao banco de dados. Os restantes dos campos n&#227;o precisam ser configurados, clique no bot&#227;o "gravar" para que a defini&#231;&#227;o desse conex&#227;o de banco de dados seja salva. Caso haja algum erro de configura&#231;&#227;o aparecer&#225; uma janela avisando que n&#227;o foi poss&#237;vel estabelecer uma conex&#227;o com o banco de dados seguindo as defini&#231;&#245;es informadas, se isto ocorrer reveja as defini&#231;&#245;es feitas.
+<br>
+
+<br>
+Para testar a conex&#227;o ou a execu&#231;&#227;o de instru&#231;&#245;es de comando com um dos banco de dados do projeto basta executar o utilit&#225;rio Explorar BD identificado pelo &#237;cone <img src="db.png" width="20" height="20" border="0" alt="db">. Por exemplo, para saber quais s&#227;o as tabelas que comp&#245;em o banco de dados do projeto escolha a op&#231;&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">TABLE</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> do campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Op&#231;&#245;es Especiais</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A figura abaixo ilustra a tela de consulta &#224;s tabelas do banco de dados Agenda:
+<br>
+
+<br>
+<img src="bld_banco.png" width="745" height="293" border="0" alt="bld_banco">
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

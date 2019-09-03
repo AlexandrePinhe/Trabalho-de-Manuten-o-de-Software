@@ -1,0 +1,132 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+   <title>Definindo Combos</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Combo">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?definindo_combos.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>Definindo Combos
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.4',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.6',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">O primeiro componente que iremos definir para o nosso projeto ser&#225; uma combo. Componentes do tipo combo s&#227;o definidos no escopo do projeto permitindo assim que sejam reutilizados em mais de uma p&#225;gina. Os valores de um componente combo s&#227;o sempre populados a partir do resultado de uma consulta feita ao banco de dados e tem como sa&#237;da uma s&#233;rie de tags <span style="font-family:Courier New; font-size:9pt; color:#000000">OPTION</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> para serem usadas em conjunto com a tag </span><span style="font-family:Courier New; font-size:9pt; color:#000000">SELECT</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A sintaxe que segue seria a forma padr&#227;o para referenciar um componente combo numa p&#225;gina WSP, o sinal de retic&#234;ncias indica os poss&#237;veis par&#226;metros da tag </span><span style="font-family:Courier New; font-size:9pt; color:#000000">SELECT</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:9pt; color:#000000">&lt;identificador-da-combo&gt;&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">seria o identificador de um componente combo que tenha sido definido no WI_Builder.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:9pt; color:#000000">&lt;select&nbsp;...&gt;|combo.&lt;identificador-da-combo&gt;|&lt;/select&gt;
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+A primeira combo que iremos criar dever&#225; ser populada com os poss&#237;veis ramos de atividade a que uma empresa pode pertencer. No banco de dados do nosso projeto a informa&#231;&#227;o dos poss&#237;veis ramos de atividades de uma empresa encontram-se cadastrados na tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Para saber qual o conte&#250;do dessa tabela, voc&#234; poder&#225; usar o utilit&#225;rio "Explorar BD" do WI_Builder, identificado pelo &#237;cone <img src="db.png" width="20" height="20" border="0" alt="db">, escolher a op&#231;&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">TABLE</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> da combo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Op&#231;&#245;es Especiais</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e clicar no link <b>Visualizar</b>, da coluna <span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF">Conte&#250;do</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> respectivo &#224; tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Para criarmos a combo com os ramos de atividade siga os passos abaixo:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No menu <b>Projeto</b> (</span><span style="font-family:Courier New; font-size:9pt; color:#000000"><i>treeview</i></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">), que fica no canto superior esquerdo da tela principal do seu projeto WI, clique na op&#231;&#227;o <b>Combos</b>. Em seguida clique na subop&#231;&#227;o <b>Combos</b>, que aparece na parte inferior esquerda da tela do seu projeto WI.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Descri&#231;&#227;o</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> entre com uma breve descri&#231;&#227;o informando a funcionalidade dessa combo, por exemplo: </span><span style="font-family:Courier New; font-size:9pt; color:#000000">Combo&nbsp;que&nbsp;exibe&nbsp;os&nbsp;poss&#237;veis&nbsp;ramos&nbsp;de&nbsp;atividade&nbsp;de&nbsp;uma&nbsp;empresa</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Identificador</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> digite </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Este campo indica qual o identificador que ser&#225; criado para esse componente e que ir&#225; identificar unicamente essa combo dentro desse projeto, ser&#225; atrav&#233;s desse identificador que n&#243;s faremos refer&#234;ncia a essa combo em nossas p&#225;ginas do projeto.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> digite a instru&#231;&#227;o de consulta que ser&#225; enviada ao banco de dados. Para ajudar na constru&#231;&#227;o do comando SQL de consulta vamos utilizar o WIzard SQL identificado pelo &#237;cone <img src="wisql.png" width="15" height="11" border="0" alt="wisql"> que aparece no lado direito do r&#243;tulo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. O comando SQL que iremos construir dever&#225; retornar todos os poss&#237;veis ramos de atividade ordenados ascendemente pela descri&#231;&#227;o.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique no &#237;cone <img src="wisql.png" width="15" height="11" border="0" alt="wisql">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Na primeira tela do WIzard SQL s&#227;o exibidas todas as tabelas que fazem parte do banco de dados com o qual estamos trabalhando. Marque a caixa correspondente &#224; tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique na op&#231;&#227;o <b>Campos</b> da barra superior que aparece na janela do WIzard SQL e depois clique na op&#231;&#227;o <b>(Todos)</b> para que todos os campos da tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> sejam selecionados.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique na op&#231;&#227;o Filtros da barra superior que aparece na janela do WIzard SQL. Em <b>Campos </b>escolha o item "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade.Descricao</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" , no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Ordem</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> escolha a op&#231;&#227;o "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Ascendente</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" e por fim clique no bot&#227;o "gravar".
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique na op&#231;&#227;o SQL da barra superior que aparece na janela do WIzard SQL, para visualizar o comando gerado e o resultado obtido com a execu&#231;&#227;o dele. Se tudo estiver correto clique no bot&#227;o "copiar" para que o comando SQL gerado seja copiado para o campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> da defini&#231;&#227;o da combo.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">A janela do WIzard SQL fechar&#225; autom&#225;ticamente e, na tela de defini&#231;&#227;o da combo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade,</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> clique no bot&#227;o "gravar".
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+Note que ao salvar a defini&#231;&#227;o da combo os campos </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Chave</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Texto</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> foram preenchidos com </span><span style="font-family:Courier New; font-size:9pt; color:#000000">|1|</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:9pt; color:#000000">|2|</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> fazendo refer&#234;ncia respectivamente &#224; primeira e segunda colunas que s&#227;o retornadas pela consulta SQL que foi digitada no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Normalmente o campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Chave</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> referenciar&#225; a coluna que representa a chave prim&#225;ria da tabela e o campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Texto</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> a coluna ou uma combina&#231;&#227;o de colunas que ofere&#231;a uma descri&#231;&#227;o para essa chave. A figura a seguir exibe como ficar&#225; a defini&#231;&#227;o dos campos da combo:
+<br>
+
+<br>
+<img src="bld_combo.png" width="745" height="324" border="0" alt="bld_combo">
+<br>
+
+<br>
+
+<br>
+Seguindo a mesma id&#233;ia dos passos descritos anteriormente crie mais um componente combo que ir&#225; listar os estados ordenados ascendentemente por nome. A tabela a ser usada ser&#225; </span><span style="font-family:Courier New; font-size:9pt; color:#000000">uf&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">e como identificador para a combo a ser criada coloque tamb&#233;m </span><span style="font-family:Courier New; font-size:9pt; color:#000000">uf</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+<br>
+</span></span></span>
+
+</body>
+</html>

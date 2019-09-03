@@ -1,0 +1,100 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+   <title>Como Funciona o WebIntegrator?</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?funcionamento_wi.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>Como Funciona o WebIntegrator?
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">O WebIntegrator &#233; um servidor de aplica&#231;&#245;es web com ambiente de desenvolvimento integrado capaz de agilizar o desenvolvimento de aplica&#231;&#245;es cliente/servidor com o cliente HTML (browser) acessando bancos de dados com total independ&#234;ncia entre os layouts de p&#225;gina e a codifica&#231;&#227;o da regra de neg&#243;cio.
+<br>
+
+<br>
+Um projeto desenvolvido pelo WebIntegrator &#233; composto basicamente por um conjunto de p&#225;ginas JSP (JavaServer Pages) que correspondem &#224;s interfaces de intera&#231;&#227;o do sistema com o usu&#225;rio. Essas p&#225;ginas s&#227;o criadas atrav&#233;s do ambiente de desenvolvimento do WebIntegrator (WI_Builder) e editadas dentro do pr&#243;prio WI_Builder. Do conte&#250;do das p&#225;ginas, tudo que estiver delimitado pelo sinal de pipe (|) ser&#225; substitu&#237;do por um c&#243;digo JSP equivalente fazendo com que o conte&#250;do final gerado seja uma p&#225;gina JSP.
+<br>
+
+<br>
+Todas as vari&#225;veis criadas atrav&#233;s do WebIntegrator quer seja diretamente por p&#225;ginas ou atrav&#233;s de componentes de pr&#233; ou p&#243;s-p&#225;gina s&#227;o armazenadas diretamente na sess&#227;o do usu&#225;rio por&#233;m o tempo de perman&#234;ncia e o comportamento dessas vari&#225;veis depende do prefixo usado para identific&#225;-las.
+<br>
+
+<br>
+Vari&#225;veis de sess&#227;o que comecem com o prefixo <span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> s&#227;o conhecidas pelo WebIntegrator como vari&#225;veis tempor&#225;rias. Esse tipo de vari&#225;vel tem um tempo de vida pr&#233;-determinado onde as mesmas s&#227;o removidas da sess&#227;o automaticamente pelo WebIntegrator logo ap&#243;s a execu&#231;&#227;o de um pr&#233;-p&#225;gina. Geralmente, a maioria das vari&#225;veis e identificadores de um projeto do WebIntegrator s&#227;o formandos por vari&#225;veis tempor&#225;rias.
+<br>
+
+<br>
+Vari&#225;veis de sess&#227;o que comecem com o prefixo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">pvt.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> s&#227;o conhecidas pelo WebIntegrator como vari&#225;veis privadas. Essas vari&#225;veis persistem durante todo o tempo de vida da sess&#227;o e apenas podem ser removidas ou terem seus valores alterados atrav&#233;s do uso dos componentes de pr&#233; ou p&#243;s-p&#225;ginas. Geralmente, vari&#225;veis privadas s&#227;o utilizadas para armazenar informa&#231;&#245;es que s&#227;o acessadas com frequ&#234;ncia pelo projeto.
+<br>
+
+<br>
+Vari&#225;veis de sess&#227;o que comecem com o prefixo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">wi.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> s&#227;o conhecidas pelo WebIntegrator como vari&#225;veis de sistema. As vari&#225;veis de sistema normalmente s&#227;o de apenas leitura n&#227;o sendo permitido ao desenvolvedor criar vari&#225;veis desse tipo, ele apenas poder&#225; acessar seus valores e em alguns casos atribuir valores.
+<br>
+
+<br>
+O uso de qualquer outro prefixo nos identificadores de vari&#225;veis far&#225; com que o WebIntegrator sempre mantenha as vari&#225;veis armazenadas na sess&#227;o sendo que as mesmas poder&#227;o ser apagadas e terem seus valores alterados tanto por componentes de p&#225;gina ou atrav&#233;s dos m&#233;todos GET (passagem de par&#226;metros via URL) ou POST.
+<br>
+
+<br>
+Toda p&#225;gina de um projeto do WebIntegrator tem eventos que s&#227;o processados antes do conte&#250;do ser processado e enviado ao cliente. Quando uma p&#225;gina &#233; solicitada o WI_Engine primeiramente verifica se existe na sess&#227;o do usu&#225;rio uma vari&#225;vel </span><span style="font-family:Courier New; font-size:9pt; color:#000000">wi.page.prev</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> com um identificador valido de uma p&#225;gina, em caso positivo o p&#243;s-p&#225;gina dessa p&#225;gina &#233; executado. Perceba que a execu&#231;&#227;o de um p&#243;s-p&#225;gina est&#225; vinculado com a presen&#231;a da vari&#225;vel wi.page.prev na sess&#227;o do usu&#225;rio, ap&#243;s a execu&#231;&#227;o do p&#243;s-p&#225;gina o WI_Engine valida o contexto de seguran&#231;a da p&#225;gina requisitada verificando se ela possui seguran&#231;a ativa, se pode ser acessada sem login, etc. Validado o contexto de seguran&#231;a o pr&#233;-p&#225;gina da p&#225;gina requisitada &#233; processado e em seguida &#233; a p&#225;gina requisitada &#233; processada e enviada ao cliente.
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

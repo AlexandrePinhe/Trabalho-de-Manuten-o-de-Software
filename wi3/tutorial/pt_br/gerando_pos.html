@@ -1,0 +1,140 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+   <title>Gerando o P&oacute;s-P&aacute;gina</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="P&oacute;s-p&aacute;gina">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?gerando_pos.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>Gerando o P&#243;s-P&#225;gina
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.8',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.10',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">A p&#225;gina constru&#237;da at&#233; o momento j&#225; tem alguma funcionalidade de intera&#231;&#227;o com o banco de dados, por&#233;m ainda n&#227;o &#233; feito nenhum tipo de altera&#231;&#227;o nas tabelas. Para que possam ser feitas inclus&#245;es e altera&#231;&#245;es no banco de dados, uma p&#225;gina WSP deve ter um ou mais componentes do tipo Update definidos no pr&#233; ou no p&#243;s-p&#225;gina.
+<br>
+
+<br>
+Para inserirmos a l&#243;gica de inclus&#227;o e altera&#231;&#227;o dos dados de uma empresa na p&#225;gina <span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> vamos novamente acessar o WIzard de P&#225;ginas. Caso voc&#234; esteja no ambiente do WI Builder e queira ir ao WIzard de P&#225;ginas primeiramente clique no link P&#225;ginas da barra de menu do WI Builder, no tree view que aparece no lado esquerdo escolha a p&#225;gina que voc&#234; quer visualizar pelo WIzard, no nosso caso seria a p&#225;gina </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, e em seguida clique no &#237;cone <img src="wiz.png" width="20" height="22" border="0" alt="wiz">.
+<br>
+
+<br>
+Na barra de bot&#245;es da janela de Propriedades do WIzard de P&#225;ginas clique no &#237;cone <img src="update.png" width="16" height="16" border="0" alt="update"> para que os componentes com a l&#243;gica de inser&#231;&#227;o e atualiza&#231;&#227;o sejam inseridos no p&#243;s-p&#225;gina da p&#225;gina </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Os componentes ser&#227;o criados baseados nas informa&#231;&#245;es do objeto </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.empresa</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> que est&#225; definido no pr&#233;-p&#225;gina.
+<br>
+
+<br>
+Para sabermos quais e como foram configurados os componentes no p&#243;s-p&#225;gina feche a janela de Propriedades do WIzard de P&#225;ginas. De volta ao WI Builder clique no &#237;cone <img src="link.png" width="20" height="22" border="0" alt="link"> para que sejam listados quais os componentes que est&#227;o cadastrados no p&#243;s-p&#225;gina, dever&#225; aparecer uma lista com as seguintes op&#231;&#245;es:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Update do objeto tmp.empresa
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Remover tmp.empresa
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Insert do objeto tmp.empresa
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Localiza chaves do registro rec&#233;m-inserido
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Grava chaves em vari&#225;veis
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+Vejamos agora o que cada um desses componentes faz. Primeiro d&#234; um duplo clique na op&#231;&#227;o "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Update&nbsp;do&nbsp;objeto&nbsp;tmp.empresa</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">", essa op&#231;&#227;o define um componente do tipo Update que apenas ser&#225; executado se a condi&#231;&#227;o "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">|tmp.cod|&nbsp;!=</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" for avaliada como verdadeira, o teste que a condi&#231;&#227;o ir&#225; fazer &#233; se existe alguma vari&#225;vel </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.cod</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> na sess&#227;o. Se a condi&#231;&#227;o for verdadeira ent&#227;o esse componente Update ir&#225; utilizar o banco de dados agenda definido no projeto e ir&#225; executar o comando SQL digitado no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+O campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> desse componente est&#225; montando com o comando UPDATE que ir&#225; atualizar o dado da empresa cujo c&#243;digo esteja sendo informado pela vari&#225;vel de sess&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.cod</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Toda empresa quando &#233; inclu&#237;da em nosso cadastro receber&#225; um c&#243;digo &#250;nico e &#233; atrav&#233;s desse c&#243;digo &#250;nico que podemos manipular as informa&#231;&#245;es espec&#237;ficas da empressa como o seu nome de fantasia, endere&#231;o, etc.
+<br>
+
+<br>
+Perceba tamb&#233;m que a instru&#231;&#227;o SQL faz uma s&#233;rie de refer&#234;ncias &#224; vari&#225;veis de sess&#227;o como </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.empresa.Cidade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.empresa.RamodeAtividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, etc que s&#227;o justamente o nome dos campos do formul&#225;rio definido na p&#225;gina, como s&#227;o vari&#225;veis tempor&#225;rias, por terem o prefixo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, elas ser&#227;o removidas automaticamente da sess&#227;o ap&#243;s a execu&#231;&#227;o de um pr&#233;-p&#225;gina.
+<br>
+
+<br>
+Vejamos agora o pr&#243;ximo componente, mas antes clique no bot&#227;o "gravar" para salvar as informa&#231;&#245;es do componente Update do p&#243;s-p&#225;gina. Para voc&#234; navegar da defini&#231;&#227;o de um componete para outro voc&#234; poder&#225; utilizar o &#237;cone <img src="downarrow.png" width="13" height="19" border="0" alt="downarrow"> para acessar o pr&#243;ximo componente ou o &#237;cone <img src="uparrow.png" width="13" height="19" border="0" alt="uparrow"> para acessar o componente anterior. O componente de inser&#231;&#227;o tamb&#233;m &#233; do tipo Update mas ele s&#243; ser&#225; executado se a condi&#231;&#227;o "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">|tmp.cod|&nbsp;=</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" for verdadeira, ou seja, se na sess&#227;o n&#227;o existir alguma vari&#225;vel </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.cod</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:9pt; color:#000000">"|tmp.remove|&nbsp;!=&nbsp;true"</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A l&#243;gica de funcionamento desse segundo componente &#233; semelhante &#224; do primeiro componente sendo que no segundo componente Update &#233; feita a execu&#231;&#227;o de um comando INSERT para que os dados de uma nova empresa seja cadastrado. Toda nova empresa quando ela &#233; cadastrada recebe um c&#243;digo que gerado automaticamente pelo SGBD atrav&#233;s de uma coluna que fornece valores auto-increment&#225;veis. Clique no bot&#227;o "gravar" para salvar as informa&#231;&#245;es do componente Insert. Os demais componentes restantes s&#227;o usados justamente para recuperar qual o c&#243;digo que foi gerado para uma empresa rec&#233;m inserida no banco de dados.
+<br>
+
+<br>
+Para a gera&#231;&#227;o da l&#243;gica de p&#243;s-p&#225;gina o WIzard de P&#225;ginas utiliza as seguintes regras: primeiramente ele examina o pr&#233;-p&#225;gina da p&#225;gina a procura de um componente do tipo objeto, ao encontrar um componente do tipo objeto ele examina se o comando SQL que est&#225; inserido no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> na defini&#231;&#227;o do objeto &#233; um comando SELECT com a cl&#225;usula WHERE definida, se essas condi&#231;&#245;es iniciais n&#227;o forem satisfeitas o WIzard n&#227;o ir&#225; gerar o p&#243;s-p&#225;gina.
+<br>
+
+<br>
+A partir do comando SELECT definido no objeto do pr&#233;-p&#225;gina o WIzard assume que as colunas que foram declaradas na cl&#225;usula WHERE s&#227;o auto-increment&#225;veis, se as colunas que aparecem na cl&#225;usula WHERE tamb&#233;m estiverem declaradas no comando SELECT elas ser&#227;o exibidas na p&#225;gina apenas como texto.
+<br>
+
+<br>
+Da cl&#225;usula WHERE o WIzard assume que as colunas sejam auto-increment&#225;veis, como j&#225; dito anteriormente, e as vari&#225;veis com os quais essas colunas s&#227;o comparadas ser&#227;o utilizadas pelo WIzard para a constru&#231;&#227;o das condi&#231;&#245;es dos componentes do p&#243;s-p&#225;gina.
+<br>
+
+<br>
+Esses s&#227;o detalhes importantes que devem ser levados em considera&#231;&#227;o se voc&#234; quiser utilizar o recurso de gera&#231;&#227;o autom&#225;tica do p&#243;s-p&#225;gina pelo WIzard de P&#225;gina.
+<br>
+
+<br>
+Examinando o objeto do pr&#233;-p&#225;gina da p&#225;gina </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> podemos verificar que o comando SQL est&#225; com a cl&#225;usula WHERE definida como "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">...&nbsp;WHERE&nbsp;(empresas.Codigo&nbsp;=&nbsp;|tmp.cod|)</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" a partir da&#237; o WIzard assume que a coluna </span><span style="font-family:Courier New; font-size:9pt; color:#000000">Codigo</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> &#233; auto-increment&#225;vel e a vari&#225;vel </span><span style="font-family:Courier New; font-size:9pt; color:#000000">cod</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> ser&#225; utilizada nas condi&#231;&#245;es dos componentes.
+<br>
+
+<br>
+Para testar a l&#243;gica de inser&#231;&#227;o do p&#243;s-p&#225;gina e a exibi&#231;&#227;o do conte&#250;do do grid insira alguns dados de empresas, voc&#234; ver&#225; que a medida que novas empresas forem sendo inclu&#237;das o grid tamb&#233;m ir&#225; sendo populado.
+<br>
+</span></span></span>
+
+</body>
+</html>

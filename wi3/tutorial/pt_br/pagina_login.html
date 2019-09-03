@@ -1,0 +1,122 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+   <title>Criando uma P&aacute;gina de Login</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Login">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?pagina_login.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>Criando uma P&#225;gina de Login
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.10',1,0)">Anterior</a>&nbsp;
+     
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Finalizando o nosso tutorial, vamos criar uma p&#225;gina de login para o nosso projeto. A defini&#231;&#227;o de uma p&#225;gina de login &#233; feita atrav&#233;s da tela de defini&#231;&#227;o de projeto, mas antes disso precisaremos criar a p&#225;gina que ser&#225; a p&#225;gina de login. Para criar mais uma p&#225;gina no nosso projeto, pelo WI Builder, clique na op&#231;&#227;o <b>P&#225;ginas</b> do menu (<span style="font-family:Courier New; font-size:9pt; color:#000000"><i>treeview</i></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">) do WI Builder e clique na barra do submenu que aparece na parte inferior esquerda da tela, identificado pelo figura: <img src="rz_menupg.png" width="32" height="16" border="0" alt="rz_menupg">. Defina no campo <span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF">Identificador</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> da p&#225;gina, com o nome </span><span style="font-family:Courier New; font-size:9pt; color:#000000">index</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">T&#237;tulo</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> digite "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">P&#225;gina&nbsp;de&nbsp;Login</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">", sem as aspas. Clique no bot&#227;o "gravar".
+<br>
+
+<br>
+Ap&#243;s a p&#225;gina ter sido criada volte para a defini&#231;&#227;o do projeto clicando no link <b>Projeto</b> da barra de menu do WI Builder. Para configurarmos uma p&#225;gina de login vamos usar as defini&#231;&#245;es da sess&#227;o <b>Login</b> seguindo os passos abaixo:
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique no &#237;cone <img src="access.png" width="15" height="16" border="0" alt="access"> e depois marque a op&#231;&#227;o </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Ativar Login</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> para indicarmos ao WebIntegrator que ele dever&#225; fazer o gerenciamento de login desse projeto.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Banco de Dados</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> escolha o banco de dados que ser&#225; utilizado no login, no nosso caso esse banco de dados &#233; </span><span style="font-family:Courier New; font-size:9pt; color:#000000">agenda</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">P&#225;gina Inicial ou de Login</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> indique qual p&#225;gina do projeto ser&#225; utilizada, no nosso caso escolha a op&#231;&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">index</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo SQL deve ser digitado o comando SQL que ir&#225; validar o login. O login &#233; considerado v&#225;lido pelo WebIntegrator quando esse comando retornar algum resultado. Para construirmos o nosso comando SQL de valida&#231;&#227;o siga os passos abaixo utilizando o WIzard SQL (<img src="wisql.png" width="15" height="11" border="0" alt="wisql">):
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Escolha a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">usuarios</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e em seguida selecione todos os seus campos.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Na se&#231;&#227;o <b>Filtros</b> fa&#231;a com que as colunas </span><span style="font-family:Courier New; font-size:9pt; color:#000000">usuarios.Login</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:9pt; color:#000000">usuarios.Senha</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> sejam ocultadas da declara&#231;&#227;o SELECT a ser montada e que tamb&#233;m tenham definidas como condi&#231;&#227;o de compara&#231;&#227;o se elas s&#227;o iguais a </span><span style="font-family:Courier New; font-size:9pt; color:#000000">'|tmp.user|'</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:9pt; color:#000000">'|tmp.pass|'</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> respectivamente lembrando de incluir os sinais de ap&#243;strofos.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">O comando SQL gerado dever&#225; ser algo bem semelhante &#224; </span><span style="font-family:Courier New; font-size:8pt; color:#000000"><b>SELECT</b>&nbsp;usuarios.Nome&nbsp;<b>FROM</b>&nbsp;usuarios&nbsp;<b>WHERE</b>&nbsp;(usuarios.Login&nbsp;=&nbsp;'|tmp.user|')&nbsp;<b>AND</b>&nbsp;(usuarios.Senha&nbsp;=&nbsp;'|tmp.pass|')
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Courier New; font-size:8pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Courier New; font-size:8pt; color:#000000"></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Por fim salve a defini&#231;&#227;o do projeto clicando no bot&#227;o "gravar".
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+Perceba que no comando SQL de valida&#231;&#227;o do login estamos referenciando as vari&#225;veis tmp.user e tmp.pass, essas vari&#225;veis dever&#227;o ser colocadas na sess&#227;o atrav&#233;s da p&#225;gina de login index. Para a gera&#231;&#227;o da p&#225;gina de login vamos mais uma vez utilizar o WIzard de P&#225;ginas, clique em P&#225;ginas e em seguida escolha a p&#225;gina index.
+<br>
+
+<br>
+Para acessar o WIzard de p&#225;ginas clique em <img src="wiz.png" width="20" height="22" border="0" alt="wiz">. O WIzard ao detectar que uma p&#225;gina est&#225; configurada como sendo a p&#225;gina de login do projeto ir&#225; perguntar qual ser&#225; a p&#225;gina a ser chamada quando o login for validado, no nosso caso escolha a p&#225;gina </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Com o esquema de valida&#231;&#227;o de login ativado nenhuma p&#225;gina do projeto poder&#225; ser acessada se o usu&#225;rio de uma sess&#227;o do WebIntegrator n&#227;o foi efetivamente logado no projeto, nesse caso ele sempre ser&#225; redirecionado para a p&#225;gina de login definida no projeto. Em alguns casos &#233; conveniente que algumas p&#225;ginas de um projeto com esquema de valida&#231;&#227;o de login estejam acess&#237;veis publicamente, nesses casos essas p&#225;ginas devem estar com a op&#231;&#227;o </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Acessa sem Login</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> marcada.
+<br>
+
+<br>
+Para fazer um teste clique no link <b>P&#225;ginas</b> da barra de menu (treeview) do WI Builder, clique na p&#225;gina </span><span style="font-family:Courier New; font-size:9pt; color:#000000">index</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e em seguida no &#237;cone <img src="view.png" width="20" height="22" border="0" alt="view"> para tentar visualizar a p&#225;gina
+<br>
+
+<br>
+Ao final de todo o processo, se tudo estiver definido corretamente, o exemplo da figura exibida abaixo ser&#225; extamente como dever&#225; aparecer na tela do seu navegador (brawser).
+<br>
+
+<br>
+<img src="bld_pag_login.png" width="772" height="173" border="0" alt="bld_pag_login">
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

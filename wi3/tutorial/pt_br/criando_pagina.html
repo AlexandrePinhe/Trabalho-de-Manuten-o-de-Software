@@ -1,0 +1,132 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+   <title>Criando uma P&aacute;gina</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="P&aacute;gina">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?criando_pagina.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>Criando uma P&#225;gina
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.6',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.8',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Ap&#243;s a defini&#231;&#227;o de alguns componentes de escopo do projeto como as duas combos (<span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:9pt; color:#000000">uf</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">) e o grid SQL (</span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">) vamos criar uma p&#225;gina para que esses componentes sejam inseridos. A p&#225;gina a ser criada dever&#225; ter um formul&#225;rio com os campos correspondentes aos dados de uma empresa sendo que esse formul&#225;rio poder&#225; ser usado tanto para o cadastro de uma nova empresa quanto para a altera&#231;&#227;o dos dados de uma empresa j&#225; cadastrada, essa p&#225;gina tamb&#233;m ir&#225; listar quais as empresas que se encontram atualmente cadastradas.
+<br>
+
+<br>
+Para criar uma nova p&#225;gina no WI Builder, em seu projeto, clique no link <b>P&#225;ginas </b>da barra de menu (</span><span style="font-family:Courier New; font-size:9pt; color:#000000"><i>treeview</i></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">) e, posteriormente, clique na barrinha do submenu <img src="rz_menupg.png" width="32" height="16" border="0" alt="rz_menupg"> que surge abaixo e tem a finalidade de abrir a tela de defini&#231;&#245;es da nova p&#225;gina. Na tela de defini&#231;&#227;o de p&#225;ginas entre no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">T&#237;tulo</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> o texto "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Cadastro&nbsp;de&nbsp;Empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" e no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Identificador</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> digite </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Para o nosso caso tamb&#233;m desmarque a op&#231;&#227;o </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Seguran&#231;a ativa</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, com essa op&#231;&#227;o marcada o WI Engine sempre checa se a requisi&#231;&#227;o para essa p&#225;gina est&#225; vindo de uma outra p&#225;gina WSP, em caso afirmativo o acesso &#224; p&#225;gina &#233; liberado, em caso contr&#225;rio um erro 403 (acesso proibido) &#233; retornado ao cliente. Por fim, clique no bot&#227;o "gravar".
+<br>
+
+<br>
+Perceba que ao gravar a defini&#231;&#227;o da p&#225;gina o campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Tipo (MIME)</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> foi preenchido automaticamente com o valor </span><span style="font-family:Courier New; font-size:9pt; color:#000000">html</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> indicando que o conte&#250;do dessa p&#225;gina ser&#225; enviada ao cliente como sendo do tipo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">text/html</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. A depender da necessidade o desenvolvedor poder&#225; definir outros tipos MIME para as p&#225;ginas como </span><span style="font-family:Courier New; font-size:9pt; color:#000000">png</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> (caso a p&#225;gina retorne como conte&#250;do uma imagem do tipo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">image/png</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">), </span><span style="font-family:Courier New; font-size:9pt; color:#000000">doc</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> (caso o conte&#250;do retornado seja do tipo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">application/msword</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">), etc.
+<br>
+
+<br>
+Ap&#243;s termos criado a p&#225;gina vamos adicionar um componente do tipo <b>Objeto</b> ao pr&#233;-p&#225;gina. Os componentes de p&#225;gina do tipo Objeto t&#234;m como principal utilidade armazenar o resultado de uma consulta feita a um banco de dados, al&#233;m disso esses componentes em conjunto com o WIzard de p&#225;ginas ajudam na constru&#231;&#227;o de formul&#225;rios.
+<br>
+
+<br>
+Todo componente Objeto possui um identificador que &#233; usado como prefixo dos nomes das colunas que s&#227;o retornadas pela consulta antes de serem colocadas na sess&#227;o do usu&#225;rio. O WIzard de p&#225;ginas toda vez que encontra um componente Objeto definido no pr&#233;-p&#225;gina inserir&#225; automaticamente um formul&#225;rio HTML correspondente ao objeto com as colunas retornadas da consulta indicando os campos desse formul&#225;rio
+<br>
+
+<br>
+Para nos ajudar na constru&#231;&#227;o do formul&#225;rio de cadastro de empresas e tamb&#233;m na recupera&#231;&#227;o dos dados de uma empresa vamos adicionar um Objeto que recuperar&#225; as informa&#231;&#245;es sobre uma empresa. Para construir um Objeto siga os passos descritos abaixo:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Escolha a op&#231;&#227;o Pr&#233;-P&#225;gina identificada pelo &#237;cone <img src="pre.png" width="20" height="22" border="0" alt="pre">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Nas op&#231;&#245;es da coluna <b>Novos Elementos</b> clique no link Objeto.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Descri&#231;&#227;o</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> digite Empresa.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Objeto</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> digite </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.empresa</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Neste campo n&#243;s definimos qual ser&#225; o identificador desse componente, como esse identificador est&#225; come&#231;ando com o prefixo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> n&#243;s estamos informando ao WebIntegrator que o tempo de vida dessa vari&#225;vel na sess&#227;o ser&#225; at&#233; o momento em que essa p&#225;gina for enviada ao usu&#225;rio depois disso ela ser&#225; apagada da sess&#227;o.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> vamos mais uma vez pedir ao WIzard SQL para que ele gere a instru&#231;&#227;o SQL que ir&#225; recuperar as informa&#231;&#245;es de uma empresa a partir de seu c&#243;digo. Pelo WIzard SQL (<img src="wisql.png" width="15" height="11" border="0" alt="wisql">) escolha a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e selecione todos os campos dessa tabela.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Ainda no WIzard SQL, na op&#231;&#227;o Filtros escolha a op&#231;&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas.codigo</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, marque a op&#231;&#227;o </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Ocultar</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> para indicar que utilizaremos essa coluna mas n&#227;o queremos que seu valor seja retornado pela pesquisa, no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Condi&#231;&#227;o</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> escolha a op&#231;&#227;o "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Igual&nbsp;a</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" e preencha a caixa de texto com "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">|tmp.cod|</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" sem as aspas. Essa defini&#231;&#227;o faz com que os valores da coluna </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas.codigo</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> n&#227;o sejam retornados pela consulta mas ela seja usada na express&#227;o de condi&#231;&#227;o da consulta onde seus valores ser&#227;o comparados com a vari&#225;vel de sess&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.cod</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Clique no bot&#227;o "gravar".
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Ainda na op&#231;&#227;o Filtros configure o campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">T&#237;tulo</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> das op&#231;&#245;es </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas.nomefantasia</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas.razaosocial</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas.endereco</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas.ramoatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> com os valores "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Nome&nbsp;de&nbsp;Fantasia</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">", "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Raz&#227;o&nbsp;Social</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">", "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Endere&#231;o</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" e "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Ramo&nbsp;de&nbsp;Atividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" respectivamente. Lembrando que para cada op&#231;&#227;o o bot&#227;o "gravar" deve ser clicado para que a defini&#231;&#227;o seja salva para cada uma das op&#231;&#245;es.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique na op&#231;&#227;o SQL do WIzard SQL. O SGBD provavelmente ir&#225; retornar uma mensagem informando que h&#225; um erro no comando SQL. O que ocorreu aqui foi que o WebIntegrator antes de enviar o comando SQL ao SGBD ele fez um pr&#233;-processamento do comando para substituir refer&#234;ncias &#224; vari&#225;veis de sess&#227;o pelo seu respectivo valor, no nosso caso o nosso comando SQL est&#225; fazendo refer&#234;ncia &#224; vari&#225;vel de sess&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.cod</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> mas a mesma n&#227;o se encontra na sess&#227;o. Para que a mensagem de erro n&#227;o apare&#231;a digite no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">tmp.cod</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> o valor </span><span style="font-family:Courier New; font-size:9pt; color:#000000">0</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> (zero) e clique no bot&#227;o "executar" para que o comando SQL seja executado novamente.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique no bot&#227;o "copiar". A janela do WIzard SQL ser&#225; fechada, retornando para a tela de defini&#231;&#227;o do objeto.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Na tela de defini&#231;&#227;o do objeto clique no bot&#227;o "gravar" para que a defini&#231;&#227;o seja salva.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+Perceba que ao gravar a defini&#231;&#227;o do objeto o campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Condi&#231;&#227;o</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> foi preenchido automaticamente com o valor </span><span style="font-family:Courier New; font-size:9pt; color:#000000">true</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> indicando que esse componente sempre ser&#225; executado, caso queira o desenvolvedor poder&#225; definir condi&#231;&#245;es mais elaboradas com o uso de operadores condicionais como </span><span style="font-family:Courier New; font-size:9pt; color:#000000">&amp;&amp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> ("e l&#243;gico") ou </span><span style="font-family:Courier New; font-size:9pt; color:#000000">||</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> ("ou l&#243;gico"), par&#234;ntesis e tamb&#233;m fazendo refer&#234;ncia &#224;s vari&#225;veis de sess&#227;o.
+<br>
+
+<br>
+Com o objeto definido no pr&#233;-p&#225;gina clique no &#237;cone <img src="wiz.png" width="20" height="22" border="0" alt="wiz"> para que o WIzard de P&#225;gina gere uma p&#225;gina com um formul&#225;rio baseado nas informa&#231;&#245;es desse objeto. Lembrando que essa &#233; apenas uma funcionalidade de intera&#231;&#227;o entre o componente objeto e o Wizard de P&#225;ginas, pois ambos podem ser usados separadamente, o componente objeto para armazenar os dados vindos de uma consulta a um banco de dados e o WIzard de P&#225;ginas ser utilizado para a cria&#231;&#227;o das p&#225;ginas.
+<br>
+</span></span></span>
+
+</body>
+</html>

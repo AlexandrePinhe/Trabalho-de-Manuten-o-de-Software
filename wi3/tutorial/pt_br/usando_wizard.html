@@ -1,0 +1,134 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+   <title>Usando o WIzard de P&aacute;ginas</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="WIzard">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?usando_wizard.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>Usando o WIzard de P&#225;ginas
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.7',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.9',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">O WIzard de P&#225;ginas &#233; o utilit&#225;rio do WebIntegrator usado no desenvolvimento de p&#225;ginas para o projeto que oferece ao desenvolvedor um ambiente de desenvolvimento baseado nos conceitos RAD (Rapid Application Development) para a cria&#231;&#227;o e/ou edi&#231;&#227;o de p&#225;ginas WSP. Neste tipo de ambiente a maior parte do tempo de desenvolvimento de uma p&#225;gina ser&#225; destinado &#224; defini&#231;&#227;o dos valores das propriedades e dos eventos dos elementos que ir&#227;o fazer parte da p&#225;gina sem ser preciso que o desenvolvedor se importe com a codifica&#231;&#227;o HTML necess&#225;ria para ger&#225;-la.
+<br>
+
+<br>
+O ambiente do WIzard &#233; composto de duas janelas: uma que exibe o layout da p&#225;gina como ser&#225; visto pelos usu&#225;rios da aplica&#231;&#227;o e uma outra janela, a janela de Propriedades, onde s&#227;o exibidas as propriedades de um elemento da p&#225;gina que esteja selecionado. 
+<br>
+
+<br>
+A figura abaixo ilustra a janela exibindo o layout da p&#225;gina.
+<br>
+
+<br>
+<img src="bld_layout.png" width="766" height="372" border="0" alt="bld_layout">
+<br>
+
+<br>
+A figura seguinte exibe a janela de Propriedades dos elemetos de p&#225;gina.
+<br>
+
+<br>
+<img src="bld_propriedades.png" width="252" height="429" border="0" alt="bld_propriedades">
+<br>
+
+<br>
+
+<br>
+Ent&#227;o, na janela onde se exibe o layout da p&#225;gina os elementos podem ser selecionados bastando clicar com o mouse sobre o &#237;cone <img src="prop.png" width="14" height="13" border="0" alt="prop"> e automaticamente a janela de Propriedades ir&#225; exibir os dados do elemento correspondente.
+<br>
+
+<br>
+Examinando a p&#225;gina que foi criada pelo WIzard vale destacar alguns detalhes. Como j&#225; havia sido dito anteriormente, baseado nos dados do objeto definido no pr&#233;-p&#225;gina o formul&#225;rio <span style="font-family:Courier New; font-size:9pt; color:#000000">Empresa</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> foi criado e para cada coluna retornada na consulta foi criado um campo no formul&#225;rio, o detalhe a ser percebido aqui &#233; que o campo "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Ramo&nbsp;de&nbsp;Atividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" veio como uma combo-box e j&#225; fazendo refer&#234;ncia &#224; combo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> que n&#243;s hav&#237;amos definido anteriormente.
+<br>
+
+<br>
+Isso ocorreu porque o WIzard de P&#225;ginas ao processar o objeto </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.empresa</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> identificou que a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> utilizada pelo objeto tinha um relacionamento com a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">atrav&#233;s da coluna </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramoatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> que estava sendo renomeada para "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Ramo&nbsp;de&nbsp;Atvidade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">". Ao identificar esse relacionamento o Wizard de P&#225;ginas gerou o campo "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Ramo&nbsp;de&nbsp;Atvidade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" como sendo uma combo-box referenciando o componente </span><span style="font-family:Courier New; font-size:9pt; color:#000000">combo.ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A refer&#234;ncia ao componente combo &#233; feita simplesmente concatenando o prefixo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">combo.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> ao nome da tabela com o qual a coluna se relaciona, no nosso caso como a coluna </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramoatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> se relaciona com a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> o WIzard de P&#225;ginas concatenou o prefixo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">combo.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> com </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> fazendo assim refer&#234;ncia a uma combo cujo identificador seja </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, como n&#243;s j&#225; hav&#237;amos definido uma combo justamente com esse identificador n&#243;s conseguimos tirar proveito de mais um recurso do WIzard.
+<br>
+
+<br>
+Perceba que embora tenhamos definido duas combos apenas uma delas foi inserida automaticamente pelo WIzard de P&#225;ginas, a combo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">uf</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> n&#227;o foi inserida automaticamente porque o WIzard n&#227;o detectou nenhum relacionamento entre a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">uf</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> mas mesmo assim voc&#234; pode fazer essa altera&#231;&#227;o pessoalmente.
+<br>
+
+<br>
+Pelo WIzard de P&#225;ginas selecione o campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">UF</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> da p&#225;gina clicando no &#237;cone <img src="prop.png" width="14" height="13" border="0" alt="prop"> que aparece ao lado do campo. Veja que nesse momento a janela de Propriedades est&#225; reflitindo as propriedades relacionada ao campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">UF</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, para que esse campo fa&#231;a refer&#234;ncia &#224; combo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">uf</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> siga os passos abaixo:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Tipo</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> troque a op&#231;&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">Campo</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> por </span><span style="font-family:Courier New; font-size:9pt; color:#000000">Grupo</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, assim n&#243;s estamos indicando ao WIzard de P&#225;ginas para que ele substitua o tipo de campo de UF para um tipo que exiba um grupo de valores.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Textos </span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">clique no bot&#227;o "..." para que sejam listadas as combos que est&#227;o definidas no projeto e dessa lista escolha a op&#231;&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">uf</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+Pronto! J&#225; temos em nossa p&#225;gina as duas combos que hav&#237;amos definido, caso voc&#234; queira visualizar como ser&#225; a p&#225;gina em tempo de execu&#231;&#227;o clique no &#237;cone <img src="view16.png" width="16" height="16" border="0" alt="view16">.
+<br>
+
+<br>
+Por fim vamos agora adicionar o nosso grid &#224; p&#225;gina. Primeiramente para isso adicione um elemento do tipo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">Form</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> para que o formul&#225;rio atual seja fechado, para adicionar um elemento do tipo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">Form</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> clique no &#237;cone <img src="add.png" width="16" height="16" border="0" alt="add"> da janela de Propriedades e altere a op&#231;&#227;o do campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Tipo</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> para </span><span style="font-family:Courier New; font-size:9pt; color:#000000">Form</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Para referenciar o grid adicione mais um elemento &#224; p&#225;gina clicando no &#237;cone <img src="add.png" width="16" height="16" border="0" alt="add"> da janela de Propriedades. A princ&#237;pio todos os elementos quando s&#227;o adicionados a uma p&#225;gina s&#227;o do tipo </span><span style="font-family:Courier New; font-size:9pt; color:#000000">Gen&#233;rico</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, campos desse tipo servem para que o desenvolvedor possa inserir um c&#243;digo livre diretamente em algum ponto da p&#225;gina. Na caixa de texto da sess&#227;o <b>Texto</b> deve ser colocado o texto que ser&#225; inclu&#237;do na p&#225;gina. Como queremos referenciar o grid </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> coloque como conte&#250;do dessa caixa de texto o valor </span><span style="font-family:Courier New; font-size:9pt; color:#000000">|grid.empresas|</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Por fim clique na caixa de op&#231;&#227;o </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Quebra linha</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> para indicar que qualquer outro elemento a ser inserido dever&#225; ficar abaixo do grid.
+<br>
+
+<br>
+Para visualizar como ser&#225; a p&#225;gina em tempo de execu&#231;&#227;o clique no &#237;cone <img src="view16.png" width="16" height="16" border="0" alt="view16"> da barra de bot&#245;es da janela de Propriedades, veja que as combos j&#225; aparecem com seus valores populados e o grid j&#225; est&#225; sendo exibido.
+<br>
+</span></span></span>
+
+</body>
+</html>

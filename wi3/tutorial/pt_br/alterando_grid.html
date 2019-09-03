@@ -1,0 +1,122 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+   <title>Alterando o Modelo do Grid</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?alterando_grid.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>Alterando o Modelo do Grid
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.9',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.11',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Para darmos uma maior funcionalidade ao nosso grid vamos fazer com que o nome de fantasia da empresa seja um link que far&#225; com que os dados da empresa a qual aquele link se refere sejam exibidos pela p&#225;gina empresas para que esses dados possam ser alterados. Clique no link <b>Projeto</b> da barra de menu do WI Builder (<span style="font-family:Courier New; font-size:9pt; color:#000000"><i>treeview</i></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">) e em seguida clique no &#237;tem <b>Grids</b> para visualizar os grids dispon&#237;veis para o projeto.
+<br>
+
+<br>
+Da listagem de grids que aparece no canto inferior esquerdo clique no link do Grids SQL: </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Para editar o modelo desse grid clique no &#237;cone <img src="prop.png" width="14" height="13" border="0" alt="prop"> que aparece na sess&#227;o <b>Modelo</b>. Para criarmos o link devemos alterar a c&#233;lula da tabela que faz refer&#234;ncia ao <u>nome de fantasia da empresa</u>, o c&#243;digo do modelo alterado segue abaixo com o texto em negrito indicando a mudan&#231;a realizada.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:9pt; color:#000000">&lt;table&nbsp;cellspacing='0'&nbsp;border="1"&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;th&gt;Nome&nbsp;de&nbsp;Fantasia&lt;/th&gt;
+<br>
+&lt;th&gt;Cidade&lt;/th&gt;
+<br>
+&lt;th&gt;UF&lt;/th&gt;
+<br>
+&lt;th&gt;Ramo&nbsp;de&nbsp;Atividade&lt;/th&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;tr&gt;
+<br>
+<b>&lt;td&gt;&lt;a&nbsp;href="/|wi.proj.id|/empresas.wsp?tmp.cod=|codigo|"&gt;|NomedeFantasia|&lt;/a&gt;&amp;nbsp;&lt;/td&gt;
+<br>
+</b>&lt;td&gt;|Cidade|&amp;nbsp;&lt;/td&gt;
+<br>
+&lt;td&gt;|UF|&amp;nbsp;&lt;/td&gt;
+<br>
+&lt;td&gt;|RamodeAtividade|&amp;nbsp;&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;tr&gt;&lt;td&nbsp;align='center'&nbsp;colspan='4'&gt;Nenhum&nbsp;registro&nbsp;selecionado&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;/table&gt;
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+Substitua o c&#243;digo-fonte do modelo atual do grid pelo c&#243;digo-fonte listado acima e depois clique no bot&#227;o "gravar". Note que atrav&#233;s da URL que chama a p&#225;gina </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas.wsp</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> estamos passando a vari&#225;vel </span><span style="font-family:Courier New; font-size:9pt; color:#000000">tmp.cod</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> que ser&#225; utilizada pelo objeto definido no pr&#233;-p&#225;gina da p&#225;gina </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> para que os dados da empresa daquele c&#243;digo possam ser recuperados.
+<br>
+
+<br>
+Perceba que no link &#233; feito uma refer&#234;ncia &#224; uma vari&#225;vel chamada </span><span style="font-family:Courier New; font-size:9pt; color:#000000">codigo</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> que dever&#225; retornar o c&#243;digo da empresa. Atualmente o c&#243;digo da empresa ainda n&#227;o est&#225; sendo retornado no resultado de nossa consulta ao banco de dados ent&#227;o precisaremos incluir no comando SQL do grid para que a coluna Codigo da tabela empresas seja retornada.
+<br>
+
+<br>
+Na tela de defini&#231;&#227;o do grid </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> altere o comando SELECT que est&#225; no campo SQL incluindo a coluna codigo, o comando SQL dever&#225; ficar assim:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:9pt; color:#000000">SELECT&nbsp;<b>empresas.Codigo,</b>&nbsp;empresas.NomeFantasia&nbsp;AS&nbsp;"Nome&nbsp;de&nbsp;Fantasia",&nbsp;empresas.Cidade,&nbsp;empresas.UF,&nbsp;ramosatividade.Descricao&nbsp;AS&nbsp;"Ramo&nbsp;de&nbsp;Atividade"&nbsp;FROM&nbsp;(ramosatividade&nbsp;INNER&nbsp;JOIN&nbsp;empresas&nbsp;ON&nbsp;(ramosatividade.Codigo&nbsp;=&nbsp;empresas.RamoAtividade))
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+O texto em negrito que aparece acima indica o conte&#250;do que foi acrescentado ao comando SQL para que ele retornasse a coluna codigo. Salve a altera&#231;&#227;o feita na defini&#231;&#227;o do grid e visualiza a p&#225;gina. Para visualiz&#225;-la clique no link <b>P&#225;ginas</b> do menu (</span><span style="font-family:Courier New; font-size:9pt; color:#000000"><i>treeview</i></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">) do WI Builder, selecione a p&#225;gina empresas clicando no link </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> que aparece no canto inferior esquerdo e, em seguida, clique no &#237;cone <img src="view.png" width="20" height="22" border="0" alt="view">. Para fazer alguns testes clique em algum dos links do grid e altere as informa&#231;&#245;es de algumas empresas.</span><span style="font-family:Courier New; font-size:9pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

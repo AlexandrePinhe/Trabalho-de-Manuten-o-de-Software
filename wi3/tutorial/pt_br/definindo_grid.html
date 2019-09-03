@@ -1,0 +1,184 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+   <title>Definindo um Grid</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Grid">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?definindo_grid.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>Definindo um Grid
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.5',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.7',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">O WebIntegrator possui uma s&#233;rie de componentes cuja finalidade &#233; a exibi&#231;&#227;o de resultados de consultas feitas a fontes de dados, um desses &#233; o <b>componente Combo</b>, que j&#225; vimos anteriormente. Um outro componente, que tamb&#233;m tem essa finalidade, &#233; o componente <b>Grid</b>.
+<br>
+
+<br>
+Os componentes <b>Grid</b> oferecem ao desenvolvedor do WebIntegrator a possibilidade de processar as informa&#231;&#245;es vinda de uma fonte de dados (consulta a um banco de dados, listagem de um diret&#243;rio, mensagens em uma caixa postal POP3, etc) e exib&#237;-las, seguindo um modelo de apresenta&#231;&#227;o previamente definido pelo desenvolvedor.
+<br>
+
+<br>
+Os modelos de apresenta&#231;&#227;o podem seguir uma estrutura simples (modelo &#250;nico), usando como base a estrutura de uma tabela HTML, para que os dados sejam exibidos de uma maneira tabular ou atrav&#233;s de modelos m&#250;ltiplos, onde cada parte do grid (cabe&#231;alho, rodap&#233;, c&#233;lulas vazias, c&#233;lulas v&#225;lidas, etc) esteja representada em partes distintas.
+<br>
+
+<br>
+Quando se usa o modelo simples, uma das defini&#231;&#245;es a ser feita &#233; a linha da tabela HTML desse modelo, que ir&#225; ser populada com os dados do resultado da consulta &#224; fonte de dados, feita atrav&#233;s do campo <span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">In&#237;cio na Linha</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Baseado na defini&#231;&#227;o desse campo, as linhas da tabela anteriores a essa, caso existam, formam o cabe&#231;alho do grid; a linha posterior &#224; linha de detalhe s&#243; ir&#225; aparecer caso o resultado da consulta n&#227;o retorne nenhum registro e as linhas logo abaixo dessa formam o rodap&#233;.
+<br>
+
+<br>
+A linha de detalhe definida pelo campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">In&#237;cio na Linha</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> al&#233;m de referenciar os nomes das colunas poder&#225; referenciar outras vari&#225;veis que estejam na sess&#227;o inclusive referenciar outro grid para criar a vis&#227;o de mestre-detalhe. As outras c&#233;lulas do grid tamb&#233;m poder&#227;o fazer refer&#234;ncia &#224;s vari&#225;veis do WebIntegrator.
+<br>
+
+<br>
+O modelo m&#250;ltiplo, ao inv&#233;s de trabalhar com um &#250;nico modelo, trabalha com a defini&#231;&#227;o das v&#225;rias partes que comp&#245;em o modelo do grid. Essas partes s&#227;o: o cabe&#231;alho, in&#237;cio do registro, registro v&#225;lido, registro vazio, fim do registro, sem registros e rodap&#233;. Quando se usa o modelo m&#250;ltiplo a sequ&#234;ncia de processamento das partes &#233; a seguinte: primeiro o WI_Engine processa o modelo relativo ao cabe&#231;alho; em seguida se o resultado da consulta feita ao banco de dados retornou algum registro, ent&#227;o os modelos relativos ao in&#237;cio do registro, registro v&#225;lido e fim do registro s&#227;o processados respectivamente e isso se repete at&#233; que todos os registros tenham sido processados ou que a contagem da itera&#231;&#227;o tenha alcan&#231;ado o valor definido no campo <span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF">Quantidade</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, sen&#227;o se o resultado da consulta n&#227;o retornar nenhum registro ent&#227;o o modelo "sem registros" &#233; processado; finalmente o modelo relativo ao rodap&#233; &#233; processado.
+<br>
+
+<br>
+O WebIntegrator oferece tr&#234;s tipos de grids: o grid HTML, o grid XMLOut e o grid SQL, desses o que vai nos interessar neste tutorial ser&#225; o grid SQL. Para mostrarmos o funcionamento de um grid SQL vamos definir um grid que ir&#225; exibir quais as empresas que est&#227;o cadastradas em nossa base de dados exibindo o nome de fantasia, a cidade, o estado e o ramo de atividade.
+<br>
+
+<br>
+Para criarmos o grid das empresas siga os passos abaixo:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No menu <b>Projeto</b> (</span><span style="font-family:Courier New; font-size:9pt; color:#000000"><i>treeview</i></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">), clique na op&#231;&#227;o <b>Combos</b>. Em seguida, clique no submenu <b>Grids SQL</b> que aparece logo abaixo.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Descri&#231;&#227;o</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> entre com uma breve descri&#231;&#227;o da funcionalidade desse grid, por exemplo: </span><span style="font-family:Courier New; font-size:9pt; color:#000000">Grid&nbsp;que&nbsp;exibe&nbsp;as&nbsp;empresas&nbsp;cadastradas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Identificador</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> digite </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. Este campo indica qual o identificador que ser&#225; criado para esse componente e que ir&#225; identificar unicamente esse grid dentro desse projeto, ser&#225; atrav&#233;s desse identificador que n&#243;s faremos refer&#234;ncia a esse grid em nossas p&#225;ginas do projeto.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> digite a instru&#231;&#227;o de consulta que ser&#225; enviada ao banco de dados. Para ajudar na constru&#231;&#227;o do comando SQL de consulta vamos utilizar o WIzard SQL identificado pelo &#237;cone <img src="wisql.png" width="15" height="11" border="0" alt="wisql"> que aparece no lado direito do r&#243;tulo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">. O comando SQL que iremos construir dever&#225; retornar todos os poss&#237;veis ramos de atividade, ordenados ascendentemente pela descri&#231;&#227;o.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique no &#237;cone <img src="wisql.png" width="15" height="11" border="0" alt="wisql">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Dessa vez n&#243;s usremos duas tabelas: a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">e a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.</span><span style="font-family:Courier New; font-size:9pt; color:#000000">&nbsp;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Na primeira tela do WIzard SQL s&#227;o exibidas todas as tabelas que fazem parte do banco de dados com o qual estamos trabalhando. Certifique-se que nenhum </span><span style="font-family:Courier New; font-size:9pt; color:#000000"><i>checkbox</i></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> de tabela esteja selecionado. Clicando no bot&#227;o <b>Nova</b>, para criar uma nova sele&#231;&#227;o SQL, todas as marca&#231;&#245;es de tabelas ser&#227;o removidas, ent&#227;o maque as duas tabelas correspondentes.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Como estamos usando duas tabelas clique na op&#231;&#227;o <b>Relacionamentos</b> que aparece na janela do WIzard SQL. Nessa op&#231;&#227;o n&#243;s definimos como ser&#225; feito o relacionamento entre as tabelas selecionadas anteriormente, para recuperar as informa&#231;&#245;es de relacionamentos entre as tabelas para o banco de dados clique no &#237;cone <img src="rel.png" width="16" height="16" border="0" alt="rel">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="85"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Caso o SGBD tenha suporte &#224; defini&#231;&#227;o de chave estrangeira e o banco de dados tamb&#233;m tenha usado essa defini&#231;&#227;o basta clicar no bot&#227;o "Atualizar" que o WI_Builder ir&#225; recuperar todas as defini&#231;&#245;es. Mesmo que o SGBD n&#227;o ofere&#231;a suporte ao conceito de chave estrangeira e/ou o banco de dados n&#227;o tenha usado tal defini&#231;&#227;o o desenvolvedor poder&#225; definir esses relacionamentos internamente no WI_Builder.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="85"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="85"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">No campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Chave prim&#225;ria</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> escolha a op&#231;&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Chava estrangeira</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> escolha a op&#231;&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="85"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="85"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Abaixo do campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Chave prim&#225;ria</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> escolha a op&#231;&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">codigo</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e abaixo do campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Chave estrangeira</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> escolha a op&#231;&#227;o </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramoatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.</span><span style="font-family:Courier New; font-size:9pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="85"></td><td width="14"><span style="font-family:Courier New; font-size:9pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Courier New; font-size:9pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="85"></td><td width="14"><span style="font-family:Courier New; font-size:9pt; color:#000000"></span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique no bot&#227;o "Gerar" para que seja salva a defini&#231;&#227;o de que a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> se relaciona com a chave prim&#225;ria </span><span style="font-family:Courier New; font-size:9pt; color:#000000">codigo</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> da tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> atrav&#233;s da coluna </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramoatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="85"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="85"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Feche a janela de defini&#231;&#227;o de relacionamentos.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="85"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique novamente na op&#231;&#227;o <b>Relacionamentos</b> da barra superior, perceba que dessa vez j&#225; apareceu o relacionamento entre as tabelas. Clicando em um das op&#231;&#245;es do relacionamento entre as tabelas o desenvolvedor define se ser&#225; feita um inner join identificado pelo s&#237;mbolo <img src="innerjoin.png" width="19" height="12" border="0" alt="innerjoin">, um right join identificado por <img src="rightjoin.png" width="19" height="12" border="0" alt="rightjoin"> ou um left join identificado por <img src="leftjoin.png" width="19" height="13" border="0" alt="leftjoin"> indica que ser&#225; feito um inner join entre as tabelas. No nosso caso deixe a op&#231;&#227;o marcada para a realiza&#231;&#227;o de um inner join (<img src="innerjoin.png" width="19" height="12" border="0" alt="innerjoin">).
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique na op&#231;&#227;o <b>Campos</b> da barra superior, que aparece na janela do WIzard SQL, para a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> escolha as colunas </span><span style="font-family:Courier New; font-size:9pt; color:#000000">nomefantasia</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:9pt; color:#000000">cidade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:9pt; color:#000000">uf</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> e para a tabela </span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> escolha a coluna </span><span style="font-family:Courier New; font-size:9pt; color:#000000">descricao</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique na op&#231;&#227;o <b>Filtros</b> da barra superior, que aparece na janela do WIzard SQL. Nessa parte vamos pedir para que o nome das colunas sejam substitu&#237;dos por t&#237;tulos mais explicativos quando vierem do resultado da consulta. Em <b>Campos </b>escolha a op&#231;&#227;o "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas.NomeFantasia</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">", no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">T&#237;tulo</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> digite "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Nome&nbsp;de&nbsp;Fantasia</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" sem as aspas e clique no bot&#227;o "gravar".
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Ainda em Filtros escolha a op&#231;&#227;o "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">ramosatividade.Descricao</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">", no campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">T&#237;tulo</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> digite "</span><span style="font-family:Courier New; font-size:9pt; color:#000000">Ramo&nbsp;de&nbsp;Atividade</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">" sem as aspas e clique no bot&#227;o "gravar".
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clique na op&#231;&#227;o SQL da barra superior, que aparece na janela do WIzard SQL, para visualizar o comando gerado e o resultado obtido com a execu&#231;&#227;o dele. Se tudo estiver correto clique no bot&#227;o "copiar" para que o comando SQL gerado seja copiado para o campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> da defini&#231;&#227;o do grid.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="57"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Clicando no bot&#227;o "gravar" a janela do WIzard SQL fechar&#225; autom&#225;ticamente salvando as defini&#231;&#245;es do grid SQL </span><span style="font-family:Courier New; font-size:9pt; color:#000000">empresas</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+Perceba que o campo </span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">In&#237;cio na Linha</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> foi preenchido automaticamente com o valor </span><span style="font-family:Courier New; font-size:9pt; color:#000000">2</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, isso indica que a segunda linha da tabela definida no modelo simples &#233; a linha que ser&#225; populada com os valores dos registros oriundos do resultado da consulta. Perceba tamb&#233;m que a caixa da op&#231;&#227;o <span style="font-family:Helvetica,Arial; font-size:10pt; color:#0000FF">Gerar</span></span></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, fica marcada a partir da primeira vez que acessamos a p&#225;gina para gerar um novo grid. Portanto, neste momento voc&#234; dever&#225; clicar no bot&#227;o "gravar".
+<br>
+
+<br>
+Para visualizar  o grid, clique no &#237;cone <img src="view16.png" width="16" height="16" border="0" alt="view16"> ou, se preferir, visualize e at&#233; mesmo edite o modelo que foi gerado automaticamente pelo WI_Builder, basta clicar no &#237;cone <img src="prop.png" width="14" height="13" border="0" alt="prop"> da sess&#227;o <b>Modelo</b>.
+<br>
+
+<br>
+Ap&#243;s termos definido um grid, para fazermos refer&#234;ncia a ele numa p&#225;gina WSP basta usarmos a seguinte sintaxe: </span><span style="font-family:Courier New; font-size:9pt; color:#000000">|grid.&lt;identificador-do-grid&gt;|</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">, onde </span><span style="font-family:Courier New; font-size:9pt; color:#000000">&lt;identificador-do-grid&gt;</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> seria o identificador dado a um grid definido para o projeto.
+<br>
+
+<br>
+A figura abaixo ilustra a visualiza&#231;&#227;o do grid definido anteriormente.
+<br>
+
+<br>
+<img src="bld_grid.png" width="382" height="94" border="0" alt="bld_grid">
+<br>
+
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

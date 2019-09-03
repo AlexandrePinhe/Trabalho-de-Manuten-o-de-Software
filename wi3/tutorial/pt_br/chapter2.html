@@ -1,0 +1,252 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+   <title>Tutorial</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?chapter2.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>Tutorial
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.4',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('2.1',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">O tutorial aqui proposto visa iniciar o desenvolvedor nos conhecimentos b&#225;sicos no desenvolvimento de aplica&#231;&#245;es web utilizando o WebIntegrator, para isso iremos criar uma aplica&#231;&#227;o web que ir&#225; realizar a manuten&#231;&#227;o de um cadastro de empresas. A manuten&#231;&#227;o do cadastro de empresas envolver&#225; tanto a parte de inser&#231;&#227;o de uma nova empresa quanto a parte de atualiza&#231;&#227;o/altera&#231;&#227;o dos dados de empresas j&#225; cadastradas.
+<br>
+
+<br>
+Durante o desenvolvimento de nossa aplica&#231;&#227;o utilizaremos um banco de dados para que possamos armazenar os dados das empresas, logo abaixo segue o script SQL que pode ser utilizado para a montagem da estrutura de tabelas do banco de dados que iremos utilizar. A depender do SGBD que for ser utilizado ser&#227;o necess&#225;rias algumas modifica&#231;&#245;es no script abaixo:
+<br>
+
+<br>
+<span style="font-family:Courier New; font-size:8pt; color:#000000"><b>CREATE</b>&nbsp;<b>TABLE</b>&nbsp;cargos&nbsp;(
+<br>
+&nbsp;&nbsp;Codigo&nbsp;int&nbsp;<b>NOT</b>&nbsp;<b>NULL</b>&nbsp;<b>default</b>&nbsp;0,
+<br>
+&nbsp;&nbsp;Descricao&nbsp;varchar(50)&nbsp;<b>default</b>&nbsp;<b>NULL</b>
+<br>
+);
+<br>
+
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;cargos&nbsp;(Codigo,&nbsp;Descricao)&nbsp;VALUES(11,&nbsp;"Estagi&#225;rio&nbsp;Administrativo");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;cargos&nbsp;(Codigo,&nbsp;Descricao)&nbsp;VALUES(12,&nbsp;"Estagi&#225;rio&nbsp;T&#233;cnico");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;cargos&nbsp;(Codigo,&nbsp;Descricao)&nbsp;VALUES(33,&nbsp;"Programador");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;cargos&nbsp;(Codigo,&nbsp;Descricao)&nbsp;VALUES(32,&nbsp;"Analista");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;cargos&nbsp;(Codigo,&nbsp;Descricao)&nbsp;VALUES(31,&nbsp;"Web&nbsp;Designer");
+<br>
+
+<br>
+<b>CREATE</b>&nbsp;<b>TABLE</b>&nbsp;empresas&nbsp;(
+<br>
+&nbsp;&nbsp;Codigo&nbsp;int&nbsp;<b>NOT</b>&nbsp;<b>NULL</b>&nbsp;auto_increment,
+<br>
+&nbsp;&nbsp;NomeFantasia&nbsp;varchar(50)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;RazaoSocial&nbsp;varchar(50)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Endereco&nbsp;varchar(150)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;CEP&nbsp;varchar(10)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Cidade&nbsp;varchar(40)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;UF&nbsp;char(2)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;RamoAtividade&nbsp;int&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Telefone&nbsp;varchar(15)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Fax&nbsp;varchar(15)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;<b>PRIMARY</b>&nbsp;<b>KEY</b>&nbsp;&nbsp;(Codigo)
+<br>
+);
+<br>
+
+<br>
+
+<br>
+<b>CREATE</b>&nbsp;<b>TABLE</b>&nbsp;empresaspessoas&nbsp;(
+<br>
+&nbsp;&nbsp;CodEmpresa&nbsp;int&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;CodPessoa&nbsp;int&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Cargo&nbsp;int&nbsp;<b>default</b>&nbsp;<b>NULL</b>
+<br>
+);
+<br>
+
+<br>
+
+<br>
+<b>CREATE</b>&nbsp;<b>TABLE</b>&nbsp;pessoas&nbsp;(
+<br>
+&nbsp;&nbsp;Codigo&nbsp;int&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Nome&nbsp;varchar(50)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Telefone&nbsp;varchar(15)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Celular&nbsp;varchar(15)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Email&nbsp;varchar(40)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Foto&nbsp;varchar(50)&nbsp;<b>default</b>&nbsp;<b>NULL</b>
+<br>
+);
+<br>
+
+<br>
+<b>CREATE</b>&nbsp;<b>TABLE</b>&nbsp;ramosatividade&nbsp;(
+<br>
+&nbsp;&nbsp;Codigo&nbsp;int&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Descricao&nbsp;varchar(50)&nbsp;<b>default</b>&nbsp;<b>NULL</b>
+<br>
+);
+<br>
+
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;ramosatividade&nbsp;(Codigo,&nbsp;Descricao)&nbsp;VALUES(11,&nbsp;"Inform&#225;tica&nbsp;(Software&nbsp;House)");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;ramosatividade&nbsp;(Codigo,&nbsp;Descricao)&nbsp;VALUES(12,&nbsp;"Inform&#225;tica&nbsp;(Loja)");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;ramosatividade&nbsp;(Codigo,&nbsp;Descricao)&nbsp;VALUES(21,&nbsp;"Hospitais&nbsp;e&nbsp;Cl&#237;nicas");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;ramosatividade&nbsp;(Codigo,&nbsp;Descricao)&nbsp;VALUES(31,&nbsp;"Escolas&nbsp;e&nbsp;Cursos&nbsp;T&#233;cnicos");
+<br>
+
+<br>
+<b>CREATE</b>&nbsp;<b>TABLE</b>&nbsp;uf&nbsp;(
+<br>
+&nbsp;&nbsp;sigla&nbsp;char(2)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;nome&nbsp;varchar(30)&nbsp;<b>default</b>&nbsp;<b>NULL</b>
+<br>
+);
+<br>
+
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("AC",&nbsp;"Acre");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("AL",&nbsp;"Alagoas");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("AM",&nbsp;"Amazonas");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("AP",&nbsp;"Amap&#225;");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("BA",&nbsp;"Bahia");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("CE",&nbsp;"Cear&#225;");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("DF",&nbsp;"Distrito&nbsp;Federal");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("GO",&nbsp;"Goi&#225;s");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("MA",&nbsp;"Maranh&#227;o");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("MG",&nbsp;"Minas&nbsp;Gerais");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("MS",&nbsp;"Mato&nbsp;Grosso&nbsp;do&nbsp;Sul");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("MT",&nbsp;"Mato&nbsp;Grosso");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("PB",&nbsp;"Para&#237;ba");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("PE",&nbsp;"Pernambuco");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("PI",&nbsp;"Piau&#237;");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("PR",&nbsp;"Paran&#225;");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("RJ",&nbsp;"Rio&nbsp;de&nbsp;Janeiro");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("RO",&nbsp;"Rond&#244;nia");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("RR",&nbsp;"Roraima");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("RS",&nbsp;"Rio&nbsp;Grande&nbsp;do&nbsp;Sul");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("SC",&nbsp;"Santa&nbsp;Catarina");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("SE",&nbsp;"Sergipe");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("SP",&nbsp;"S&#227;o&nbsp;Paulo");
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;uf&nbsp;(sigla,&nbsp;nome)&nbsp;VALUES("TO",&nbsp;"Tocantins");
+<br>
+
+<br>
+<b>CREATE</b>&nbsp;<b>TABLE</b>&nbsp;usuarios&nbsp;(
+<br>
+&nbsp;&nbsp;Login&nbsp;varchar(10)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Senha&nbsp;varchar(10)&nbsp;<b>default</b>&nbsp;<b>NULL</b>,
+<br>
+&nbsp;&nbsp;Nome&nbsp;varchar(50)&nbsp;<b>default</b>&nbsp;<b>NULL</b>
+<br>
+);
+<br>
+
+<br>
+<b>INSERT</b>&nbsp;<b>INTO</b>&nbsp;usuarios&nbsp;(Login,&nbsp;Senha,&nbsp;Nome)&nbsp;VALUES("teste",&nbsp;"teste",&nbsp;"Teste");
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+Durante o andamento do tutorial ser&#227;o mostrados alguns WIzards e outros facilitadores que o WebIntegrator oferece para agilizar rotinas comuns que s&#227;o executadas pelo desenvolvedor durante o desenvolvimento de aplica&#231;&#245;es web.
+<br>
+</span></span></span>
+
+</body>
+</html>
