@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<WIZ>
+  <CONTENT><![CDATA[<table cellpadding='2' cellspacing='0' style='border-bottom:solid 2px black; border-right:solid 2px black'>
+<style type='text/css'>
+td.elegante, th.elegante {font: normal 10pt Arial; border-left: solid 1px gray; 
+  border-top: solid 1px gray}
+th.elegante {font-weight: bold; background-color:#DDDDDD}
+</style>
+<tr>]]></CONTENT>
+</WIZ>
+
