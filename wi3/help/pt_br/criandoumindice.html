@@ -1,0 +1,342 @@
+<html>
+<head>
+   <title>Criando um &Iacute;ndice</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?criandoumindice.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Criando um &#205;ndice
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.2',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.2.2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Criando um &#205;ndice</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Para iniciar a cria&#231;&#227;o de um &#237;ndice defina alguns pontos anteriormente. Primeiro, todo documento antes de ser indexado ele dever&#225; ter o seu conte&#250;do, que sempre deve ser representado por um arquivo, publicado em um diret&#243;rio que chamamos de diret&#243;rio de publica&#231;&#227;o. Sugere-se que o diret&#243;rio de publica&#231;&#227;o de arquivos fique localizado em uma das pastas internas ao projeto. Segundo, defina quais ser&#227;o as propriedades adicionais que um documento ir&#225; possuir.
+<br>
+
+<br>
+Para a cria&#231;&#227;o de um &#237;ndice o desenvolvedor precisar&#225; usar o conector Java </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">br.com.itx.modules.search.WIIndexer</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> juntamente com a defini&#231;&#227;o de algumas vari&#225;veis que servir&#227;o como par&#226;metros para o conector. Logo abaixo segue a lista de vari&#225;veis de ambiente que dever&#227;o estar configuradas para que o &#237;ndice possa ser criado corretamente.
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Vari&#225;vel</b>
+<br>
+</span></div></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Descri&#231;&#227;o</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>tmp.indexName</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">vari&#225;vel que dever&#225; conter o nome do &#237;ndice que ser&#225; criado ou que ter&#225; suas configura&#231;&#245;es lida.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>
+<br>
+tmp.properties</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">vari&#225;vel que dever&#225; conter a listagem separada por v&#237;rgula dos nomes das propriedades adicionais que um documento poder&#225; ter.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>tmp.dirName</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">vari&#225;vel que dever&#225; conter o nome do diret&#243;rio de publica&#231;&#227;o dos arquivos.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>
+<br>
+tmp.mask</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">vari&#225;vel que dever&#225; conter as extens&#245;es de arquivos que ser&#227;o processados pelo &#237;ndice. Se o conte&#250;do dessa vari&#225;vel for vazio o <b>WI Search</b> tentar&#225; indexar qualquer arquivo que for publicado.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>
+<br>
+tmp.parseHTML</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">vari&#225;vel que dever&#225; conter o valor true para habilitar o processamento de conte&#250;do HTML dos documentos quando publicados.
+<br>
+</span></td></tr></table>
+<br>
+
+<br>
+Para exemplificar a cria&#231;&#227;o de um &#237;ndice inicie um projeto no WebIntegrator e crie uma p&#225;gina chamada </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>configindice.wsp</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e coloque a listagem abaixo como sendo c&#243;digo-fonte da p&#225;gina.</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;!DOCTYPE&nbsp;HTML&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;HTML&nbsp;4.0&nbsp;Transitional//EN"&gt;
+<br>
+&lt;HTML&gt;
+<br>
+&lt;HEAD&gt;
+<br>
+&lt;TITLE&gt;Indexador&lt;/TITLE&gt;
+<br>
+&lt;SCRIPT&gt;
+<br>
+function&nbsp;reindexar()&nbsp;{
+<br>
+&nbsp;&nbsp;with&nbsp;(document.forms[0])&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;elements["tmp.acao"].value="update";
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;submit();
+<br>
+&nbsp;&nbsp;}
+<br>
+}
+<br>
+&lt;/SCRIPT&gt;
+<br>
+&lt;/HEAD&gt;
+<br>
+&lt;BODY&gt;&nbsp;
+<br>
+&lt;FORM&nbsp;ACTION="|wi.page.id|.wsp"&nbsp;METHOD="post"&gt;
+<br>
+&lt;INPUT&nbsp;TYPE="hidden"&nbsp;NAME="tmp.acao"&nbsp;VALUE="create"&gt;
+<br>
+&lt;INPUT&nbsp;TYPE="hidden"&nbsp;NAME="tmp.storeContent"&nbsp;VALUE=""&gt;
+<br>
+&lt;INPUT&nbsp;TYPE="hidden"&nbsp;NAME="wi.page.prev"&nbsp;VALUE="|wi.page.id|"&gt;
+<br>
+&lt;TABLE&nbsp;BORDER="1"&nbsp;CELLSPACING="0"&nbsp;CELLPADDING="2"&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&gt;Nome&nbsp;do&nbsp;&#237;ndice:&nbsp;&lt;INPUT&nbsp;TYPE="text"&nbsp;NAME="tmp.indexName"&nbsp;VALUE="|tmp.indexName|"&nbsp;SIZE="50"&gt;&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&gt;Propriedades&nbsp;adicionais:&nbsp;&lt;INPUT&nbsp;TYPE="text"&nbsp;NAME="tmp.properties"&nbsp;VALUE="|tmp.properties|"&nbsp;SIZE="50"&gt;&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;TD&gt;&lt;INPUT&nbsp;TYPE="checkbox"&nbsp;NAME="tmp.parseHTML"&gt;&nbsp;Processar&nbsp;conte&#250;do&nbsp;HTML&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TH&nbsp;BGCOLOR="#C0C0C0"&gt;Fonte&nbsp;de&nbsp;Dados&lt;/TH&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&gt;
+<br>
+&lt;TABLE&nbsp;CELLSPACING="0"&nbsp;CELLPADDING="2"&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&nbsp;ALIGN="left"&nbsp;NOWRAP&gt;&lt;INPUT&nbsp;TYPE="radio"&nbsp;NAME="tmp.dsType"&nbsp;VALUE="dir"&nbsp;CHECKED&gt;&nbsp;Diret&#243;rio&nbsp;de&nbsp;Arquivos&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&nbsp;NOWRAP&gt;Diret&#243;rio&nbsp;de&nbsp;pesquisa:&nbsp;&lt;INPUT&nbsp;TYPE="text"&nbsp;NAME="tmp.dirName"&nbsp;VALUE="|tmp.dirName|"&nbsp;SIZE="70"&gt;&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&gt;Extens&#245;es&nbsp;de&nbsp;arquivos&nbsp;a&nbsp;serem&nbsp;processados:&nbsp;&lt;INPUT&nbsp;TYPE="text"&nbsp;NAME="tmp.mask"&nbsp;VALUE="|tmp.mask|"&gt;&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&nbsp;NOWRAP&gt;&lt;INPUT&nbsp;TYPE="checkbox"&nbsp;NAME="tmp.recursive"&gt;&nbsp;Pesquisar&nbsp;em&nbsp;sub-diret&#243;rios&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;/TABLE&gt;
+<br>
+&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&nbsp;ALIGN="center"&gt;&lt;INPUT&nbsp;TYPE="submit"&nbsp;VALUE="Indexar"&gt;
+<br>
+&lt;INPUT&nbsp;TYPE="button"&nbsp;VALUE="Reindexar"&nbsp;onClick="reindexar();"&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;/TABLE&gt;
+<br>
+&lt;/FORM&gt;
+<br>
+&lt;/BODY&gt;
+<br>
+&lt;/HTML&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">
+<br>
+
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+Para completar a constru&#231;&#227;o da p&#225;gina adicione ao p&#243;s-p&#225;gina dela um evento <a href=javaScript:parent.reDisplay('1.4.5',1,0)>Conector Java</a> com as seguintes configura&#231;&#245;es:</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="134" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="134" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.4.5',1,0)>Condi&ccedil;&atilde;o</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>true</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="134" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.4.5',1,0)>Nome da classe</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>br.com.itx.modules.search.WIIndexer</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Note que o c&#243;digo-fonte faz refer&#234;ncia &#224;quelas vari&#225;veis necess&#225;rias ao conector </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">br.com.itx.modules.search.WIIndexer</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. O importante &#233; que todo projeto do WebIntegrator que precise de uma esquema de indexa&#231;&#227;o e pesquisa que utilize o WI Search precisar&#225; de uma p&#225;gina semelhante a essa para a cria&#231;&#227;o da estrutura inicial do &#237;ndice.
+<br>
+
+<br>
+Para executar essa p&#225;gina clique no &#237;cone Visualizar do WI Builder identificado por uma p&#225;gina com uma lupa (<img src="replaceold.png" width="20" height="22" border="0" alt="replaceold">). Como estudo de caso crie um &#237;ndice onde os documentos publicados ter&#227;o como propriedades adicionais uma data e um t&#237;tulo, para criar a estrutura inicial de um &#237;ndice com essas caracter&#237;sticas siga as informa&#231;&#245;es da tabela abaixo.
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Descri&#231;&#227;o</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+
+<br>
+Nome do &#237;ndice</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Informe aqui o nome do &#237;ndice a ser criado, o restante do tutorial assume que tenha sido definido o nome do &#237;ndice como <b>modelo</b>. Todo &#237;ndice a ser gerado possui um nome que ser&#225; usado para referenciar esse &#237;ndice nas a&#231;&#245;es de indexa&#231;&#227;o, pesquisa e/ou remo&#231;&#227;o atrav&#233;s da vari&#225;vel <span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">tmp.indexName</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Baseado nesse nome ser&#225; criado um diret&#243;rio em </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&lt;projeto&gt;/WEB-INF/index</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> onde ser&#227;o armazenados os arquivos propriet&#225;rios do &#237;ndice.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+
+<br>
+
+<br>
+Propriedades adicionais
+<br>
+</span></span></span></span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">No WI Search um documento &#233; composto de um conte&#250;do e de 0 (zero) ou mais propriedades adicionais. Liste aqui estas propriedes separadas por v&#237;rgula. Como em nosso caso queremos adicionar uma data (dividida em dia, m&#234;s e ano) e um t&#237;tulo, as nossas propriedades adicionais ser&#227;o: ano, mes, dia, titulo. Um detalhe importante &#233; que quando se quer criar &#237;ndices hier&#225;rquicos com o WI Search a ordem em que as propriedades adicionais s&#227;o declaradas s&#227;o levadas em considera&#231;&#227;o onde a primeira tem maior n&#237;vel hier&#225;rquico (preced&#234;ncia) em rela&#231;&#227;o a segunda que tem maior n&#237;vel hier&#225;rquico em rela&#231;&#227;o a terceira e assim sucessavimente.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+Diret&#243;rio de pesquisa
+<br>
+</span></span></span></span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Indique aqui o caminho onde ser&#227;o publicados os arquivos que ter&#227;o seus conte&#250;dos indexados. Geralmente esse diret&#243;rio ser&#225; o mesmo diret&#243;rio a ser configurado como o diret&#243;rio de upload e download do projeto. Para esse caso esse diret&#243;rio ser&#225; <span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&lt;projeto&gt;/documentos</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. 
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Processar conte&#250;do HTML
+<br>
+</span></span></span></span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Marcando essa op&#231;&#227;o o processamento de conte&#250;do HTML ser&#225; ativado para que as tags que fa&#231;am parte dos arquivos sejam retiradas e apenas o conte&#250;do seja indexado. Para nosso caso marque essa op&#231;&#227;o.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+Extens&#245;es de arquivos a serem processados</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Caso se queira que apenas certos tipos de arquivos sejam processados especifique aqui as extens&#245;es desses arquivos separadas por v&#237;rgula, se for deixado em branco o WI Search tentar&#225; indexar qualquer tipo de arquivo. Aqui vamos dizer que apenas arquivos com extens&#227;o <span style="font-family:Courier New; font-size:10pt; color:#000000"><b>htm</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ou </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>html</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> sejam processados, para isso coloque essas extens&#245;es separadas por v&#237;rgula.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Pesquisar em sub-diret&#243;rios
+<br>
+</span></span></span></span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Caso esta op&#231;&#227;o esteja marcada o mecanismo de indexa&#231;&#227;o tamb&#233;m ir&#225; pesquisar por arquivos que estejam em algum sub-diret&#243;rio dentro do diret&#243;rio especificado no campo Diret&#243;rio de pesquisa. 
+<br>
+</span></td></tr></table>
+<br>
+
+<br>
+Ap&#243;s os campos terem sido preenchidos com os valores correspondentes clique no bot&#227;o <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>Indexar</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> para que a estrutura do &#237;ndice seja criada.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

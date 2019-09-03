@@ -1,0 +1,298 @@
+<html>
+<head>
+   <title>dateformat</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?dateformat.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Fun&#231;&#227;o dateformat
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.3',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.3.2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>dateformat</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+A fun&#231;&#227;o <b>DateFormat</b> aceita uma s&#233;rie de par&#226;metros para realizar formata&#231;&#245;es em valores datas/horas e est&#225; registrada internamente pelo WebIntegrator pelo nome </span><span style="font-family:Courier New; font-size:10pt; color:#000000">df</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, a sua sintaxe &#233; a seguinte:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$df(&lt;data&gt;,&nbsp;&lt;tipo-de-formata&#231;&#227;o&gt;,&nbsp;[&lt;par&#226;metros-de-formata&#231;&#227;o&gt;])$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+A depender do tipo de formata&#231;&#227;o escolhido pelo desenvolvedor a fun&#231;&#227;o poder&#225; usar nenhum, um ou v&#225;rios par&#226;metros de formata&#231;&#227;o.
+<br>
+
+<br>
+Para especificar uma m&#225;scara para um valor DATA/HORA usa-se uma string que especifique este padr&#227;o. Neste padr&#227;o, todos os caracteres ASCII s&#227;o reservados como caracteres de padr&#227;o, os quais s&#227;o definidos a seguir:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">S&#237;mbolo&nbsp;&nbsp;Significado&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Apresenta&#231;&#227;o&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exemplo
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">-------&nbsp;&nbsp;-----------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-------
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">G&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;designador&nbsp;de&nbsp;era&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Texto)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AD
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1996
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m&#234;s&nbsp;do&nbsp;ano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Texto&nbsp;&amp;&nbsp;N&#250;mero)&nbsp;&nbsp;Julho&nbsp;&amp;&nbsp;07
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dia&nbsp;do&nbsp;m&#234;s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">h&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hora&nbsp;em&nbsp;am/pm&nbsp;(1~12)&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hora&nbsp;do&nbsp;dia&nbsp;(0~23)&nbsp;&nbsp;&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minutos&nbsp;da&nbsp;hora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;segundos&nbsp;do&nbsp;minuto&nbsp;&nbsp;&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;millisegundos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;978
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dia&nbsp;da&nbsp;semana&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Texto)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quinta-feira
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dia&nbsp;do&nbsp;ano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;189
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dia&nbsp;da&nbsp;semana&nbsp;do&nbsp;m&#234;s&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2&nbsp;(segunda&nbsp;semana)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">w&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;semana&nbsp;do&nbsp;ano&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">W&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;semana&nbsp;do&nbsp;m&#234;s&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;marcador&nbsp;am/pm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Texto)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PM
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">k&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hora&nbsp;do&nbsp;dia&nbsp;(1~24)&nbsp;&nbsp;&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hora&nbsp;em&nbsp;am/pm&nbsp;(0~11)&nbsp;&nbsp;(N&#250;mero)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time&nbsp;Zone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Texto)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pacific&nbsp;Standard&nbsp;Time
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;delimitador&nbsp;de&nbsp;texto&nbsp;&nbsp;(Delimitador)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aspas&nbsp;simples&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(Literal)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+A quantidade de um determinado caractere de padr&#227;o ir&#225; determinar qual ser&#225; o seu formato.
+<br>
+
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>(Texto)</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: quando for especificado 4 ou mais caracteres de padr&#227;o de um determinado s&#237;mbolo ser&#225; usada a forma extendida, menos de 4 caracteres ser&#225; usada a forma curta ou abreviada se existir alguma.
+<br>
+
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>(N&#250;mero)</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: o n&#250;mero m&#237;nimo de d&#237;gitos. N&#250;meros menores s&#227;o preenchidos com zero para essa quantidade. O ano &#233; manipulado especialmente; isto &#233;, se a quantidade de y for 2, o ano ser&#225; truncado para 2 d&#237;gitos.
+<br>
+
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>(Texto &amp; N&#250;mero)</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: tr&#234;s ou mais, use texto, sen&#227;o use o formato num&#233;rico.
+<br>
+
+<br>
+Em seguida, h&#225; alguns exemplos mostrando como usar esses padr&#245;es e quais os resultados.
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">M&#225;scara&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Resultado
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">--------------&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---------
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">yyyy.MM.dd&nbsp;G&nbsp;&#224;s&nbsp;hh:mm:ss&nbsp;z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&gt;&nbsp;&nbsp;1996.07.10&nbsp;AD&nbsp;&#224;s&nbsp;15:08:56&nbsp;PDT
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">EEE,&nbsp;d&nbsp;de&nbsp;MMM&nbsp;d,&nbsp;yy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&gt;&nbsp;&nbsp;Qua,&nbsp;10&nbsp;de&nbsp;Jul,&nbsp;96
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">h:mm&nbsp;a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&gt;&nbsp;&nbsp;12:08&nbsp;PM
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">hh&nbsp;horas&nbsp;a,&nbsp;zzzz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&gt;&nbsp;&nbsp;12&nbsp;horas&nbsp;PM,&nbsp;Pacific&nbsp;Daylight&nbsp;Time
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">"K:mm&nbsp;a,&nbsp;z"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&gt;&gt;&nbsp;&nbsp;0:00&nbsp;PM,&nbsp;PST
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">"yyyyy.MMMMM.dd&nbsp;GGG&nbsp;hh:mm&nbsp;aaa"&nbsp;&nbsp;-&gt;&gt;&nbsp;&nbsp;1996.Julho.10&nbsp;AD&nbsp;12:08&nbsp;PM
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="19"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Logo abaixo segue uma lista com os tipos de formata&#231;&#245;es poss&#237;veis e seus respectivos par&#226;metros de formata&#231;&#227;o.
+<br>
+
+<br>
+
+<br>
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>TIPOS DE FORMATA&#199;&#213;ES</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+<div align="center"><b>EXT</b>
+<br>
+</div>
+<br>
+Escreve por extenso uma data que esteja no padr&#227;o ANSI (yyyy-MM-dd).
+<br>
+
+<br>
+<b>Sintaxe:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$df(&lt;data&gt;,&nbsp;EXT)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<b>Exemplos:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$df(2001-12-20,&nbsp;EXT)$|</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<div align="center"><b>FMT
+<br>
+</b>
+<br>
+</div>Formata uma data para um outro padr&#227;o. O desenvolvedor indica qual o formato em que a data se encontra e qual o novo formato que ela assumir&#225;.
+<br>
+
+<br>
+<b>Sintaxe:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$df(&lt;data&gt;,&nbsp;FMT,&nbsp;&lt;mascaraAtual&gt;,&nbsp;&lt;mascaraNova&gt;)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<b>Exemplos:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$df(2001-12-20,&nbsp;FMT,&nbsp;yyyy-MM-dd,&nbsp;dd/MM/yyyy)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<div align="center"><b>INC</b>
+<br>
+</div>
+<br>
+Adiciona uma quantidade especificada de dias &#224; data passada no par&#226;metro. Tanto a data especificada quanto o resultado estar&#225; no formato ANSI (yyyy-MM-dd). Caso o desenvolvedor queira adicionar &#224; data algo diferente a dias, ele poder&#225; utilizar um par&#226;metro adicional informando a que padr&#227;o refere-se o n&#250;mero do incremento.
+<br>
+
+<br>
+O padr&#227;o do incremento &#233; um daqueles s&#237;mbolos que a fun&#231;&#227;o <b>DateFormat</b> suporta, ou seja, M para meses, d para dias, etc. Se esse par&#226;metro n&#227;o for passado a fun&#231;&#227;o assume que o n&#250;mero do incremento refere-se a dias.
+<br>
+
+<br>
+<b>Sintaxe:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$df(&lt;data&gt;,&nbsp;INC,&nbsp;&lt;n&#250;mero&gt;[,&nbsp;&lt;padr&#227;o&gt;])$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<b>Exemplos:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$df(2001-12-20,&nbsp;INC,&nbsp;10)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$df(2001-10-20,&nbsp;INC,&nbsp;2,&nbsp;M)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<div align="center"><b>DEC</b>
+<br>
+</div>
+<br>
+Decrementa uma quantidade especificada de dias &#224; data passada no par&#226;metro. Tanto a data especificada quanto o resultado estar&#227;o no formato ANSI (yyyy-MM-dd). Caso o desenvolvedor queira decrementar da data algo diferente a dias, ele poder&#225; utilizar um par&#226;metro adicional informando a que padr&#227;o refere-se o n&#250;mero do decremento.
+<br>
+
+<br>
+O padr&#227;o do decremento &#233; um daqueles s&#237;mbolos que a fun&#231;&#227;o DateFormat suporta, ou seja, M para meses, d para dias, etc. Se esse par&#226;metro n&#227;o for passado a fun&#231;&#227;o assume que o n&#250;mero do decremento refere-se a dias.
+<br>
+
+<br>
+<b>Sintaxe:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$df(&lt;data&gt;,&nbsp;DEC,&nbsp;&lt;n&#250;mero&gt;[,&nbsp;&lt;padr&#227;o&gt;])$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<b>Exemplos:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$df(2001-12-20,&nbsp;DEC,&nbsp;10)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$df(2001-10-20,&nbsp;DEC,&nbsp;2,&nbsp;M)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<div align="center"><b>SUB</b>
+<br>
+</div>
+<br>
+Retorna a diferen&#231;a em dias entre duas datas. As datas passadas como par&#226;metro dever&#227;o estar no formato ANSI (yyyy-MM-dd).
+<br>
+
+<br>
+<b>Sintaxe:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$df(&lt;data-mais-nova&gt;,&nbsp;SUB,&nbsp;&lt;data-mais-antiga&gt;)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<b>Exemplos:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$df(2001-12-20,&nbsp;SUB,&nbsp;2000-12-20)$|
+<br>
+&nbsp;
+<br>
+<div align="center"></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>WDAY</b>
+<br>
+</div>
+<br>
+Retorna o dia da semana. O primeiro dia da semana &#233; o domingo (1) e o &#250;ltimo &#233; o s&#225;bado(7).
+<br>
+
+<br>
+<b>Sintaxe:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$df(&lt;data&gt;,&nbsp;WDAY,&nbsp;&lt;mascaraAtual&gt;)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<b>Exemplos:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$df(2001-12-20,&nbsp;WDAY,&nbsp;yyyy-MM-dd)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

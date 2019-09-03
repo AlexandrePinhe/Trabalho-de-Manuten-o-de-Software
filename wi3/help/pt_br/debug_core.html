@@ -1,0 +1,74 @@
+<html>
+<head>
+   <title>...fazer o debug da l&oacute;gica de um pr&eacute; ou p&oacute;s p&aacute;gina</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?debug_core.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...fazer o debug da l&#243;gica de um pr&#233; ou p&#243;s p&#225;gina
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.16',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.10',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...fazer o debug da l&#243;gica de um pr&#233; ou p&#243;s p&#225;gina</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+&#201; comum em algumas situa&#231;&#245;es ser necess&#225;rio fazer uma an&#225;lise detalhada da l&#243;gica que um pr&#233; ou p&#243;s p&#225;gina est&#225; executando vendo como se encontrava o contexto de vari&#225;veis antes e depois de sua execu&#231;&#227;o. Para realizar essa tarefa o desenvolvedor pode gravar uma vari&#225;vel pvt.debug.core ou tmp.debug.core com o valor <i>true</i>  que  ir&#225; gerar o debug no diret&#243;rio de logs do projeto. Caso o desenvolvedor n&#227;o deseje que todas as vari&#225;veis sejam exportadas ele pode usar pvt.core.filter para definir o que deve ser exportado.
+<br>
+
+<br>
+Quando uma requisi&#231;&#227;o &#233; feita ao WI e existe a vari&#225;vel pvt.debug.core com valor true &#233; ent&#227;o criada uma pasta descrita abaixo:
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">debug-[hora:minuto:segundo da requisi&#231;&#227;o]-[id da sess&#227;o]</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+Dentro da pasta haver&#225; um arquivo conforme descrito abaixo para cada elemento de l&#243;gica do pr&#233; ou p&#243;s p&#225;gina processado:
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">element-[hora:minuto:segundo da execu&#231;&#227;o do elemento]-[tipo do elemento de l&#243;gica]_[1 ou 2].txt</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+onde o txt terminado por 1 informa as vari&#225;veis antes da l&#243;gica ser executada e 2 depois de ser executada.
+<br>
+
+<br>
+Dentro do arquivo txt pode ser visto como t&#237;tulo a descri&#231;&#227;o do componente de l&#243;gica do WI e o conte&#250;do de todas as vari&#225;veis do contexto.
+<br>
+</span></span></span>
+
+</body>
+</html>

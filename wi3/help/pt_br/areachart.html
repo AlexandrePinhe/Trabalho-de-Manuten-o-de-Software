@@ -1,0 +1,158 @@
+<html>
+<head>
+   <title>Gr&aacute;fico de &aacute;rea</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?areachart.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Gr&#225;fico de &#225;rea
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.4.3',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Gr&#225;fico de &#225;rea</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O nome do conector respons&#225;vel pela gera&#231;&#227;o de gr&#225;ficos de &#225;rea &#233; </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.modules.chart.AreaChart</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. O gr&#225;fico de &#225;rea gerado por esse conector assume que o objeto que servir&#225; como dataset cont&#233;m a informa&#231;&#245;a de uma ou mais categorias sendo que cada uma dessas categorias pode possuir uma ou mais s&#233;ries de dados.
+<br>
+
+<br>
+O conector </span><span style="font-family:Courier New; font-size:10pt; color:#000000">AreaChart</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> assume que o objeto que ele usar&#225; para popular o gr&#225;fico esteja com as informa&#231;&#245;es das categorias dispostas ou em linha ou em coluna.
+<br>
+
+<br>
+Quando a disposi&#231;&#227;o dos dados das categorias est&#227;o em linha (<span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">ver exemplo abaixo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) o conector </span><span style="font-family:Courier New; font-size:10pt; color:#000000">AreaChart</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> faz o seguinte procedimento: os valores da primeira coluna ser&#227;o usados como r&#243;tulos das categorias e os nomes das colunas a partir da segunda coluna ser&#227;o usados como r&#243;tulos para a legenda das s&#233;ries. Perceba que nesse caso os dados para cada uma das categorias est&#227;o na linha do nome da categoria.
+<br>
+
+<br>
+Por exemplo, o gr&#225;fico de linhas abaixo foi gerado a partir de um objeto onde as categorias est&#227;o sendo representadas pelos munic&#237;pios Abar&#233;, Aba&#237;ra, Acajutiba, Adustina, Aiquara, Alagoinhas e Alcoba&#231;a e para cada um desses munic&#237;pios (categorias) h&#225; uma s&#233;rie de dados indicada pelos r&#243;tulos "</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&#193;rea&nbsp;plantada</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">" e "</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&#193;rea&nbsp;colhida</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">".
+<br>
+
+<br>
+<div align="center"><img src="areas.png" width="620" height="460" border="0" alt="areas">
+<br>
+</div>
+<br>
+O objeto usado para gerar o gr&#225;fico acima possui a estrutura exibida abaixo. Perceba que os dados das s&#233;ries para cada uma das categorias (munic&#237;pios) est&#227;o dispostos em linha e os nomes das colunas foram usados como legenda.
+<br>
+
+<br>
+<div align="center"><img src="dados_areas.png" width="502" height="191" border="0" alt="dados_areas">
+<br>
+</div>
+<br>
+Ent&#227;o um objeto a ser usado como </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>dataset</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> para gera&#231;&#227;o de gr&#225;fico de linhas com disposi&#231;&#227;o dos dados das categorias em linha deve ter o seguinte padr&#227;o:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">   1. Os valores da primeira coluna do objeto cont&#234;m os nomes dos r&#243;tulos para as categorias.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">   2. Os nomes das colunas a partir da segunda coluna do objeto indicam os nomes dos r&#243;tulos das s&#233;ries das categorias. &#201; com base nesses nomes que ser&#225; gerada a legenda para o gr&#225;fico.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">   3. Os valores das s&#233;ries para cada uma das categorias dever&#227;o estar dispostos numa &#250;nica linha.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Quando a disposi&#231;&#227;o dos dados das categorias est&#227;o em coluna (<span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">ver exemplo abaixo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) o conector </span><span style="font-family:Courier New; font-size:10pt; color:#000000">AreaChart</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> faz o seguinte procedimento: os valores da primeira coluna ser&#227;o usados como r&#243;tulos das categorias, os valores da segunda coluna ser&#227;o usados como r&#243;tulos das s&#233;ries e os valores da terceira coluna ser&#227;o usados como os dados correspondente ao par (categoria, s&#233;rie) formado pelo valor das duas colunas anteriores.
+<br>
+
+<br>
+Por exemplo, o gr&#225;fico de linhas abaixo foi gerado a partir de um objeto onde as categorias est&#227;o sendo representadas pelos munic&#237;pios listados na primeira coluna e para cada um desses munic&#237;pios (categorias) h&#225; uma s&#233;rie de dados indicada pelos anos onde se calcula a &#225;rea colhida.
+<br>
+
+<br>
+<div align="center"><img src="areas2.png" width="620" height="461" border="0" alt="areas2">
+<br>
+</div>
+<br>
+O objeto usado para gerar o gr&#225;fico acima possui a estrutura exibida abaixo. Perceba que os dados das s&#233;ries para cada uma das categorias (munic&#237;pios) est&#227;o dispostos nas colunas.
+<br>
+
+<br>
+<div align="center"><img src="dados_areas2.png" width="502" height="479" border="0" alt="dados_areas2">
+<br>
+</div>
+<br>
+Ent&#227;o um objeto a ser usado como dataset para gera&#231;&#227;o de gr&#225;fico de linhas com disposi&#231;&#227;o dos dados das categorias em coluna deve ter o seguinte padr&#227;o:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">   1. Os valores da primeira coluna do objeto cont&#234;m os nomes dos r&#243;tulos para as categorias.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">   2. Os valores da segunda coluna do obejto cont&#234;m os nomes dos r&#243;tulos para as s&#233;ries.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">   3. Os valores da terceira coluna do objeto cont&#234;m os valores dos dados correspondente ao par (categoria, s&#233;rie) formado pelas coluna anteriores.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O conector </span><span style="font-family:Courier New; font-size:10pt; color:#000000">AreaChart</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> assume como padr&#227;o que os dados das categorias est&#227;o dispostos em linha no objeto, mas esse valor pode ser alterado setando a propriedade </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.chart.bar.categoryDatasetDisposition</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> atrav&#233;s do campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Disposi&#231;&#227;o&nbsp;dos&nbsp;dados&nbsp;das&nbsp;categorias&nbsp;no&nbsp;objeto</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Al&#233;m das propriedades comuns a todos os gr&#225;ficos, os gr&#225;ficos de &#225;rea possuem algumas outras propriedades adicionais.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Orienta&#231;&#227;o&nbsp;do&nbsp;plot</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica a orienta&#231;&#227;o que o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>plot</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> utilizar&#225; para desenhar o gr&#225;fico. Os valores poss&#237;veis s&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">vertical</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">horizontal</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, sendo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">vertical</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> o valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>default</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">R&#243;tulo&nbsp;do&nbsp;eixo&nbsp;X</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica o nome do r&#243;tulo que ser&#225; dado ao eixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">X</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">R&#243;tulo&nbsp;do&nbsp;eixo&nbsp;Y</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica o nome do r&#243;tulo que ser&#225; dado ao eixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">Y</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Disposi&#231;&#227;o&nbsp;dos&nbsp;dados&nbsp;das&nbsp;categorias&nbsp;no&nbsp;objeto</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica como est&#227;o dispostos os dados de cada uma das categorias dentro do objeto. Os valores poss&#237;veis s&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">line</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, indicando que os dados das categorias est&#227;o dispostos em linha no objeto, e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">column</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, indicando que os dados das categorias est&#227;o dispostos em coluna no obejto. O valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>default</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> &#233; </span><span style="font-family:Courier New; font-size:10pt; color:#000000">line</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

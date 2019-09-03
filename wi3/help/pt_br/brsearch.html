@@ -1,0 +1,192 @@
+<html>
+<head>
+   <title>BR Search</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?brsearch.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>BR Search
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.1.7.2',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>BR Search</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O <b>BR/Search</b> &#233; um produto voltado para o gerenciamento de informa&#231;&#245;es n&#227;o estruturadas. Trata-se de um banco de dados onde o tipo de dado "Texto Corrido" &#233; tratado com o mesmo n&#237;vel de import&#226;ncia que qualquer outro campo chave, tradicionalmente utilizado nos bancos de dados que suportam o modelo relacional, embora n&#227;o siga tal modelo. Em virtude disso, usa-se uma sintaxe propriet&#225;ria para recupera&#231;&#227;o e inser&#231;&#227;o de informa&#231;&#245;es.
+<br>
+
+<br>
+Para recuperar todos os documentos que constam na base de dados, a sintaxe &#233;: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">@docn</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Para listar apenas os documentos cujo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">ID</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> seja maior do que </span><span style="font-family:Courier New; font-size:10pt; color:#000000">20</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, a sintaxe &#233;: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">@docn&nbsp;&gt;&nbsp;20</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Em geral, a sintaxe usada para recuperar documentos baseados em </span><span style="font-family:Courier New; font-size:10pt; color:#000000">ID</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> &#233;:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">@docn&lt;condi&#231;&#227;o&gt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+
+<br>
+Para realizar a pesquisa por um determinado texto na base basta digitar o texto a ser pesquisado, caso queira que a pesquisa seja feita em apenas um determinado par&#225;grafo especifique-o entre colchetes. A sintaxe &#233; a seguinte:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;texto&gt;&nbsp;[&lt;par&#225;grafo&gt;]</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+
+<br>
+Existe uma fun&#231;&#227;o que retorna a meta-estrutura de uma base, e &#233; ela:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$wi.listmetastruct$|
+<br>
+</div></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+Voc&#234; tamb&#233;m poder&#225; fazer buscas com operadores </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>booleanos</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> permitindo que termos sejam combinados por meio de operadores l&#243;gicos. Exemplo:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">caf&#233;&nbsp;[title]&nbsp;AND&nbsp;@docn&nbsp;&gt;&nbsp;20&nbsp;AND&nbsp;NOT&nbsp;leite&nbsp;[title]
+<br>
+</div></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+A express&#227;o acima solicita que seja feita uma busca pela palavra </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>caf&#233;</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> no par&#225;grafo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">title</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cujos </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">IDs</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> dos documentos sejam maior do que </span><span style="font-family:Courier New; font-size:10pt; color:#000000">20</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e que a palavra </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>leite</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> n&#227;o apare&#231;a no par&#225;grafo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">title</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Para personalizar a consulta existem alguns par&#226;metros que podem ser utilizados entre chaves no inicio da express&#227;o e separados por "ponto e virgula" e s&#227;o eles:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:9pt; color:#000000"><span style="font-family:Courier New; font-size:9pt; color:#FF0000">hlon&nbsp;ou&nbsp;highlighton&nbsp;-&nbsp;define&nbsp;o&nbsp;inicio&nbsp;do&nbsp;highlight.&nbsp;Ex:&nbsp;&lt;b&gt;&nbsp;
+<br>
+hloff&nbsp;ou&nbsp;highlightoff&nbsp;-&nbsp;define&nbsp;o&nbsp;final&nbsp;do&nbsp;highlight.&nbsp;Ex:&nbsp;&lt;/b&gt;&nbsp;
+<br>
+subparon&nbsp;-&nbsp;define&nbsp;o&nbsp;que&nbsp;dever&#225;&nbsp;vir&nbsp;antes&nbsp;de&nbsp;cada&nbsp;subparagrafo&nbsp;(s&#243;&nbsp;funciona&nbsp;no&nbsp;texto.subpars).&nbsp;Ex:&nbsp;&lt;b&gt;
+<br>
+subparoff&nbsp;-&nbsp;define&nbsp;o&nbsp;que&nbsp;dever&#225;&nbsp;vir&nbsp;ap&#243;s&nbsp;cada&nbsp;subparagrafo&nbsp;(s&#243;&nbsp;funciona&nbsp;no&nbsp;texto.subpars).&nbsp;Ex:&nbsp;&lt;/b&gt;
+<br>
+sort&nbsp;-&nbsp;define&nbsp;a&nbsp;ordena&#231;&#227;o&nbsp;utilizada&nbsp;nos&nbsp;paragrafos.&nbsp;Ex:&nbsp;PAR1,PAR2,-PAR3&nbsp;
+<br>
+plural&nbsp;-&nbsp;define&nbsp;o&nbsp;uso&nbsp;ou&nbsp;n&#227;o&nbsp;de&nbsp;plural&nbsp;(default&nbsp;false).&nbsp;Ex:&nbsp;true&nbsp;ou&nbsp;false&nbsp;
+<br>
+adjacentlevel&nbsp;-&nbsp;define&nbsp;o&nbsp;n&#237;vel&nbsp;de&nbsp;adjac&#234;ncia&nbsp;da&nbsp;consulta.&nbsp;Ex:&nbsp;3&nbsp;
+<br>
+thesaurus&nbsp;-&nbsp;define&nbsp;o&nbsp;uso&nbsp;de&nbsp;um&nbsp;thesaurus.&nbsp;Ex:&nbsp;teste&nbsp;ou&nbsp;teste&nbsp;[BT,NT]&nbsp;
+<br>
+database&nbsp;-&nbsp;define&nbsp;um&nbsp;database&nbsp;a&nbsp;ser&nbsp;consultado&nbsp;(default&nbsp;o&nbsp;da&nbsp;conex&#227;o).&nbsp;Ex:&nbsp;SAMP</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&nbsp;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Para ativar o destaque das palavras pesquisadas defina as propriedades </span><span style="font-family:Courier New; font-size:10pt; color:#000000">hlon</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">hloff</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com as tags que ser&#227;o usadas para marcar o in&#237;cio e o fim do destaque, a sintaxe &#233; a seguinte:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">{&nbsp;hlon=&lt;tag-inicial&gt;&nbsp;;&nbsp;hloff=&lt;tag-final&gt;&nbsp;}&nbsp;&lt;texto-de-pesquisa&gt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Por exemplo, para que a palavra </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>leite</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> venha destacada em negrito no resultado de uma pesquisa poderia-se usar o seguinte:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">{&nbsp;hlon=&lt;b&gt;&nbsp;;&nbsp;hloff=&lt;/b&gt;&nbsp;}&nbsp;leite</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Um consulta ao BRSearch cria um vetor de subpar&#225;grafos para cada par&#225;grado, baseando-se em seu nome e com suporte ao Grid ObjetoWI:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">Par&#225;grafo&nbsp;"Texto":
+<br>
+texto&nbsp;=&nbsp;valor&nbsp;do&nbsp;paragrafo
+<br>
+texto.subpars&nbsp;=&nbsp;valor&nbsp;de&nbsp;todos&nbsp;os&nbsp;subparagrafos&nbsp;(utiliza&nbsp;subpar&nbsp;on/off)
+<br>
+texto.subpars.size()&nbsp;=&nbsp;quantidade&nbsp;de&nbsp;subparagrafos
+<br>
+texto.subpars[1].value&nbsp;=&nbsp;valor&nbsp;de&nbsp;um&nbsp;determinado&nbsp;subparagrafo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+&#201; interessante para o desenvolvedor saber que a &#250;ltima consulta realizada ao BRSearch &#233; armazenada no WI, sendo assim existe uma forma din&#226;mica de recuperar um determinado </span><span style="font-family:Courier New; font-size:10pt; color:#000000">docn</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (detalhe) que &#233; utilizando um gravar num objeto WI com a fun&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">|$wi.brs(|tmp.docn|)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e tamb&#233;m passar&#227;o a existir "</span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.brs.first,&nbsp;wi.brs.last,&nbsp;wi.brs.next,&nbsp;wi.brs.prev</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">"
+<br>
+
+<br>
+Para realizar inser&#231;&#245;es na base de dados usa-se uma sintaxe semelhante &#224;quela usada em instru&#231;&#245;es SQL:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">DELETE&nbsp;WHERE&nbsp;@docn=|tmp.id|
+<br>
+
+<br>
+INSERT&nbsp;VALUES&nbsp;(|tmp.ti|,|tmp.tx|,|tmp.cr|)
+<br>
+INSERT&nbsp;(ti,tx,cr)&nbsp;VALUES&nbsp;(|tmp.ti|,|tmp.tx|,|tmp.cr|)
+<br>
+INSERT&nbsp;(ti&nbsp;longo,tx,cr&nbsp;longo)&nbsp;VALUES&nbsp;(|tmp.ti|,|tmp.tx|,|tmp.cr|)
+<br>
+INSERT&nbsp;(ti_longo,tx,cr_longo)&nbsp;VALUES&nbsp;(|tmp.ti|,|tmp.tx|,|tmp.cr|)
+<br>
+
+<br>
+UPDATE&nbsp;VALUES&nbsp;(|tmp.ti|,|tmp.tx|,|tmp.cr|)&nbsp;WHERE&nbsp;@docn=|tmp.id|
+<br>
+UPDATE&nbsp;(ti,tx,cr)&nbsp;VALUES&nbsp;(|tmp.ti|,|tmp.tx|,|tmp.cr|)&nbsp;WHERE&nbsp;@docn=|tmp.id|
+<br>
+UPDATE&nbsp;(ti&nbsp;longo,tx,cr&nbsp;longo)&nbsp;VALUES&nbsp;(|tmp.ti|,|tmp.tx|,|tmp.cr|)&nbsp;WHERE&nbsp;@docn=|tmp.id|
+<br>
+UPDATE&nbsp;(ti_longo,tx,cr_longo)&nbsp;VALUES&nbsp;(|tmp.ti|,|tmp.tx|,|tmp.cr|)&nbsp;WHERE&nbsp;@docn=|tmp.id|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+onde </span><span style="font-family:Courier New; font-size:10pt; color:#000000">ti_longo</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> &#233; o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>input&nbsp;name</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> sem "</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>.</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">" e "</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>:</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">"
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>
