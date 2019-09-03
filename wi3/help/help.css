@@ -1,0 +1,9 @@
+BODY {font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 12px; background-color: #fff; color: #000; background-image: url(../images/back.gif)}
+TABLE {font-size: 12px}
+TH {background-color: LightGrey}
+PRE {color: Red; font-family: Courier New; font-size: 12px}
+HR {height: 1px; background-color: #008}
+TABLE.button {background-image: url(../images/botao.gif); background-repeat:no-repeat; background-position:50% 50%}
+TD.button {text-align:center; font: bold 8pt Verdana; color:#008; cursor:pointer; cursor:hand;}
+.code {background-color: LightGrey}
+.indent {padding-left: 25px}

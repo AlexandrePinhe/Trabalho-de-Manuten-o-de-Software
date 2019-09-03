@@ -1,0 +1,48 @@
+/* tabelas dos grupos */
+TABLE.group1 {background: blue; width:600px;}
+TABLE.group2 {background: yellow; width:500px;}
+TABLE.group3 {background: red; width:500px;}
+TABLE.group4 {background: white; width:500px;}
+TABLE.group5 {background: cyan; width:500px;}
+
+/* tabela dos detalhes */
+TABLE.detail {background: #ccc; width:500px; margin-top:5px;  margin-bottom:5px; border: solid 2px blue}
+
+/* identificador dos títulos (nome das colunas) */
+.label1, .label2,.label3, .label4,.label5, .label6 {font: normal 8pt Verdana; }
+.label1 {color: yellow}
+.label2 {color: red}
+
+/* títulos dos grupos (conteúdo das colunas de título)*/
+.title1 {font: bold 12pt Verdana; display:block; margin-bottom:10px}
+.title2,.title3,.title4,.title5,.title6 {font: bold 10pt Verdana; margin-bottom:10px}
+
+/* células da tabela dos detalhes (podem ser configuradas independentemente: Data=dados, Header=cabeçalho) */
+TD.detailData1,TD.detailData2 ,TD.detailData3 ,TD.detailData4 ,TD.detailData5,TD.detailData6,  
+TD.detailHeader1,TD.detailHeader2 ,TD.detailHeader3 ,TD.detailHeader4 ,TD.detailHeader5,TD.detailHeader6  
+    {font: normal 10pt Verdana; color: blue; width:100px}
+TD.detailHeader5  {color: yellow; background-color:blue; font-weight: bold}
+TD.detailData5  {color: blue; background-color:yellow; font-weight: bold}
+TD.detailData6,TD.detailHeader6 {color: navy; background-color:white; width:500px}
+TD.detailData4 {color: magenta}
+TD.detailData6 {color: red}
+
+/* tabela dos resultados da sumarização */
+TABLE.footer1 {background: green}
+TABLE.footer2 {background: cyan;}
+TABLE.footer3 {background-color: yellow}
+TABLE.footer4 {background: red;}
+TABLE.footer5 {background: aqua;}
+TABLE.footer6 {background: yellow;}
+
+/* célula onde está a tabela de sumarização (segue a ordem dos grupos)*/
+TD.footer1 {background-color: navy; text-align:left}
+TD.footer2 {background-color: gold; text-align:center; border-bottom:solid blue}
+TD.footer3 {background-color: pink;text-align:right; font: normal 8pt Verdana;}
+
+/* células da tabela de sumarização (título e conteúdo) */
+TD.footerHeader1,TD.footerHeader2,TD.footerHeader3,TD.footerHeader4,TD.footerHeader5,TD.footerHeader6, 
+TD.footerData1,TD.footerData2,TD.footerData3,TD.footerData4,TD.footerData5,TD.footerData6 
+   {font: normal 10pt Verdana;color: navy; background-color:white; text-align:right;}
+TD.footerData1,TD.footerData2,TD.footerData3,TD.footerData4,TD.footerData5,TD.footerData6 
+   {font-weight: bold; text-align:right; width:100px}
