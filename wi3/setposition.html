@@ -1,0 +1,64 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+<title>WIZard - Posicionamento</title>
+<LINK REL=StyleSheet HREF="builder.css" TYPE="text/css">
+<script type="text/javascript" src="builder.js"></script>
+<script type="text/javascript">
+function init(){
+  var pos = getCookie("WIZPosition")
+  if (pos) {
+     chkPos = document.forms[0].position
+     for (var i=0; i<chkPos.length; i++) {
+       chkPos[i].checked = chkPos[i].value == pos;
+     }
+  }
+  var size = getCookie("WIZSize");
+  if (size) document.forms[0]["size"].value = size;
+  window.focus();
+}
+function saveCookies() {
+  chkPos = document.forms[0].position
+  for (var i=0; i<chkPos.length; i++) {
+    if(chkPos[i].checked) setCookie("WIZPosition", chkPos[i].value);
+  }
+  setCookie("WIZSize", document.forms[0]["size"].value);
+  opener.top.location.reload();
+  self.close();
+}
+</script>
+</head>
+<body onload="init()" style='margin: 0'>
+<form method="post">
+<TABLE cellspacing="0" cellpadding="5">
+  <tr><td class='title'>Posicionamento da janela de propriedades</td></tr>
+  <tr><td>&nbsp;</td></tr>
+  <tr><td class= 'txtC'>
+    <INPUT name="position" type="radio" checked="checked" value="right"> Direita
+    <INPUT name="position" type="radio" value="left"> Esquerda
+    <INPUT name="position" type="radio" value="top"> Acima
+    <INPUT name="position" type="radio" value="bottom"> Abaixo
+  </td></tr>
+  <tr><td class="txtC">Tamanho: <input name='size' size="5"></td></tr>
+  <tr><td align="center"><button type="button" class="button" onmouseover='this.className="buttonOver"' onmouseout='this.className="button"' onclick="saveCookies()">ok</button></td></tr>
+</TABLE>
+</form>
+</body>
+</html>

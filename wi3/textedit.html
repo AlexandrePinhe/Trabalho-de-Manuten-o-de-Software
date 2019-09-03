@@ -1,0 +1,72 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+<title>WebIntegrator</title>
+<LINK REL=StyleSheet HREF="builder.css" TYPE="text/css">
+<link rel="stylesheet" type="text/css" href="codemirror/wi.css"/>
+<script type="text/javascript" src="builder.js"></script>
+<script language="Javascript" src="codemirror/js/codemirror.js"></script>
+<script language="Javascript" src="codemirror/wi.js"></script>
+</head>
+<body onload="setTimeout('init()',500)" style="overflow: hidden"> 
+<form>
+<div id="textDiv" class="CodeMirror-border" style="width: 99%">
+<textarea id="text" name="text" rows="23" cols="75" wrap="off"
+  class="CodeMirror-textarea"></textarea>
+</div>
+    <table align="center"  cellpadding="0" cellspacing="0" width="90%" height="20"
+    style="margin-top: 5px">
+            <tr><td align="center">
+             <button type="button" class="button" onclick="save()">Gravar</button></a>
+          </td><td align="center">
+             <button type="button" class="button" onclick="self.close()">Cancelar</button></a>
+          </td></tr>
+      </table>
+</form>
+
+<script type="text/javascript">
+var field;
+window.onerror = new Function("return true;");
+// window.onresize = resizeTextArea ; Não funciona com o codemirror
+resizeTextArea();
+function init() {
+   field = opener.fieldEdit;
+   document.forms[0]['text'].value = field.value;
+   setTimeout("htmlCodeMirror('text')", 200);
+}
+
+function resizeTextArea() {
+	 if (window.outerHeight) document.forms[0].text.style.height = window.innerHeight - 70; 
+	 else document.forms[0].text.style.height = document.body.offsetHeight - 70; 
+}
+
+function save() {
+   var txt = cmEditor.getCode();
+   if (field.tagName == "INPUT") {
+       txt = txt.replace(/\n/gi, ' ').replace(/\r/gi,'');
+   }
+   field.value = txt;
+   opener.closeWindow = false;
+   field.form.submit();
+   self.close();
+}
+</script>
+</body>
+</html>

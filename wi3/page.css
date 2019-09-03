@@ -1,0 +1,26 @@
+body    {background:#ffffff; text:#0000ff; link:#0000ff; vlink:#0000ff; alink:#000080}
+
+.number { text-align:right; padding-right:4px }
+.label , .text
+				{text-align:left; FONT: 8pt  Verdana,Arial;  vertical-align:bottom; color:#000088;} 
+
+.title  {FONT: bold 12pt Verdana,Arial; text-align:center; color:#000088; 
+          background-color:#ffa; border: thin solid #d0b870;}
+
+.text  {FONT: bold 10pt Verdana,Arial;}
+
+.center {text-align:center; FONT: bold 10pt Verdana,Arial; vertical-align:top; color:#000088;} 
+
+a,a:LINK,a:VISITED,a:ACTIVE
+			{font:normal 10pt Verdana;color: #000088; text-decoration: none;}
+
+a.label,a.label:LINK,a.label:VISITED,a.label:ACTIVE,
+			{font:normal 8pt Verdana;}
+
+a:HOVER {color: #d0b870; text-decoration: underline;}
+
+FORM.frm {display:inline;}
+
+table {width:100%}
+
+td.label {padding-top: 10px}

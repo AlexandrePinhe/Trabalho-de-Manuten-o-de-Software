@@ -1,0 +1,49 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<HTML>
+<HEAD>
+  <LINK REL="StyleSheet" TYPE="text/css" HREF="builder.css" />
+  <TITLE>Wizard para driver JDBC</TITLE>
+</HEAD>
+<body onload='focus()'>
+<table><tr>
+<td class="title">Driver JDBC</td></tr></table>
+<table><tr>
+<td>
+<form>
+<table><tr>
+<td class="label">Servidor:</td>
+</tr><tr>
+<td><INPUT NAME="host" /></td></tr></table>
+</td>
+<td>
+<table><tr>
+<td class="label">Base de dados:</td>
+</tr><tr>
+<td><INPUT size='30' NAME="db" /></td></tr></table>
+</td>
+</tr></table>
+</form>
+<table align="center"  width="90%" ><tr>
+<td align="center">
+<button id='save' name='save' onmouseover='this.className="buttonOver"' onmouseout='this.className="button"' 
+  type="button" class="button" 
+  onclick="opener.writeTemplate(document.forms[0].host.value, document.forms[0].db.value); self.close()">gravar</button></td>
+</body>
+</html>

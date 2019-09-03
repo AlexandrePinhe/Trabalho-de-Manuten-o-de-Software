@@ -1,0 +1,169 @@
+body {
+	background: #f9f9f9;
+	text: #0000ff;
+	link: #0000ff;
+	vlink: #0000ff;
+	alink: #000080
+}
+
+//
+BODY {
+	scrollbar-base-color: #ddd;
+}
+
+.label,.labelC,.title,.txtC,.txtR,.texto,.textoC,.txtBold,.textoBold,.txtTop
+	{
+	text-align: left;
+	FONT: 8pt Tahoma, Arial;
+	vertical-align: bottom;
+	color: #000;
+}
+
+.labelC {
+	vertical-align: center;
+}
+
+.title,.titleTop {
+	font-size: 8pt;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+	/* background-image: url(images/backgr.jpg); */
+	background: #ab2929;
+	height: 21px;
+	vertical-align: middle;
+	/* border-left: 1px outset #eee;
+	border-right: 2px ridge #eee; */
+}
+
+
+.txtBold,
+.textoBold { font-weight: bold; color: #000; }
+
+.txtC,
+.textoC { text-align: center; }
+
+.txtR { text-align: right; }
+
+.texto,
+.textoC,
+.textoBold,
+.txtTop { font-size: 10pt; }
+
+.txtTop { vertical-align: top; }
+
+.name {
+	font: Bold 8pt Verdana;;
+	color: navy;
+	text-align: center;
+}
+
+/* CLASSES WIDTH */
+
+.w70 { width: 70 }
+.w150 { width: 150 }
+.w180 {	width: 180 }
+.w250 {	width: 250 }
+.w400 {	width: 400 }
+
+/* CLASSES LINK */
+
+a,
+a:LINK,
+a:VISITED,
+a:ACTIVE,
+a.label,
+a.label:LINK,
+a.label:VISITED,
+a.label:ACTIVE,
+a.Type,
+a.Type:LINK,
+a.Type:VISITED,
+a.Type:ACTIVE {
+	font: normal 8pt Tahoma;
+	color: #000;
+	text-decoration: none;
+}
+
+a:HOVER,
+a.Type:HOVER {
+	color: #cf3232;
+	text-decoration: underline;
+}
+
+a.Var:HOVER {
+	background-color: #ccc;
+	text-decoration: underline;
+	color: #000;
+	cursor: help;
+}
+
+a.Type,a.Type:LINK,
+a.Type:VISITED,
+a.Type:ACTIVE {
+	font-weight: Bold;
+	margin-left: 0px
+}
+
+a.Sub,a.Sub:LINK,
+a.Sub:VISITED,
+a.Sub:ACTIVE { margin-left: 10px }
+
+a.Sel,
+a.Sel:LINK,
+a.Sel:VISITED,
+a.Sel:ACTIVE {
+	font-weight: bold;
+	color: #000088;
+	background-color: #d0b870;
+	margin-left: 10px
+}
+
+a.tbar,
+a.tbar:HOVER {
+	width: 23px;
+	height: 23px;
+	padding: 2px;
+}
+
+a.tbar:HOVER {
+	border: 1px solid #992525;
+	background-color: white;
+	padding: 1px;
+}
+
+table { width: 100% }
+
+/* BUTTON */
+
+#buttons { position: absolute; bottom:10px; left: 0; padding-top: 5px }
+
+.button,.buttonOver {
+	width: 100px;
+	height: auto;
+	padding: 2px 0;
+	/* background-image: url(./images/botao.gif);
+	white-space: nowrap;
+	background-repeat: no-repeat;
+	background-position: 50% 50%; */
+	text-align: center;
+	font: bold 8pt Tahoma;
+	cursor: pointer;
+	border: solid 1px #ab2929;
+	color: #6d151b;
+	background: #f7e7df;
+	border-top: solid 1px #ebc4b6;
+	border-left: solid 1px #ebc4b6;
+	border-right: solid 1px #ab2929;
+	border-bottom: solid 1px #ab2929;
+	text-transform: capitalize;
+}
+
+.buttonOver {
+	color: white; 
+	background: #ab2929; 
+	border-bottom: solid 1px #ebc4b6;
+	border-right: solid 1px #ebc4b6;
+	border-top: solid 1px #ab2929;
+	border-left: solid 1px #ab2929;	
+}
