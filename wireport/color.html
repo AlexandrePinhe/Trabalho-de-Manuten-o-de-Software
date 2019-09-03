@@ -1,0 +1,930 @@
+<!--
+/*
+ * WebIntegrator - Ferramenta de produtividade Java
+ * Copyright (c) 2001-2008 Itx Tecnologia da Informação Ltda.
+ *
+ * Este programa é software livre; você pode redistribuí-lo e/ou modificá-lo 
+ * sob os termos da GNU GENERAL PUBLIC LICENSE (GPL) conforme publicada pela 
+ * Free Software Foundation; versão 2 da Licença.
+ * Este programa é distribuído na expectativa de que seja útil, porém, SEM 
+ * NENHUMA GARANTIA; nem mesmo a garantia implícita de COMERCIABILIDADE OU 
+ * ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA.
+ * 
+ * Consulte a GNU GPL para mais detalhes.
+ * Você deve ter recebido uma cópia da GNU GPL junto com este programa; se não, 
+ * veja em http://www.gnu.org/licenses/ 
+ */
+-->
+
+<html>
+<head>
+	<title>WebIntegrator - Amostra de cores</title>
+<SCRIPT LANGUAGE=javascript>
+  <!--
+  var mouse = true;
+  function MakeColor(ThisColor) {
+    document.bgColor = ThisColor;
+    document.forms[0].color.value=ThisColor;
+  }
+  function chMouse() { 
+    if (window.opener) 
+    if (window.opener.document.forms[0]) 
+      if (window.opener.document.forms[0][objColor]) {
+        window.opener.document.forms[0][objColor].value=document.forms[0].color.value;
+        if (opener.mostraCor)
+          opener.mostraCor(opener.document.forms[0][objColor])
+        self.close();
+      }
+  }
+  var objColor = location.search.substring(1);
+  //-->
+</SCRIPT>
+</head>
+
+<body onload="document.forms[0].color.focus()"> 
+<table><tr>
+
+<td bgcolor="#000000">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#000000');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#000033">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#000033');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#000066">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#000066');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#000099">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#000099');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#0000CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#0000CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#0000FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#0000FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#003300">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#003300');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#003333">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#003333');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#003366">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#003366');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#003399">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#003399');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#0033CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#0033CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#0033FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#0033FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#006600">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#006600');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#006633">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#006633');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#006666">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#006666');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#006699">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#006699');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#0066CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#0066CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#0066FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#0066FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#009900">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#009900');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#009933">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#009933');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#009966">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#009966');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#009999">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#009999');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#0099CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#0099CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#0099FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#0099FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00CC00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00CC00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00CC33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00CC33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00CC66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00CC66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00CC99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00CC99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00CCCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00CCCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00CCFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00CCFF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00FF00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00FF00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00FF33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00FF33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00FF66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00FF66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00FF99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00FF99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00FFCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00FFCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#00FFFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#00FFFF');">
+<img width=10 height=10 border="0"></a></td>
+
+</tr>
+<tr>
+
+<td bgcolor="#330000">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#330000');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#330033">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#330033');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#330066">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#330066');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#330099">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#330099');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#3300CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#3300CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#3300FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#3300FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#333300">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#333300');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#333333">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#333333');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#333366">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#333366');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#333399">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#333399');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#3333CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#3333CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#3333FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#3333FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#336600">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#336600');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#336633">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#336633');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#336666">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#336666');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#336699">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#336699');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#3366CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#3366CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#3366FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#3366FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#339900">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#339900');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#339933">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#339933');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#339966">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#339966');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#339999">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#339999');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#3399CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#3399CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#3399FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#3399FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33CC00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33CC00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33CC33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33CC33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33CC66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33CC66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33CC99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33CC99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33CCCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33CCCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33CCFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33CCFF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33FF00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33FF00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33FF33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33FF33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33FF66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33FF66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33FF99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33FF99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33FFCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33FFCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#33FFFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#33FFFF');">
+<img width=10 height=10 border="0"></a></td>
+
+</tr>
+<tr>
+
+<td bgcolor="#660000">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#660000');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#660033">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#660033');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#660066">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#660066');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#660099">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#660099');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#6600CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#6600CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#6600FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#6600FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#663300">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#663300');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#663333">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#663333');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#663366">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#663366');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#663399">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#663399');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#6633CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#6633CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#6633FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#6633FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#666600">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#666600');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#666633">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#666633');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#666666">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#666666');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#666699">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#666699');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#6666CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#6666CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#6666FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#6666FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#669900">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#669900');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#669933">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#669933');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#669966">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#669966');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#669999">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#669999');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#6699CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#6699CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#6699FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#6699FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66CC00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66CC00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66CC33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66CC33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66CC66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66CC66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66CC99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66CC99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66CCCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66CCCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66CCFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66CCFF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66FF00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66FF00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66FF33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66FF33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66FF66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66FF66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66FF99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66FF99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66FFCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66FFCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#66FFFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#66FFFF');">
+<img width=10 height=10 border="0"></a></td>
+
+</tr>
+<tr>
+
+<td bgcolor="#990000">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#990000');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#990033">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#990033');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#990066">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#990066');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#990099">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#990099');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#9900CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#9900CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#9900FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#9900FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#993300">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#993300');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#993333">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#993333');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#993366">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#993366');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#993399">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#993399');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#9933CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#9933CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#9933FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#9933FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#996600">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#996600');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#996633">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#996633');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#996666">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#996666');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#996699">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#996699');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#9966CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#9966CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#9966FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#9966FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#999900">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#999900');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#999933">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#999933');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#999966">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#999966');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#999999">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#999999');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#9999CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#9999CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#9999FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#9999FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99CC00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99CC00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99CC33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99CC33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99CC66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99CC66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99CC99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99CC99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99CCCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99CCCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99CCFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99CCFF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99FF00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99FF00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99FF33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99FF33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99FF66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99FF66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99FF99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99FF99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99FFCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99FFCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#99FFFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#99FFFF');">
+<img width=10 height=10 border="0"></a></td>
+
+</tr>
+<tr>
+
+<td bgcolor="#CC0000">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC0000');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC0033">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC0033');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC0066">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC0066');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC0099">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC0099');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC00CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC00CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC00FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC00FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC3300">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC3300');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC3333">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC3333');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC3366">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC3366');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC3399">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC3399');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC33CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC33CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC33FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC33FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC6600">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC6600');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC6633">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC6633');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC6666">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC6666');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC6699">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC6699');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC66CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC66CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC66FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC66FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC9900">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC9900');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC9933">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC9933');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC9966">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC9966');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC9999">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC9999');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC99CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC99CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CC99FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CC99FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCCC00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCCC00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCCC33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCCC33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCCC66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCCC66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCCC99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCCC99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCCCCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCCCCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCCCFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCCCFF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCFF00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCFF00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCFF33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCFF33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCFF66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCFF66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCFF99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCFF99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCFFCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCFFCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#CCFFFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#CCFFFF');">
+<img width=10 height=10 border="0"></a></td>
+
+</tr>
+<tr>
+
+<td bgcolor="#FF0000">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF0000');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF0033">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF0033');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF0066">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF0066');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF0099">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF0099');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF00CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF00CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF00FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF00FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF3300">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF3300');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF3333">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF3333');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF3366">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF3366');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF3399">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF3399');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF33CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF33CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF33FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF33FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF6600">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF6600');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF6633">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF6633');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF6666">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF6666');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF6699">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF6699');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF66CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF66CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF66FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF66FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF9900">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF9900');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF9933">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF9933');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF9966">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF9966');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF9999">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF9999');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF99CC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF99CC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FF99FF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FF99FF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFCC00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFCC00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFCC33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFCC33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFCC66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFCC66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFCC99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFCC99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFCCCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFCCCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFCCFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFCCFF');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFFF00">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFFF00');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFFF33">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFFF33');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFFF66">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFFF66');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFFF99">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFFF99');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFFFCC">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFFFCC');">
+<img width=10 height=10 border="0"></a></td>
+
+<td bgcolor="#FFFFFF">
+<a href="#" onclick="return chMouse();" onmouseover="return MakeColor('#FFFFFF');">
+<img width=10 height=10 border="0"></a></td>
+</tr></table><form>
+<div align="center">
+<input name="color" onblur="MakeColor(this.value)"></div>
+</form>
+</body>
+</html>

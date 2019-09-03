@@ -1,0 +1,53 @@
+body      	{background:#f8f8FF; text:#0000ff; link:#0000ff; vlink:#0000ff; alink:#000080}
+
+//BODY		{scrollbar-base-color: #ddd;}
+
+.label,.labelC,.title, .txtC, .txtR, .texto, .textoC,.txtBold,.textoBold, .txtTop, .noBorder
+				{text-align:left; FONT: 8pt  Verdana,Arial;  vertical-align:bottom; color:#000088;} 
+.labelC  {vertical-align:center;} 
+.title, .titleTop {font-size:8pt; font-weight:bold;text-align:center; color:black;
+      background-image: url(images/backgr.jpg); height:21px; vertical-align:middle;
+      border-left: 1px outset #eee; border-right: 2px ridge #eee;}
+
+.titleTop {background-color:#ECE9D8; border: none;}
+
+.txtBold,.textoBold  { font-weight:bold;}
+.txtC, .textoC  {text-align:center;} 
+.txtR  {text-align:right;} 
+.texto,.textoC,.textoBold,.txtTop  {font-size:10pt;}
+.txtTop  {vertical-align:top}
+.name	{font:Bold 8pt Verdana;color: navy; text-align:center;}
+
+.w70         {width:70}
+.w150       {width:150}
+.w180       {width:180}
+.w250       {width:250}
+.w400       {width:400}
+
+a,a:LINK,a:VISITED,a:ACTIVE,   a.label,a.label:LINK,a.label:VISITED,a.label:ACTIVE,
+a.Type,a.Type:LINK,a.Type:VISITED,a.Type:ACTIVE
+			{font:normal 8pt Verdana;color: #000088; text-decoration: none;}
+
+a:HOVER,a.Type:HOVER 	{color: #000; text-decoration: underline;}
+
+a.Var:HOVER {background-color: #ccc; text-decoration: underline; color: #000; cursor:help;}
+
+a.Type,a.Type:LINK,a.Type:VISITED,a.Type:ACTIVE
+			{font-weight:Bold;margin-left:0px}
+
+a.Sub,a.Sub:LINK,a.Sub:VISITED,a.Sub:ACTIVE
+			{margin-left:10px}
+
+a.Sel,a.Sel:LINK,a.Sel:VISITED,a.Sel:ACTIVE
+   { font-weight:bold;color:#000088; 
+    background-color:#d0b870; margin-left:10px}
+
+a.tbar, a.tbar:HOVER { border:solid 2px; border-color: #f8f8ff; width:23px; height:23px; padding:2px }
+a.tbar:HOVER { border:2px outset #ffffff; background-color:#eef}
+
+table {width:100%}
+
+.button, .buttonOver   {width:60px; background-image: url(images/botao.gif);padding:5px 0px; white-space: nowrap;
+   background-repeat:no-repeat; background-position:50% 50%; background-color:transparent; 
+   text-align:center; font: bold 8pt Verdana; color:#008; cursor:pointer; cursor:hand; border:none}
+.buttonOver   {background-image: url(images/botao_over.gif)}
