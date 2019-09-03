@@ -1,0 +1,136 @@
+<html>
+<head>
+   <title>...funciona o WIzard de grids</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?wiz_grid.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...funciona o WIzard de grids
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.7',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.9',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...funciona o WIzard de grids</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+A id&#233;ia do WIzard de grids assim como do WIzard de p&#225;ginas &#233; facilitar o trabalho do desenvolvedor na cria&#231;&#227;o e manuten&#231;&#227;o de modelos simples de grids utilizando o mesmo mecanismo dos componentes do WIzard. O WIzard de grids v&#234; o modelo simples de um grid dividos em partes espec&#237;ficas e cada uma dessas partes recebe um nome especial definindo assim um estilo para cada parte do grid.
+<br>
+
+<br>
+O modelo simples de um grid &#233; formado por um c&#243;digo de uma tabela HTML, como exemplo vamos segue o modelo simples que segue abaixo.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;!--&nbsp;Cabe&#231;alho&nbsp;(in&#237;cio)&nbsp;--&gt;
+<br>
+&lt;table&nbsp;border="1"&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;!--&nbsp;Cabe&#231;alho&nbsp;(fim)&nbsp;--&gt;
+<br>
+
+<br>
+&lt;!--&nbsp;C&#233;lula&nbsp;do&nbsp;Cabe&#231;alho&nbsp;(&#237;nicio)&nbsp;--&gt;
+<br>
+&lt;th&gt;C&#233;lula&nbsp;#1&lt;/th&gt;
+<br>
+&lt;!--&nbsp;C&#233;lula&nbsp;do&nbsp;Cabe&#231;alho&nbsp;(fim)&nbsp;--&gt;
+<br>
+
+<br>
+&lt;!--&nbsp;Detalhe&nbsp;(in&#237;cio)&nbsp;--&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;!--&nbsp;Detalhe&nbsp;(fim)&nbsp;--&gt;
+<br>
+
+<br>
+&lt;!--&nbsp;C&#233;lula&nbsp;do&nbsp;Detalhe&nbsp;(in&#237;cio)&nbsp;--&gt;
+<br>
+&lt;td&gt;|dado1|&lt;/td&gt;
+<br>
+&lt;!--&nbsp;C&#233;lula&nbsp;do&nbsp;Detalhe&nbsp;(fim)&nbsp;--&gt;
+<br>
+
+<br>
+&lt;!--&nbsp;Sem&nbsp;Registros&nbsp;(in&#237;cio)&nbsp;--&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;td&gt;Nenhum&nbsp;registro&nbsp;retornado&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;!--&nbsp;Sem&nbsp;Registros&nbsp;(fim)&nbsp;--&gt;
+<br>
+
+<br>
+&lt;!--&nbsp;Rodap&#233;&nbsp;(in&#237;cio)&nbsp;--&gt;
+<br>
+&lt;/table&gt;
+<br>
+&lt;!--&nbsp;Rodap&#233;&nbsp;(fim)&nbsp;--&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O modelo simples acima est&#225; definido para um grid onde a segunda linha da tabela ser&#225; iteragida com os dados a serem populados. Os trechos que se encontram destacados s&#227;o justamente as partes do estilo do grid a ser criado. Um estilo de grid &#233; composto pelas v&#225;rias partes que ir&#227;o compor o estilo, e os nomes dever&#227;o ser no formato </span><span style="font-family:Courier New; font-size:10pt; color:#000000">grid.&lt;nome-do-estilo&gt;.&lt;parte&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, onde </span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;parte&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> deve ser: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">head</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">headCell</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">detail</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">detailCell</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">noRegister</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">foot</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Cada parte de um estilo de grid &#233; definido semelhantemente a um componente do WIzard sendo que esses componentes tamb&#233;m poder&#227;o ser de projeto ou globais havendo uma tela espec&#237;fica para a sua edi&#231;&#227;o.
+<br>
+
+<br>
+Na p&#225;gina de defini&#231;&#227;o do grid h&#225; uma combo "Estilo", onde ser&#227;o mostrados os estilos globais (prefixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>$</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) e de projeto (prefixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>#</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">). Selecionando-se o estilo e marcando-se o checkbox "<span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Gerar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">", o grid ser&#225; gerado utilizando-se os componentes previamente definidos.
+<br>
+
+<br>
+Uma vez gerado o grid, os componentes poder&#227;o facilmente ser editados. Vale lembrar que os par&#226;metros mostrados s&#227;o aqueles definidos nos componentes no formato </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|wiz.Nome=default|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, que poder&#227;o ser colocados de acordo com o grau de customiza&#231;&#227;o que se deseja dar ao componente.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<html>
+<head>
+   <title>WIEvent</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="WIEvent">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?wievent.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>WIEvent
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.5.3',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.6.1',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:1pt; color:#000000"><hr><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</div><div align="center"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div></span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> WIEvent</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O componente WIEvent oferece a funcionalidade &#224;s aplica&#231;&#245;es web desenvolvidas pelo WebIntegrator a troca (envio ou recebimento) de dados entre o cliente (browser) e o servidor sem a necessidade da submiss&#227;o completa da p&#225;gina permitindo que o desenvolvedor, atrav&#233;s da p&#225;gina, solicite ao servidor onde esteja hospedado uma aplica&#231;&#227;o WI a execu&#231;&#227;o de comandos ao banco de dados e que as resultados dessas solicita&#231;&#245;es sejam retornados &#224; p&#225;gina para que possam ser manipulados. Ap&#243;s os dados terem sido retornados ao cliente (browser) o WIEvent encerra a comunica&#231;&#227;o com o servidor e a partir da&#237; come&#231;a a trabalhar com os dados localmente.
+<br>
+
+<br>
+A manipula&#231;&#227;o dos dados no lado do cliente (browser) &#233; feito atrav&#233;s de chamadas a m&#233;todos JavaScript da biblioteca do WIEvent que se encontra no arquivo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wievent.js</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que se encontra no diret&#243;rio </span><span style="font-family:Courier New; font-size:10pt; color:#000000">js</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> dentro do pr&#243;prio projeto. Esse arquivo ser&#225; criado automaticamente no projeto quando for definido o primeiro componente WIEvent para esse mesmo projeto.
+<br>
+
+<br>
+Para inserir a chamada &#224; biblioteca do WIEvent numa p&#225;gina de um projeto usando o WIzard de p&#225;ginas basta selecionar a op&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;HEAD&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Link&nbsp;JS</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> adicionar o valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000">/|wi.proj.id|/js/wievent.js</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Link&nbsp;JS</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> suporta que a defini&#231;&#227;o de v&#225;rios arquivos JS desde que cada chamada aos arquivos JS estejam separadas por v&#237;rgula.
+<br>
+
+<br>
+Para inserir a chamada &#224; biblioteca do WIEngine diretamente no c&#243;digo-fonte de uma p&#225;gina do projeto insira o trecho de c&#243;digo HTML que segue abaixo dentro da tag HEAD do documento HTML que representa a p&#225;gina.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;SCRIPT&nbsp;TYPE="text/javascript"&nbsp;SRC="/|wi.proj.id|/js/wievent.js"&gt;&lt;/SCRIPT&gt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+A configura&#231;&#227;o de um componente WIEvent &#233; feito atrav&#233;s do WIBuilder podendo ser do tipo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ou </span><span style="font-family:Courier New; font-size:10pt; color:#000000">UPDATE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> sendo que o primeiro apenas envia ao banco de dados comandos de pesquisa enquanto o &#250;ltimo apenas envia comandos de atualiza&#231;&#227;o. Uma p&#225;gina solicita a execu&#231;&#227;o de um componente WIEvent atrav&#233;s do seu identificador sendo que para componentes WIEvent do tipo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> deve-se utilizar o m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">selectdb()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> enquanto para chamar componentes WIEvent do tipo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">UPDATE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> deve-se utilizar o m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">updatedb()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Logo abaixo seguem listados os m&#233;todos dispon&#237;veis para interagir com componentes WIEvent, para saber como utilizar os m&#233;todos do WIEvent acesse a se&#231;&#227;o <b>Como...</b> da ajuda do WebIntegrator.
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>M&#233;todo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Descri&#231;&#227;o</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">WIEvent(timeout,&nbsp;prjId)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Instancia um objeto WIEvent no lado cliente. O par&#226;metro <span style="font-family:Courier New; font-size:10pt; color:#000000">timeout</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o tempo de espera em segundos para a resposta do WIEvent, o valor default &#233; 30 segundos; o par&#226;metro </span><span style="font-family:Courier New; font-size:10pt; color:#000000">prjId</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o nome do projeto onde est&#225; o compoente WIEvent a ser executado, o valor default &#233; o nome do projeto chamado pela URL.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+
+<br>
+execute(metodo)<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Solicita que o servidor execute o componente WIEvent correspondente e ap&#243;s o retorno da resposta do servidor executa a fun&#231;&#227;o JavaScript passada como par&#226;metro. Essa fun&#231;&#227;o JavaScript sempre receber&#225; como primeiro par&#226;metro um objeto WIEvent que dever&#225; ser usado para a chamada dos m&#233;todos necess&#225;rios.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+
+<br>
+preread(nome)<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Solicita a leitura da vari&#225;vel passada pelo par&#226;metro <span style="font-family:Courier New; font-size:10pt; color:#000000">nome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, a vari&#225;vel deve fazer parte da sess&#227;o do WebIntegrator. O conte&#250;do poder&#225; ser lido posteriormente pelo m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">readobj()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ap&#243;s a chamada do m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">execute()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+readobj(nome)<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o conte&#250;do da vari&#225;vel passada pelo par&#226;metro <span style="font-family:Courier New; font-size:10pt; color:#000000">nome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que deve ter siso previamente solicitado atrav&#233;s do m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">preread()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+writeobj(nome,&nbsp;valor)<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Grava uma vari&#225;vel na sess&#227;o do WebIntegrator. A grava&#231;&#227;o somente ir&#225; se efetivar ap&#243;s a chamada ao m&#233;todo <span style="font-family:Courier New; font-size:10pt; color:#000000">execute()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ou </span><span style="font-family:Courier New; font-size:10pt; color:#000000">selectdb()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+selectdb(eventId)<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Solicita a execu&#231;&#227;o de um componente WIEvent do tipo <span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> identificado pelo par&#226;metro </span><span style="font-family:Courier New; font-size:10pt; color:#000000">eventId</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. O componente s&#243; ser&#225; efetivamente executado ao se chamar o m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">execute()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+updatedb(eventId)<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Solicita a execu&#231;&#227;o de um componente WIEvent do tipo <span style="font-family:Courier New; font-size:10pt; color:#000000">UPDATE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> identificado pelo par&#226;metro </span><span style="font-family:Courier New; font-size:10pt; color:#000000">eventId</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. O componente s&#243; ser&#225; efetivamnete executado ao se chamar o m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">execute()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">next()<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Avan&#231;a para o pr&#243;ximo registro ou linha de dados retornado pela chamada ao m&#233;todo <span style="font-family:Courier New; font-size:10pt; color:#000000">selectdb()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+
+<br>
+column(nome)<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o valor da coluna indicada pelo par&#226;metro <span style="font-family:Courier New; font-size:10pt; color:#000000">nome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. O par&#226;metro </span><span style="font-family:Courier New; font-size:10pt; color:#000000">nome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> pode ser tanto o nome da coluna quanto o seu &#237;ndice no registro ou linha de dados, sendo que a contagem dos &#237;ndices das colunas come&#231;a a partir de 1.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">go(linha)<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Move o cursor para o &#237;ndice da linha indicada pelo par&#226;metro <span style="font-family:Courier New; font-size:10pt; color:#000000">linha</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> dentro dos registros ou linha de dados retornadas. A contagem dos &#237;ndices das linhas come&#231;a a partir de 1.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">rowcount()<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o n&#250;mero de registros ou de linhas de resultado retornadas pela chamada ao m&#233;todo <span style="font-family:Courier New; font-size:10pt; color:#000000">selectdb()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr></table><table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+populateCombo(eventId,&nbsp;combo,&nbsp;c&#243;digo,&nbsp;valor)<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">M&#233;todo utilit&#225;rio que popula a combo passada pelo par&#226;metro <span style="font-family:Courier New; font-size:10pt; color:#000000">combo</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com os dados retornados pela execu&#231;&#227;o de um componente WIEvent do tipo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> identificado pelo par&#226;metro </span><span style="font-family:Courier New; font-size:10pt; color:#000000">eventId</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. O par&#226;metro </span><span style="font-family:Courier New; font-size:10pt; color:#000000">codigo</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o nome ou &#237;ndice da coluna que ser&#225; usada para popular os valores da combo j&#225; o par&#226;metro </span><span style="font-family:Courier New; font-size:10pt; color:#000000">valor</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o nome ou &#237;ndice da coluna que ser&#225; usada para popular os textos dos valores da combo, se esses dois par&#226;metros forem omitidos o m&#233;todo ir&#225; utilizar os dados da primeira coluna para popular os valores e os dados da segunda coluna para popular os textos dos valores da combo.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="202" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">setInputValue(eventId,&nbsp;input,&nbsp;coluna)<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="346" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">M&#233;todo utilit&#225;rio que configura o atributo <span style="font-family:Courier New; font-size:10pt; color:#000000">VALUE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> de um campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">INPUT</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> do tipo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">TEXT</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> passado pelo par&#226;metro </span><span style="font-family:Courier New; font-size:10pt; color:#000000">input</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com o valor da coluna indicada pelo par&#226;metro </span><span style="font-family:Courier New; font-size:10pt; color:#000000">coluna</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> retornado por um componente WIEvent do tipo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> identificado pelo par&#226;metro </span><span style="font-family:Courier New; font-size:10pt; color:#000000">eventId</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, caso a execu&#231;&#227;o do WIEvent retorne mais de uma linha de resultado ser&#225; utilizado o valor da primeira linha.
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

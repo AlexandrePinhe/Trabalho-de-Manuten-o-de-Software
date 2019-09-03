@@ -1,0 +1,169 @@
+<html>
+<head>
+   <title>...depurar uma aplica&ccedil;&atilde;o no WebIntegrator usando a fun&ccedil;&atilde;o wi.context()</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?wicontext.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...depurar uma aplica&#231;&#227;o no WebIntegrator usando a fun&#231;&#227;o wi.context()
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.5',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.7',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...depurar uma aplica&#231;&#227;o no WebIntegrator usando a fun&#231;&#227;o wi.context()</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Neste passo-a-passo ser&#225; explicado como o desenvolvedor poder&#225; usar a fun&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.context()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> para realizar debugs nas vari&#225;veis das aplica&#231;&#245;es criadas usando o WebIntegrator. O que a fun&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.context()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> faz &#233; um </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>dump</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> no contexto do WebIntegrator retornando a lista de vari&#225;veis e seus respectivos valores no momento em que ela &#233; executada. A listagem das vari&#225;veis &#233; retornada no seguinte padr&#227;o:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;nome-da-vari&#225;vel&gt;=&lt;valor-da-vari&#225;vel&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<img src="importante.png" width="33" height="32" border="0" alt="importante"> <b>IMPORTANTE:
+<br>
+</b>
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Possa ser que algumas vari&#225;veis tenham em seu conte&#250;do quebras-de-linha, nestes casos a fun&#231;&#227;o </span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.context()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> substituir&#225; essas quebras pelos sinais de </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>\r\n</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+Por ser uma fun&#231;&#227;o, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.context()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> tem que estar entre o sinal de </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|$</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">$|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o valor retornado dever&#225; ser armazenado em uma vari&#225;vel. Um outro detalhe &#233; que ela tamb&#233;m suporta que seja passado um par&#226;metro indicando quais as vari&#225;veis a serem retornadas e se ser&#225; feito um </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>dump</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> recursivo. Para indicar que um </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>dump</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> recursivo seja realizado usa-se o asterisco </span><span style="font-family:Courier New; font-size:10pt; color:#000000">(*)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Veja alguns exemplos que seguem abaixo:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="205"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">|$wi.context()$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna apenas as vari&#225;veis que apenas fazem parte do contexto raiz, ou seja, aquelas que cujo identificador n&#227;o possue pontos.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="205"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">|$wi.context(*)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna todas as vari&#225;veis que fazem parte do contexto do WebIntegrator.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="205"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">|$wi.context(wi)$|</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"></span></td><td><span style="font-family:Courier New; font-size:10pt; color:#000000"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna apenas as vari&#225;veis que come&#231;am com wi.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">|$wi.context(wi.*)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;Retorna todas as vari&#225;veis que come&#231;am com o identificador </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>wi</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+
+<br>
+Para demonstrarmos a funcionalidade pr&#225;tica dessa fun&#231;&#227;o vamos criar uma p&#225;gina de </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>debug</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> onde o usu&#225;rio entra com o nome de uma vari&#225;vel ou uma m&#225;scara adequada para retornar o valor desejado. Esta p&#225;gina bastar&#225; ter apenas um formul&#225;rio HTML com um campo-texto onde o usu&#225;rio entre com o nome ou m&#225;scara da vari&#225;vel. No Pr&#233;-P&#225;gina dessa p&#225;gina vamos colocar um elemento <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>Gravar</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> criando a vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>tmp.contexto</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e em seu conte&#250;do gravaremos o resultado da chamada &#224; fun&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|$wi.context()$|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> passando como par&#226;metro um poss&#237;vel valor que foi digitado pelo usu&#225;rio. Como c&#243;digo-fonte da p&#225;gina pode-se usar o modelo que segue abaixo:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="672" bgcolor="#BFBFBF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;HTML&gt;
+<br>
+&lt;HEAD&gt;
+<br>
+&lt;TITLE&gt;|wi.page.title|&lt;/TITLE&gt;
+<br>
+&lt;/HEAD&gt;
+<br>
+
+<br>
+&lt;BODY&gt;
+<br>
+&lt;form&nbsp;action="|wi.page.name|.wsp"&nbsp;method="post"&nbsp;&gt;
+<br>
+&lt;input&nbsp;type="text"&nbsp;name="tmp.var"&gt;
+<br>
+&lt;input&nbsp;type="submit"&nbsp;name="tmp.btn"&nbsp;value="Debug"&gt;
+<br>
+&lt;/form&gt;
+<br>
+&lt;pre&gt;
+<br>
+|tmp.context|
+<br>
+&lt;/pre&gt;
+<br>
+&lt;/BODY&gt;
+<br>
+&lt;/HTML&gt;
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+No Pr&#233;-P&#225;gina coloque um elemento <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>Gravar</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com as seguintes defini&#231;&#245;es:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Condi&#231;&#227;o</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">|tmp.btn|&nbsp;=&nbsp;debug<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Objetos</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.context<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Se condi&#231;&#227;o verdadeira</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">|$wi.context(|tmp.var|)$|<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

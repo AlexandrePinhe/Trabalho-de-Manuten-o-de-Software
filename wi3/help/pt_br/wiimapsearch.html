@@ -1,0 +1,82 @@
+<html>
+<head>
+   <title>...fazer busca em mensagens usando Imap</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?wiimapsearch.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...usar o wi.token
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.13',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.15',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...fazer busca em mensagens usando Imap</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O protocolo Imap permite que o desenvolvedor fa&#231;a busca nas mensagens de uma determinada pasta utilizando crit&#233;rios pr&#233;-estabelecidos.
+<br>
+
+<br>
+Para facilitar a gera&#231;&#227;o de um grid a partir de um uma busca o WI conta com a funcionalidade 
+<br>
+
+<br>
+Para gerar um grid contendo o resultado de uma busca numa pasta IMAP de um servidor pode ser utilizada a op&#231;&#227;o Java de Banco de Dados e no comando sql coloca-se </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.database.impl.ResultSetImapSearch:[id_servidor],[pasta],[titulo],[corpo],[de]</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><i> </i>onde os par&#226;metros tanto podem estar fixos como ser vari&#225;vel entre pipes.
+<br>
+
+<br>
+<u>id_servidor</u> = o id do servidor a ser utilizado.
+<br>
+<u>pasta</u> = a pasta onde a busca deve ser feita.
+<br>
+<u>titulo</u> = o texto completo que deve conter no t&#237;tulo (n&#227;o &#233; obrigat&#243;rio).
+<br>
+<u>corpo</u> = o texto completo que deve conter no corpo da mensagem (n&#227;o &#233; obrigat&#243;rio).
+<br>
+<u>de</u> = o email do remetente (n&#227;o &#233; obrigat&#243;rio).
+<br>
+
+<br>
+OBS: Uma busca pode ser testada no Explorar BD e caso seja necess&#225;rio passar as vari&#225;veis do usu&#225;rio e senha da conex&#227;o pode se colocar como se fosse par&#226;metros adicionais da classe, pois a classe ir&#225; desconsider&#225;-las e o Explorar BD ir&#225; permitir entrar uma valor para os campos.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

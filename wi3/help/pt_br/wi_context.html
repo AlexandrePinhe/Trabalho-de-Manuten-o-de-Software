@@ -1,0 +1,108 @@
+<html>
+<head>
+   <title>wi.context</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?wi_context.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>wi.context
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.3.12',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.4',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>wi.context</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+A fun&#231;&#227;o <b>wi.context</b> realiza um </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>dump</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> no contexto do WebIntegrator retornando a lista de vari&#225;veis e seus respectivos valores no momento em que ela &#233; executada. A listagem das vari&#225;veis &#233; retornada no seguinte padr&#227;o:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;nome-da-vari&#225;vel&gt;=&lt;valor-da-vari&#225;vel&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>IMPORTANTE:
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="77"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span></span></span></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">possa ser que algumas vari&#225;veis tenham em seu conte&#250;do quebras-de-linha, nestes casos a fun&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">wi.context()</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> substituir&#225; essas quebras pelos sinais de </span><span style="font-family:Courier New; font-size:10pt; color:#000000">\r\n</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. 
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="77"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+A sintaxe de uso &#233; a seguinte:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$wi.context([&lt;par&#226;metro&gt;])$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Essa fun&#231;&#227;o aceita que seja passado um par&#226;metro indicando quais as vari&#225;veis a serem retornadas e se ser&#225; feito um </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>dump</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> recursivo. Para indicar que um </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>dump</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> recursivo seja realizado usa-se o asterisco (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">*</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">). Veja alguns exemplos que seguem abaixo:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="192"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$wi.context()$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> </span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna apenas as vari&#225;veis que apenas fazem parte do contexto raiz, ou seja, aquelas que cujo identificador n&#227;o possue pontos (sem recursividade).
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="192"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$wi.context(*)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna todas as vari&#225;veis que fazem parte do contexto do WebIntegrator.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="192"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$wi.context(wi)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna apenas as vari&#225;veis que come&#231;am com "wi" (sem recursividade).
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="192"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$wi.context(wi.*)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna todas as vari&#225;veis que come&#231;am com "wi".
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="192"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$wi.context(wi.s%)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna todas as vari&#225;veis do contexto do WebIntegrator que come&#231;am com "wi.s".
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span></td></tr></table>
+
+</body>
+</html>

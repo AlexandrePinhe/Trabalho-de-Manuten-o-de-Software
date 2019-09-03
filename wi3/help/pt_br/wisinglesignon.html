@@ -1,0 +1,88 @@
+<html>
+<head>
+   <title>...usar o SingleSignOn em projetos</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?wisinglesignon.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...usar o wi.token
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.11',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.13',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...usar o SingleSignOn em projetos
+<br>
+</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O SingleSignOn &#233; um recurso que permite compartilhar o login entre projetos. Com esse recurso o desenvolvedor pode criar um projeto para ser o que efetivamente realiza o login e os demais projetos podem se utilizar das vari&#225;veis exportadas por ele sem necessitar que o usu&#225;rio da aplica&#231;&#227;o tenha que ficar se logando para cada projeto.
+<br>
+
+<br>
+Para facilitar o entendimento vamos identificar o projeto que faz o login como <i>projeto pai  </i>enquanto os demais projetos como <i>projeto filho.</i>
+<br>
+
+<br>
+Antes de come&#231;ar a efetiva adequa&#231;&#227;o dos projetos para utilizar o SingleSignOn &#233; necess&#225;rio copiar no common/lib do tomcat a biblioteca <i>wi-singlesignonrepository.jar</i>  que encontra-se dentro do WEB-INF/lib dos projetos, remov&#234;-las nos projetos envolvidos e reiniciar o tomcat.
+<br>
+
+<br>
+Passos para utilizar o SingleSignOn:
+<br>
+
+<br>
+- No <i>projeto pai</i>  deve ser colocado no pr&#233;-p&#225;gina da p&#225;gina principal (aquela que entra depois de logado) o elemento Atribuir SingleSignOn, e nele o desenvolvedor pode informar quais vari&#225;veis deseja exportar para os projetos filhos. (Ex: pvt.login., pvt.nome, etc). As vari&#225;veis tanto podem ser espec&#237;ficas como tmp.nome e grupos  como pvt.login. e separadas por v&#237;rgula.
+<br>
+
+<br>
+- Nos <i>projetos filhos</i>  o login deve estar apenas ativado e com a p&#225;gina de login informada. A p&#225;gina de login do projeto filho deve ter o conte&#250;do abaixo para remeter para a p&#225;gina de login do projeto pai.
+<br>
+
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">&lt;script&gt;
+<br>
+location="/[projeto_pai]/[pagina_login].wsp?tmp.gotoproj=|wi.proj.prev|&amp;tmp.gotopage=|wi.page.prev|";
+<br>
+&lt;/script&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Pronto, feito esses passos passa a existir uma interliga&#231;&#227;o entre o login do projeto pai e o dos projetos filhos.
+<br>
+</span></span></span>
+
+</body>
+</html>

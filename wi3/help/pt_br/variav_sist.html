@@ -1,0 +1,550 @@
+<html>
+<head>
+   <title>Vari&aacute;veis do Sistema</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Vari&aacute;veis do Sistema">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?variav_sist.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Vari&#225;veis do Sistema</b><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>
+<br>
+</b></span></span></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.1.2',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.1.2.2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:Helvetica,Arial; font-size:1pt; color:#000000"><hr></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Vari&#225;veis do Sistema</b></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:1pt; color:#000000"><hr></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">O WebIntegrator oferece ao desenvolvedor algumas vari&#225;veis de sistema que sempre se encontram dispon&#237;veis independente da aplica&#231;&#227;o que esteja sendo executada ou dos componentes por ela usadas.
+<br>
+
+<br>
+Vari&#225;veis com prefixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>wi.</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> s&#227;o sempre reservadas para uso pelo WebIntegrator e apenas podem ter o seu conte&#250;do manipulado atrav&#233;s dos componentes de pr&#233;-p&#225;gina ou p&#243;s-p&#225;gina. A grande maioria das vari&#225;veis reservadas do WebIntegrator s&#227;o apenas de leitura, as &#250;nicas que n&#227;o seguem essa regra s&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000080"><b>wi.proj.prev</b></span></span></span><span style="font-family:Courier New; font-size:9pt; color:#000000">&nbsp;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">e</span><span style="font-family:Courier New; font-size:9pt; color:#000000">&nbsp;</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#000080"><b>wi.page.prev</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que s&#227;o vari&#225;veis de leitura e escrita.
+<br>
+
+<br>
+A vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>wi.proj.prev</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para for&#231;ar um valor indicando qual o projeto que foi anteriormente executado, j&#225; a vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>wi.page.prev</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para indicar qual p&#243;s-p&#225;gina o WebIntegrator ir&#225; executar.
+<br>
+
+<br>
+Para ver todas as vari&#225;veis existentes numa requisi&#231;&#227;o &#233; s&#243; colocar <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>&lt;wi:out/&gt;</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> na p&#225;gina. &#201; poss&#237;vel utilizar uma m&#225;scara colocando <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>&lt;wi:out mask="tmp.*" /&gt;</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Logo abaixo segue uma tabela com a rela&#231;&#227;o das vari&#225;veis atualmente disponibilizadas pelo WebIntegrator, algumas dessas vari&#225;veis apenas estar&#227;o dispon&#237;veis se determinados tipos de componentes forem executados.
+<br>
+
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Vari&#225;vel
+<br>
+</b></span></div></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Descri&#231;&#227;o</b><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></div></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Exemplo
+<br>
+</b></span></div></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+wi.date.ansi<span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna a atual data do sistema onde est&#225; instalado o WebIntegrator no formata ANSI <span style="font-family:Courier New; font-size:10pt; color:#000000">aaaa-mm-dd.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">2001-05-28</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+wi.date.day<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o dia do m&#234;s atual de acordo com a data do sistema onde est&#225; instalado o WebIntegrator.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">28</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+wi.date.dmy<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna a atual da data do sistema onde est&#225; instalado o WebIntegrator no formato <span style="font-family:Courier New; font-size:10pt; color:#000000">dd/mm/aaaa.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">28/05/2001</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+wi.date.hm<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna a hora atual do sistema onde est&#225; instalado o WebIntegrator no formato <span style="font-family:Courier New; font-size:10pt; color:#000000">hh:mm.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">09:25</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+wi.date.hms<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna a hora atual do sistema onde est&#225; instalado o WebIntegrator no formato<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"> </span><span style="font-family:Courier New; font-size:10pt; color:#000000">hh:mm:ss.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">09:25:36
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+wi.date.hour<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna as horas da atual hora do sistema onde est&#225; instalado o WebIntegrator.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">09</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+wi.date.internal</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o n&#250;mero de milisegundos desde de 1&#186; de Janeiro de 1970, 00:00:00 GMT em rela&#231;&#227;o &#224; data-hora atual do sistema onde est&#225; instalado o WebIntegrator.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.date.mdy</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna a data atual do sistema onde est&#225; instalado o WebIntegrator no formato <span style="font-family:Courier New; font-size:10pt; color:#000000">mm/dd/aaaa.</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">05/28/2001</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.date.min</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna os minutos da atual hora do sistema onde est&#225; instalado o WebIntegrator.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+25
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.date.month</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o nome do m&#234;s da atual data do sistema onde est&#225; instalado o WebIntegrator.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">Maio</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.date.sec</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna os segundos da atual hora do sistema onde est&#225; instalado o WebIntegrator.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">36</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.date.wday</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o nome do dia da semana da atual data do sistema onde est&#225; instalado o WebIntegrator.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">Segunda-feira</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.date.year</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o n&#250;mero do ano com 4 d&#237;gitos da atual data do sistema onde est&#225; instalado o WebIntegrator.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">2001</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table><table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.date.ymonth</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o n&#250;mero do m&#234;s da atual data do sistema onde est&#225; instalado o WebIntegrator.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">05</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.email</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o endere&#231;o do e-mail para qual est&#225; sendo enviada a mensagem quando a op&#231;&#227;o "Processar cada c&#243;pia" estiver habilitada.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.email.attid<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o identificador global associado a um e-mail.<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.email.ok<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o status final do envio de e-mails.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">false<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.error<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna um erro gen&#233;rico do WebIntegrator.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.headers</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna uma lista com os nomes dos HEADERS dispon&#237;veis para o browser em quest&#227;o pois a depender do browser a lista varia.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">accept-language,&nbsp;connection,&nbsp;accept,&nbsp;host,&nbsp;accept-encoding,&nbsp;user-agent,&nbsp;referer
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.header.&lt;nome-do-HEADER&gt;<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o valor de um HEADER espec&#237;fico.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.mjava.ident</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o identificador de qual rotina foi pedida para ser executada.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.mjava.session<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o valor da sess&#227;o do WebIntegrator.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.mjava.nspace
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o nome do <i>namespace </i>onde vai ser executada a rotina MUMPS.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.mjava.user</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o nome do usu&#225;rio que foi usado para abrir conex&#227;o com o MJava.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.mjava.pass</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna a senha do usu&#225;rio que foi usada para abrir conex&#227;o com o MJava.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.page.id
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o identificador da p&#225;gina.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">inserehtml<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.page.name</span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o &#250;ltimo token do identifcador da p&#225;gina. O s&#237;mbolo de separa&#231;&#227;o dos tokens &#233; a barra (/) ou a barra invertida (\).
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+
+<br>
+inserehtml<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.proj.prev
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o identificador do projeto que foi executado anteriormente.<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+wi.page.prev<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o identificador da p&#225;gina que foi exibida anteriormente.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+inserehtml<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.proj.title<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o t&#237;tulo do projeto.<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.page.title<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna o t&#237;tulo da p&#225;gina.<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.session.ip
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Endere&#231;o IP da sess&#227;o.<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.session.id
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Id da sess&#227;o.
+<br>
+</span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></td></tr></table><table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.session.host
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Nome da m&#225;quina cliente.<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.server.host
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Nome do servidor.<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.server.port
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Porta do servidor.<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.server.prot
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Protocolo do servidor.<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.server.url
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">URL completa do servidor.<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.request.querystring
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Querystring do metodo GET.<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.request.url
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">URL completa do que foi submetido.<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="240" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">wi.request.parameters
+<br>
+</span></td><td align="left" valign="top" width="192" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Par&#226;metros recebidos na requisi&#231;&#227;o.<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></td></tr></table>
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

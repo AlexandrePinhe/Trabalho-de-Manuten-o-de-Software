@@ -1,0 +1,84 @@
+<html>
+<head>
+   <title>Tutorial do WISearch</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?wisearch.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Tutorial do WISearch
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.1',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.2.1',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Tutorial do WISearch (introdu&#231;&#227;o)</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O WISearch &#233; um m&#243;dulo adicional do servidor de aplica&#231;&#245;es web WebIntegrator que oferece a capacidade de gerar &#237;ndices a partir de conte&#250;dos textuais onde posteriormente possam ser feitas buscas </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>full-text</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Esse m&#243;dulo, composto por um conjunto de classes Java, gerencia um mecanismo de busca e indexa&#231;&#227;o baseado na API <span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF"><u><span class="weblink"><a href="http://jakarta.apache.org/lucene/docs/index.html" target="_blank">Lucene</a></span></u></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> oferecendo ainda a possibilidade de serem gerados &#237;ndices hier&#225;rquicos baseados nas informa&#231;&#245;es dos documentos indexados.
+<br>
+
+<br>
+Todo documento, a ser publicado em um &#237;ndice gerenciado pelo WISearch, al&#233;m do seu conte&#250;do que deve ser representado por um arquivo tamb&#233;m poder&#225; ter associado propriedades adicionais definidas pelo pr&#243;prio desenvolvedor como uma maneira de estender as informa&#231;&#245;es dispon&#237;veis sobre um documento podendo essas propriedades adicionais tamb&#233;m serem pesquisadas.
+<br>
+Basicamente o m&#243;dulo WISearch &#233; composto de 6 classes Java respons&#225;veis pela gera&#231;&#227;o e manuten&#231;&#227;o da estrutura dos &#237;ndices, s&#227;o elas:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></b></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>br.com.itx.modules.search.WIIndexer</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: conector Java respons&#225;vel pela gera&#231;&#227;o da estrutura inicial do &#237;ndice.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>br.com.itx.modules.search.WIPublisher</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: conector Java respons&#225;vel pela publica&#231;&#227;o de um documento no &#237;ndice. Por publica&#231;&#227;o entenda como sendo o ato de indexar o conte&#250;do de um arquivo e as propriedades adicionais que ir&#227;o compor um documento.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>br.com.itx.modules.search.SearchGrid</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>grid</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> Java respons&#225;vel pela montagem de um </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>grid</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que servir&#225; para exibir os resultados de uma pesquisa feita num &#237;ndice.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>br.com.itx.modules.search.SearchObject</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: conector Java que retorna os resultados de uma pesquisa feita num &#237;ndice numa estrutura de dados semelhante ao elemento Objeto do WebIntegrator.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>br.com.itx.modules.search.WIHighlighter</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: conector Java respons&#225;vel por efetuar o destaque dos termos no conte&#250;do de um documento baseado na </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>query</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que foi utilizada na pesquisa.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>br.com.itx.modules.search.WIRemover</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: conector Java respons&#225;vel pela remo&#231;&#227;o de um ou mais documentos da estrutura do &#237;ndice. Vale notar que essa classe n&#227;o far&#225; a remo&#231;&#227;o f&#237;sica do documento no diret&#243;rio apenas apagar&#225; as informa&#231;&#245;es dele constantes no &#237;ndice.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Para a constru&#231;&#227;o e manuten&#231;&#227;o de um &#237;ndice usando o WISearch basta-nos usar essas classes Java, atrav&#233;s de defini&#231;&#245;es de conectores e/ou </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>grids</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> Java e de algumas vari&#225;veis que s&#227;o usadas internamente por elas. A princ&#237;pio todos os conectores precisam saber com qual &#237;ndice ele dever&#225; trabalhar, essa informa&#231;&#227;o dever&#225; ser passada para os conectores atrav&#233;s da vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.indexName</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Para acompanhar o tutorial, cria as p&#225;ginas conforme o c&#243;digo fonte apresentado a seguir, ou crie um projeto novo, entre no m&#243;dulo de revis&#245;es e aplique a revis&#227;o contida nesse arquivo:  <span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF"><u><span class="weblink"><a href="wisearch.zip" target="_blank">wisearch.zip</a></span></u></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

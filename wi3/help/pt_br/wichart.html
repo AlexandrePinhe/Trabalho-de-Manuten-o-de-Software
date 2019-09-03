@@ -1,0 +1,112 @@
+<html>
+<head>
+   <title>Tutorial do WIChart</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?wichart.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Tutorial do WIChart
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.3.13',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.4.1',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Tutorial do WIChart</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O WI Chart, &#233; um conjunto de conectores Java que geram imagens de gr&#225;ficos baseadas em informa&#231;&#245;es que est&#227;o armazenadas em objetos do WebIntegrator. O formato do arquivo da imagem gerada segue o padr&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">PNG</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e em virtude disso as p&#225;ginas que ir&#227;o exibir as imagens dever&#227;o ter a propriedade </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Tipo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> configurada como </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>png</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Independentemente do tipo de gr&#225;fico a ser gerado eles sempre possuem algumas propriedades comuns:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">T&#237;tulo&nbsp;do&nbsp;gr&#225;fico</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica o nome do t&#237;tulo que ser&#225; dado ao gr&#225;fico.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Largura</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica a largura em pixels que a imagem do gr&#225;fico ir&#225; possuir, o valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>default</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> &#233; de </span><span style="font-family:Courier New; font-size:10pt; color:#000000">620</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Altura</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica a altura em pixels que a imagem do gr&#225;fico ir&#225; possuir, o valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>default</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> &#233; de </span><span style="font-family:Courier New; font-size:10pt; color:#000000">460</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">3D</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica se o gr&#225;fico ser&#225; desenhado em perspectiva 3D. Esse campo apenas aceita os valores true e false sendo false o seu valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>default</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">N&#237;vel&nbsp;de&nbsp;opacidade&nbsp;do&nbsp;gr&#225;fico</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica o n&#237;vel de opacidade que o gr&#225;fico ter&#225;. O n&#237;vel de opacidade ir&#225; influenciar na intensidade da transpar&#234;ncia que o gr&#225;fico ir&#225; ter, ou seja, quanto menor for o n&#237;vel de opacidade maior ser&#225; a transpar&#234;ncia. Os valores v&#227;o de </span><span style="font-family:Courier New; font-size:10pt; color:#000000">1.0f</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> a </span><span style="font-family:Courier New; font-size:10pt; color:#000000">0.0f</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> sendo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">1.0f</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> o valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>default</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Cor&nbsp;de&nbsp;fundo&nbsp;da&nbsp;imagem&nbsp;(hexadecimal)</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica a cor de fundo em formato hexadecimal que a imagem do gr&#225;fico ir&#225; possuir.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Objeto&nbsp;(dataset)</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica o identificador do objeto do WebIntegrator que servir&#225; como dataset para o gr&#225;fico. Por </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>dataset</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> entenda como sendo o conjunto de informa&#231;&#245;es que ir&#225; popular o gr&#225;fico.
+<br>
+
+<br>
+A depender do tipo de gr&#225;fico as informa&#231;&#245;es dentro do objeto que representam o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>dataset</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> devem estar dispostas de uma maneira padr&#227;o a fim de que o gr&#225;fico possa ser populado corretamente.
+<br>
+
+<br>
+As duas formas aceit&#225;veis s&#227;o a disposi&#231;&#227;o das informa&#231;&#245;es em linha ou em coluna sendo que em alguns tipos de gr&#225;ficos apenas uma delas &#233; aceit&#225;vel. Para saber qual o formato aceito pelo gr&#225;fico leia a documenta&#231;&#227;o espec&#237;fica do gr&#225;fico.
+<br>
+
+<br>
+Os tipos de gr&#225;ficos atualmente dispon&#237;veis s&#227;o:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;    Gr&#225;fico em barras
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;    Gr&#225;fico em fatias (torta)
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;    Gr&#225;fico de linhas
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font>&nbsp;&nbsp;&nbsp;    Gr&#225;fico de &#225;rea
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

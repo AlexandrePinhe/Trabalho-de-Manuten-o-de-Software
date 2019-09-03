@@ -1,0 +1,74 @@
+<html>
+<head>
+   <title>...configurar o login para lembrar a p&aacute;gina que foi chamada</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?wiloginmemorize.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...usar o wi.token
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.12',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.14',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...configurar o login para lembrar a p&#225;gina que foi chamada
+<br>
+</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O login padr&#227;o de um projeto WI sempre entra na mesma p&#225;gina principal informada num projeto, mas o desenvolvedor pode configurar o projeto para lembrar a p&#225;gina que foi chamada e ao logar entrar nela.
+<br>
+
+<br>
+No pr&#233;-p&#225;gina da pagina login criar um gravar em tmp.gotoproj, tmp.gotopage se |tmp.gotopage| = vazio o valor |wi.proj.prev|, |wi.page.prev|. Se est&#225; sendo usado <u>SingleSignOn</u> isso s&#243; deve ser feito no pr&#233;-p&#225;gina do projeto que efetivamente faz o login.
+<br>
+
+<br>
+No formul&#225;rio de login criar um elemento oculto (hidden) tmp.gotoproj com o valor |tmp.gotoproj| e tmp.gotopage com o valor |tmp.gotopage|.
+<br>
+
+<br>
+No pr&#233;-p&#225;gina da p&#225;gina principal (aquela que entra depois de logado) deve ser colocado um desvio caso  |tmp.gotopage| != vazio para |wi.server.url|/|tmp.gotoproj|/|tmp.gotopage|.wsp. Se est&#225; sendo usado <u>SingleSignOn</u> isso deve ser feito ap&#243;s o Atribuir SingleSignOn.
+<br>
+
+<br>
+
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

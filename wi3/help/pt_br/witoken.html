@@ -1,0 +1,70 @@
+<html>
+<head>
+   <title>...usar o wi.token</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?witoken.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...usar o wi.token
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.14',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.16',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...usar o wi.token</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+&#201; comum algumas aplica&#231;&#245;es web requererem que se controle ou que se evite que o usu&#225;rio possa utilizar alguns recursos do browser como voltar ou atualizar as p&#225;ginas, podendo causar o processamento dos dados de uma mesma p&#225;gina repetidas vezes. Como exemplo: suponha uma aplica&#231;&#227;o web que onde o usu&#225;rio acessa uma p&#225;gina que realiza uma opera&#231;&#227;o de d&#233;bito em uma conta-corrente banc&#225;ria, e que n&#227;o seja oferecido um controle transacional sobre esta p&#225;gina, se o usu&#225;rio pedir atrav&#233;s do browser para que essa p&#225;gina seja atualizada, uma nova solicita&#231;&#227;o de d&#233;bito ser&#225; realizada sem que necessariamente o usu&#225;rio tenha pedido isso conscientemente.
+<br>
+
+<br>
+Para oferecer um controle transacional sobre esses tipos de a&#231;&#227;o o WebIntegrator gera um <b>token</b> (identificador) que servir&#225; como um validador de p&#225;gina. Automaticamente, o <b>WI Engine</b> gera para cada p&#225;gina WSP solicitada, um token de transa&#231;&#227;o &#250;nico identificado na vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.token</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, este token ser&#225; usado para garantir e refor&#231;ar uma &#250;nica requisi&#231;&#227;o para uma transa&#231;&#227;o em particular.
+<br>
+
+<br>
+Para que o controle seja feito basta referenciar essa vari&#225;vel (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.token</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) na p&#225;gina que ter&#225; sua transa&#231;&#227;o controlada. Quando os dados da p&#225;gina s&#227;o enviados para o servidor, o valor do token tamb&#233;m dever&#225; ser enviado pela p&#225;gina como conte&#250;do de uma vari&#225;vel chamada </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>wi.token</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, isso pode ser feito criando um campo no formul&#225;rio do tipo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">HIDDEN&nbsp;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">cujo atributo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">NAME</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> seja </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.token</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o atributo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">VALUE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> referencie </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|wi.token|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. No lado servidor o valor da vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.token</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> &#233; comparado com o token que est&#225; armazenado na sess&#227;o do usu&#225;rio, caso os valores coincidam, &#233; atribu&#237;da &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.token.ok</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> o valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>true</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, se os valores n&#227;o coincidirem a vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.token.ok</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ter&#225; seu valor igual a </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>false</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+As p&#225;ginas criadas pelo WIzard j&#225; referenciam automaticamente a vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wi.token</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, portanto estando elas prontas para terem um controle transacional. Uma maneira para implementar esse controle &#233; colocar um evento no p&#243;s-p&#225;gina da p&#225;gina que ser&#225; controlada para que fa&#231;a um desvio para uma outra p&#225;gina se o token n&#227;o for v&#225;lido ou, em termos de condi&#231;&#227;o, se </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|wi.token.ok|&nbsp;!=&nbsp;true</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

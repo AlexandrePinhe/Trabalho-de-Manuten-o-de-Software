@@ -1,0 +1,362 @@
+<html>
+<head>
+   <title>...criar um novo elemento para uso no WIzard</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?wiz_elemento.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...criar um novo elemento para uso no WIzard
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.4',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.6',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...criar um novo elemento para uso no WIzard</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+A ferramenta WIzard do WebIntegrator oferece a oportunidade do desenvolvedor poder acrescentar novos elementos a serem usados numa p&#225;gina WSP criados pelo pr&#243;prio desenvolvedor. Esses elementos n&#227;o s&#227;o nada mais al&#233;m do que trechos de c&#243;digo HTML que ser&#227;o inclu&#237;dos na p&#225;gina onde algumas propriedades poder&#227;o ser preenchidas de acordo com os valores que elas foram definidas atrav&#233;s do WIzard.
+<br>
+
+<br>
+Um elemento criado pelo desenvolvedor poder&#225; estar dispon&#237;vel para todos os projetos que fazem parte de uma instala&#231;&#227;o do WebIntegrator ou apenas para um projeto espec&#237;fico e al&#233;m do mais eles tamb&#233;m podem estar associados a um tipo espec&#237;fico de dado de um dos bancos de dados do projeto, desta maneira sempre que o WIzard montar uma p&#225;gina baseada em um Objeto de pr&#233;-p&#225;gina ele tentar&#225; usar aqueles componentes que estiverem associados a um tipo espec&#237;fico de acordo com os valores do Objeto.
+<br>
+
+<br>
+Como um exemplo inicial tente definir um elemento que servir&#225; como entrada para valores de data dividido em tr&#234;s campos separado pelo s&#237;mbolo da barra (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">/</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) onde um dos campos indica o dia, o outro o m&#234;s e o &#250;ltima campo indicando o ano. Para isso, acesse o WIzard e na janela de Propriedades clique no r&#243;tulo do campo Tipo. Na nova janela que se abre digite o nome que o componente ter&#225; no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Nome</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. O c&#243;digo-fonte desse elemento pode ser algo semelhante com o que se segue logo abaixo:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="672" bgcolor="#BFBFBF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">&lt;table&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;td nowrap&gt;Data&lt;/td&gt;
+<br>
+&lt;td nowrap&gt;&lt;input type="text" name="tmp.data.dia" size="2" value="|tmp.data.dia|"&gt;/
+<br>
+&lt;input size="2" type="text" name="tmp.data.mes" value="|tmp.data.mes|"&gt;/
+<br>
+&lt;input type="text" size="4" name="tmp.data.ano" value="|tmp.data.ano|"&gt;&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;/table&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="672" bgcolor="#BFBFBF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">&lt;div&gt;
+<br>
+  &lt;label&gt;|wiz[1].Titulo={label}| |$if(|wiz[2].Requerido={required}|,*)$|&lt;/label&gt;&lt;br&gt;
+<br>
+  &lt;input type="text" name="|wiz.{name}|" value="|wiz.Valor={value}|" 
+<br>
+         size="|wiz[3].Tamanho={size}|" maxlength="|wiz[4].Limite={maxlength}|"&gt;
+<br>
+&lt;/div&gt;
+<br>
+|wiznewline|</span><span style="font-family:MS Sans Serif; font-size:8pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Se o elemento for salvo com a op&#231;&#227;o <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>Global</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> marcada ele estar&#225; dispon&#237;vel para todos os projetos do WebIntegrator e no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Tipo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> da janela de Propriedades seu nome vir&#225; precedido do s&#237;mbolo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>$</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, caso contr&#225;rio o elemento apenas estar&#225; dispon&#237;vel no projeto em que ele foi criado e no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Tipo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> seu nome vir&#225; precedido do s&#237;mbolo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>#</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+O elemento acima ilustra como pode ser o c&#243;digo-fonte de um elemento por&#233;m ele ainda n&#227;o oferece a oportunidade do desenvolvedor poder definir certos valores em tempo de design da p&#225;gina. Para acrescentar essa caracter&#237;stica basta fazer refer&#234;ncia a vari&#225;veis que ir&#227;o fazer parte do ambiente do WIzard para que o elemento possa ser configurado de acordo com o que o desenvolvedor queira.
+<br>
+
+<br>
+Para criar vari&#225;veis no ambiente do WIzard basta que no c&#243;digo-fonte do elemento o desenvolvedor referencie vari&#225;veis que comecem com o prefixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>wiz.</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, o complemento do nome da vari&#225;vel servir&#225; como o nome da propriedade que ser&#225; exibida na janele de Propriedades do WIzard. A sintaxe a ser usada &#233; a seguinte:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|wiz.&lt;nome-da-propriedade&gt;|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+
+<br>
+Como exemplo altere o c&#243;digo-fonte do elemento digitado acima para que o r&#243;tulo do campo possa ser digitado pelo desenvolvedor em tempo de design da p&#225;gina. O c&#243;digo-fonte pode ser o que segue abaixo:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="672" bgcolor="#BFBFBF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">&lt;table&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;td nowrap&gt;|wiz.Rotulo|&lt;/td&gt;
+<br>
+&lt;td nowrap&gt;&lt;input type="text" size="|wiz.TamCampoDia=2|" name="tmp.data.dia" value="|tmp.data.dia|"&gt;/
+<br>
+&lt;input type="text" size="|wiz.TamCampoMes=2|" name="tmp.data.mes" value="|tmp.data.mes|"&gt;/
+<br>
+&lt;input type="text" size="|wiz.TamCampoAno=4|" name="tmp.data.ano" value="|tmp.data.ano|"&gt;&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;/table&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+A altera&#231;&#227;o feita acima faz com que o elemento possua agora uma propriedade chamada <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>R&#243;tulo</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que estar&#225; dispon&#237;vel para ser configurada atrav&#233;s da janela de propriedade do WIzard quando um desenvolvedor fizer uso desse elemento numa p&#225;gina WSP.
+<br>
+
+<br>
+
+<br>
+Durante a defini&#231;&#227;o de uma propriedade o desenvolvedor tamb&#233;m poder&#225; definir algum valor padr&#227;o que el&#225; ir&#225; assumir. Para isso basta que na defini&#231;&#227;o da propriedade no c&#243;digo-fonte do elemento o desenvolvedor atribua esse valor usando a seguinte sintaxe:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|wiz.&lt;nome-da-propriedade&gt;=&lt;valor-padr&#227;o&gt;|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Para ilustar essa possibilidade altere novamente o c&#243;digo-fonte do elemento exemplificado aqui oferecendo agora a chance do desenvolvedor poder definir qual o tamanho que os campos de entrada de dados ter&#227;o mas j&#225; tendo eles valores pr&#233;-configurados.
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="672" bgcolor="#BFBFBF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">&lt;table&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;td nowrap&gt;|wiz.Rotulo|&lt;/td&gt;
+<br>
+&lt;td nowrap&gt;&lt;input type="text" size="|wiz.TamCampoDia=2|" name="tmp.data.dia" value="|tmp.data.dia|"&gt;/
+<br>
+&lt;input type="text" size="|wiz.TamCampoMes=2|" name="tmp.data.mes" value="|tmp.data.mes|"&gt;/
+<br>
+&lt;input type="text" size="|wiz.TamCampoAno=4|" name="tmp.data.ano" value="|tmp.data.ano|"&gt;&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;/table&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+O elemento representado pelo c&#243;digo-fonte acima possui agora quatro propriedades que podem ser configuradas pelo WIzard: <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>Rotulo</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>TamCampoDia</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>TamCampoMes</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>TamCampoAno</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, sendo que as tr&#234;s &#250;ltimas propriedades, respectivamente, j&#225; possuem valores pr&#233;-configurados.
+<br>
+
+<br>
+A princ&#237;pio as propriedades de um elemento quando s&#227;o exibidas na janela de Propriedades do WIzard est&#227;o ordenadas alfabeticamente em ordem crescente de acordo com o nome da propriedade, mas o desenvolvedor poder&#225; definir a ordem na qual as propriedades ir&#227;o aparecer no WIzard bastando que ap&#243;s o prefixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>wiz</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ele informe entre sinais de colchetes a sequ&#234;ncia que a propriedade ir&#225; assumir. A sintaxe &#233; a seguinte:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|wiz[&lt;sequ&#234;ncia&gt;].&lt;nome-da-propriedade&gt;|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+
+<br>
+O c&#243;digo-fonte abaixo altera novamente o elemento para que se possa definir a sequ&#234;ncia que as propriedades ir&#227;o aparecer no WIzard.
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="672" bgcolor="#BFBFBF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">&lt;table&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;td nowrap&gt;|wiz[1].Rotulo|&lt;/td&gt;
+<br>
+&lt;td nowrap&gt;&lt;input type="text" size="|wiz[2].TamCampoDia=2|" name="tmp.data.dia" value="|tmp.data.dia|"&gt;/
+<br>
+&lt;input type="text" size="|wiz[3].TamCampoMes=2|" name="tmp.data.mes" value="|tmp.data.mes|"&gt;/
+<br>
+&lt;input type="text" size="|wiz[4].TamCampoAno=4|" name="tmp.data.ano" value="|tmp.data.ano|"&gt;&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;/table&gt;</span><span style="font-family:Courier New; font-size:8pt; color:#000000"><span style="font-family:Courier New; font-size:8pt; color:#FF0000">
+<br>
+</span></span></span></span></span></span></td></tr></table>
+<br>
+
+<br>
+Uma outra possibilidade que pode ser feita para configurar qual valor uma determinada propriedade pode ter &#233; o desenvolvedor poder especificar um determinado grupo de valores que ela poder&#225; ter. Para isso basta que o desenvolvedor liste os poss&#237;veis valores da propriedade separados por v&#237;rgula definindo-os como valores-padr&#245;es dela. A sintaxe &#233; a seguinte:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|wiz.&lt;nome-da-propriedade&gt;.combo=&lt;valor#1&gt;[,&lt;valor#2&gt;,...]|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Note a presen&#231;a do sufixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">combo</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, &#233; ele que indica ao WIzard que essa propriedade possui um grupo de valores e que os mesmos ser&#227;o exibidos numa combo-box limitando assim as op&#231;&#245;es de escolha que o desenvolvedor da p&#225;gina poder&#225; ter. Caso queira o desenvolvedor tamb&#233;m poder&#225; indicar qual dos valores poss&#237;veis ser&#225; o valor-padr&#227;o bastando que para isso delimite o valor entre os sinais de chaves. Como exemplo altere o c&#243;digo-fonte do elemento acrescentando a propriedade de poder alinhar verticalmente atrav&#233;s dos valores </span><span style="font-family:Courier New; font-size:10pt; color:#000000">bottom</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">middle</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ou </span><span style="font-family:Courier New; font-size:10pt; color:#000000">top</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="672" bgcolor="#BFBFBF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">&lt;table&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;td nowrap style="vertical-align: |wiz.AlinhamentoVertical.combo={bottom},middle,top|;"&gt;|wiz[1].Rotulo|&lt;/td&gt;
+<br>
+&lt;td nowrap&gt;&lt;input type="text" size="|wiz[2].TamCampoDia=2|" name="tmp.data.dia" value="|tmp.data.dia|"&gt;/
+<br>
+&lt;input type="text" size="|wiz[3].TamCampoMes=2|" name="tmp.data.mes" value="|tmp.data.mes|"&gt;/
+<br>
+&lt;input type="text" size="|wiz[4].TamCampoAno=4|" name="tmp.data.ano" value="|tmp.data.ano|"&gt;&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;/table&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+
+<br>
+O desenvolvedor ainda poder&#225; atribuir a cada um dos valores da combo um texto a fim de torn&#225;-los mais explicativos, para isso coloca-se o texto que dever&#225; estar associado seguido do valor entre os sinais de </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>[</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>]</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. A funcionalidade dos sinais de chaves tamb&#233;m vale aqui, ou seja, delimitando um par texto-valor entre chaves esse ser&#225; o valor defaul do componente.
+<br>
+
+<br>
+Alterando o c&#243;digo-fonte do elemento para que ao inv&#233;s de exibir os valores </span><span style="font-family:Courier New; font-size:10pt; color:#000000">bottom</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">middle</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">top</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> sejam exibidos os textos <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Abaixo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Meio</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Acima</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ficaria assim:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="672" bgcolor="#BFBFBF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">&lt;table&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;td nowrap style="vertical-align: |wiz.AlinhamentoVertical.combo={Abaixo[bottom]},Meio[middle],Acima[top]|;"&gt;|wiz[1].Rotulo|&lt;/td&gt;
+<br>
+&lt;td nowrap&gt;&lt;input type="text" size="|wiz[2].TamCampoDia=2|" name="tmp.data.dia" value="|tmp.data.dia|"&gt;/
+<br>
+&lt;input type="text" size="|wiz[3].TamCampoMes=2|" name="tmp.data.mes" value="|tmp.data.mes|"&gt;/
+<br>
+&lt;input type="text" size="|wiz[4].TamCampoAno=4|" name="tmp.data.ano" value="|tmp.data.ano|"&gt;&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;/table&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Al&#233;m das combos de valores que podem ser definidas pelo pr&#243;prio desenvolvedor tamb&#233;m poder&#227;o ser feitas referencias &#224;s combos do pr&#243;prio WIzard que listam as classes CSS e as fun&#231;&#245;es JavaScript dispon&#237;veis para uma p&#225;gina.
+<br>
+
+<br>
+Para referenciar a combo com a listagem das classes CSS dispon&#237;veis utilize a seguinte sintaxe:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|wiz.&lt;nome-da-propriedade&gt;.combo=wiz.CSSCombo|
+<br>
+</div></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Para fazer refer&#234;ncia &#224; combo que lista as fun&#231;&#245;es JavaScript dispon&#237;veis para uma p&#225;gina use a sintaxe a seguie:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|wiz.&lt;nome-da-propriedade&gt;.combo=wiz.JSCombo|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Essas combos tamb&#233;m suportam a funcionalidade de defini&#231;&#227;o de um valor padr&#227;o j&#225; vir selecionado. Para isso basta colocar o valor que se deseje vir selecionado entre chaves logo ap&#243;s a refer&#234;ncia a combo. A sintaxe ficaria assim:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|wiz.&lt;nome-da-propriedade&gt;.combo=wiz.CSSCombo|wizJSCombo[{valor-padr&#227;o}]|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Al&#233;m da possibilidade de referenciar as combos de CSS e fun&#231;&#245;es JavaScript dispon&#237;veis pelo WIzard o desenvolvedor poder&#225; referenciar as vari&#225;veis </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wiz.{name}</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wiz.{label}</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wiz.{size}</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">wiz.{value}</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> para, respectivamente, recuperarem o nome que foi definido para esse componente na p&#225;gina, o r&#243;tulo que foi dado &#224; coluna, o tamanho do campo da coluna e o valor padr&#227;o que essa coluna possui. As tr&#234;s &#250;ltimas vari&#225;veis s&#243; ter&#227;o utilidades com elementos do WIzard que estejam vinculados com algum tipo de dado de banco de dados pois os mesmos poder&#227;o ser usados para recuperar informa&#231;&#245;es de uma coluna de uma tabela do banco.
+<br>
+
+<br>
+Um outro recurso que pode ser adicionado aos componentes &#233; ofercer ao desenvolvedor que ir&#225; utiliz&#225;-los uma dica (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">hint</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) do que cada uma das propriedades faz. Para definir o texto da dica das propriedades de um componente basta colocar dentro de um coment&#225;rio HTML, no pr&#243;prio c&#243;digo-fonte do componente, as propriedades com o texto da dica. Tomando como exemplo o componente aqui desenvolvido, a declara&#231;&#227;o dos textos das dicas ficaria assim:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="672" bgcolor="#BFBFBF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">&lt;!--
+<br>
+|wiztitle.AlinhamentoVertical=Alinhamento vertical do campo.|
+<br>
+|wiztitle.Rotulo=O texto do r&#243;tulo.|
+<br>
+|wiztitle.TamCampoDia=Tamanho do campo dia.|
+<br>
+|wiztitle.TamCampoMes=Tamanho do campo m&#234;s.|
+<br>
+|wiztitle.TamCampoAno=Tamanho do campo ano.|
+<br>
+--&gt;
+<br>
+&lt;table&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;td nowrap style="vertical-align: |wiz.AlinhamentoVertical.combo={Abaixo[bottom]},Meio[middle],Acima[top]|;"&gt;|wiz[1].Rotulo|&lt;/td&gt;
+<br>
+&lt;td nowrap&gt;&lt;input type="text" size="|wiz[2].TamCampoDia=2|" name="tmp.data.dia" value="|tmp.data.dia|"&gt;/
+<br>
+&lt;input type="text" size="|wiz[3].TamCampoMes=2|" name="tmp.data.mes" value="|tmp.data.mes|"&gt;/
+<br>
+&lt;input type="text" size="|wiz[4].TamCampoAno=4|" name="tmp.data.ano" value="|tmp.data.ano|"&gt;&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;/table&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Para desassociar um componente de um tipo de dados no banco o desenvolvedor deve selecionar o componente, com a tecla &lt;ctrl&gt; apertada desmarcar o tipo associado e gravar a altera&#231;&#227;o.
+<br>
+</span></span></span>
+
+</body>
+</html>
