@@ -1,0 +1,162 @@
+<html>
+<head>
+   <title>Funcionamento do WIzard</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?funcionamentodowizard.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Funcionamento do WIzard
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.5',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.5.2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Detalhes do funcionamento do WIzard</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O principal objetivo do WIzard &#233; ajudar o desenvolvedor na cria&#231;&#227;o de p&#225;ginas WSP baseada nas defini&#231;&#245;es de elementos do tipo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>Objetos</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> encontradas no Pr&#233;-P&#225;gina. No momento da montagem da p&#225;gina o WIzard seguir&#225; um modelo de p&#225;gina definido internamente por ele caso o projeto n&#227;o ofere&#231;a nenhuma, caso o projeto use um modelo para a cria&#231;&#227;o das p&#225;ginas leia a nota que segue abaixo.
+<br>
+
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>NOTA</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>
+<br>
+ </b><img src="nota.png" width="34" height="33" border="0" alt="nota">&nbsp;&nbsp;&nbsp;A fim de obter um correto funcionamento do WIzard no caso onde um projeto esteja usando uma p&#225;gina que sirva como modelo para a cria&#231;&#227;o das p&#225;ginas WSP os seguintes requisitos tem que ser atendidos:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="12"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Caso o modelo j&#225; possua uma </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tag</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&lt;HEAD&gt;</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> fa&#231;a refer&#234;ncia &#224; vari&#225;vel <b>|head.content|</b> dentro dessa tag. Querendo, o desenvolvedor tamb&#233;m poder&#225; deixar a cargo do WIzard a montagem dos elementos da tag </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&lt;HEAD&gt;</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> desde que para isso ele fa&#231;a refer&#234;ncia &#224; vari&#225;vel <b>|head|</b> logo ap&#243;s a tag </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&lt;HTML&gt;</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, neste caso o p&#225;gina-modelo n&#227;o poder&#225; possuir explicitamente a tag </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&lt;HEAD&gt;</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="12"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="12"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">O atributo <b>onLoad</b> da tag </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&lt;BODY&gt;</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> dever&#225; chamar a fun&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>init()</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Esta fun&#231;&#227;o JavaScript encontra-se implicitamente definida no elemento </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&lt;HEAD&gt;</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> da p&#225;gina quando gerada pelo WIzard.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="12"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="12"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Dentro da tag </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&lt;BODY&gt;</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> fa&#231;a refer&#234;ncia &#224; vari&#225;vel <b>|body.content|</b>, ser&#225; no local onde foi inserida essa vari&#225;vel que o WIzard ir&#225; inserir o(s) formul&#225;rio(s) que corresponde(m) ao(s) Objeto(s) encontrado(s) no Pr&#233;-P&#225;gina.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="12"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Logo abaixo segue um exemplo de c&#243;digo-fonte para uma p&#225;gina que servir&#225; de modelo.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;HTML&gt;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;HEAD&gt;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|head.content|
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;/HEAD&gt;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;BODY&nbsp;onLoad="init()"&gt;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;P&nbsp;ALIGN="center"&gt;MEU&nbsp;CABE&#199;ALHO&lt;/P&gt;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|body.content|
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;P&nbsp;ALIGN="center"&gt;MEU&nbsp;RODAP&#201;&lt;/P&gt;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;/BODY&gt;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;/HTML&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+A primeira coisa a ser feita pelo WIzard quando o desenvolvedor solicita a sua ajuda ser&#225; percorrer todos os elementos do Pr&#233;-P&#225;gina procurando por <b>Objetos</b>, para cada elemento do tipo Objeto que for encontrado o WIzard ir&#225; inserir um formul&#225;rio na p&#225;gina WSP e para cada coluna referenciada por um Objeto ser&#225; criado um campo de entrada no formul&#225;rio espec&#237;fico.
+<br>
+
+<br>
+Como exemplo suponha que num Pr&#233;-P&#225;gina haja um &#250;nico Objeto identificado por </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>tmp.obj</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com a seguinte instru&#231;&#227;o SQL: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;col1,&nbsp;col2,&nbsp;col3&nbsp;FROM&nbsp;tab</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Neste caso o WIzard iria criar apenas um formul&#225;rio pois no Pr&#233;-P&#225;gina s&#243; h&#225; um Objeto e nesse formul&#225;rio seriam inseridos tr&#234;s campos de entrada que correspondem &#224;s tr&#234;s colunas (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">col1,&nbsp;col2&nbsp;e&nbsp;col3</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) referenciadas pelo Objeto.
+<br>
+
+<br>
+Ao montar a p&#225;gina o WIzard tentar&#225; descobrir se as colunas referenciadas pelo Objeto j&#225; possuem algum tamanho definido no banco de dados, assim quando os campos forem criados algumas propriedades como limite e tamanho do campo ser&#227;o automaticamanete preenchidas. Usando essas mesmas informa&#231;&#245;es, o WIzard ir&#225; dispor os campos para que os mesmos ocupem o m&#225;ximo espa&#231;o da p&#225;gina.
+<br>
+
+<br>
+Quando na instru&#231;&#227;o SQL de um elemento do tipo Objeto existir a cl&#225;usula </span><span style="font-family:Courier New; font-size:10pt; color:#000000">WHERE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, o WIzard ir&#225; consider&#225;-las <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">colunas-chaves</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> portanto n&#227;o ser&#227;o permitidas altera&#231;&#245;es em seus valores atrav&#233;s do formul&#225;rio gerado. Os valores com os quais as colunas citadas no </span><span style="font-family:Courier New; font-size:10pt; color:#000000">WHERE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> s&#227;o comparados ir&#227;o aparecer no formul&#225;rio como campos do tipo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>HIDDEN</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> caso possuam o prefixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>tmp</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. J&#225; as colunas que foram citadas na cl&#225;usula </span><span style="font-family:Courier New; font-size:10pt; color:#000000">WHERE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e no </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ir&#227;o aparecer na p&#225;gina como um </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>label</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, ou seja, apenas o nome da coluna seguido de seu valor.
+<br>
+
+<br>
+Como exemplo suponha que num Pr&#233;-P&#225;gina haja um &#250;nico Objeto identificado por </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>tmp.obj</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com a seguinte instru&#231;&#227;o SQL: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;col1,&nbsp;col2,&nbsp;col3&nbsp;FROM&nbsp;tab&nbsp;WHERE&nbsp;col1&nbsp;=&nbsp;|tmp.val1|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Neste caso o WIzard iria criar apenas um formul&#225;rio pois no Pr&#233;-P&#225;gina s&#243; h&#225; um Objeto e nesse formul&#225;rio seriam inseridos dois campos de entrada que correspondem &#224;s colunas </span><span style="font-family:Courier New; font-size:10pt; color:#000000">col2</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">col3</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, um campo do tipo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">HIDDEN</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> correspondente ao valor com o qual est&#225; sendo comparada a coluna </span><span style="font-family:Courier New; font-size:10pt; color:#000000">col1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e um </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>label</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> para apenas visualizar o valor da coluna </span><span style="font-family:Courier New; font-size:10pt; color:#000000">col1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Esta "restri&#231;&#227;o" imposta pelo WIzard &#233; para garantir o correto funcionamento no momento da gera&#231;&#227;o da l&#243;gica de P&#243;s-P&#225;gina.
+<br>
+
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<img src="importante.png" width="33" height="32" border="0" alt="importante"> <b>IMPORTANTE:
+<br>
+</b>
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">A l&#243;gica dos elementos Update gerada para o P&#243;s-P&#225;gina pelo WIzard considera as colunas declaradas na cl&#225;usula WHERE do Objeto correspondente como sendo colunas que tem seus valores gerados automaticamente pelo banco de dados (valor auto-incremento, campo calculado, etc.) mas isso n&#227;o impede que o desenvolvedor depois fa&#231;a altera&#231;&#245;es nos elementos gerados com o intuito de alterar a sua l&#243;gica.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+A l&#243;gica de P&#243;s-P&#225;gina s&#243; &#233; gerada sob pedido do desenvolvedor quando se clica no &#237;cone <img src="update.png" width="16" height="16" border="0" alt="update"> da janela de Propriedades por&#233;m para a l&#243;gica ser gerada o Objeto, a partir do qual est&#225; se construindo o P&#243;s-P&#225;gina, dever&#225; possuir em sua instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SQL</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> as cl&#225;usulas </span><span style="font-family:Courier New; font-size:10pt; color:#000000">WHERE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">FROM</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e n&#227;o pode usar mais de uma tabela.
+<br>
+
+<br>
+Para cada Objeto do Pr&#233;-P&#225;gina s&#227;o criado 5 (cinco) elementos de P&#243;s-P&#225;gina: tr&#234;s <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Updates</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, um <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Objeto</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e um <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Gravar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Um dos Updates &#233; respons&#225;vel pela l&#243;gica de inserir os dados digitados no formul&#225;rio no banco de dados atrav&#233;s de um comando </span><span style="font-family:Courier New; font-size:10pt; color:#000000">INSERT</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, outro Update serve para remover quando selecionada a op&#231;&#227;o excluir e o outro Update fica com a l&#243;gica para atualizar os dados atrav&#233;s de um comando </span><span style="font-family:Courier New; font-size:10pt; color:#000000">UPDATE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Os elementos Objeto e Gravar s&#227;o utilizados quando no Objeto do Pr&#233;-P&#225;gina a cl&#225;usula </span><span style="font-family:Courier New; font-size:10pt; color:#000000">WHERE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> faz refer&#234;ncia a alguma vari&#225;vel com prefixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>tmp</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, o Objeto fica encarregado de retornar a(s) coluna(s) que &#233;(s&#227;o) considerada(s) chave(s) e o Gravar ir&#225; atribuir esses valores retornados pelo Objeto &#224;s respectivas vari&#225;veis tempor&#225;rias.
+<br>
+
+<br>
+Apagando o formul&#225;rio correspondente a um Objeto os elementos de P&#243;s-P&#225;gina associadas a ele tamb&#233;m ser&#227;o removidos desde que o desenvolvedor n&#227;o os tenha alterado.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

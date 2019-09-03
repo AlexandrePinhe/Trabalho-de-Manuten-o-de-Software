@@ -1,0 +1,198 @@
+<html>
+<head>
+   <title>...montar uma barra de navega&ccedil;&atilde;o de grid</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?grid_navegacao.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...montar uma barra de navega&#231;&#227;o de grid
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.9',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.11',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...montar uma barra de navega&#231;&#227;o de grid</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Neste passo-a-passo ser&#225; explicado como o desenvolvedor poder&#225; montar uma barra de navega&#231;&#227;o com bot&#245;es que levem aos primeiros, pr&#243;ximo, anterior e &#250;ltimos registro, semelhante &#224;s que s&#227;o encontradas em componentes Delphi ou Visual Basic. Para montar essa barra de navega&#231;&#227;o ser&#227;o feitas algumas personaliza&#231;&#245;es em algumas propriedades que os grids possuem, para saber mais detalhes sobre as vari&#225;veis dispon&#237;veis para um grid acesse o t&#243;pico da Ajuda <a href=javaScript:parent.reDisplay('1.1.2.2',1,0)>Vari&aacute;veis do grid</a>.
+<br>
+
+<br>
+Para a montagem da barra de navega&#231;&#227;o de um grid precisaremos de:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td width="12"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">um grid (obviamente!) que esteja com o campo <span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Quantidade</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> definido com algum valor v&#225;lido o suficiente para gerar uma navega&#231;&#227;o pelos registros retornados.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td width="12"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td width="12"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">imagens que ser&#227;o usadas para a montagem da barra de navega&#231;&#227;o.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="12"></td><td width="12"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="48" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><img src="go_last.png" width="23" height="23" border="0" alt="go_last">
+<br>
+</span></div></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Imagem para os &#250;ltimos registros.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="48" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><img src="go_first.png" width="23" height="23" border="0" alt="go_first">
+<br>
+</span></div></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Imagem para os primeiros registros.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="48" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><img src="go_next.png" width="23" height="23" border="0" alt="go_next">
+<br>
+</span></div></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Imagem para os pr&#243;ximos registros.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="48" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><img src="go_previous.png" width="23" height="23" border="0" alt="go_previous">
+<br>
+</span></div></td><td align="left" valign="top" width="336" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Imagem para os registros anteriores.
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Como o exemplo dos c&#243;digos aqui exibidos fazem refer&#234;ncia &#225; </span><span style="font-family:Courier New; font-size:10pt; color:#000000">grid.&lt;identificador&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> lembre-se de substituir </span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;identificador&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> pelo identificador correspondente ao grid para o qual voc&#234; quer montar a barra de navega&#231;&#227;o, ou seja, caso voc&#234; queira montar a barra de navega&#231;&#227;o para um grid cujo identificador seja </span><span style="font-family:Courier New; font-size:10pt; color:#000000">meuGrid</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ent&#227;o substitua </span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;identificador&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> por </span><span style="font-family:Courier New; font-size:10pt; color:#000000">meuGrid</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Um grid do WebIntegrator oferece uma s&#233;rie de propriedades sendo que algumas dessas podem ter seus valores alterados, as que ser&#227;o alteradas aqui para a montagem da barra de navega&#231;&#227;o ser&#227;o:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="227" bgcolor="#FFFFFF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">grid.&lt;identificador&gt;txtBack</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="496" bgcolor="#FFFFFF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Esta propriedade tanto pode ser usada para exibir o texto do link que aponta para os registros anteriores quanto pode ser usada para que o desenvolvedor personalize este texto atribuindo algum valor a ela. Por default, o valor dessa propriedade &#233; <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>Anterior</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="227" bgcolor="#FFFFFF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">grid.&lt;identificador&gt;txtGo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="496" bgcolor="#FFFFFF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Esta propriedade tanto pode ser usada para exibir o texto do link que aponta para os pr&#243;ximos registros quanto pode ser usada para que o desenvolvedor personalize este texto atribuindo algum valor a ela. Por default, o valor dessa propriedade &#233; <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>Pr&#243;ximo</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="227" bgcolor="#FFFFFF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">grid.&lt;identificador&gt;txtFirst</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+</span></span></span></span></span></span></td><td align="left" valign="top" width="496" bgcolor="#FFFFFF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Esta propriedade tanto pode ser usada para exibir o texto do link que aponta para os primeiros registros quanto pode ser usada para que o desenvolvedor personalize este texto atribuindo algum valor a ela. Por default, o valor dessa propriedade &#233; <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>Primeiro</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="227" bgcolor="#FFFFFF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">grid.&lt;identificador&gt;txtLast</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span></span></span></td><td align="left" valign="top" width="496" bgcolor="#FFFFFF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Esta propriedade tanto pode ser usada para exibir o texto do link que aponta para os &#250;ltimos registros quanto pode ser usada para que o desenvolvedor personalize este texto atribuindo algum valor a ela. Por default, o valor dessa propriedade &#233; <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>&#218;ltimo</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="227" bgcolor="#FFFFFF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F">grid.&lt;identificador&gt;txtMid</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="496" bgcolor="#FFFFFF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Esta propriedade tanto pode ser usada para exibir o que ser&#225; exibido como separador dos links para os anteriores e os pr&#243;ximos registros quanto pode ser usada para que o desenvolvedor personalize o que ser&#225; exibido atribuindo algum valor a ela. Por default, o valor dessa propriedade &#233; <span style="font-family:Courier New; font-size:10pt; color:#000000"><b>-</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+As propriedades </span><span style="font-family:Courier New; font-size:10pt; color:#000000">txtBack</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">txtGo</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">txtLast</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">txtFirst</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> s&#227;o usadas internamente pelo <b>WI Engine</b> para a montagem das propriedades </span><span style="font-family:Courier New; font-size:10pt; color:#000000">linkBack</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">linkGo</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">linkLast</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">linkFirst</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, respectivamente. As duas primeiras propriedades s&#227;o usadas internamente para a montagem do link de navega&#231;&#227;o de um grid, que &#233; retornado pela propriedade link. J&#225; a propriedade </span><span style="font-family:Courier New; font-size:10pt; color:#000000">linkFull</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> retorna um link de navega&#231;&#227;o contendo todas as propriedades de navega&#231;&#227;o incluindo os links para os primeiros e &#250;ltimos resultados.
+<br>
+
+<br>
+Para come&#231;ar a montagem da barra de navega&#231;&#227;o primeiramente copie as imagens que ser&#227;o usadas para um diret&#243;rio images do projeto. Na p&#225;gina que exibir&#225; o grid adicione um elemento <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>Gravar</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com a seguinte configura&#231;&#227;o:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="96" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="628" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="96" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000"><b>Objetos</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="628" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">grid.&lt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>identificador</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">&gt;.txtGo, grid.&lt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>identificador</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">&gt;.txtBack, grid.&lt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>identificador</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">&gt;.txtMid, grid.&lt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>identificador</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">&gt;.txtFirst, grid.&lt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>identificador</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">&gt;.txtLast
+<br>
+</span></span></span></span></span></span></td></tr><tr><td align="left" valign="top" width="96" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>
+<br>
+</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000"><b>Se condi&#231;&#227;o verdadeira</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="628" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">&lt;img src="/|wi.proj.id|/images/next.jpg" border="0" title="Pr&#243;ximo"&gt;,&lt;img src="/|wi.proj.id|/images/previous.jpg" border="0" title="Anterior"&gt;,&amp;nbsp;,&lt;img src="/|wi.proj.id|/images/first.jpg" border="0" title="Primeiros"&gt;,&lt;img src="/|wi.proj.id|/images/last.jpg" border="0" title="&#218;ltimos"
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<img src="importante.png" width="33" height="32" border="0" alt="importante"> <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>IMPORTANTE:
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="77"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span></span></span></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Lembre-se de substituir as ocorr&#234;ncias de </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&lt;identificador&gt;</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> pelo identificador correspondente ao grid que se esteja montando a barra de navega&#231;&#227;o.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="77"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Pronto, a nossa barra de navega&#231;&#227;o j&#225; est&#225; configurada! Agora basta fazer a refer&#234;ncia na p&#225;gina ao grid (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">|grid.&lt;identificador&gt;|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) e ao link de navega&#231;&#227;o (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">|grid.&lt;identificador&gt;.linkFull|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">). Para que a montagem do link de navega&#231;&#227;o sej&#225; correto &#233; necess&#225;rio que a propriedade </span><span style="font-family:Courier New; font-size:10pt; color:#000000">rowCount</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> do grid retorne um valor v&#225;lido e esse resultado &#233; dependente do driver JDBC que estiver sendo utilizado.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<html>
+<head>
+   <title>Executando uma a&ccedil;&atilde;o ao carregar uma p&aacute;gina WSP</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?js_onload_body.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Executando uma a&#231;&#227;o ao carregar uma p&#225;gina WSP
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.10.1',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.11',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Executando uma a&#231;&#227;o ao carregar uma p&#225;gina WSP
+<br>
+</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Se voc&#234; quiser definir uma fun&#231;&#227;o JavaScript no atributo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">ONLOAD</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> da tag </span><span style="font-family:Courier New; font-size:10pt; color:#000000">BODY</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> de uma p&#225;gina WSP gerada pelo WIzard insiram um elemento do tipo <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Gen&#233;rico</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> na p&#225;gina WSP e na propriedade <span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Texto</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> desse elemento coloque o seguinte trecho de c&#243;digo:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;script&gt;
+<br>
+window.onload&nbsp;=&nbsp;function()&nbsp;{init();&nbsp;&lt;seu-c&#243;digo&gt;};
+<br>
+&lt;/script&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+A parte indicada por </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&lt;seu-c&#243;digo&gt;</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> pode ser substitu&#237;da por qualquer c&#243;digo JavaScript inclusive chamada a outras fun&#231;&#245;es. A fun&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">init()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> &#233; uma fun&#231;&#227;o usada pelas p&#225;ginas geradas pelo WIzard para uma pr&#233;-formata&#231;&#227;o dos campos de um formul&#225;rio ent&#227;o recomendamos que ela seja a primeira instru&#231;&#227;o a ser executada antes de qualquer c&#243;digo.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

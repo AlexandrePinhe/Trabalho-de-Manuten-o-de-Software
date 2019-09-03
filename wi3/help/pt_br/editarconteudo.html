@@ -1,0 +1,74 @@
+<html>
+<head>
+   <title>...editar o layout de uma p&aacute;gina WSP fora do WI_Builder</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?editarconteudo.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...editar o layout de uma p&#225;gina WSP fora do WI Builder
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.6',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.8',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...editar o layout de uma p&#225;gina WSP fora do WI Builder</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O <b>WI Builder</b> permite que o desenvolvedor edite o layout das p&#225;ginas WSP de um projeto tanto pelo WIzard de p&#225;ginas quanto pelo simples editor acess&#237;vel nas tela de defini&#231;&#227;o da pr&#243;pria p&#225;gina por&#233;m como fazer caso o desenvolvedor queira editar os conte&#250;dos dessas p&#225;ginas em editores de terceiros.
+<br>
+
+<br>
+Para cada p&#225;gina criada pelo <b>WI Builder</b> ser&#225; criada uma p&#225;gina JSP diretamente no diret&#243;rio do projeto, um arquivo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">.xml</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com as defini&#231;&#245;es da p&#225;gina em </span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;WEBAPP_PATH&gt;/WEB-INF/definitions/pages</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e um outro arquivo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">.xml</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> representando o layout da p&#225;gina em </span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;WEBAPP_PATH&gt;/WEB-INF/definitions/layouts</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Nenhum dos tr&#234;s arquivos citados acima devem ser manipulados diretamente pelo desenvolvedor atrav&#233;s de ferramentas de terceiros e fora do ambiente do <b>WI Builder</b>, principalmente as p&#225;ginas JSP, pois as mesmas s&#227;o geradas automaticamente pelo <b>WI Builder</b> baseadas nas defini&#231;&#245;es dos layouts.
+<br>
+
+<br>
+Para que voc&#234; possa editar o layout de uma p&#225;gina WSP fora do ambiente do <b>WI Builder</b> primeiramente voc&#234; precisa acessar a tela de defini&#231;&#227;o da p&#225;gina e em seguida clicar no &#237;cone <img src="edit.png" width="20" height="22" border="0" alt="edit">. Na tela de edi&#231;&#227;o, clique no bot&#227;o <img src="gravar.png" width="43" height="23" border="0" alt="gravar">. Nesse momento ser&#225; criado um arquivo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>.html</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> em </span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;WEBAPP_PATH&gt;/WEB-INF/definitions/layouts</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Ser&#225; editando esse arquivo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">.html</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que o desenvolvedor poder&#225; estar editando o layout de uma p&#225;gina WSP. Vale notar que ap&#243;s as edi&#231;&#245;es das p&#225;ginas feitas por programas externos &#233; necess&#225;rio efetuar um recarregamento do projeto para que as correspondentes p&#225;ginas JSP sejam geradas baseadas nos layouts.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<html>
+<head>
+   <title>Tutorial de Fun&ccedil;&otilde;es</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?funcoes.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Tutorial de Fun&#231;&#245;es
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.2.5',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.3.1',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Tutorial de Fun&#231;&#245;es</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Uma fun&#231;&#227;o definida pelo usu&#225;rio no WebIntegrator &#233; uma classe Java que implementa a interface </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.integration.InterfaceFunction</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e que deve estar devidamente registrada pelo WI Builder.
+<br>
+
+<br>
+A interface </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.integration.InterfaceFunction</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> declara apenas o m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">execute(Hash&nbsp;wiMap,&nbsp;String[]&nbsp;args)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cujo argumento cont&#233;m os par&#226;metros que foram passados para a fun&#231;&#227;o. O c&#243;digo-fonte da interface segue abaixo:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">package&nbsp;br.com.itx.integration;
+<br>
+
+<br>
+public&nbsp;interface&nbsp;InterfaceFunction&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;String&nbsp;execute(WIMap&nbsp;wiMap,&nbsp;String[]&nbsp;args);
+<br>
+}
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Logo abaixo segue um exemplo de implementa&#231;&#227;o de uma fun&#231;&#227;o que retornar&#225; o valor passado como par&#226;metro, caso nenhum ou mais de um par&#226;metro seja passado a fun&#231;&#227;o retornar&#225; uma mensagem informando que foi passada uma quantidade incorreta de par&#226;metros.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">import&nbsp;br.com.itx.integration.InterfaceFunction;
+<br>
+
+<br>
+public&nbsp;class&nbsp;WIMensagem&nbsp;implements&nbsp;InterfaceFunction&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;static&nbsp;final&nbsp;String&nbsp;MSG&nbsp;=&nbsp;"Oops!&nbsp;Quantidade&nbsp;incorreta&nbsp;de&nbsp;par&#226;metros.";
+<br>
+
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;public&nbsp;String&nbsp;execute(WIMap&nbsp;wiMap,&nbsp;String[]&nbsp;args)&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;(args.length&nbsp;==&nbsp;0&nbsp;||&nbsp;args.length&nbsp;&gt;&nbsp;1)&nbsp;?&nbsp;WIMensagem.MSG&nbsp;:&nbsp;args[0];
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>
+}</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+Ap&#243;s compilar a classe Java que implementa a l&#243;gica de sua fun&#231;&#227;o coloque o arquivo compilado (arquivo com a extens&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>.class</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) no reposit&#243;rio de classes espec&#237;fico de um projeto ou no reposit&#243;rio de classes comum ao </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>web&nbsp;container</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que voc&#234; estiver utilizando. Se voc&#234; criou a sua fun&#231;&#227;o dentro de um pacote (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">package</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) lembre-se de criar a estrutura de diret&#243;rios correspondente.
+<br>
+
+<br>
+As fun&#231;&#245;es que forem instaladas no reposit&#243;rio de classes de um projeto apenas poder&#227;o ser utilizada no projeto espec&#237;fico onde foi instalada. J&#225; aquelas que forem instaladas no reposit&#243;rio comum ao </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>web</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>container</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ficar&#227;o dispon&#237;veis a todos os projetos.
+<br>
+
+<br>
+Para registrar a fun&#231;&#227;o acesse o WI Builder e escolha a op&#231;&#227;o <img src="func.png" width="16" height="16" border="0" alt="func"> do menu <b>Op&#231;&#245;es</b> e indique o nome completo da classe e o nome pelo qual ela ser&#225; chamada dentro dos projetos do WebIntegrator. Para registrar a fun&#231;&#227;o acima poder&#237;amos usar os seguintes dados:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="288" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Nome:</b>
+<br>
+</span></div></td><td align="left" valign="top" width="288" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>msg</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="288" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Classe:</b>
+<br>
+</span></div></td><td align="left" valign="top" width="288" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>WIMensagem</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Agora voc&#234; poder&#225; executar a fun&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">msg</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> implementada pela classe <b>WIMensagem</b> dentro do WebIntegrator bastando digitar </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|$msg("&lt;mensagem&gt;")$|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Sempre que voc&#234; quiser usar uma fun&#231;&#227;o a sintaxe &#233;:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000">|$&lt;nome-da-fun&#231;&#227;o&gt;([&lt;par&#226;metro-#1&gt;,...])$|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Caso um dos par&#226;metro a ser passado para a fun&#231;&#227;o contenha v&#237;rgula em seu conte&#250;do use a barra invertida (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">\</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) antes do sinal de v&#237;rgula para informar ao WI Engine que n&#227;o se trata da v&#237;rgula como separadora de par&#226;metros e dessa forma evitando que a  fun&#231;&#227;o receba par&#226;metros inesperados ou incorretos. Por exemplo, caso quis&#233;ssemos passar a mensagem "</span><span style="font-family:Courier New; font-size:10pt; color:#000000">1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">2</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">3</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">testando...</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">" para a fun&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>msg</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> a sintaxe seria:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$msg(1\,&nbsp;2\,&nbsp;3\,&nbsp;testando...)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+
+<br>
+Junto com a distribui&#231;&#227;o do WebIntegrator seguem algumas fun&#231;&#245;es j&#225; implementadas, s&#227;o elas:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">dateformat</span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o para formata&#231;&#227;o de valores data.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">decodeDES</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b></b></span></b></span></span></td><td><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b></b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o que decodifica uma sequ&#234;ncia de caracteres usando o algoritmo DES.</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">encodeDES</span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o que codifica uma sequ&#234;ncia de caracteres usando o algoritmo DES.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">eval</span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o que realiza a avalia&#231;&#227;o de uma express&#227;o num&#233;rica.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">fileCopy</span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o que realiza a c&#243;pia de um arquivo.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">htmlFilter</span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o que remove de um texto as tags HTML nele contidas.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">if</span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o que realiza um teste de condi&#231;&#227;o e retorna um valor a depender do resultado da avalia&#231;&#227;o.</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">md5</span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o que retorna o hash de um valor usando o algoritmo MD5.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">numberformat</span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o para formata&#231;&#227;o de valores num&#233;ricos.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">piece</span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o que retorna uma substring baseada em um delimitador.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">random</span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o para gera&#231;&#227;o de n&#250;meros aleat&#243;rios.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="102"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">textformat</span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o para formata&#231;&#227;o de valores texto.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">wi.context&nbsp;&nbsp;&nbsp;<span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Fun&#231;&#227;o que realiza um dump no contexto do WebIntegrator.
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

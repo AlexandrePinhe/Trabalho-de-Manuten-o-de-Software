@@ -1,0 +1,70 @@
+<html>
+<head>
+   <title>...adicionar outras taglibs aos arquivos jsp</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?howto_taglibs.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...usar o WI_Event
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.2',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.4',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...</b><b>adicionar outras taglibs aos arquivos jsp</b></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O desenvolvedor pode definir outras taglibs para serem adicionadas aos arquivos jsp, bastando para isso criar no WEB-INF do projeto um arquivo taglibs.txt e colocar os registros desejados. Ao modificar o arquivo &#233; neces&#225;rio regerar todos os arquivos jsp.
+<br>
+
+<br>
+Veja exemplo do arquivo taglibs.txt:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;%@&nbsp;taglib&nbsp;prefix='x'&nbsp;uri='http://java.sun.com/jsp/jstl/core'&nbsp;%&gt;
+<br>
+&lt;%@&nbsp;taglib&nbsp;prefix='y'&nbsp;uri='http://java.sun.com/jsp/jstl/core'&nbsp;%&gt;
+<br>
+&lt;%@&nbsp;taglib&nbsp;prefix='z'&nbsp;uri='/wicore'&nbsp;%&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

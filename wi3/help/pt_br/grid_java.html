@@ -1,0 +1,226 @@
+<html>
+<head>
+   <title>...montar um grid HTML do tipo Java</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?grid_java.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...montar um grid HTML do tipo Java
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.8',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.10',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...montar um grid HTML do tipo Java</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Neste passo-a-passo ser&#225; explicado como o desenvolvedor poder&#225; montar um grid HTML do tipo Java a fim de demonstrar a funcionalidade desse tipo de grid que pode ser empregado quando se quer exibir dados de uma forma tabular, ou seja, em linhas e colunas onde a fonte desses dados n&#227;o &#233; suportada nativamente pelos componentes grids dispon&#237;veis no WebIntegrator.
+<br>
+
+<br>
+Para a montagem desse grid &#233; necess&#225;rio que o desenvolvedor tenha algum n&#237;vel de conhecimento na linguagem de programa&#231;&#227;o Java. Como exemplo vamos montar um grid que ir&#225; listar as propriedades do sistema onde a m&#225;quina virtual Java est&#225; sendo executada. Essa informa&#231;&#227;o pode ser recuperada usando o m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">getProperties()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> da classe </span><span style="font-family:Courier New; font-size:10pt; color:#000000">System</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A primeira coisa a ser feita &#233; criarmos uma classe Java que implemente a interface </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.integration.InterfaceGrid</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> colocando no m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">execute()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> a l&#243;gica que ir&#225; popular a estrutura de dados a ser passada para o <b>WI Engine</b> que se encarregar&#225; de montar o grid.
+<br>
+
+<br>
+O c&#243;digo-fonte da classe segue logo abaixo com os coment&#225;rios explicando a sua l&#243;gica:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="672" bgcolor="#BFBFBF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">import&nbsp;br.com.itx.integration.InterfaceGrid;
+<br>
+import&nbsp;java.util.Hashtable;
+<br>
+import&nbsp;java.util.HashMap;
+<br>
+import&nbsp;java.util.Properties;
+<br>
+import&nbsp;java.util.Enumeration;
+<br>
+import&nbsp;br.com.itx.util.Hash;
+<br>
+import&nbsp;br.com.itx.integration.DatabaseAliases;
+<br>
+
+<br>
+public&nbsp;class&nbsp;TesteInterfaceGrid&nbsp;implements&nbsp;InterfaceGrid&nbsp;{
+<br>
+&nbsp;&nbsp;public&nbsp;HashMap[]&nbsp;execute(Hash&nbsp;context,&nbsp;DatabaseAliases&nbsp;databases)&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;recupera&nbsp;as&nbsp;informa&#231;&#245;es&nbsp;do&nbsp;sistema
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Properties&nbsp;props&nbsp;=&nbsp;System.getProperties();
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;instancia&nbsp;a&nbsp;estrutura&nbsp;de&nbsp;dados&nbsp;que&nbsp;ser&#225;&nbsp;usada&nbsp;pelo&nbsp;WI&nbsp;Engine
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;para&nbsp;a&nbsp;montagem&nbsp;do&nbsp;grid
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Hashtable[]&nbsp;ht&nbsp;=&nbsp;new&nbsp;Hashtable[props.size()];
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Enumeration&nbsp;enum&nbsp;=&nbsp;props.keys();
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;(int&nbsp;i&nbsp;=&nbsp;0;&nbsp;enum.hasMoreElements();&nbsp;i++)&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;cada&nbsp;&#237;ndice&nbsp;do&nbsp;array&nbsp;representa&nbsp;uma&nbsp;linha&nbsp;de&nbsp;dados&nbsp;que&nbsp;pode
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;ser&nbsp;exibida&nbsp;no&nbsp;grid
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ht[i]&nbsp;=&nbsp;new&nbsp;Hashtable();
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String&nbsp;key&nbsp;=&nbsp;(String)&nbsp;enum.nextElement();
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;as&nbsp;chaves&nbsp;das&nbsp;tabelas&nbsp;hashes&nbsp;correspondem&nbsp;&#224;s&nbsp;vari&#225;veis&nbsp;que
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;ser&#227;o&nbsp;referenciadas&nbsp;no&nbsp;modelo&nbsp;do&nbsp;grid
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ht[i].put("chave",&nbsp;key);
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ht[i].put("valor",&nbsp;props.getProperty(key));
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;ht;
+<br>
+&nbsp;&nbsp;}
+<br>
+
+<br>
+&nbsp;&nbsp;public&nbsp;int&nbsp;returnType()&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;sempre&nbsp;retornar&#225;&nbsp;todos&nbsp;os&nbsp;&#237;ndices&nbsp;do&nbsp;array&nbsp;em&nbsp;caso&nbsp;de&nbsp;navega&#231;&#227;o
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;do&nbsp;grid
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;InterfaceGrid.COMPLETE;
+<br>
+&nbsp;&nbsp;}
+<br>
+}</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Sempre que um desenvolvedor quiser implementar o seu pr&#243;prio grid ele ter&#225; de criar uma classe Java que implemente a </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>interface</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.integration.InterfaceGrid</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Esta </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>interface</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> &#233; composta de dois m&#233;todos: o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">execute(Hash,&nbsp;Databases)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que, como explicado logo acima, conter&#225; a l&#243;gica da montagem do array de objetos </span><span style="font-family:Courier New; font-size:10pt; color:#000000">Hashtable;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">returnType()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que indica, em caso de navega&#231;&#227;o do grid, como os &#237;ndices do array ser&#227;o retornados. H&#225; tr&#234;s maneiras dos &#237;ndices serem retornados:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>COMPLETE</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="480" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna todos os elementos do array independentemente do &#237;ndice inicial que esteja sendo usado para a exibi&#231;&#227;o dos dados no grid.
+<br>
+
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>HAS_MORE_ROWS</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="480" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna os elementos do array a partir do &#237;ndice inicial que esteja sendo usado para a exibi&#231;&#227;o dos dados no grid, ou seja, dependendo do tamanho do array, poder&#225; ou n&#227;o haver mais registros a serem exibidos.
+<br>
+
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>NO_MORE_ROWS</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="480" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna apenas a quantidade de elementos a serem exibidas no grid, ou seja, caso o campo Quantidade do grid esteja definido com o valor 10 ent&#227;o ser&#227;o retornado apenas 10 &#237;ndices.
+<br>
+</span></td></tr></table>
+<br>
+
+<br>
+Compile a classe acima e coloque o arquivo compilado (arquivo com extens&#227;o .class) em um dos reposit&#243;rios de classes que seja vis&#237;vel &#224; sua aplica&#231;&#227;o web. Caso o desenvolvedor queira criar classes Java que fa&#231;am parte de um pacote (usando a palavra-chave package), lembre-se que ao fazer o deployment dessas classes criar a estrutura de diret&#243;rios correspondente a estrutura de nomea&#231;&#227;o dos pacotes.
+<br>
+
+<br>
+Ap&#243;s ter compilada a classe e feito o deployment vamos configurar a p&#225;gina. Primeiro defina um grid HTML do tipo Java (clique em Projeto, depois no &#237;cone <img src="grid.png" width="16" height="16" border="0" alt="grid"> e em seguida clique no link Grids HTML). Para definir um grid HTML do tipo Java basta apenas preencher o campo Identificador com o nome pelo qual referenciaremos o grid e escolher a op&#231;&#227;o JAVA no campo Tipo, neste exemplo os outros campos podem ser deixados em branco.
+<br>
+
+<br>
+Depois de ter clicado no bot&#227;o <img src="gravar.png" width="43" height="23" border="0" alt="gravar">clique no link Editar para que possamos editar o modelo do nosso grid. Como um exemplo para o modelo veja o c&#243;digo-fonte abaixo:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="672" bgcolor="#BFBFBF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;table&nbsp;border="1"&nbsp;cellspacing="0"&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;th&gt;Chave&lt;/th&gt;
+<br>
+&lt;th&gt;Valor&lt;/th&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;!---&nbsp;linha&nbsp;que&nbsp;faz&nbsp;refer&#234;ncia&nbsp;&#224;s&nbsp;chaves&nbsp;das&nbsp;tabelas&nbsp;hashes
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;montada&nbsp;pela&nbsp;classe&nbsp;TesteInterfaceGrid&nbsp;--&gt;
+<br>
+&lt;tr&gt;
+<br>
+&lt;td&gt;|chave|&lt;/td&gt;
+<br>
+&lt;td&gt;|valor|&nbsp;&lt;/td&gt;
+<br>
+&lt;/tr&gt;
+<br>
+&lt;/table&gt;
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Por fim crie uma p&#225;gina e no pr&#233;-p&#225;gina coloque um elemento Grid Java onde no campo <span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Nome da classe</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> preencha com o nome de uma classe que implementa a </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>interface</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.integration.InterfaceGrid</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que no nosso caso &#233; <b>TesteInterfaceGrid</b> e, no campo <span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Grid</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, escolha o grid Java que corresponde a essa classe. No c&#243;digo-fonte da p&#225;gina fa&#231;a refer&#234;ncia ao grid digitando </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|grid.&lt;identificador&gt;|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> substituindo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;identificador&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> pelo identificador correspondente ao grid.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

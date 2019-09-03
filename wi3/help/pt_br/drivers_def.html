@@ -1,0 +1,100 @@
+<html>
+<head>
+   <title>...configurar o arquivo JDBC_Drivers.xml</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?drivers_def.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...configurar o arquivo JDBC_Drivers.xml
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.3',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.5',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...configurar o arquivo JDBC_Drivers.xml</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O arquivo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">JDBC_Drivers.xml</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> &#233; um arquivo com estrutura XML que cont&#233;m as defini&#231;&#245;es das poss&#237;veis conex&#245;es com bancos de dados que podem ser feitas pelo WebIntegrator. O principal objetivo desse arquivo &#233; poder adicionar novos tipos de bancos de dados ao WebIntegrator extendo e adaptando o produto &#224;s necessidades do usu&#225;rio.
+<br>
+
+<br>
+Para adicionar uma entrada de um novo driver JDBC a esse arquivo basta edit&#225;-lo informando o nome completo da classe do driver que implementa a interface </span><span style="font-family:Courier New; font-size:10pt; color:#000000">Driver</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> da API JDBC, a string de conex&#227;o usada por esse driver, uma descri&#231;&#227;o para ser exibida na defini&#231;&#227;o de banco de dados no <b>WI Builder</b>, um identificador &#250;nico para essa configura&#231;&#227;o que ser&#225; usado internamente pelo <b>WI Engine</b> e opcionalmente uma query de valida&#231;&#227;o a ser usada para validar se uma conex&#227;o do pool ainda corresponde com uma conex&#227;o ativa no banco de dados.
+<br>
+
+<br>
+As informa&#231;&#245;es sobre a classe do driver (CLASS) e da URL de string de conex&#227;o (URL) s&#227;o dependentes do driver JDBC que se estiver configurando e dever&#227;o estar dispon&#237;veis na documenta&#231;&#227;o do driver, a </span><span style="font-family:Courier New; font-size:10pt; color:#000000">query</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> de valida&#231;&#227;o (VALIDATIONQUERY) quando configurada dever&#225; retornar como resultado no m&#237;nimo uma linha v&#225;lida, as outras duas informa&#231;&#245;es s&#227;o de escolha pr&#243;pria do usu&#225;rio.
+<br>
+
+<br>
+Como exemplo suponha que se queira possibilitar que o WebIntegrator acesse bases de dados em </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>HSQL</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Primeiramente deve-se fazer o download do respectivo driver JDBC a partir do site oficial do fabricante e instal&#225;-lo num local adequado, por "local adequado" entenda como sendo um diret&#243;rio que fa&#231;a parte do CLASSPATH da JVM e que tamb&#233;m esteja acess&#237;vel &#224;s classes do pacote do WebIntegrator. Em ambientes com instala&#231;&#245;es baseadas no Tomcat recomendamos que a instala&#231;&#227;o dos drivers JDBC seja feita em </span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;TOMCAT_HOME&gt;/common/lib</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A documenta&#231;&#227;o do </span><span style="font-family:Courier New; font-size:10pt; color:#000000">HSQL&nbsp;1.7.1b</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> informa que o nome completo da classe que implementa a interface </span><span style="font-family:Courier New; font-size:10pt; color:#000000">Driver</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> da API JDBC &#233; </span><span style="font-family:Courier New; font-size:10pt; color:#000000">org.hsqldb.jdbcDriver</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e a string de conex&#227;o deve ser </span><span style="font-family:Courier New; font-size:10pt; color:#000000">jdbc:hsqldb:hsql://&lt;servidor&gt;:&lt;porta&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Com essas informa&#231;&#245;es j&#225; se pode criar a entrada no arquivo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">drivers.def</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que pode ser semelhante com a que segue abaixo.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">...
+<br>
+&lt;JDBC&nbsp;ID="hsqldb"&gt;
+<br>
+&nbsp;&nbsp;&lt;DESCRIPTION&gt;HSQLDB&lt;/DESCRIPTION&gt;
+<br>
+&nbsp;&nbsp;&lt;CLASS&gt;org.hsqldb.jdbcDriver&lt;/CLASS&gt;
+<br>
+&nbsp;&nbsp;&lt;URL&gt;jdbc:hsqldb:hsql:|alias|&lt;/URL&gt;
+<br>
+&nbsp;&nbsp;&lt;VALIDATIONQUERY&gt;SELECT&nbsp;1&lt;/VALIDATIONQUERY&gt;/
+<br>
+&lt;/JDBC&gt;
+<br>
+...
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Perceba que a defini&#231;&#227;o da string de conex&#227;o feita na tag URL faz refer&#234;ncia a uma vari&#225;vel chamada </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>alias</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Essa vari&#225;vel ser&#225; substitu&#237;da pelo que o usu&#225;rio definir no campo <span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Alias</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> na defini&#231;&#227;o de banco de dados completando assim a string de conex&#227;o a ser usada pelo driver JDBC para se conectar com o banco de dados.
+<br>
+
+<br>
+Algumas implementa&#231;&#245;es de drivers JDBC recomendam que os mesmos sejam inicializados ou registrados anteriormente, para casos como esses a tag </span><span style="font-family:Courier New; font-size:10pt; color:#000000">CLASS</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> aceita que seja passado ou o atributo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">NEWINSTANCE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ou o atributo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">REGISTERDRIVE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Para drivers JDBC que recomendem o uso do m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">newInstance()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> basta adicionar o atributo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">NEWINSTANCE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com o valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>ON</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, para drivers JDBC que recomendem o registro pr&#233;vio atrav&#233;s do m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">registerDrive()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> basta adicionar o atributo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">REGISTERDRIVER</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com o valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>ON</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

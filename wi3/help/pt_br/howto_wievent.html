@@ -1,0 +1,348 @@
+<html>
+<head>
+   <title>...usar o WI_Event</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?howto_wievent.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...usar o WI_Event
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.1',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.3',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...</b><b>usar o WI_Event</b></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Neste passo-a-passo ser&#225; explicado como o desenvolvedor poder&#225; utilizar o WI_Event para fazer a intera&#231;&#227;o do cliente (browser) com o servidor sem a necessidade de submter a p&#225;gina. Como estudo de caso vamos popular uma combo-box dinamicamente, neste exemplo vamos criar uma p&#225;gina com uma combo-box que ter&#225; seus valores populados de acordo com um crit&#233;rio de pesqusia a ser digitado pelo usu&#225;rio:
+<br>
+
+<br>
+Para a montagem desse exemplo primeiramente crie um banco de dados que possua um esquema SQL semelhante ao que segue abaixo.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">CREATE&nbsp;TABLE&nbsp;uf&nbsp;(
+<br>
+&nbsp;&nbsp;sigla&nbsp;varchar(2)&nbsp;,
+<br>
+&nbsp;&nbsp;nome&nbsp;varchar(30)&nbsp;
+<br>
+);
+<br>
+
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("AC","Acre");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("AL","Alagoas");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("AM","Amazonas");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("AP","Amap&#225;");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("BA","Bahia");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("CE","Cear&#225;");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("DF","Distrito&nbsp;Federal");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("GO","Goi&#225;s");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("MA","Maranh&#227;o");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("MG","Minas&nbsp;Gerais");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("MS","Mato&nbsp;Grosso&nbsp;do&nbsp;Sul");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("MT","Mato&nbsp;Grosso");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("PB","Para&#237;ba");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("PE","Pernambuco");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("PI","Piau&#237;");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("PR","Paran&#225;");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("RJ","Rio&nbsp;de&nbsp;Janeiro");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("RO","Rond&#244;nia");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("RR","Roraima");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("RS","Rio&nbsp;Grande&nbsp;do&nbsp;Sul");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("SC","Santa&nbsp;Catarina");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("SE","Sergipe");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("SP","S&#227;o&nbsp;Paulo");
+<br>
+INSERT&nbsp;INTO&nbsp;uf&nbsp;VALUES("TO","Tocantins");</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Ap&#243;s a cria&#231;&#227;o da base de dados crie um projeto pelo WI_Builder e defina o banco de dados criado como o banco de dados do projeto. Primeiramente vamos definir um Evento do tipo SELECT (clique em Projeto e em seguida na op&#231;&#227;o Events escolhendo o tipo Selects) definindo o identificador como uf, escolha o banco de dados que possui a estrutura de tabela definida acima e no campo SQL digite a seguinte instru&#231;&#227;o:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">SELECT&nbsp;*&nbsp;FROM&nbsp;uf&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;'|tmp.criterio|%'</span></span></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000"><span style="font-family:Times New Roman; font-size:12pt; color:#FF0000">
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Para uma p&#225;gina poder referenciar aos Eventos definidos no WI_Builder &#233; necess&#225;rio que essa p&#225;gina caregue um arquivo JavaScript que representa a biblioteca de fun&#231;&#245;es do WI_Event. Para inserir a chamada &#224; biblioteca do WI_Event numa p&#225;gina de um projeto usando o WIzard de p&#225;ginas basta selecionar a op&#231;&#227;o &lt;HEAD&gt; e no campo Link JS adicionar o valor /|wi.proj.id|/js/wievent.js, o campo Link JS suporta que a defini&#231;&#227;o de v&#225;rios arquivos JS desde que cada chamada aos arquivos JS estejam separadas por v&#237;rgula.
+<br>
+
+<br>
+Para inserir a chamada &#224; biblioteca do WI_Engine diretamente no c&#243;digo-fonte de uma p&#225;gina do projeto insira o trecho de c&#243;digo HTML que segue abaixo dentro da tag HEAD do documento HTML que representa a p&#225;gina.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;SCRIPT&nbsp;TYPE="text/javascript"&nbsp;SRC="/|wi.proj.id|/js/wievent.js"&gt;&lt;/SCRIPT&gt;</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+No arquivo wievent.js pode ser vista um resumo dos m&#233;todos suportados pelo WIEvent.
+<br>
+
+<br>
+A biblioteca de fun&#231;&#245;es do WIEvent disponibiliza o m&#233;todo utilit&#225;rio populateCombo() para ajudar o desenvolvedor na montagem de combos din&#226;mica. 
+<br>
+
+<br>
+Logo abaixo segue o c&#243;digo-fonte da p&#225;gina que ir&#225; popular ir&#225; popular dinamicamente a combo-box.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;!DOCTYPE&nbsp;HTML&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;HTML&nbsp;4.0&nbsp;Transitional//EN"&gt;
+<br>
+&lt;html&gt;
+<br>
+&lt;head&gt;
+<br>
+&lt;title&gt;Populando&nbsp;uma&nbsp;combo-box&nbsp;dinamicamente&lt;/title&gt;
+<br>
+&lt;!--&nbsp;arquivo&nbsp;JS&nbsp;da&nbsp;biblioteca&nbsp;de&nbsp;fun&#231;&#245;es&nbsp;de&nbsp;um&nbsp;objeto&nbsp;WIEvent&nbsp;--&gt;
+<br>
+&lt;SCRIPT&nbsp;TYPE="text/javascript"&nbsp;SRC="/|wi.proj.id|/js/wievent.js"&gt;&lt;/SCRIPT&gt;
+<br>
+&lt;script&gt;
+<br>
+function&nbsp;popularCombo()&nbsp;{
+<br>
+&nbsp;&nbsp;//instancio&nbsp;um&nbsp;objeto&nbsp;do&nbsp;tipo&nbsp;WIEvent&nbsp;para&nbsp;que&nbsp;eu&nbsp;possa&nbsp;interagir
+<br>
+&nbsp;&nbsp;//com&nbsp;um&nbsp;componente&nbsp;WI_Event&nbsp;definido&nbsp;no&nbsp;WI_Builder.
+<br>
+&nbsp;&nbsp;var&nbsp;evt&nbsp;=&nbsp;new&nbsp;WIEvent();
+<br>
+&nbsp;&nbsp;//crio&nbsp;uma&nbsp;vari&#225;vel&nbsp;"tmp.criterio"&nbsp;na&nbsp;sess&#227;o&nbsp;do&nbsp;WebIntegrator&nbsp;com
+<br>
+&nbsp;&nbsp;//o&nbsp;valor&nbsp;que&nbsp;foi&nbsp;digitado&nbsp;no&nbsp;campo&nbsp;"criterio"&nbsp;do&nbsp;formul&#225;rio.
+<br>
+&nbsp;&nbsp;//Lembre-se&nbsp;que&nbsp;na&nbsp;defini&#231;&#227;o&nbsp;do&nbsp;componente&nbsp;WI_Event&nbsp;pelo&nbsp;WI_Builder
+<br>
+&nbsp;&nbsp;//foi&nbsp;feita&nbsp;a&nbsp;refer&#234;ncia&nbsp;a&nbsp;uma&nbsp;vari&#225;vel&nbsp;"tmp.criterio"&nbsp;no&nbsp;comando&nbsp;SQL.
+<br>
+&nbsp;&nbsp;evt.writeobj("tmp.criterio",&nbsp;document.forms[0]["criterio"].value);
+<br>
+&nbsp;&nbsp;//Uso&nbsp;a&nbsp;fun&#231;&#227;o&nbsp;populate.Combo&nbsp;com&nbsp;os&nbsp;seguintes&nbsp;par&#226;metros:&nbsp;"uf"
+<br>
+&nbsp;&nbsp;//&#233;&nbsp;o&nbsp;nome&nbsp;do&nbsp;evento&nbsp;definido&nbsp;no&nbsp;WI_Builder,&nbsp;document.forms[0]["tmp.estados"]
+<br>
+&nbsp;&nbsp;//&#233;&nbsp;o&nbsp;nome&nbsp;da&nbsp;combo&nbsp;definida&nbsp;na&nbsp;p&#225;gina,&nbsp;"sigla"&nbsp;indica&nbsp;o&nbsp;nome&nbsp;da&nbsp;
+<br>
+&nbsp;&nbsp;//coluna&nbsp;que&nbsp;ser&#225;&nbsp;usada&nbsp;para&nbsp;popular&nbsp;os&nbsp;valores&nbsp;da&nbsp;combo&nbsp;e&nbsp;"sigla"
+<br>
+&nbsp;&nbsp;//indica&nbsp;o&nbsp;nome&nbsp;da&nbsp;coluna&nbsp;que&nbsp;ser&#225;&nbsp;usada&nbsp;para&nbsp;popular&nbsp;os&nbsp;textos.
+<br>
+&nbsp;&nbsp;evt.populateCombo("uf",&nbsp;document.forms[0]["tmp.estados"],&nbsp;"sigla",&nbsp;"nome");
+<br>
+}
+<br>
+&lt;/script&gt;
+<br>
+&lt;/head&gt;
+<br>
+&lt;body&gt;
+<br>
+&lt;form&gt;
+<br>
+Crit&#233;rio&nbsp;de&nbsp;pesquisa:&nbsp;&lt;input&nbsp;type="text"&nbsp;name="criterio"&nbsp;value=""&gt;
+<br>
+&lt;input&nbsp;type="button"&nbsp;value="Popular&nbsp;Combo"&nbsp;onclick="popularCombo()"&gt;
+<br>
+&lt;br&gt;
+<br>
+&lt;select&nbsp;name="tmp.estados"&gt;&lt;/select&gt;
+<br>
+&lt;/form&gt;
+<br>
+&lt;/body&gt;
+<br>
+&lt;/html&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+A popula&#231;&#227;o din&#226;mica de uma combo &#233; apenas um dos exemplos de usabilidade do componente WI_Event, outras funcionalidades podem ser desenvolvidas a depender das necessidades que venham a surgir para um determinado projeto. Como regras para utilizar o WI_Event adote os seguintes pontos:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">a p&#225;gina que for interagir com um componente WI_Event do projeto ou apenas utilizar o objeto WIEvent deve carregar a biblioteca de fun&#231;&#245;es JavaScript que se encontra em /|wi.proj.id|/js/wievent.js. 
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">instancie um objeto do tipo WIEvent.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">...
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">evt = new WIEvent();
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">...
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">execute o m&#233;todo desejado.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td width="25"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="51"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Exemplos:
+<br>
+
+<br>
+Para dar alerts dos estados que iniciam com o prefixo desejado:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;!DOCTYPE&nbsp;HTML&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;HTML&nbsp;4.0&nbsp;Transitional//EN"&gt;
+<br>
+&lt;html&gt;
+<br>
+&lt;head&gt;
+<br>
+&lt;SCRIPT&nbsp;TYPE="text/javascript"&nbsp;SRC="/|wi.proj.id|/js/wievent.js"&gt;&lt;/SCRIPT&gt;
+<br>
+&lt;script&gt;
+<br>
+function&nbsp;myalerts()&nbsp;{
+<br>
+&nbsp;&nbsp;var&nbsp;evt&nbsp;=&nbsp;new&nbsp;WIEvent();
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&nbsp;&nbsp;evt.debug&nbsp;=&nbsp;true;&nbsp;//&nbsp;se&nbsp;desejar&nbsp;ver&nbsp;o&nbsp;debug&nbsp;da&nbsp;comunica&#231;&#227;o&nbsp;do&nbsp;WIEvent
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&nbsp;&nbsp;evt.writeobj("tmp.criterio",&nbsp;document.forms[0]["criterio"].value);
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&nbsp;&nbsp;evt.selectdb("uf");
+<br>
+&nbsp;&nbsp;while&nbsp;(evt.next()&nbsp;&gt;&nbsp;-1)&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;alert(evt.column("nome"));
+<br>
+&nbsp;&nbsp;}
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">}
+<br>
+&lt;/script&gt;
+<br>
+&lt;/head&gt;
+<br>
+&lt;body&gt;
+<br>
+&lt;form&gt;
+<br>
+Crit&#233;rio&nbsp;de&nbsp;pesquisa:&nbsp;&lt;input&nbsp;type="text"&nbsp;name="criterio"&nbsp;value=""&gt;
+<br>
+&lt;input&nbsp;type="button"&nbsp;value="Dar&nbsp;alerts"&nbsp;onclick="myalerts()"&gt;
+<br>
+&lt;/form&gt;
+<br>
+&lt;/body&gt;
+<br>
+&lt;/html&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Para recuperar numa caixa de texto o nome do estado dado o c&#243;digo do mesmo:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;!DOCTYPE&nbsp;HTML&nbsp;PUBLIC&nbsp;"-//W3C//DTD&nbsp;HTML&nbsp;4.0&nbsp;Transitional//EN"&gt;
+<br>
+&lt;html&gt;
+<br>
+&lt;head&gt;
+<br>
+&lt;SCRIPT&nbsp;TYPE="text/javascript"&nbsp;SRC="/|wi.proj.id|/js/wievent.js"&gt;&lt;/SCRIPT&gt;
+<br>
+&lt;script&gt;
+<br>
+function&nbsp;acheNome()&nbsp;{
+<br>
+&nbsp;&nbsp;var&nbsp;evt&nbsp;=&nbsp;new&nbsp;WIEvent();
+<br>
+&nbsp;&nbsp;evt.writeobj("tmp.sigla",&nbsp;document.forms[0]["sigla"].value);
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&nbsp;&nbsp;evt.setInputValue("acheNome",&nbsp;document.forms[0]["nome"],&nbsp;"nome")
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">}
+<br>
+&lt;/script&gt;
+<br>
+&lt;/head&gt;
+<br>
+&lt;body&gt;
+<br>
+&lt;form&gt;
+<br>
+Sigla:&nbsp;&lt;input&nbsp;type="text"&nbsp;name="sigla"&nbsp;value=""&gt;&lt;br&gt;
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">Nome:&nbsp;&lt;input&nbsp;type="text"&nbsp;name="nome"&nbsp;value=""&gt;&lt;br&gt;
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;input&nbsp;type="button"&nbsp;value="Ache&nbsp;Nome"&nbsp;onclick="acheNome()"&gt;
+<br>
+&lt;/form&gt;
+<br>
+&lt;/body&gt;
+<br>
+&lt;/html&gt;
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">OBS: Para funcionar precisa ser criado o WIEvent do tipo Select com o seguinte comando sql: 
+<br>
+SELECT * FROM uf WHERE sigla = '|tmp.sigla|'
+<br>
+</span></span></span>
+
+</body>
+</html>

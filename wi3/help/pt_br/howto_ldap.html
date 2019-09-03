@@ -1,0 +1,180 @@
+<html>
+<head>
+   <title>...usar a Bridge Jdbc para Ldap</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?howto_ldap.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...usar o WI_Event
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...</b><b>usar a Bridge Jdbc para Ldap</b></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Neste passo-a-passo ser&#225; mostrado como o desenvolvedor poder&#225; utilizar a Bridge JDBC Ldap para acessar um servidor de diret&#243;rios (Active Directory, Apache DS, etc) usando o protocolo Ldap atrav&#233;s de pseudo comandos SQL.
+<br>
+
+<br>
+O documenta&#231;&#227;o da Bridge Jdbc Ldap pode ser encontrada no site <u>myvd.sourcefourge.net </u>atrav&#233;s do link http://myvd.sourceforge.net/bridge.html enquando o download pode ser feito clicando http://myvd.sourceforge.net/jdbcldap.html.
+<br>
+
+<br>
+Nos testes foram utilizados o sevidor de diret&#243;rios Apache Directory Server (http://directory.apache.org/apacheds/1.5/) e Apache Directory Studio (http://directory.apache.org/studio/), mas nada impede que outros servidores de diret&#243;rios sejam utilizados a t&#237;tulo do Active Directory da Microsoft.
+<br>
+
+<br>
+Antes de iniciar os teste usando o Apache DS foi necess&#225;rio importar o arquivo example.ldif que j&#225; acompanha o produto usando o Apache Studio.
+<br>
+
+<br>
+Para que o WI reconhe&#231;a a Bridge Jdbc Jdap &#233; necess&#225;rio o download da mesma no link mencionado acima e a coloca&#231;&#227;o do arquivo jdbcLdap.jar na pasta lib do Tomcat 6 ou shared/lib do Tomcat 5.
+<br>
+
+<br>
+Ao criar uma conex&#227;o com o danco de dados deve-se selecionar a Bridge Jdbc Ldap a qual n&#227;o estar&#225; com *, preencher no alias <b>//localhost:10389</b>, no campo usu&#225;rio colocar <b>uid=admin,ou=system</b> e no campo senha o valor <b>secret</b>.
+<br>
+
+<br>
+Antes de efetivamente come&#231;ar a escrever os pseudos sqls deve-se enterder o 3 tipos de escopos que a Brigde Jdbc Ldap pode utilizar:
+<br>
+
+<br>
+- <b>objectScope</b>: ser&#225; recuperado apenas os dados do n&#243; especificado 
+<br>
+(baixo uso pois os dados retornados s&#227;o bastante limitados)
+<br>
+Ex1: select * from objectScope;dc=example,dc=com
+<br>
+Ex2: select * from objectScope;ou=Users,dc=example,dc=com
+<br>
+Ex3: select * from objectScope;uid=aeinstein,ou=Users,dc=example,dc=com
+<br>
+
+<br>
+- <b>oneLevelScope</b>: ser&#225; recuperado os dados filhos do n&#243; especificado 
+<br>
+(muito uso pois retorna dados estruturalmente muito parecidos com um tabela relacional)
+<br>
+Ex1: select * from oneLevelScope;dc=example,dc=com
+<br>
+Ex2: select * from oneLevelScope;ou=users,dc=example,dc=com
+<br>
+Ex3: select * from oneLevelScope;ou=Users,dc=example,dc=com where uid=?|tmp.user|
+<br>
+
+<br>
+- <b>subTreeScope</b>: ser&#225; recuperado os dados do n&#243; especificado e todos os filhos recursivamente 
+<br>
+(baixo uso pois os dados retornados representam uma estrutura hier&#225;rquica d&#237;ficil de trabalhar com o modelo relacional)
+<br>
+
+<br>
+OBS: Conforme vimos nos exemplos acima em quase 100% dos casos iremos trabalhar com o <b>oneLevelScope.
+<br>
+</b>E caso o desenvolvedor deseje ele pode ser especificado como escopo padr&#227;o no alias do BD para n&#227;o precisar ser informando nos SQLs.
+<br>
+Ex: //localhost:10389?SEARCH_SCOPE:=oneLevelScope<b>
+<br>
+</b>
+<br>
+Segue alguns exemplos de SQL:
+<br>
+
+<br>
+- Que pode ser usado no login do projeto que n&#227;o usa MD5
+<br>
+SELECT * FROM oneLevelScope;ou=Users,dc=example,dc=com WHERE uid=?|tmp.user| and userpassword=?|tmp.pass|
+<br>
+
+<br>
+- Que pode ser usado no login do projeto que usa MD5
+<br>
+SELECT userpassword, uid, cn, givenname FROM oneLevelScope;ou=Users,dc=example,dc=com WHERE uid = ?|tmp.user|
+<br>
+Nesse exemplo as senhas armazenadas em userpassword precisam estar no formato MD5
+<br>
+
+<br>
+- Um exemplo de SQL com texto fixo
+<br>
+select * from oneLevelScope;ou=Users,dc=example,dc=com where uid='aeinstein'
+<br>
+
+<br>
+- O download BD de uma imagem armazenada no formato Base64 no servidor de diret&#243;rios
+<br>
+select jpegphoto from oneLevelScope;ou=Users,dc=example,dc=com where uid='aeinstein'
+<br>
+&#201; necess&#225;rio marcar na defini&#231;&#227;o do download a op&#231;&#227;o base64 e colocar em tipo o valor <u>jpg</u> que &#233; o formato que est&#225; armazenado. 
+<br>
+
+<br>
+A Bridge Jdbc Ldap tamb&#233;m suporta os comando insert, update e delete de forma muito semelhante a um banco de dados relacional, e maiores detalhes podem ser obtidos na documenta&#231;&#227;o do produto. Segue alguns exemplos de update:
+<br>
+
+<br>
+- Altera o nome do usu&#225;rio aeinstein
+<br>
+UPDATE objectScope;uid=aeinstein,ou=Users,dc=example,dc=com SET givenname = 'AlbertX'
+<br>
+OBS: A implementa&#231;&#227;o 2.1 da Bridge Jdbc Ldap cont&#233;m algum bug que s&#243; est&#225; aceitando inserts, updates e deletes usando o objectScope.
+<br>
+Funciona: UPDATE objectScope;uid=|tmp.user|,ou=Users,dc=example,dc=com SET givenname = 'AlbertX'
+<br>
+Deveria Funcionar: UPDATE oneLevelScope;ou=Users,dc=example,dc=com SET givenname = 'AlbertX' where uid='|tmp.user|'
+<br>
+
+<br>
+- Altera, adiciona ou remove propriedades diretamente pelo acesso Ldap
+<br>
+UPDATE ENTRY objectScope;uid=aeinstein,ou=Users,dc=example,dc=com DO REPLACE SET userPassword='secret'
+<br>
+OBS: Pela documenta&#231;&#227;o da Bridge Jdbc Ldap apesar dessa forma n&#227;o ser padr&#227;o Sql &#233; a forma mais poderosa de manipular as propriedades Ldap.
+<br>
+
+<br>
+
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

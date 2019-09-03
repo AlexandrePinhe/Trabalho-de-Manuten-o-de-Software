@@ -1,0 +1,76 @@
+<html>
+<head>
+   <title>Verificando se uma p&aacute;gina est&aacute; em modo de design do WIzard</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?designmode.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Verificando se uma p&#225;gina est&#225; em modo de design do WIzard
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.10',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.10.2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Verificando se uma p&#225;gina est&#225; em modo de design do WIzard
+<br>
+</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Podem aparecer situa&#231;&#245;es em que seja necess&#225;rio distinguir se uma p&#225;gina WSP est&#225; sendo exibida no modo de design do WIzard ou se est&#225; sendo executada diretamente pelo <b>WI Engine</b>. Tendo essa necessidade voc&#234; poder&#225; fazer uso da vari&#225;vel designMode que se encontra dispon&#237;vel em qualquer p&#225;gina WSP que tenha sido criada pelo WIzard.
+<br>
+
+<br>
+Como um exemplo bem simples acesse uma p&#225;gina WSP atrav&#233;s do WIzard, acrescente um elemento do tipo <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Gen&#233;rico</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e em seu campo <span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Texto</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> coloque o seguinte trecho de c&#243;digo:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;script&gt;
+<br>
+msg&nbsp;=&nbsp;(window.designMode&nbsp;?&nbsp;"Esta&nbsp;p&#225;gina&nbsp;est&#225;&nbsp;sendo&nbsp;exibida&nbsp;pelo&nbsp;WIzard!"&nbsp;:&nbsp;"Esta&nbsp;p&#225;gina&nbsp;est&#225;&nbsp;sendo&nbsp;exibida&nbsp;pelo&nbsp;WI_Engine!");
+<br>
+alert(msg);
+<br>
+&lt;/script&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Ao ser exibida pelo WIzard a p&#225;gina ir&#225; mostrar a mensagem "</span><span style="font-family:Courier New; font-size:10pt; color:#000000">Esta&nbsp;p&#225;gina&nbsp;est&#225;&nbsp;sendo&nbsp;exibida&nbsp;pelo&nbsp;WIzard!</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">" e quando for montada pelo <b>WI Engine</b>, ou seja, quando for chamada diretamente por uma URL ser&#225; mostrada a mesagem "</span><span style="font-family:Courier New; font-size:10pt; color:#000000">Esta&nbsp;p&#225;gina&nbsp;est&#225;&nbsp;sendo&nbsp;exibida&nbsp;pelo&nbsp;WI&nbsp;Engine!</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">".
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

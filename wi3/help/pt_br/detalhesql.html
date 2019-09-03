@@ -1,0 +1,244 @@
+<html>
+<head>
+   <title>SQL</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?detalhesql.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>SQL
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.1.7',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.1.7.2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>SQL</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<b>SQL</b> (<b>Structued Query Language</b>) &#233; uma linguagem projetada para ser usada com banco de dados relacionais e seus comandos s&#227;o dividos em duas categorias, os comandos <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">DML</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (<span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Data Manipulation Language</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) que lidam com dados, ou recuperando ou modificando-os para mant&#234;-los atualizados; e os comandos <span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">DDL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (<span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">Data Description Language</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) que lidam com cria&#231;&#227;o ou altera&#231;&#227;o das tabelas, views (vis&#245;es) e &#237;ndices.
+<br>
+
+<br>
+Dessas duas categorias a mais usada no WebIntegrator, certamente, ser&#225; a DML. Logo abaixo segue uma lista dos comandos DML mais comuns.
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>SELECT:</b> usado para consultar e exibir dados de um banco de dados. O comando SELECT especifica quais colunas ser&#227;o inclu&#237;das no resultado. A grande maioria das instru&#231;&#245;es SQL usadas nas aplica&#231;&#245;es s&#227;o comandos SELECT;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>INSERT:</b> adiciona novas linhas a uma tabela. INSERT &#233; usado para popular uma tabela rec&#233;m-criada ou para adicionar uma ou mais linhas a uma tabela j&#225; existente;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>DELETE:</b> remove uma linha especificada ou um conjunto de linhas de uma tabela;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>UPDATE:</b> altera um valor existente em uma coluna de uma tabela.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="32"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Logo abaixo temos alguns exemplos de como o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> pode ser preenchido:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">SELECT&nbsp;*&nbsp;FROM&nbsp;Funcionarios
+<br>
+
+<br>
+INSERT&nbsp;INTO&nbsp;Funcionarios&nbsp;VALUES&nbsp;(|codigo|,"|nome|")
+<br>
+
+<br>
+DELETE&nbsp;FROM&nbsp;Funcionarios&nbsp;WHERE&nbsp;cod&nbsp;=&nbsp;|codigo|
+<br>
+
+<br>
+UPDATE&nbsp;Funcionarios&nbsp;SET
+<br>
+&nbsp;&nbsp;nome&nbsp;=&nbsp;"|nome|",&nbsp;endereco&nbsp;=&nbsp;"|endereco|"&nbsp;WHERE&nbsp;cod&nbsp;=&nbsp;|cod|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+Quando um comando sql &#233; executado o valor das colunas &#233; recuperado pelo getString mas se for um texto longo
+<br>
+o desenvolvedor pode especificar para recuperar usando o getAsciiStream atrav&#233;s da fun&#231;&#227;o wi.longTextColumns. Ex:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$wi.longTextColumns(3,5)$|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">SELECT&nbsp;cod,&nbsp;nome,&nbsp;anamnese,&nbsp;nascimento,&nbsp;historico&nbsp;FROM&nbsp;Paciente
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Por padr&#227;o o WI ir&#225; criar um Statement com a instru&#231;&#227;o substitu&#237;da pelo resultado do processamento dos pipes (caso haja filtros de sql esses caracteres ser&#227;o removidos das vari&#225;veis). Para fazer com que o WI processe a instru&#231;&#227;o usando um PreparedStatement &#233; necess&#225;rio que o pipe seja  prececido, encostado, a um sinal "?". Ex:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">INSERT&nbsp;INTO&nbsp;Pessoa&nbsp;(cod,&nbsp;nome)&nbsp;VALUES&nbsp;(?|tmp.cod|,&nbsp;?|tmp.nome|)
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Quando n&#227;o &#233; explicitamente informada o tipo de atribui&#231;&#227;o (cast) o WI ir&#225; utilizar o setString, mas &#233; possivel fazer um 
+<br>
+comando definindo qual comando set dever&#225; ser utilizado:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">select&nbsp;*&nbsp;from&nbsp;pessoa&nbsp;where&nbsp;nome&nbsp;like&nbsp;?[str]|tmp.ini|
+<br>
+insert&nbsp;into&nbsp;pessoa&nbsp;(cod,&nbsp;nome)&nbsp;values&nbsp;(?[int]|tmp.cod|,&nbsp;?[str]|tmp.nome|)
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O tipos disponiveis para o colchete s&#227;o: 
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">asc</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (setAscii), <span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">bin</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (setBinary), <span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">dat</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (setDate), <span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">int</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (setInt), <span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">lon</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (setLong), <span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">flt</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (setFloat), <span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">dbl</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (setDouble), <span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">str</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (setString)
+<br>
+
+<br>
+Quando &#233; utilizado [bin] e o valor come&#231;a com "file:" ser&#225; procurado o arquivo correspondente no disco.
+<br>
+Ex: O valor "file:/tmp/arquivo.jpg"
+<br>
+
+<br>
+Quando o cast &#233; especificado o WI faz o set correspondente e caso haja erro de cast ele define null 
+<br>
+(resolve problemas de drivers que obrigam o set correspondente como no informix). Ex:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">insert&nbsp;into&nbsp;teste&nbsp;(data)&nbsp;values&nbsp;(?[dat]|tmp.data|)&nbsp;
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">Se&nbsp;data&nbsp;for&nbsp;vazio&nbsp;fica&nbsp;null&nbsp;no&nbsp;bd.
+<br>
+
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#FF0000">insert&nbsp;into&nbsp;teste&nbsp;(data)&nbsp;values&nbsp;(?|tmp.data|)&nbsp;
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">Se&nbsp;data&nbsp;for&nbsp;vazio&nbsp;fica&nbsp;0000-00-00&nbsp;no&nbsp;bd.
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Quando &#233; especificado [str] &#233; setString, mas se o texto for null (insensitivo) fica null para n&#227;o violar uma chave 
+<br>
+estrangeira, j&#225; o convencional, quando n&#227;o especifica, ficaria o texto null.
+<br>
+Ex:  Uma combo de estado onde a sele&#231;&#227;o n&#227;o &#233; obrigatorio (o item selecione teria value="null")
+<br>
+
+<br>
+Existe uma fun&#231;&#227;o que retorna a lista de tabelas ou views de uma conex&#227;o:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">$wi.listmeta(table)$</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|&nbsp;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Existe uma fun&#231;&#227;o que retorna a meta-estrutura de uma tabela, e &#233; ela:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">$wi.listmetastruct(tabela)$</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|&nbsp;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Para executar uma chamada a uma </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>stored&nbsp;procedure</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> utilize a sintaxe espec&#237;fica do sistema gerenciador de banco de dados (SGBD) que estiver sendo utilizado. No caso do SGBD Oracle a sintaxe a ser usada deve ser a seguinte:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">{&nbsp;call&nbsp;&lt;nome-da-stored-procedure&gt;([&lt;param1&gt;,&nbsp;...])&nbsp;}
+<br>
+{&nbsp;call&nbsp;?&nbsp;:=&nbsp;&lt;nome-da-stored-procedure&gt;([&lt;param1&gt;,&nbsp;...])&nbsp;}
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<img src="importante.png" width="33" height="32" border="0" alt="importante"> <b>IMPORTANTE:
+<br>
+</b>
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Ao chamar </span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>stored&nbsp;procedures</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> Oracle assegure-se que:
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>1.</b> se ela retornar um conjunto de resultados, os mesmos sejam referenciados atrav&#233;s de um cursor. O c&#243;digo da stored procedure deve ser semelhante a:
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">CREATE&nbsp;OR&nbsp;REPLACE&nbsp;FUNCTION&nbsp;&lt;nome-da-stored-procedure&gt;([&lt;param1&gt;,&nbsp;...])
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">RETURN&nbsp;types.ref_cursor
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">AS
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td width="25"><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></span></span></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;nome-do-cursor&gt;&nbsp;types.ref_cursor;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td width="25"><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td><td></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">BEGIN
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td width="25"><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></span></span></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">OPEN&nbsp;&lt;nome-do-cursor&gt;&nbsp;FOR&nbsp;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td width="25"><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">...
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td width="25"><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000">RETURN&nbsp;&lt;nome-do-cursor&gt;;
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td width="25"><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td><td></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">END;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="64"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">      
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>2. </b>se ela realizar atualiza&#231;&#245;es e/ou inser&#231;&#245;es de dados que seja retornado um valor num&#233;rico. Valores negativos servem para indicar que houve algum erro durante a execu&#231;&#227;o da stored-procedure ou valores positivos para indicar a quantidade de linhas que foram alteradas e/ou inseridas.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>3. </b>para passar par&#226;metros por refer&#234;ncia &#233; necess&#225;rio colocar ".out" no nome da vari&#225;vel que usa Prepared Statement para indicar que o seu retorno dese ser capturado. 
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Ex (oracle): </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">{&nbsp;call&nbsp;myprocedure(?|tmp.cod|,&nbsp;?|tmp.nome.out|)&nbsp;}
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

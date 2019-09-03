@@ -1,0 +1,416 @@
+<html>
+<head>
+   <title>Exibindo a Estrutura Hier&aacute;rquica do &Iacute;ndice</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?estruturahierarquicadoindice.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Exibindo a Estrutura Hier&#225;rquica do &#205;ndice
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.2.4',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.3',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Exibindo a Estrutura Hier&#225;rquica do &#205;ndice</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Com os passos descritos anteriormente j&#225; est&#225; dispon&#237;vel um simples por&#233;m funcional aplicativo de indexa&#231;&#227;o e busca de documentos. A seguir veremos como exibir uma vis&#227;o hier&#225;rquica em uma estrutura em &#225;rvore das informa&#231;&#245;es dos documentos dispon&#237;veis no &#237;ndice.
+<br>
+
+<br>
+O &#237;ndice hier&#225;rquico ser&#225; montado baseado nas propriedades adicionais que foram definidas para o &#237;ndice. A hierarquia exibida ser&#225; de acordo com a ordem em que as propriedades adicionais foram listadas na hora da defini&#231;&#227;o do &#237;ndice. Em nossa aplica&#231;&#227;o, como definimos as propriedades adicionais <b>ano</b>, <b>mes</b>, <b>dia</b> e <b>titulo</b>, ent&#227;o a estrutura a ser gerada se assemelhar&#225; com a que segue:
+<br>
+
+<br>
+<img src="estrutura_pastas.png" width="512" height="115" border="0" alt="estrutura_pastas">
+<br>
+
+<br>
+Inicialmente vamos construir um </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>frameset</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, composto de duas colunas onde uma dessas colunas ter&#225; duas linhas. Um dos </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>frames</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> exibir&#225; um componente <b>TreeView</b> que representar&#225; a vis&#227;o hier&#225;rquica do &#237;ndice, um outro </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>frame</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> exibir&#225; um formul&#225;rio de pesquisa e um terceiro </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>frame</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que exibir&#225; o resultado das pesquisas. Para isso crie a p&#225;gina </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>framepesq.wsp</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e coloque o seguinte c&#243;digo:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="569" bgcolor="#BFBFBF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;HTML&gt;
+<br>
+&lt;HEAD&gt;
+<br>
+&lt;TITLE&gt;&#205;ndice&nbsp;Hier&#225;rquico&lt;/TITLE&gt;
+<br>
+&lt;META&nbsp;HTTP-EQUIV="pragma"&nbsp;CONTENT="no-cache"&gt;
+<br>
+&lt;META&nbsp;HTTP-EQUIV="expires"&nbsp;CONTENT="0"&gt;
+<br>
+&lt;/HEAD&gt;
+<br>
+&lt;!--&nbsp;frames&nbsp;--&gt;
+<br>
+&lt;FRAMESET&nbsp;COLS="23%,*"&nbsp;&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;FRAME&nbsp;NAME="treeview"&nbsp;SRC="treeview.wsp"&nbsp;MARGINWIDTH="10"&nbsp;MARGINHEIGHT="10"&nbsp;SCROLLING="auto"&nbsp;FRAMEBORDER="0"&nbsp;NORESIZE&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;FRAMESET&nbsp;ROWS="21%,*"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FRAME&nbsp;NAME="search"&nbsp;SRC="pesquisa.wsp"&nbsp;MARGINWIDTH="10"&nbsp;MARGINHEIGHT="10"&nbsp;SCROLLING="auto"&nbsp;FRAMEBORDER="0"&nbsp;NORESIZE&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FRAME&nbsp;NAME="searchMain"&nbsp;SRC="resultado.wsp"&nbsp;MARGINWIDTH="10"&nbsp;MARGINHEIGHT="10"&nbsp;SCROLLING="auto"&nbsp;FRAMEBORDER="0"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/FRAMESET&gt;
+<br>
+&lt;/FRAMESET&gt;
+<br>
+&lt;/HTML&gt;
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Note que o c&#243;digo acima faz refer&#234;ncia a uma p&#225;gina chamada </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>treeview.wsp</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, ser&#225; ela que exibir&#225; a estrutura em &#225;rvore das informa&#231;&#245;es do &#237;ndice. Primeiro crie-a e adicione dois eventos em seu pr&#233;-p&#225;gina:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="96" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Evento</b>
+<br>
+</span></div></td><td align="left" valign="top" width="432" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Descri&#231;&#227;o</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="96" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.4.9',1,0)>Gravar</a>
+<br>
+</span></td><td align="left" valign="top" width="432" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">gravar na vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">tmp.indexName</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"> o nome do &#237;ndice a partir do qual montar&#225; a &#225;rvore que no nosso caso &#233; </span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>modelo</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">.</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="96" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.4.5',1,0)>Conector Java</a>
+<br>
+</span></td><td align="left" valign="top" width="432" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">chamar a classe</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">br.com.itx.modules.search.WIHierarchicalIndex</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+No c&#243;digo-fonte da p&#225;gina que ser&#225; exibido a estrutura hier&#225;rquica do &#237;ndice tem que ser levado algumas considera&#231;&#245;es. Primeiro, para que o <b>TreeView</b> seja montado e visualizado, o arquivo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">treeview.js</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ter&#225; de ser carregado inserindo a seguinte </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>tag</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="569" bgcolor="#BFBFBF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;SCRIPT&nbsp;TYPE="text/javascript"&nbsp;SRC="/wi3/treeview.js"&gt;&lt;/SCRIPT&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Al&#233;m da tag acima, acrescente outra listando as propriedades do <b>TreeView</b>:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;SCRIPT&gt;
+<br>
+/****************************
+<br>
+&nbsp;*&nbsp;Propriedades&nbsp;do&nbsp;TreeView&nbsp;*
+<br>
+&nbsp;****************************/
+<br>
+//&nbsp;identificador&nbsp;&#250;nico&nbsp;para&nbsp;esse&nbsp;TreeView&nbsp;(n&#227;o&nbsp;altere&nbsp;essa&nbsp;op&#231;&#227;o)
+<br>
+UniqueID&nbsp;=&nbsp;"JS_TreeView_docu";
+<br>
+
+<br>
+//&nbsp;diret&#243;rio&nbsp;raiz&nbsp;dos&nbsp;links&nbsp;(n&#227;o&nbsp;altere&nbsp;essa&nbsp;op&#231;&#227;o)
+<br>
+DocRoot&nbsp;=&nbsp;"";
+<br>
+
+<br>
+//&nbsp;diret&#243;rio&nbsp;das&nbsp;"peles"&nbsp;do&nbsp;TreeView.&nbsp;As&nbsp;op&#231;&#245;es&nbsp;dispon&#237;veis&nbsp;s&#227;o:
+<br>
+//&nbsp;/wi3/images/grafix/win/
+<br>
+//&nbsp;/wi3/images/grafix/mac/
+<br>
+//&nbsp;/wi3/images/grafix/hlp/
+<br>
+//&nbsp;/wi3/images/grafix/os2/
+<br>
+ImgRoot&nbsp;=&nbsp;"/wi3/images/grafix/win/";
+<br>
+
+<br>
+//&nbsp;p&#225;gina&nbsp;que&nbsp;cont&#233;m&nbsp;o&nbsp;FRAMESET&nbsp;que&nbsp;chama&nbsp;o&nbsp;&#237;ndice
+<br>
+FrameSet&nbsp;=&nbsp;"";
+<br>
+
+<br>
+//&nbsp;largura&nbsp;da&nbsp;imagem&nbsp;(n&#227;o&nbsp;altere&nbsp;essa&nbsp;op&#231;&#227;o)
+<br>
+ImgWidth&nbsp;=&nbsp;14;
+<br>
+
+<br>
+//&nbsp;altura&nbsp;da&nbsp;imagem&nbsp;(n&#227;o&nbsp;altere&nbsp;essa&nbsp;op&#231;&#227;o)
+<br>
+ImgHeight&nbsp;=&nbsp;18;
+<br>
+
+<br>
+EntryHeight&nbsp;=&nbsp;ImgHeight;
+<br>
+
+<br>
+//&nbsp;chave&nbsp;inicial&nbsp;(n&#227;o&nbsp;altere&nbsp;essa&nbsp;op&#231;&#227;o)
+<br>
+InitialKey&nbsp;=&nbsp;"";
+<br>
+
+<br>
+//&nbsp;cor&nbsp;de&nbsp;fundo&nbsp;da&nbsp;p&#225;gina
+<br>
+CurrPageBG&nbsp;=&nbsp;"#000099";
+<br>
+
+<br>
+//&nbsp;cor&nbsp;de&nbsp;frente&nbsp;da&nbsp;p&#225;gina
+<br>
+CurrPageFG&nbsp;=&nbsp;"#FFFFFF";
+<br>
+
+<br>
+LinkCurrPage&nbsp;=&nbsp;true;
+<br>
+
+<br>
+//&nbsp;texto&nbsp;a&nbsp;ser&nbsp;apresentado&nbsp;como&nbsp;dica&nbsp;do&nbsp;n&#243;&nbsp;raiz&nbsp;do&nbsp;&#237;ndice
+<br>
+TreeRootHint&nbsp;=&nbsp;"";
+<br>
+
+<br>
+//&nbsp;texto&nbsp;a&nbsp;ser&nbsp;apresentado&nbsp;como&nbsp;dica&nbsp;de&nbsp;um&nbsp;link&nbsp;para&nbsp;uma&nbsp;p&#225;gina
+<br>
+NormalPageHint&nbsp;=&nbsp;"";
+<br>
+
+<br>
+//&nbsp;texto&nbsp;a&nbsp;ser&nbsp;apresentado&nbsp;como&nbsp;dica&nbsp;de&nbsp;um&nbsp;link
+<br>
+LinkedPageHint&nbsp;=&nbsp;"";
+<br>
+
+<br>
+//&nbsp;texto&nbsp;a&nbsp;ser&nbsp;apresentado&nbsp;como&nbsp;dica&nbsp;da&nbsp;figura&nbsp;que&nbsp;fecha&nbsp;um&nbsp;ramo&nbsp;da&nbsp;&#225;rvore
+<br>
+OpenBookHint&nbsp;=&nbsp;"Fechar";&nbsp;
+<br>
+
+<br>
+//&nbsp;texto&nbsp;a&nbsp;ser&nbsp;apresentado&nbsp;como&nbsp;dica&nbsp;da&nbsp;figura&nbsp;que&nbsp;abre&nbsp;um&nbsp;ramo&nbsp;da&nbsp;&#225;rvore
+<br>
+ClosedBookHint&nbsp;=&nbsp;"Abrir";
+<br>
+
+<br>
+OpenBookStatus&nbsp;=&nbsp;"Fechar&nbsp;sub-lista";
+<br>
+
+<br>
+ClosedBookStatus&nbsp;=&nbsp;"Abrir&nbsp;sub-lista";
+<br>
+
+<br>
+//&nbsp;mensagem&nbsp;que&nbsp;aparece&nbsp;na&nbsp;barra&nbsp;de&nbsp;status&nbsp;do&nbsp;browser
+<br>
+window.defaultStatus&nbsp;=&nbsp;"&#193;rvore&nbsp;dos&nbsp;arquivos&nbsp;do&nbsp;&#237;ndice";
+<br>
+
+<br>
+//&nbsp;mensagem&nbsp;a&nbsp;ser&nbsp;exibida&nbsp;quando&nbsp;o&nbsp;&#237;ndice&nbsp;n&#227;o&nbsp;fizer&nbsp;parte&nbsp;de&nbsp;um&nbsp;FRAMESET
+<br>
+//&nbsp;e&nbsp;a&nbsp;propriedade&nbsp;checkFrames&nbsp;estiver&nbsp;setada&nbsp;para&nbsp;true
+<br>
+navExplain&nbsp;=&nbsp;"\nThis&nbsp;page&nbsp;normally&nbsp;belongs&nbsp;inside&nbsp;a&nbsp;navigation"&nbsp;+&nbsp;"&nbsp;frame.\n\nIs&nbsp;it&nbsp;OK&nbsp;to&nbsp;reload&nbsp;the&nbsp;page&nbsp;as&nbsp;designed&nbsp;?";
+<br>
+
+<br>
+//&nbsp;fontes&nbsp;a&nbsp;serem&nbsp;usadas&nbsp;pelo&nbsp;&#237;ndice
+<br>
+FontFace&nbsp;=&nbsp;"Verdana,Times&nbsp;New&nbsp;Roman,Times,serif";
+<br>
+
+<br>
+compactTree&nbsp;=&nbsp;false;
+<br>
+
+<br>
+viewMatchCnt&nbsp;=&nbsp;0;
+<br>
+
+<br>
+//&nbsp;indica&nbsp;se&nbsp;visualiza&nbsp;apenas&nbsp;um&nbsp;ramo&nbsp;da&nbsp;&#225;rvore
+<br>
+singleBranch&nbsp;=&nbsp;false;
+<br>
+
+<br>
+//&nbsp;indica&nbsp;se&nbsp;ser&#225;&nbsp;feita&nbsp;a&nbsp;verifica&#231;&#227;o&nbsp;se&nbsp;o&nbsp;&#237;ndice&nbsp;faz&nbsp;parte&nbsp;de&nbsp;um&nbsp;FRAMESET
+<br>
+checkFrames&nbsp;=&nbsp;false;
+<br>
+
+<br>
+//baseHref="_self";
+<br>
+
+<br>
+/**
+<br>
+&nbsp;*&nbsp;m&#233;todo&nbsp;que&nbsp;monta&nbsp;a&nbsp;query&nbsp;da&nbsp;pesquisa&nbsp;de&nbsp;acordo&nbsp;com&nbsp;o&nbsp;link.
+<br>
+&nbsp;*/
+<br>
+function&nbsp;sendQuery(key)&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;var&nbsp;flds&nbsp;=&nbsp;fields.split("^");
+<br>
+&nbsp;&nbsp;&nbsp;var&nbsp;keys&nbsp;=&nbsp;key.split("^");
+<br>
+&nbsp;&nbsp;&nbsp;var&nbsp;query&nbsp;=&nbsp;"";
+<br>
+&nbsp;&nbsp;&nbsp;for&nbsp;(var&nbsp;i&nbsp;=&nbsp;0;&nbsp;i&nbsp;&lt;&nbsp;flds.length;&nbsp;i++)&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;(keys[i])&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sep&nbsp;=&nbsp;(i&nbsp;==&nbsp;0)&nbsp;?&nbsp;""&nbsp;:&nbsp;"&nbsp;AND&nbsp;";
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;query&nbsp;+=&nbsp;sep&nbsp;+&nbsp;flds[i]&nbsp;+&nbsp;":\""&nbsp;+&nbsp;keys[i]&nbsp;+&nbsp;";
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+<br>
+&nbsp;&nbsp;&nbsp;}
+<br>
+&nbsp;&nbsp;&nbsp;if&nbsp;(top.frames["search"])&nbsp;{
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top.frames["search"].document.forms[0].target&nbsp;=&nbsp;"searchMain";
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top.frames["search"].document.forms[0]["tmp.search.query"].value&nbsp;=&nbsp;query;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top.frames["search"].document.forms[0].submit();
+<br>
+&nbsp;&nbsp;&nbsp;}
+<br>
+}
+<br>
+&lt;/SCRIPT&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+
+<br>
+Por fim, coloque dentro da </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>tag</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">&lt;BODY&gt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> a refer&#234;ncia &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|tmp.search.tree|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que &#233; criada pela classe </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.modules.search.WIHierarchicalIndex</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e que retorna a estrutura em &#225;rvore das propriedades dos documentos que fazem parte do &#237;ndice.
+<br>
+
+<br>
+Para mostrar mais uma funcionalidade do WI Search, acrescente agora o recurso de destaque de termos no texto de acordo com o crit&#233;rio de pesquisa. Para isso, na p&#225;gina </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>visualizar.wsp</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> desative o evento <b>Download</b> e acrescente os eventos de <b>Importar Arquivo</b> e <b>Concetor Java</b>.
+<br>
+
+<br>
+Para configurar o evento <b>Importar Arquivo</b> fa&#231;a as seguintes defini&#231;&#245;es:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.4.3.1',1,0)>Objeto</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>content</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.4.3.1',1,0)>Condi&ccedil;&atilde;o verdadeira</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>|wi.proj.path|/documentos/|tmp.arquivo|</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Com a configura&#231;&#227;o, o conte&#250;do do arquivo que antes era feito o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>download</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> agora est&#225; armazenado na vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">content</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. O pr&#243;ximo passo ser&#225; a configura&#231;&#227;o da classe Java que ir&#225; recuperar o conte&#250;do dessa vari&#225;vel e destacar os termos. Para isso, adicione um Conector Java com as seguintes configura&#231;&#245;es:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.4.5',1,0)>Condi&ccedil;&atilde;o</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>|queryDestaque|&nbsp;!=</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.4.5',1,0)>Nome da classe</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>br.com.itx.modules.search.Highlighter</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Por fim substitua o conte&#250;do da p&#225;gina visualizar.wsp pela refer&#234;ncia &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">content</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, com isso sempre que essa p&#225;gina for solicitada o seu conte&#250;do corresponder&#225; ao conte&#250;do do arquivo passado pela vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.arquivo</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com os termos em destaque.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>
