@@ -1,0 +1,19 @@
+<html>
+<body>
+<table border="1" cellspacing="0">
+  <tr>
+    <td align="center"><b>RowID</b></td>
+    <td align="center"><b>WIobject</b></td>
+  </tr>
+  <tr>
+    <td>|rowid|&nbsp;</td>
+    <td>|wiobject|&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <p align="center">Empty</p>
+    </td>
+  </tr>
+</table>
+</body>
+</html>

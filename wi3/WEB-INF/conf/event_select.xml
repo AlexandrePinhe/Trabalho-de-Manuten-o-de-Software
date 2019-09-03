@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE EVENT [
+  <!ELEMENT EVENT (#PCDATA)>
+  <!ENTITY nbsp '&#160;'>
+  <!ENTITY cr '&#13;'>
+  <!ENTITY lf '&#10;'>
+]>
+
+<EVENT TYPE="SELECT">
+  <DESCRIPTION>Descrição do event</DESCRIPTION>
+  <CONDITION>Condição</CONDITION>
+  <DATABASE>Banco de dados a ser utilizado</DATABASE>
+  <SQL>Expressão SQL</SQL>
+  <SQLFILTER>Caracteres a serem removidos da expressão SQL</SQLFILTER>
+</EVENT>

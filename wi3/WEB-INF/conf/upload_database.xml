@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE UPLOAD [
+  <!ELEMENT UPLOAD (#PCDATA)>
+  <!ENTITY nbsp '&#160;'>
+  <!ENTITY cr '&#13;'>
+  <!ENTITY lf '&#10;'>
+]>
+
+<UPLOAD TYPE="DATABASE">
+  <DESCRIPTION>Descrição do upload DB</DESCRIPTION>
+  <DATABASE>Banco de dados para o upload DB</DATABASE>
+  <SQL>Expressão SQL para o upload DB</SQL>
+  <SQLFILTER>Filtro SQL para o upload DB</SQLFILTER>
+  <FORMFIELD>Campo do formulário</FORMFIELD>
+  <ZIP>Indica que o arquivo deve ser compactado no formato ZIP</ZIP>
+  <BASE64>Indica que o arquivo deve ser no formato BASE 64</BASE64>
+</UPLOAD>

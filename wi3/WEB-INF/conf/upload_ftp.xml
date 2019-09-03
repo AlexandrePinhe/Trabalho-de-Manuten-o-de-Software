@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE UPLOAD [
+  <!ELEMENT UPLOAD (#PCDATA)>
+  <!ENTITY nbsp '&#160;'>
+  <!ENTITY cr '&#13;'>
+  <!ENTITY lf '&#10;'>
+]>
+
+<UPLOAD TYPE="FTP">
+  <DESCRIPTION>Descrição do upload FTP</DESCRIPTION>
+  <HOSTID>Host para o upload FTP</HOSTID>
+  <DIRECTORY>Diretório para o upload FTP</DIRECTORY>
+  <FILE>Arquivo para o upload FTP</FILE>
+  <CREATEDIR>Cria diretório</CREATEDIR>
+  <FORMFIELD>Campo do formulário</FORMFIELD>
+</UPLOAD>

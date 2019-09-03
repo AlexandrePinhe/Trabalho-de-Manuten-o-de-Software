@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE DOWNLOAD [
+  <!ELEMENT DOWNLOAD (#PCDATA)>
+  <!ENTITY nbsp '&#160;'>
+  <!ENTITY cr '&#13;'>
+  <!ENTITY lf '&#10;'>
+]>
+
+<DOWNLOAD TYPE="LOCAL">
+  <DESCRIPTION>Descrição do download local</DESCRIPTION>
+  <DIRECTORY>Diretório para o download local</DIRECTORY>
+  <FILE>Arquivo para o download local</FILE>
+  <MIME>Mime para o download local</MIME>
+  <NOFILE>Mensagem &apos;No File&apos; para o download local</NOFILE>
+  <ACTIVEPAGE>Processa página para o download local</ACTIVEPAGE>
+</DOWNLOAD>

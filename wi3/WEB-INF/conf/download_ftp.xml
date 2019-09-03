@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE DOWNLOAD [
+  <!ELEMENT DOWNLOAD (#PCDATA)>
+  <!ENTITY nbsp '&#160;'>
+  <!ENTITY cr '&#13;'>
+  <!ENTITY lf '&#10;'>
+]>
+
+<DOWNLOAD TYPE="FTP">
+  <DESCRIPTION>Descrição do download FTP</DESCRIPTION>
+  <HOSTID>Host para o download FTP</HOSTID>
+  <DIRECTORY>Diretório para o download FTP</DIRECTORY>
+  <FILE>Arquivo para o download FTP</FILE>
+  <MIME>Mime para o download FTP</MIME>
+  <NOFILE>Mensagem &apos;No File&apos; para o download FTP</NOFILE>
+  <ACTIVEPAGE>Processa página para o download FTP</ACTIVEPAGE>
+</DOWNLOAD>

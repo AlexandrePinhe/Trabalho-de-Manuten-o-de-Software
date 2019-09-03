@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE WEBSERVICE [
+  <!ELEMENT WEBSERVICE (#PCDATA)>
+  <!ENTITY nbsp '&#160;'>
+  <!ENTITY cr '&#13;'>
+  <!ENTITY lf '&#10;'>
+]>
+
+<WEBSERVICE>
+  <DESCRIPTION>Descrição do serviço 1</DESCRIPTION>
+  <NAMESPACE>Define o namespace do serviço</NAMESPACE>
+  <METHODS>
+    <METHOD ID="Metodo1">
+      <DESCRIPTION>Descrição do método 1</DESCRIPTION>
+      <WIOBJIN>WIObject dos dados recebidos</WIOBJIN>
+      <XMLIN>XML dos dados recebidos(com type e suporta nomes especificos para cada elemento)</XMLIN>
+      <PAGE>Página com a lógica a ser executada no pré-página</PAGE>
+      <XMLOUT>XML dos dados a serem enviados(com type e aceita grid.xml)</XMLOUT>
+      <FAULTS>
+        <FAULT SEQ="1">
+          <CONDITION>Condição para lançar a falha</CONDITION>
+          <CODE>SOAP-ENV:Server</CODE>
+          <DESCRIPTION>Descrição da falha</DESCRIPTION>
+        </FAULT>
+      </FAULTS>
+    </METHOD>
+  </METHODS>
+</WEBSERVICE>
+
+

@@ -1,0 +1,11 @@
+<applet width="600" height="300" code="webintegrator.applet.ViewGraph" codebase="/wi2/applets">
+  <param name="titulo" value="Gráfico de Tabela">
+  <param name="espaco" value="15">
+  <param name="tipo" value="1">
+  <param name="numvalores" value="1">
+  <param name="xtitulo" value="valor1,valor2">
+  <param name="valores1" value="12,20">
+  <!param name="subtitulo" value="Opções Horizontais"-->
+  <!param name="cor" value="1"-->
+  <!param name="escala" value="100"-->  
+</applet>

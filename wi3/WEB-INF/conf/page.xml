@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE PAGE [
+  <!ELEMENT PAGE (#PCDATA)>
+  <!ENTITY nbsp '&#160;'>
+  <!ENTITY cr '&#13;'>
+  <!ENTITY lf '&#10;'>
+]>
+
+<PAGE>
+  <DEFINITION>
+    <TITLE>Título da página</TITLE>
+    <SECURITY>Segurança ativa: on/off</SECURITY>
+    <MIME>MIME da página</MIME>
+    <NOLOGIN>Desvio em caso de logoff (url)</NOLOGIN>
+    <BROWSERCACHE>Permite cache do browser: on/off</BROWSERCACHE>
+    <RERENDER>Suportar Renderização Parcial: on/off</RERENDER>
+    <JSF>Página JSF: on/off</JSF>
+    <SYSPAGE>Página de sistema: on/off</SYSPAGE>
+    <ISERRORPAGE>Indica se essa é uma página de Erro: on/off</ISERRORPAGE>
+    <ERRORPAGE>Página de Erro</ERRORPAGE>
+    <GRIDTEMPLATE>Grid que usará essa página como modelo</GRIDTEMPLATE>
+    <SYNCPRE>Syncronizar o PRE</SYNCPRE>
+    <SYNCPOS>Syncronizar o POS</SYNCPOS>
+    <USEPERSISTONWIZARD>Usar presistência no POS do Wizard</USEPERSISTONWIZARD>
+  </DEFINITION>
+  <PREPAGE>
+    <INDEX>
+      <REDIRS SEQ="1"/>
+      <SENDMAILS SEQ="1"/>
+      <LISTMAILS SEQ="1"/>
+      <GETMAILS SEQ="1"/>
+      <KILLMAILS SEQ="1"/>
+      <GRIDREFS SEQ="1"/>
+      <COMBOREFS SEQ="1"/>
+      <REPORTREFS SEQ="1"/>
+      <DOWNLOADREFS SEQ="1"/>
+      <UPLOADREFS SEQ="1"/>
+      <FILEINS SEQ="1"/>
+      <SOCKETS SEQ="1"/>
+      <OBJECTS SEQ="1"/>
+      <LISTS SEQ="1"/>
+      <SETS SEQ="1"/>
+      <KILLS SEQ="1"/>
+      <UPDATES SEQ="1"/>
+      <LISTFILES SEQ="1"/>
+      <REMOVEFILES SEQ="1"/>
+      <COOKIES SEQ="1"/>
+      <CONNECTORS SEQ="1"/>
+      <JAVAGRIDS SEQ="1"/>
+      <WIOBJECTGRIDS SEQ="1"/>
+      <FILEOUTS SEQ="1"/>
+      <TREEVIEWS SEQ="1"/>
+      <WEBSERVICES SEQ="1"/>
+      <JSPELEMENTS SEQ="1"/>
+    </INDEX>
+    <REDIRS>
+      <CONDITIONALS>
+        <REDIR SEQ="1">
+          <CONDITION>Condição</CONDITION>
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <GO>Pagina destino do desvio</GO>
+          <RETURN>Retorna para a página que chamou</RETURN>
+        </REDIR>
+      </CONDITIONALS>
+      <SQLS>
+        <REDIR SEQ="2">
+          <CONDITION>Condição</CONDITION>
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <WIOBJ>Objeto de retorno</WIOBJ>
+          <DATABASE>Banco de dados a ser utilizado</DATABASE>
+          <SQL>Expressão SQL</SQL>
+          <SQLFILTER>Caracteres a serem removidos da expressão SQL</SQLFILTER>
+          <WHEN>Quando executar o desvio: FOUND/NOTFOUND</WHEN>
+          <GO>Pagina destino do desvio</GO>
+          <RETURN>Retorna para a página que chamou</RETURN>
+        </REDIR>
+      </SQLS>
+    </REDIRS>
+    <SENDMAILS>
+      <SENDMAIL SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <TO>Destino do email</TO>
+        <CC>Cópia para</CC>
+        <BCC>Cópia oculta</BCC>
+        <FROM>Email do rementente</FROM>
+        <SENDER>Nome do remetente</SENDER>
+        <SUBJECT>Assunto</SUBJECT>
+        <HTMLCONTENT>Corpo do email (aceita variaveis)</HTMLCONTENT>
+        <EACHONE>Se ON: processa SOURCE para cada destinatário</EACHONE>
+        <NOTIFICATION>Notificação de recebimento</NOTIFICATION>
+        <EXECUTE>Página a executar para cada email</EXECUTE>
+        <MIME>MIME do email</MIME>
+        <HELLO>Hello</HELLO>
+        <HOSTID>ID do host definido no projeto</HOSTID>
+        <ATTACHDIR>Diretório dos anexos</ATTACHDIR>
+        <ATTACHREMOVE>ON/OFF</ATTACHREMOVE>
+      </SENDMAIL>
+    </SENDMAILS>
+    <LISTMAILS>
+      <LISTMAIL SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <HOSTID>Host ID</HOSTID>
+        <GRIDID>ID do grid que receberá a lista</GRIDID>
+        <FOLDER>Pasta para listar</FOLDER>
+      </LISTMAIL>
+    </LISTMAILS>
+    <GETMAILS>
+      <GETMAIL SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <WIOBJ>Contém: header,body,attachs(id,filename,mime,size,href,link)</WIOBJ>
+        <GRIDATTACH>
+          <CONDITION>Condição para o grid Attach</CONDITION>
+          <GRIDID>ID do grid Attach</GRIDID>
+        </GRIDATTACH>
+        <HOSTID>Host ID</HOSTID>
+        <MAILID>Mail ID</MAILID>
+        <FOLDER>Pasta para listar</FOLDER>
+      </GETMAIL>
+    </GETMAILS>
+    <KILLMAILS>
+      <KILLMAIL SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <HOSTID>Host ID</HOSTID>
+        <IDLIST>Lista de emails a serem removidos</IDLIST>
+        <FOLDER>Pasta para listar</FOLDER>
+      </KILLMAIL>
+    </KILLMAILS>
+    <GRIDREFS>
+      <GRIDREF SEQ="1">
+        <GRIDID>ID definido no projeto</GRIDID>
+        <CONDITION>Condição</CONDITION>
+        <SUBID>ID dessa instancia</SUBID>
+        <TYPE>Tipo do grid: LINEARS/MATRIXES</TYPE>
+        <GENERATEINPAGE>O grid SQL/XML deverá ser gerado na página dando outputstream direto</GENERATEINPAGE>
+      </GRIDREF>
+    </GRIDREFS>
+    <COMBOREFS>
+      <COMBOREF SEQ="1">
+        <COMBOID>ID definido no projeto</COMBOID>
+        <CONDITION>Condição</CONDITION>
+        <SUBID>ID dessa instancia</SUBID>
+        <SELECTED>Chave para pré-seleção</SELECTED>
+        <OPTIONPARAM>Parametro para cada &apos;option&apos;</OPTIONPARAM>
+      </COMBOREF>
+    </COMBOREFS>
+    <REPORTREFS>
+      <REPORTREF SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <REPORTID>ID definido no projeto</REPORTID>
+        <OUTPUTDIR>Diretório de saída</OUTPUTDIR>
+        <OUTPUTFORMAT>Formato do relatório</OUTPUTFORMAT>
+        <PARAMETERS>
+          <PARAMETER>Parâmetros de entrada</PARAMETER>
+        </PARAMETERS>
+      </REPORTREF>
+    </REPORTREFS>
+    <DOWNLOADREFS>
+      <DOWNLOADREF SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DOWNLOADID>ID definido no projeto</DOWNLOADID>
+        <TYPE>LOCAL/FTPS/DATABASE</TYPE>
+      </DOWNLOADREF>
+    </DOWNLOADREFS>
+    <UPLOADREFS>
+      <UPLOADREF SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <UPLOADID>ID definido no projeto</UPLOADID>
+        <TYPE>LOCAL/FTPS/DATABASE</TYPE>
+      </UPLOADREF>
+    </UPLOADREFS>
+    <FILEINS>
+      <FILEIN SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <WIOBJ>WIObject</WIOBJ>
+        <SOURCEIFTRUE>Origem da pagina se a condição for verdadeira</SOURCEIFTRUE>
+        <SOURCEIFFALSE>Origem da pagina se a condição for falsa</SOURCEIFFALSE>
+        <ACTIVEPAGE>ON: Processa variáveis</ACTIVEPAGE>
+        <DECODEXML>ON: Decodifica o XML</DECODEXML>
+      </FILEIN>
+    </FILEINS>
+    <SOCKETS>
+      <SOCKETELEMENT SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <HOSTID>ID do host</HOSTID>
+        <TIMEOUT>Tempo de espera</TIMEOUT>
+        <SENDOBJ>Objeto WI a enviar</SENDOBJ>
+        <READOBJ>Objeto WI recebido</READOBJ>
+        <DECODEXML>ON: Decodifica o XML</DECODEXML>
+      </SOCKETELEMENT>
+    </SOCKETS>
+    <TRANSACTIONS>
+      <TRANSACTION SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <WIOBJ>WIObject</WIOBJ>
+        <MSGTRUE>Mensagem caso seja efetuado corretamente</MSGTRUE>
+        <MSGFALSE>Mensagem em caso de erro</MSGFALSE>
+        <MSGNONE>Mensagem em caso de nenhuma condição atendida</MSGNONE>
+        <START>Indica se está iniciando uma transação: on/off</START>
+      </TRANSACTION>
+    </TRANSACTIONS>
+    <OBJECTS>
+      <OBJECT SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <WIOBJ>WIObject</WIOBJ>
+        <MULTIPLE>Indica se o objeto é multiplo</MULTIPLE>
+        <DATABASE>Banco de dados a ser utilizado</DATABASE>
+        <SQL>Expressão SQL</SQL>
+        <SQLFILTER>Caracteres a serem removidos da expressão SQL</SQLFILTER>
+        <COLUMNIDS>Quantidade de colunas identificadoras (para obj multiplo)</COLUMNIDS>
+      </OBJECT>
+    </OBJECTS>
+    <LISTS>
+      <LIST SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <WIOBJ>WIObject</WIOBJ>
+        <DATABASE>Banco de dados a ser utilizado</DATABASE>
+        <SQL>Expressão SQL</SQL>
+        <SQLFILTER>Caracteres a serem removidos da expressão SQL</SQLFILTER>
+        <PRE>Texto inicial da lista</PRE>
+        <POS>Texto  final da lista</POS>
+        <SEP>Texto separador dos elementos da lista</SEP>
+      </LIST>
+    </LISTS>
+    <SETS>
+      <SET SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <WIOBJ>WIObject</WIOBJ>
+        <IFTRUE>Valor caso condição seja verdadeira</IFTRUE>
+        <ENABLEFALSE>Habilita valor para condição falsa</ENABLEFALSE>
+        <IFFALSE>Valor caso condição seja falsa</IFFALSE>
+        <RECURSIVE>Habilita recursividade no processamento de variáveis</RECURSIVE>
+        <ENCODE>Indica se o conteúdo está codificado</ENCODE>
+        <DISABLEPRODUCE>O conteúdo não deve ser produzido</DISABLEPRODUCE>
+      </SET>
+    </SETS>
+    <KILLS>
+      <KILL SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <WIOBJ>Objeto a ser removido</WIOBJ>
+      </KILL>
+    </KILLS>
+    <UPDATES>
+      <UPDATE SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <WIOBJ>Retorna concatenado com sequencial caso múltiplo, com MSGTRUE e MSGFALSE para cada objeto</WIOBJ>
+        <PREFIX>Prefixo utilizado em update múltiplo</PREFIX>
+        <SIZE>Quantidade de registros para update múltiplo</SIZE>
+        <ROWCONDITION>Condição para cada linha, caso múltiplo</ROWCONDITION>
+        <OBJECTID>Objeto utilizado para cada linha</OBJECTID>
+        <DATABASE>Banco de dados a ser utilizado</DATABASE>
+        <SQL>Expressão SQL</SQL>
+        <SQLFILTER>Caracteres a serem removidos da expressão SQL</SQLFILTER>
+        <AUTOCOMMIT>ON/OFF - Liga ou desliga auto-commit</AUTOCOMMIT>
+        <MSGFALSE>
+          <MESSAGE CODE="1">Mensagem para o erro 1</MESSAGE>
+          <MESSAGE CODE="2">Mensagem para o erro 2</MESSAGE>
+          <NOMESSAGE>Retorna em caso de erro quando não há MessageFalse adequada</NOMESSAGE>
+        </MSGFALSE>
+        <MSGTRUE>Mensagem caso seja efetuado corretamente</MSGTRUE>
+      </UPDATE>
+    </UPDATES>
+    <LISTFILES>
+      <LOCALS>
+        <LISTFILE SEQ="1">
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <CONDITION>Condição</CONDITION>
+          <DIRECTORY>Diretório</DIRECTORY>
+          <MASK>Máscara</MASK>
+          <GRIDID>Grid de saída</GRIDID>
+        </LISTFILE>
+      </LOCALS>
+      <FTPS>
+        <LISTFILE SEQ="2">
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <CONDITION>Condição</CONDITION>
+          <HOSTID>ID definido no projeto</HOSTID>
+          <DIRECTORY>Diretório</DIRECTORY>
+          <MASK>Máscara</MASK>
+          <GRIDID>Grid de saída</GRIDID>
+        </LISTFILE>
+      </FTPS>
+    </LISTFILES>
+    <REMOVEFILES>
+      <LOCALS>
+        <REMOVEFILE SEQ="1">
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <CONDITION>Condição</CONDITION>
+          <DIRECTORY>Diretório</DIRECTORY>
+          <MASK>Máscara</MASK>
+          <REMOVEDIR>Remove diretório vazio</REMOVEDIR>
+        </REMOVEFILE>
+      </LOCALS>
+      <FTPS>
+        <REMOVEFILE SEQ="2">
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <CONDITION>Condição</CONDITION>
+          <HOSTID>ID definido no projeto</HOSTID>
+          <DIRECTORY>Diretório</DIRECTORY>
+          <MASK>Máscara</MASK>
+          <REMOVEDIR>Remove diretório vazio</REMOVEDIR>
+        </REMOVEFILE>
+      </FTPS>
+    </REMOVEFILES>
+    <COOKIES>
+      <READS>
+        <COOKIE SEQ="1">
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <CONDITION>Condição</CONDITION>
+          <NAME>Nome do cookie</NAME>
+          <WIOBJ>Objeto</WIOBJ>
+        </COOKIE>
+      </READS>
+      <WRITES>
+        <COOKIE SEQ="2">
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <CONDITION>Condição</CONDITION>
+          <NAME>Nome do cookie</NAME>
+          <VALUE>Valor do cookies</VALUE>
+          <PATH>Path</PATH>
+          <DOMAIN>Dominio</DOMAIN>
+          <MAXAGE>Prazo de validade</MAXAGE>
+        </COOKIE>
+      </WRITES>
+    </COOKIES>
+    <CONNECTORS>
+      <CONNECTOR SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <PLUGIN>Nome do Plugin</PLUGIN>
+        <NAMESPACE>Namespace do Plugin</NAMESPACE>
+        <CLASSNAME>Nome completo da classe Java</CLASSNAME>
+        <INPREPAGE>Define se está no pré-página</INPREPAGE>
+        <FROMOBJECT>Objeto do pre que gerou esse objeto (Wizard)</FROMOBJECT>
+        <PARAMETERS>
+          <PARAMETER>Parâmetros de entrada e saída</PARAMETER>
+        </PARAMETERS>
+      </CONNECTOR>
+    </CONNECTORS>
+    <JAVAGRIDS>
+      <JAVAGRID SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <PLUGIN>Nome do Plugin</PLUGIN>
+        <NAMESPACE>Namespace do Plugin</NAMESPACE>
+        <CLASSNAME>Nome completo da classe Java</CLASSNAME>
+        <GRIDID>ID do grid</GRIDID>
+        <PARAMETERS>
+          <PARAMETER>Parâmetros de entrada e saída</PARAMETER>
+        </PARAMETERS>
+      </JAVAGRID>
+    </JAVAGRIDS>
+    <WIOBJECTGRIDS>
+      <WIOBJECTGRID SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <WIOBJNAME>Nome do objeto WI que será a fonte dos dados</WIOBJNAME>
+        <REGISTERCONDITION>Condição para cada registro</REGISTERCONDITION>
+        <GRIDID>ID do grid</GRIDID>
+        <SUBID>ID do grid</SUBID>
+		<GENERATEINPAGE>Gerar na página</GENERATEINPAGE>
+      </WIOBJECTGRID>
+    </WIOBJECTGRIDS>
+    <FILEOUTS>
+      <FILEOUT SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <DIRECTORY>Diretorio onde gravar</DIRECTORY>
+        <FILE>Nome do arquivo a gravar</FILE>
+        <CONTENT>Objeto WI com o conteudo</CONTENT>
+        <CREATEDIR>Cria diretório</CREATEDIR>
+        <APPEND>Acrescenta a arquivo existente</APPEND>
+      </FILEOUT>
+    </FILEOUTS>
+    <WEBSERVICES>
+      <WEBSERVICE SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <HOSTID>ID definido no projeto</HOSTID>
+        <SERVICE>URL do serviço a ser invocado</SERVICE>
+        <WSDL>URL do WSDL do serviço a ser invocado</WSDL>
+		<NAMESPACE>Namespace do serviço a ser invocado</NAMESPACE> 
+		<SOAPACTION>Header soapAction a ser enviado</SOAPACTION> 	
+        <METHOD>Método a ser invocado</METHOD>
+        <SENDXML>XML a ser enviado</SENDXML>
+        <WIOBJ>WIObject dos dados recebidos</WIOBJ>
+      </WEBSERVICE>
+    </WEBSERVICES>
+    <TREEVIEWS>
+      <TREEVIEW SEQ="Sequencia">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <STYLE>Estilo das figuras (win,hlp,mac,num,os2)</STYLE>
+        <TITLE>Titulo do treeview (raiz)</TITLE>
+        <WIOBJ>Objeto resposta</WIOBJ>
+        <CONTENTS>
+          <CONTENT KEY="Texto para o nó" LINK="Link para o nó"/>
+        </CONTENTS>
+        <DATABASE ID="Banco de dados">
+          <SQL>Expressão SQL</SQL>
+          <SQLFILTER>Filtro SQL</SQLFILTER>
+          <COLUMNS>Qtd de colunas</COLUMNS>
+          <LINK>Link para cada registro</LINK>
+          <LABEL>Label para cada registro</LABEL>
+        </DATABASE>
+      </TREEVIEW>
+    </TREEVIEWS>
+    <JSPELEMENTS>
+      <JSPELEMENT SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <TEMPLATE>Template</TEMPLATE>
+        <CODE><![CDATA[Código JSP]]></CODE>
+        <PARAMETERS>
+          <PARAMETER>Parâmetros</PARAMETER>
+        </PARAMETERS>
+      </JSPELEMENT>
+    </JSPELEMENTS>
+  </PREPAGE>
+  <POSPAGE>
+    <INDEX>
+      <REDIRS SEQ="1"/>
+      <SENDMAILS SEQ="1"/>
+      <KILLMAILS SEQ="1"/>
+      <OBJECTS SEQ="1"/>
+      <LISTS SEQ="1"/>
+      <SETS SEQ="1"/>
+      <KILLS SEQ="1"/>
+      <UPDATES SEQ="1"/>
+      <REMOVEFILES SEQ="1"/>
+      <COOKIES SEQ="1"/>
+      <CONNECTORS SEQ="1"/>
+      <UPLOADREFS SEQ="1"/>
+      <FILEINS SEQ="1"/>
+      <SOCKETS SEQ="1"/>
+      <FILEOUTS SEQ="1"/>
+      <WEBSERVICES SEQ="1"/>
+			<JSPELEMENTS SEQ="1"/>
+    </INDEX>
+    <REDIRS>
+      <CONDITIONALS>
+        <REDIR SEQ="1">
+          <CONDITION>Condição</CONDITION>
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <GO>Pagina destino do desvio</GO>
+          <RETURN>Retorna para a página que chamou</RETURN>
+        </REDIR>
+      </CONDITIONALS>
+      <SQLS>
+        <REDIR SEQ="2">
+          <CONDITION>Condição</CONDITION>
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <WIOBJ>Objeto de retorno</WIOBJ>
+          <DATABASE>Banco de dados a ser utilizado</DATABASE>
+          <SQL>Expressão SQL</SQL>
+          <SQLFILTER>Caracteres a serem removidos da expressão SQL</SQLFILTER>
+          <WHEN>Quando executar o desvio: FOUND/NOTFOUND</WHEN>
+          <GO>Pagina destino do desvio</GO>
+          <RETURN>Retorna para a página que chamou</RETURN>
+        </REDIR>
+      </SQLS>
+    </REDIRS>
+    <SENDMAILS>
+      <SENDMAIL SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <TO>Destino do email</TO>
+        <CC>Cópia para</CC>
+        <BCC>Cópia oculta</BCC>
+        <FROM>Email do rementente</FROM>
+        <SENDER>Nome do remetente</SENDER>
+        <SUBJECT>Assunto</SUBJECT>
+        <HTMLCONTENT>Corpo do email (aceita variaveis)</HTMLCONTENT>
+        <EACHONE>Se ON: processa SOURCE para cada destinatário</EACHONE>
+        <NOTIFICATION>Notificação de recebimento</NOTIFICATION>
+        <EXECUTE>Página a executar para cada email</EXECUTE>
+        <MIME>MIME do email</MIME>
+        <HELLO>Hello</HELLO>
+        <HOSTID>ID do host definido no projeto</HOSTID>
+        <ATTACHDIR>Diretório dos anexos</ATTACHDIR>
+        <ATTACHREMOVE>ON/OFF</ATTACHREMOVE>
+      </SENDMAIL>
+    </SENDMAILS>
+    <KILLMAILS>
+      <KILLMAIL SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <HOSTID>Host ID</HOSTID>
+        <IDLIST>Lista de emails a serem removidos</IDLIST>
+        <FOLDER>Pasta para listar</FOLDER>
+      </KILLMAIL>
+    </KILLMAILS>
+    <TRANSACTIONS>
+      <TRANSACTION SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <WIOBJ>WIObject</WIOBJ>
+        <MSGTRUE>Mensagem caso seja efetuado corretamente</MSGTRUE>
+        <MSGFALSE>Mensagem em caso de erro</MSGFALSE>
+        <MSGNONE>Mensagem em caso de nenhuma condição atendida</MSGNONE>
+        <START>Indica se está iniciando uma transação: on/off</START>
+      </TRANSACTION>
+    </TRANSACTIONS>
+    <OBJECTS>
+      <OBJECT SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <WIOBJ>WIObject</WIOBJ>
+        <MULTIPLE>Indica se o objeto é multiplo</MULTIPLE>
+        <DATABASE>Banco de dados a ser utilizado</DATABASE>
+        <SQL>Expressão SQL</SQL>
+        <SQLFILTER>Caracteres a serem removidos da expressão SQL</SQLFILTER>
+        <COLUMNIDS>Quantidade de colunas identificadoras (para obj multiplo)</COLUMNIDS>
+        <FROMOBJECT>Objeto do pre que gerou esse objeto (Wizard)</FROMOBJECT>
+      </OBJECT>
+    </OBJECTS>
+    <LISTS>
+      <LIST SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <WIOBJ>WIObject</WIOBJ>
+        <DATABASE>Banco de dados a ser utilizado</DATABASE>
+        <SQL>Expressão SQL</SQL>
+        <SQLFILTER>Caracteres a serem removidos da expressão SQL</SQLFILTER>
+        <PRE>Texto inicial da lista</PRE>
+        <POS>Texto  final da lista</POS>
+        <SEP>Texto separador dos elementos da lista</SEP>
+      </LIST>
+    </LISTS>
+    <SETS>
+      <SET SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <WIOBJ>WIObject</WIOBJ>
+        <IFTRUE>Valor caso condição seja verdadeira</IFTRUE>
+        <ENABLEFALSE>Habilita valor para condição falsa</ENABLEFALSE>
+        <IFFALSE>Valor caso condição seja falsa</IFFALSE>
+        <RECURSIVE>Habilita recursividade no processamento de variáveis</RECURSIVE>
+        <FROMOBJECT>Objeto que gerou o update (Wizard)</FROMOBJECT>
+        <DISABLEPRODUCE>O conteúdo não deve ser produzido</DISABLEPRODUCE>
+      </SET>
+    </SETS>
+    <KILLS>
+      <KILL SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <WIOBJ>Objeto a ser removido</WIOBJ>
+        <FROMOBJECT>Objeto que gerou o update (Wizard)</FROMOBJECT>
+      </KILL>
+    </KILLS>
+    <UPDATES>
+      <UPDATE SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <WIOBJ>Retorna concatenado com sequencial caso múltiplo, com MSGTRUE e MSGFALSE para cada objeto</WIOBJ>
+        <PREFIX>Prefixo utilizado em update múltiplo</PREFIX>
+        <SIZE>Quantidade de registros para update múltiplo</SIZE>
+        <ROWCONDITION>Condição para cada linha, caso múltiplo</ROWCONDITION>
+        <OBJECTID>Objeto utilizado para cada linha</OBJECTID>
+        <DATABASE>Banco de dados a ser utilizado</DATABASE>
+        <SQL>Expressão SQL</SQL>
+        <SQLFILTER>Caracteres a serem removidos da expressão SQL</SQLFILTER>
+        <AUTOCOMMIT>ON/OFF - Liga ou desliga auto-commit</AUTOCOMMIT>
+        <MSGFALSE>
+          <MESSAGE CODE="1">Mensagem para o erro 1</MESSAGE>
+          <MESSAGE CODE="2">Mensagem para o erro 2</MESSAGE>
+          <NOMESSAGE>Retorna em caso de erro quando não há MessageFalse adequada</NOMESSAGE>
+        </MSGFALSE>
+        <MSGTRUE>Mensagem caso seja efetuado corretamente</MSGTRUE>
+        <FROMOBJECT>Objeto que gerou o update (Wizard)</FROMOBJECT>
+      </UPDATE>
+    </UPDATES>
+    <REMOVEFILES>
+      <LOCALS>
+        <REMOVEFILE SEQ="1">
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <CONDITION>Condição</CONDITION>
+          <DIRECTORY>Diretório</DIRECTORY>
+          <MASK>Máscara</MASK>
+          <REMOVEDIR>Remove diretório vazio</REMOVEDIR>
+        </REMOVEFILE>
+      </LOCALS>
+      <FTPS>
+        <REMOVEFILE SEQ="2">
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <CONDITION>Condição</CONDITION>
+          <HOSTID>ID definido no projeto</HOSTID>
+          <DIRECTORY>Diretório</DIRECTORY>
+          <MASK>Máscara</MASK>
+          <REMOVEDIR>Remove diretório vazio</REMOVEDIR>
+        </REMOVEFILE>
+      </FTPS>
+    </REMOVEFILES>
+    <COOKIES>
+      <READS>
+        <COOKIE SEQ="1">
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <CONDITION>Condição</CONDITION>
+          <NAME>Nome do cookie</NAME>
+          <WIOBJ>Objeto</WIOBJ>
+        </COOKIE>
+      </READS>
+      <WRITES>
+        <COOKIE SEQ="2">
+          <DESCRIPTION>Descrição</DESCRIPTION>
+          <CONDITION>Condição</CONDITION>
+          <NAME>Nome do cookie</NAME>
+          <VALUE>Valor do cookies</VALUE>
+          <PATH>Path</PATH>
+          <DOMAIN>Dominio</DOMAIN>
+          <MAXAGE>Prazo de validade</MAXAGE>
+        </COOKIE>
+      </WRITES>
+    </COOKIES>
+    <CONNECTORS>
+      <CONNECTOR SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <PLUGIN>Nome do Plugin</PLUGIN>
+        <NAMESPACE>Namespace do Plugin</NAMESPACE>
+        <CLASSNAME>Nome completo da classe Java</CLASSNAME>
+        <INPREPAGE>Define se está no pré-página</INPREPAGE>
+        <FROMOBJECT>Objeto do pre que gerou esse objeto (Wizard)</FROMOBJECT>
+        <PARAMETERS>
+          <PARAMETER>Parâmetros de entrada e saída</PARAMETER>
+        </PARAMETERS>
+      </CONNECTOR>
+    </CONNECTORS>
+    <UPLOADREFS>
+      <UPLOADREF SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <UPLOADID>ID definido no projeto</UPLOADID>
+        <TYPE>LOCAL/FTPS/DATABASE</TYPE>
+      </UPLOADREF>
+    </UPLOADREFS>
+    <FILEINS>
+      <FILEIN SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <WIOBJ>WIObject</WIOBJ>
+        <SOURCEIFTRUE>Origem da pagina se a condição for verdadeira</SOURCEIFTRUE>
+        <SOURCEIFFALSE>Origem da pagina se a condição for falsa</SOURCEIFFALSE>
+        <ACTIVEPAGE>ON: Processa variáveis</ACTIVEPAGE>
+        <DECODEXML>ON: Decodifica o XML</DECODEXML>
+      </FILEIN>
+    </FILEINS>
+    <SOCKETS>
+      <SOCKETELEMENT SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <HOSTID>ID do host</HOSTID>
+        <TIMEOUT>Tempo de espera</TIMEOUT>
+        <SENDOBJ>Objeto WI a enviar</SENDOBJ>
+        <READOBJ>Objeto WI recebido</READOBJ>
+        <DECODEXML>ON: Decodifica o XML</DECODEXML>
+      </SOCKETELEMENT>
+    </SOCKETS>
+    <FILEOUTS>
+      <FILEOUT SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <DIRECTORY>Diretorio onde gravar</DIRECTORY>
+        <FILE>Nome do arquivo a gravar</FILE>
+        <CONTENT>Objeto WI com o conteudo</CONTENT>
+        <CREATEDIR>Cria diretório</CREATEDIR>
+        <APPEND>Acrescenta a arquivo existente</APPEND>
+      </FILEOUT>
+    </FILEOUTS>
+    <WEBSERVICES>
+      <WEBSERVICE SEQ="1">
+        <CONDITION>Condição</CONDITION>
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <HOSTID>ID definido no projeto</HOSTID>
+        <SERVICE>URL do serviço a ser invocado</SERVICE>
+        <WSDL>URL do WSDL do serviço a ser invocado</WSDL>
+        <NAMESPACE>Namespace do serviço a ser invocado</NAMESPACE>
+        <SOAPACTION>Header soapAction a ser enviado</SOAPACTION> 	 
+        <METHOD>Método a ser invocado</METHOD>
+        <SENDXML>XML a ser enviado</SENDXML>
+        <WIOBJ>WIObject dos dados recebidos</WIOBJ>
+      </WEBSERVICE>
+    </WEBSERVICES>
+    <JSPELEMENTS>
+      <JSPELEMENT SEQ="1">
+        <DESCRIPTION>Descrição</DESCRIPTION>
+        <CONDITION>Condição</CONDITION>
+        <CODE><![CDATA[Código JSP]]></CODE>
+        <PARAMETERS>
+          <PARAMETER>Parâmetros</PARAMETER>
+        </PARAMETERS>
+      </JSPELEMENT>
+    </JSPELEMENTS>
+  </POSPAGE>
+</PAGE>

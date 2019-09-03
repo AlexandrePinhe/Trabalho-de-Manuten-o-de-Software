@@ -1,0 +1,30 @@
+<script type="text/javascript" src="/|wi.proj.id|/js/treeview.js"></script>
+<script type="text/javascript">
+// qualificações do treeview
+UniqueID = "|tv.object|";
+DocRoot = "";
+ImgRoot = "/|wi.proj.id|/images/tv/||tv.object|.style|/";
+FrameSet = "";
+ImgWidth = 14;
+ImgHeight = 18;
+EntryHeight = ImgHeight;
+InitialKey = "";
+CurrPageBG = "#000099";
+CurrPageFG = "#FFFFFF";
+LinkCurrPage = true;
+TreeRootHint = "";
+NormalPageHint = "";
+LinkedPageHint = "";
+OpenBookHint = "Fechar"; 
+ClosedBookHint = "Abrir";
+OpenBookStatus = "Fechar pasta";
+ClosedBookStatus = "Abrir pasta";
+window.defaultStatus = "";
+navExplain = "";
+FontFace = "'Verdana','Times New Roman',Times,serif";
+compactTree = false;
+viewMatchCnt = 0;
+singleBranch = true;
+checkFrames = false;
+||tv.object||
+</script>

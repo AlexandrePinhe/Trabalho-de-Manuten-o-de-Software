@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE PROJECT [
+  <!ELEMENT PROJECT (#PCDATA)>
+  <!ENTITY nbsp '&#160;'>
+  <!ENTITY cr '&#13;'>
+  <!ENTITY lf '&#10;'>
+]>
+
+<PROJECT>
+  <WIVERSION>Versão do WI</WIVERSION>
+  <DEFINITION>
+    <TITLE>Título do projeto</TITLE>
+    <JAVAPACKAGE>Pacote de classes java do projeto</JAVAPACKAGE>
+    <TEMPLATE>Modelo para as páginas</TEMPLATE>
+    <PARENT>Projeto pai do qual ele herda componentes</PARENT>
+    <REQUESTSCOPE>ON/OFF</REQUESTSCOPE>
+    <MAKECOMPATIBLE>ON/OFF</MAKECOMPATIBLE>
+    <LOCALE>Locale a ser utilizado na execução do projeto</LOCALE>
+	<TIMEZONE>Timezone a ser utilizado na execução do projeto</TIMEZONE>    
+	<DBTIME>Tempo máximo em segundos para logar um SQL (default 10)</DBTIME>
+	<LOGSDIR>Diretório para logs (vazio assume WEB-INF/logs do projeto)</LOGSDIR>
+	<PREPOSPAGE>Página que tem o pré e pós comum a todas</PREPOSPAGE>
+  </DEFINITION>
+  <PROFILES>
+    <PROFILE ID="perfil 1">
+      <INIT-PARAMS>
+  	    <INIT-PARAM ID="nome da variável">
+          <VALUE><![CDATA[conteúdo da variável]]></VALUE>
+  	    </INIT-PARAM>
+      </INIT-PARAMS>
+      <DATABASES>
+        <DATABASE ID="Banco de dados 1">
+          <TYPE>Tipo de conexão &lt;&apos;ODBC&apos;/&apos;JDBC&apos;&gt;</TYPE>
+          <ALIAS>Alias da conexão</ALIAS>
+          <USER ID="Usuário" PASS="GUICHBIJHAFXEBFKEOFEEQFSEPETFI"/>
+          <LOGINTIMEOUT>Tempo limite de login no banco de dados</LOGINTIMEOUT>
+          <QUERYTIMEOUT>Tempo limite de consulta</QUERYTIMEOUT>
+          <QTMESSAGE>Mensagem para validar o tempo limite de consulta</QTMESSAGE>
+          <TIMEOUT>Tempo limite da conexão</TIMEOUT>
+          <MAXCONNECTIONS>Máximo de conexões</MAXCONNECTIONS>
+          <DBTIMELOG>Tempo mínimo para o log de consultas</DBTIMELOG>
+        </DATABASE>
+      </DATABASES>
+      <HOSTS>
+        <HOST ID="teste">
+          <ADDRESS>Endereço do host</ADDRESS>
+          <PORT>Porta do host</PORT>
+          <USER ID="nome" PASS="ICICHBIJHAFXEBFKEOFEEQFSEPETFI"/>
+        </HOST>
+      </HOSTS>
+    </PROFILE>
+  </PROFILES>
+  <LOGIN TYPE="UserTable" ACTIVE="ON">
+    <DATABASE>Banco de dados para login</DATABASE>
+    <SQL>Expressão SQL para login</SQL>
+    <SQLFILTER>Caracteres a serem removidos da expressão SQL</SQLFILTER>
+    <MESSAGE>Mensagem para login</MESSAGE>
+    <NOLOGIN>URL para no login</NOLOGIN>
+    <CHANGEPASS>URL para alterar a senha</CHANGEPASS>
+    <MD5>ON/OFF - Usa criptografia no login</MD5>
+  </LOGIN>
+  <INIT-PARAMS>
+  	<INIT-PARAM ID="nome da variável">
+      <VALUE><![CDATA[conteúdo da variável]]></VALUE>
+  	</INIT-PARAM>
+  </INIT-PARAMS>
+  <FUNCTIONS>
+    <FUNCTION ID="Id usado no WI" CLASS="nome completo da classe java (incluindo pacote)" />
+  </FUNCTIONS>
+  <DBLOG>
+    <DATABASE>Banco de dados a ser utilizado</DATABASE>
+    <TABLE>Nome da tabela de logs</TABLE>
+    <COLUMNS>
+      <COLUMN ID="nome da coluna" VALUE="valor a ser armazenado" />
+    </COLUMNS>
+  </DBLOG>
+  <DATABASES>
+    <DATABASE ID="Banco de dados 1">
+      <DESCRIPTION>Descrição do banco de dados 1</DESCRIPTION>
+      <TYPE>Tipo de conexão &lt;&apos;ODBC&apos;/&apos;JDBC&apos;&gt;</TYPE>
+      <ALIAS>Alias da conexão</ALIAS>
+      <USER ID="Usuário" PASS="GUICHBIJHAFXEBFKEOFEEQFSEPETFI"/>
+      <LOGINTIMEOUT>Tempo limite de login no banco de dados</LOGINTIMEOUT>
+	  <QUERYTIMEOUT>Tempo limite de consulta</QUERYTIMEOUT>
+	  <QTMESSAGE>Mensagem para validar o tempo limite de consulta</QTMESSAGE>
+	  <TIMEOUT>Tempo limite da conexão</TIMEOUT>
+	  <MAXCONNECTIONS>Máximo de conexões</MAXCONNECTIONS>
+	  <DBTIMELOG>Tempo mínimo para o log de consultas</DBTIMELOG>
+    </DATABASE>
+  </DATABASES>
+  <HOSTS>
+    <HOST ID="teste">
+      <DESCRIPTION>Descrição do servidor</DESCRIPTION>
+      <PROTOCOL>FTP</PROTOCOL>
+      <ADDRESS>Endereço do host</ADDRESS>
+      <PORT>Porta do host</PORT>
+      <USER ID="nome" PASS="ICICHBIJHAFXEBFKEOFEEQFSEPETFI"/>
+    </HOST>
+  </HOSTS>
+</PROJECT>

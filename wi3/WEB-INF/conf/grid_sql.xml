@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE GRID [
+  <!ELEMENT GRID (#PCDATA)>
+  <!ENTITY nbsp '&#160;'>
+  <!ENTITY cr '&#13;'>
+  <!ENTITY lf '&#10;'>
+]>
+
+<GRID TYPE="SQL">
+  <DESCRIPTION>Descrição do grid</DESCRIPTION>
+  <DATABASE>Banco de dados utilizado</DATABASE>
+  <SQL>Expressão SQL</SQL>
+  <SQLFILTER>Caracteres a serem removidos da expressão SQL</SQLFILTER>
+  <LIMIT>Quantas linhas serão mostradas</LIMIT>
+  <HSIZE>Número de repetições horizontais</HSIZE>
+  <HDISPOSITION>Tipo de disposição nas repetições horizontais</HDISPOSITION>
+  <COLOR>Cor para linhas pares</COLOR>
+  <STYLE>Estilo do grid</STYLE>
+  <IGNOREVARS>Variáveis que não serão incluídas no form do link</IGNOREVARS>
+  <EXECUTE>Página a executar para cada registro</EXECUTE>
+  <ISRECURSIVE>Estilo do grid</ISRECURSIVE>
+  <CONTENT>
+    <LAYOUT>Layout estilo WIzard para o grid
+      <HEAD>
+        <LINK/>
+        <SCRIPT/>
+        <META/>
+        <TITLE/>
+        <TEMPLATE/>
+        <CODE/>
+      </HEAD>
+      <INDEX/>
+      <USERFIELDS/>
+    </LAYOUT>
+    <UNIQUE REGISTERLINE="Linha do grid onde inicia os registros">Um único arquivo que define o grid</UNIQUE>
+    <START>Cabeçalho do grid</START>
+    <ROWSTART>Cabeçalho das colunas</ROWSTART>
+    <REGISTER>Usado para os registros</REGISTER>
+    <NOREGISTER>Usado quando não retorna um registro</NOREGISTER>
+    <NOROW>Usado quando o select retorna vazio</NOROW>
+    <ROWEND>Final da linha</ROWEND>
+    <END>Rodapé do grid</END>
+    <SHAREDGRID>Grid do qual se origina o modelo</SHAREDGRID>
+    <CHILDRENGRIDS>
+      <CHILDGRID>Grid que importa o modelo</CHILDGRID>
+    </CHILDRENGRIDS>
+  </CONTENT>
+</GRID>

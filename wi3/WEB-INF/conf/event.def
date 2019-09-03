@@ -1,0 +1,8 @@
+<applet 
+  name="WIEvent" width="1" height="1" 
+  code="br.com.itx.applet.Event" 
+  codebase="/|wi.proj.id|/applets">
+  <param name="SessionID" value="|wi.session.id|">
+  <param name="Project" value="|wi.proj.id|">
+  <param name="AutoCommit" value="false">
+</applet>
