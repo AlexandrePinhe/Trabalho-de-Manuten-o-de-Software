@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app 
+    xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+    version="2.4">
+ 
+<display-name>WebIntegrator - Builder</display-name>
+
+<listener>
+   <listener-class>br.com.itx.util.WISessionListener</listener-class>
+</listener>
+
+<listener>
+   <listener-class>br.com.itx.util.WIContextListener</listener-class>
+</listener>
+
+<filter>
+    <filter-name>builderFilter</filter-name>
+    <filter-class>br.com.itx.builder.BuilderFilter</filter-class>
+</filter>
+
+<filter-mapping>
+    <filter-name>builderFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+
+<servlet>
+   <servlet-name>wi3_Admin</servlet-name>
+   <servlet-class>br.com.itx.builder.Admin</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_ChangePage</servlet-name>
+   <servlet-class>br.com.itx.builder.ChangePage</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_DBExplorer</servlet-name>
+   <servlet-class>br.com.itx.builder.DBExplorer</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_FrameComp</servlet-name>
+   <servlet-class>br.com.itx.builder.FrameComp</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_Generator</servlet-name>
+   <servlet-class>br.com.itx.builder.Generator</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_ImportElements</servlet-name>
+   <servlet-class>br.com.itx.builder.ImportElements</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_Login</servlet-name>
+   <servlet-class>br.com.itx.builder.Login</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_Menu</servlet-name>
+   <servlet-class>br.com.itx.builder.Menu</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_PageComp</servlet-name>
+   <servlet-class>br.com.itx.builder.PageComp</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_Patch</servlet-name>
+   <servlet-class>br.com.itx.builder.Patch</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_ProjBackup</servlet-name>
+   <servlet-class>br.com.itx.builder.ProjBackup</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_ProjComp</servlet-name>
+   <servlet-class>br.com.itx.builder.ProjComp</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_ProjDoc</servlet-name>
+   <servlet-class>br.com.itx.builder.ProjDoc</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_Relations</servlet-name>
+   <servlet-class>br.com.itx.devel.Relations</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_WebServiceComp</servlet-name>
+   <servlet-class>br.com.itx.builder.WebServiceComp</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_WIPrototyping</servlet-name>
+   <servlet-class>br.com.itx.builder.WIPrototyping</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_WIzard</servlet-name>
+   <servlet-class>br.com.itx.builder.WIzard</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_WizSql</servlet-name>
+   <servlet-class>br.com.itx.devel.WizSql</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_MemoryStatus</servlet-name>
+   <servlet-class>br.com.itx.builder.MemoryStatus</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_UpdateComp</servlet-name>
+   <servlet-class>br.com.itx.builder.update.UpdateComp</servlet-class>
+</servlet>
+
+<servlet>
+   <servlet-name>wi3_Test</servlet-name>
+   <servlet-class>br.com.itx.builder.Test</servlet-class>
+</servlet>
+
+<!--     Mapeamentos      -->
+
+<servlet-mapping>
+    <servlet-name>wi3_Admin</servlet-name>
+    <url-pattern>/Admin</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_ChangePage</servlet-name>
+    <url-pattern>/ChangePage</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_DBExplorer</servlet-name>
+    <url-pattern>/DBExplorer</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_FrameComp</servlet-name>
+    <url-pattern>/FrameComp</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_Generator</servlet-name>
+    <url-pattern>/Generator</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_ImportElements</servlet-name>
+    <url-pattern>/ImportElements</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_Menu</servlet-name>
+    <url-pattern>/Menu</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_PageComp</servlet-name>
+    <url-pattern>/PageComp</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_Patch</servlet-name>
+    <url-pattern>/Patch</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_ProjBackup</servlet-name>
+    <url-pattern>/ProjBackup</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_ProjComp</servlet-name>
+    <url-pattern>/ProjComp</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_ProjDoc</servlet-name>
+    <url-pattern>/ProjDoc</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_Relations</servlet-name>
+    <url-pattern>/Relations</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_WebServiceComp</servlet-name>
+    <url-pattern>/WebServiceComp</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_WIPrototyping</servlet-name>
+    <url-pattern>/WIPrototyping</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_WIzard</servlet-name>
+    <url-pattern>/WIzard</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_WizSql</servlet-name>
+    <url-pattern>/WizSql</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_MemoryStatus</servlet-name>
+    <url-pattern>/MemoryStatus</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_UpdateComp</servlet-name>
+    <url-pattern>/UpdateComp</url-pattern>
+</servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>wi3_Test</servlet-name>
+    <url-pattern>/Test</url-pattern>
+</servlet-mapping>
+
+<!-- Configura o tempo máximo de inatividade da sessão -->
+<session-config>
+    <session-timeout>60</session-timeout>
+</session-config>
+
+<error-page>
+	<exception-type>br.com.itx.exception.OutputterException</exception-type>
+	<location>/error.jsp</location>
+</error-page>
+
+<error-page>
+	<exception-type>br.com.itx.devel.exception.WIException</exception-type>
+	<location>/error.jsp</location>
+</error-page>
+
+</web-app> 
