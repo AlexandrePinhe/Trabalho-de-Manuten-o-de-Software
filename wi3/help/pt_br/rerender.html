@@ -1,0 +1,128 @@
+<html>
+<head>
+   <title>...utilizar a Renderiza&ccedil;&atilde;o Parcial</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?rerender.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...utilizar a Renderiza&#231;&#227;o Parcial
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.15',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.17',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...utilizar a Renderiza&#231;&#227;o Parcial</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+A Renderiza&#231;&#227;o Parcial permite que um evento javascript dispare a atualiza&#231;&#227;o de apenas uma dada &#225;rea na tela.
+<br>
+
+<br>
+Exemplo de formul&#225;rio:
+<br>
+
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">&lt;form name="myform" method="post"&gt;
+<br>
+&lt;input type="text" name="tmp.ini" value="|tmp.ini|" onkeyup="rerenderSubmit(myform,'grid_pessoas')"&gt;
+<br>
+&lt;div id="grid_pessoas"&gt;
+<br>
+|grid.pessoas|
+<br>
+&lt;/div&gt; 
+<br>
+&lt;/form&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Fun&#231;&#245;es javascript disponibilizadas:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">rerenderSubmit(form,&nbsp;rerender,&nbsp;action,&nbsp;doPos,&nbsp;msg)</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">Envia&nbsp;um&nbsp;formul&#225;rio&nbsp;e&nbsp;atualiza&nbsp;uma&nbsp;&#225;rea
+<br>
+-&nbsp;form&nbsp;&#233;&nbsp;o&nbsp;objeto&nbsp;formul&#225;rio&nbsp;a&nbsp;ser&nbsp;enviado
+<br>
+-&nbsp;rerender&nbsp;s&#227;o&nbsp;as&nbsp;&#225;reas&nbsp;a&nbsp;serem&nbsp;atualizadas&nbsp;separadas&nbsp;por&nbsp;v&#237;rgula
+<br>
+-&nbsp;action&nbsp;&#233;&nbsp;um&nbsp;valor&nbsp;que&nbsp;deve&nbsp;ser&nbsp;atribu&#237;do&nbsp;ao&nbsp;campo&nbsp;de&nbsp;id&nbsp;tmp.action
+<br>
+-&nbsp;doPos&nbsp;indica&nbsp;se&nbsp;o&nbsp;p&#243;s&nbsp;p&#225;gina&nbsp;da&nbsp;p&#225;gina&nbsp;deve&nbsp;ser&nbsp;executado
+<br>
+-&nbsp;msg&nbsp;serve&nbsp;para&nbsp;ser&nbsp;colocada&nbsp;uma&nbsp;mensagem&nbsp;de&nbsp;confirma&#231;&#227;o&nbsp;antes&nbsp;de&nbsp;efetuar&nbsp;a&nbsp;opera&#231;&#227;o<span style="font-family:Courier New; font-size:10pt; color:#7F0055">
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000">OBS:&nbsp;o&nbsp;campo&nbsp;action&nbsp;exige&nbsp;que&nbsp;o&nbsp;formul&#225;rio&nbsp;tenha&nbsp;&lt;input&nbsp;type="hidden"&nbsp;name="tmp.action"&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">rerenderLink(link,&nbsp;rerender,&nbsp;action,&nbsp;doPos,&nbsp;msg)</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">Acessa&nbsp;um&nbsp;link&nbsp;e&nbsp;atualiza&nbsp;uma&nbsp;&#225;rea
+<br>
+-&nbsp;link&nbsp;&#233;&nbsp;o&nbsp;objeto&nbsp;link&nbsp;a&nbsp;ser&nbsp;acessado
+<br>
+-&nbsp;rerender&nbsp;s&#227;o&nbsp;as&nbsp;&#225;reas&nbsp;a&nbsp;serem&nbsp;atualizadas&nbsp;separadas&nbsp;por&nbsp;v&#237;rgula
+<br>
+-&nbsp;action&nbsp;&#233;&nbsp;um&nbsp;valor&nbsp;que&nbsp;deve&nbsp;ser&nbsp;atribu&#237;do&nbsp;ao&nbsp;campo&nbsp;de&nbsp;id&nbsp;tmp.action
+<br>
+-&nbsp;doPos&nbsp;indica&nbsp;se&nbsp;o&nbsp;p&#243;s&nbsp;p&#225;gina&nbsp;da&nbsp;p&#225;gina&nbsp;deve&nbsp;ser&nbsp;executado
+<br>
+-&nbsp;msg&nbsp;serve&nbsp;para&nbsp;ser&nbsp;colocada&nbsp;uma&nbsp;mensagem&nbsp;de&nbsp;confirma&#231;&#227;o&nbsp;antes&nbsp;de&nbsp;efetuar&nbsp;a&nbsp;opera&#231;&#227;o<span style="font-family:Courier New; font-size:10pt; color:#7F0055">
+<br>
+
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">A&nbsp;&#225;rea&nbsp;rerenderIndicator&nbsp;pose&nbsp;ser&nbsp;usada&nbsp;para&nbsp;colocar&nbsp;um&nbsp;icone&nbsp;animado&nbsp;ajax&nbsp;ou&nbsp;uma&nbsp;mensagem&nbsp;de&nbsp;aguarde.
+<br>
+Ex:
+<br>
+<span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;div&nbsp;id="rerenderIndicator"&nbsp;style="display:&nbsp;none;&nbsp;position:absolute;&nbsp;top:0px;&nbsp;right:0px"&gt;
+<br>
+&lt;img&nbsp;src="/|wi.proj.id|/ajax.gif"&gt;
+<br>
+&lt;/div&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

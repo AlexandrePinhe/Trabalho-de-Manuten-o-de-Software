@@ -1,0 +1,198 @@
+<html>
+<head>
+   <title>numberformat</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?numberformat.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>numberformat
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.3.8',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.3.10',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>numberformat</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+A fun&#231;&#227;o <b>numberformat</b> serve para formatar n&#250;meros e possui a seguinte sintaxe:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$nf(&lt;n&#250;mero&gt;,&nbsp;&lt;tipo-de-formata&#231;&#227;o&gt;[,&nbsp;&lt;par&#226;metros-de-formata&#231;&#227;o&gt;])$|
+<br>
+</div></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+e a depender do tipo de formata&#231;&#227;o escolhido pelo usu&#225;rio, a fun&#231;&#227;o poder&#225; usar nenhum, um ou v&#225;rios par&#226;metros de formata&#231;&#227;o.
+<br>
+
+<br>
+
+<br>
+<div align="center"><b>Tipos de Formata&#231;&#227;o</b>
+<br>
+</div>
+<br>
+<div align="center"><b>CBR
+<br>
+</b>
+<br>
+</div>Formata o n&#250;mero passado como par&#226;metro para o padr&#227;o monet&#225;rio brasileiro. 
+<br>
+
+<br>
+<b>Sintaxe:</b></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000"> 
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$nf(&lt;n&#250;mero&gt;,&nbsp;CBR)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Exemplos: 
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$nf(1234567.89,&nbsp;CBR)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#0000FF"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#0000FF"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<div align="center"><b>CLR
+<br>
+
+<br>
+</b></div>Retorna o n&#250;mero passado como par&#226;mtero formatado no padr&#227;o n&#250;merico removendo-se os pontos e substituindo v&#237;rgula por ponto. Se na representa&#231;&#227;o num&#233;rica passada como par&#226;metro houver algum caracter diferente de um n&#250;mero, um ponto (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">.</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) ou uma v&#237;rgula (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">,</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) ser&#225; retornado vazio. 
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Sintaxe: 
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$nf(&lt;n&#250;mero&gt;,&nbsp;CLR)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Exemplos:</b></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000"> 
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$nf(1.234.567\,89,&nbsp;CLR)$|
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#0000FF"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#0000FF"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<div align="center"><b>CUS</b>
+<br>
+</div>
+<br>
+Formata o n&#250;mero para o padr&#227;o monet&#225;rio adotado nos Estados Unidos. 
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Sintaxe: 
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$nf(&lt;n&#250;mero&gt;,&nbsp;CUS)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Exemplos: </b></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$nf(1234567.89,&nbsp;CUS)$|
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#0000FF"></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000"> 
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span></td></tr></table><span style="font-family:Times New Roman; font-size:12pt; color:#000000"><div align="center"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>EXT
+<br>
+</b></div></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Escreve o extenso de um n&#250;mero inteiro. 
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Sintaxe: 
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$nf(&lt;n&#250;mero&gt;,&nbsp;EXT)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Exemplos: </b></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$nf(1234567,&nbsp;EXT)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#0000FF">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#0000FF"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#0000FF"><div align="center"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>INT
+<br>
+</b></div></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna a parte inteira de um n&#250;mero fracion&#225;rio. 
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Sintaxe: 
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$nf(&lt;n&#250;mero&gt;,&nbsp;INT)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Exemplos: </b></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$nf(1234567.89,&nbsp;INT)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#0000FF">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#0000FF"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#0000FF"><div align="center"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>FRC
+<br>
+</b></div></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Retorna a parte fracion&#225;ria de um n&#250;mero fracion&#225;rio. 
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Sintaxe: 
+<br>
+</b><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$nf(&lt;n&#250;mero&gt;,&nbsp;FRC)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Exemplos: </b></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$nf(1234567.89,&nbsp;FRC)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#0000FF"></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span></td></tr></table><span style="font-family:Times New Roman; font-size:12pt; color:#000000"><div align="center"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>FMT
+<br>
+</b></div></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Formata o numero passado como par&#226;metro para um outro padr&#227;o, indicando qual o novo formato que ela assumir&#225;. 
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Sintaxe:</b></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000"> 
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$nf(&lt;n&#250;mero&gt;,&nbsp;FMT,&nbsp;&lt;novo-padr&#227;o&gt;)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#FF0000"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Exemplos: </b></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Times New Roman; font-size:12pt; color:#000000"></span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$nf(123456.78,&nbsp;FMT,&nbsp;###\,##0.00)$|&nbsp;
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:Courier New; font-size:10pt; color:#0000FF"></span></td></tr></table><span style="font-family:Courier New; font-size:10pt; color:#0000FF"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

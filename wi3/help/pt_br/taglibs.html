@@ -1,0 +1,74 @@
+<html>
+<head>
+   <title>...incluir o registro de taglibs externas</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?taglibs.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...utilizar a Renderiza&#231;&#227;o Parcial
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.17',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.19',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...incluir o registro de taglibs externas</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Caso o desenvolvedor deseje fazer uso de uma taglib que n&#227;o pertence nativamente ao WI ele pode configurar para o builder ao gerar os jps j&#225; inclua automaticamente essa taglib. Para isso basta criar um arquivo chamado taglibs.txt no WEB-INF do projeto com as linhas que devem ser incluidas automaticamente.
+<br>
+
+<br>
+Exemplo do conteudo do arquivo taglibs.txt:
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#2A00FF">&lt;%@&nbsp;taglib&nbsp;prefix='cache'&nbsp;uri='http://jakarta.apache.org/taglibs/cache-1.0'%&gt;
+<br>
+&lt;%@&nbsp;taglib&nbsp;prefix='bsf'&nbsp;uri='http://jakarta.apache.org/taglibs/bsf-1.0'%&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+OBS: O arquivo jar correspondente a taglib a ser utilizada precisa ser colocado no WEB-INF/lib do projeto.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

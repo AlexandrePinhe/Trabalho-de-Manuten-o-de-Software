@@ -1,0 +1,76 @@
+<html>
+<head>
+   <title>Tipos de Vari&aacute;veis</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?tiposdevariaveis.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Tipos de Vari&#225;veis</b><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b>
+<br>
+</b></span></span></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.1.1',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.1.2.1',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:Helvetica,Arial; font-size:1pt; color:#000000"><hr></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Tipos de Vari&#225;veis</b></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:1pt; color:#000000"><hr></span><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">A princ&#237;pio, quaisquer dados de campo de formul&#225;rio, par&#226;metros passados por URL ou vari&#225;veis criadas a partir de componentes de pr&#233; ou p&#243;s-p&#225;gina, s&#227;o armazendos pelo WebIntegrator como vari&#225;veis de sess&#227;o, mas a depender da utiliza&#231;&#227;o de alguns prefixos, o comportamente e o tempo de vida dessas vari&#225;veis, podem mudar.
+<br>
+
+<br>
+Vari&#225;veis de sess&#227;o que comecem com o prefixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>tmp.</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> s&#227;o conhecidas pelo WebIntegrator como vari&#225;veis tempor&#225;rias. Esse tipo de vari&#225;vel, tem um tempo de vida pr&#233;-determinado onde as mesmas s&#227;o removidas da sess&#227;o, automaticamente, pelo WebIntegrator, logo ap&#243;s a execu&#231;&#227;o de um pr&#233;-p&#225;gina. Geralmente, a maioria das vari&#225;veis e identificadores de um projeto do WebIntegrator s&#227;o formandos por vari&#225;veis tempor&#225;rias.
+<br>
+
+<br>
+Vari&#225;veis de sess&#227;o que comecem com o prefixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>pvt.</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> s&#227;o conhecidas pelo WebIntegrator como vari&#225;veis privadas. Essas vari&#225;veis persistem durante todo o tempo de vida da sess&#227;o e apenas podem ser removidas, ou terem seus valores alterados, atrav&#233;s do uso dos componentes de pr&#233; ou p&#243;s-p&#225;ginas. Geralmente, vari&#225;veis privadas s&#227;o utilizadas para armazenar informa&#231;&#245;es que s&#227;o acessadas com frequ&#234;ncia pelo projeto. 
+<br>
+
+<br>
+Existe um grupo especial de vari&#225;veis </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>pvt.debug</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>tmp.debug&nbsp;</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">que serve para ativar diversos logs de debug do WI as quais podem n&#227;o podem ser passadas por url e o desenvolvedor define se quer ou n&#227;o que elas sejam da sess&#227;o.
+<br>
+
+<br>
+Vari&#225;veis de sess&#227;o que comecem com o prefixo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>wi.</b></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> s&#227;o conhecidas pelo WebIntegrator como vari&#225;veis de sistema. As vari&#225;veis de sistema, normalmente s&#227;o apenas de leitura, n&#227;o sendo permitido ao desenvolvedor criar vari&#225;veis desse tipo. Ele apenas poder&#225; acessar seus valores e, em alguns casos, atribuir valores. Para saber quais as vari&#225;veis de sistema dispon&#237;veis <a href=javaScript:parent.reDisplay('1.1.2.1',1,0)>clique aqui</a>.
+<br>
+
+<br>
+O uso de qualquer outro prefixo nos identificadores de vari&#225;veis, far&#225; com que o WebIntegrator sempre mantenha as vari&#225;veis armazenadas na sess&#227;o sendo que as mesmas poder&#227;o ser apagadas e terem seus valores alterados tanto por componentes de p&#225;gina ou atrav&#233;s dos m&#233;todos GET (passagem de par&#226;metros via URL) ou POST.
+<br>
+</span></span></span>
+
+</body>
+</html>

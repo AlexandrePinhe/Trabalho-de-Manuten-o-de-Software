@@ -1,0 +1,146 @@
+<html>
+<head>
+   <title>Combo</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?prjcmb01.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Combo
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.1.2',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.3',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Combo</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O componente Combo &#233; um componente da camada de apresenta&#231;&#227;o do projeto onde as op&#231;&#245;es de uma tag </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> s&#227;o montadas a partir do resultado de uma consulta feita a um banco de dados. Para acessar o conte&#250;do dessa vari&#225;vel basta que o desenvolvedor a referencie na p&#225;gina WSP que se queira exibir a combo-box usando a seguinte sintaxe:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|combo.&lt;identificador-da-combo&gt;|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Em casos onde o desenvolvedor tenha definido uma lista de sele&#231;&#227;o m&#250;ltipla a informa&#231;&#227;o sobre a quantidade de op&#231;&#245;es selecionadas ser&#225; retornada pela propriedade </span><span style="font-family:Courier New; font-size:10pt; color:#000000">size</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> da vari&#225;vel que representa o elemento </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> no formul&#225;rio de uma p&#225;gina. Referenciando o nome da vari&#225;vel ser&#225; retornado a lista dos valores selecionados separados por v&#237;rgula, para acessar cada um dos respectivos valores basta acrescentar </span><span style="font-family:Courier New; font-size:10pt; color:#000000">.&lt;&#237;ndice&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ao final da vari&#225;vel. Para exemplo, suponha que o seguinte formul&#225;rio encontra-se definido numa p&#225;gina WSP:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">...
+<br>
+&lt;form&nbsp;action="/|wi.proj.id|/|wi.page.id|.wsp"&nbsp;method="post"&gt;
+<br>
+&lt;select&nbsp;multiple&nbsp;name="tmp.select"&gt;|combo.minhaCombo|&lt;/select&gt;
+<br>
+...
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+referenciando </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|tmp.select|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ser&#227;o retornados os valores selecionados separados por v&#237;rgula, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|tmp.select.size|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> retornar&#225; a quantidade de elementos selecionados e para referenciar os valores selecionados individualmente usa-se </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|tmp.select.&lt;&#237;ndice&gt;|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, onde </span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;&#237;ndice&gt;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> pode variar de </span><span style="font-family:Courier New; font-size:10pt; color:#000000">1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> at&#233; </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|tmp.select.size|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+Uma outra caracter&#237;stica suportada pelas combos &#233; a passagem de par&#226;metros para a Combo a ser processada. Como exemplo, suponha que se queira passar para uma Combo se os elementos dever&#227;o vir ordenados em ordem crescente ou decrescente atrav&#233;s de uma vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.orderBy</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> a sintaxe ficaria a seguinte:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|combo.&lt;identificador-da-combo&gt;?tmp.orderBy=desc|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Esse tipo de constru&#231;&#227;o tamb&#233;m aceita a passagem de m&#250;ltiplos par&#226;metros, neste caso as atribui&#231;&#245;es das vari&#225;veis dever&#227;o estar separados por </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>&amp;</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. A sintaxe geral para um elemento Combo &#233; a seguinte:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|combo.&lt;identificador-da-combo&gt;[?&lt;vari&#225;vel1&gt;=&lt;valor1&gt;[&amp;&lt;vari&#225;vel2&gt;=&lt;valor2&gt;...]]|</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Banco&nbsp;de&nbsp;Dados</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o identificador de um dos servidores de bancos de dados definidos para o projeto que ser&#225; usado para executar o comando.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Chave</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o nome ou &#237;ndice de uma das colunas retornada pelo resultado da pesquisa de onde ser&#227;o pegos os valores para serem populados como valores-chaves das op&#231;&#245;es da combo.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Descri&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor da aplica&#231;&#227;o escreva um breve coment&#225;rio sobre a a&#231;&#227;o a ser executada pelo componente em quest&#227;o.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define quais os caracteres que dever&#227;o ser filtrados do conte&#250;do das vari&#225;veis de sess&#227;o do WebIntegrator que est&#227;o sendo referenciadas no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> antes da execu&#231;&#227;o do comando. O objetivo &#233; impedir que certos caracteres sejam passados para o comando a ser executado pelo banco de dados evitando que assim que o resultado do comando n&#227;o seja intencionalmente alterado.
+<br>
+
+<br>
+Como exemplo, suponha que haja a instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;tabCadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;|tmp.nome|%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e, o usu&#225;rio da aplica&#231;&#227;o, ao preencher o formul&#225;rio coloque no campo correspondente &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.nome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> um valor como </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%&nbsp;OR&nbsp;nome&nbsp;=</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> . Se o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> n&#227;o estiver definido com os caracteres </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, ent&#227;o o WebIntegrator ir&#225; processar a seguinte instru&#231;&#227;o: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;cadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> retornando como resultado todos as linhas da tabela.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Identificador</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor entre com um identificador &#250;nico para o componente de p&#225;gina ou de projeto que est&#225; sendo definido. Ser&#225; atrav&#233;s desse identificador que o componente e/ou seus valores ser&#227;o referenciado nas p&#225;ginas do projeto.
+<br>
+
+<br>
+A depender do componente que se estiver definindo para que o mesmo seja referenciado numa p&#225;gina ser&#225; necess&#225;rio o acr&#233;scimo de um prefixo como &#233; o caso dos componentes Grid e Combo, nesses dois casos &#233; obrigat&#243;rio o uso dos prefixos </span><span style="font-family:Courier New; font-size:10pt; color:#000000">grid.</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">combo.</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> antes dos respectivos identificadores para que o conte&#250;do correto seja exibido.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m o comando que ser&#225; enviado para ser processado pelo banco de dados. Caso o comando seja composto por mais de uma instru&#231;&#227;o SQL separe-as por ponto-e-v&#237;rgula.
+<br>
+
+<br>
+No componente Upload de Banco de Dados o valor da coluna relativo ao conte&#250;do dever&#225; ser referenciado por um sinal de interroga&#231;&#227;o, exemplo: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">INSERT&nbsp;INTO&nbsp;MinhaTabela&nbsp;(arquivo,&nbsp;conteudo)&nbsp;VALUES&nbsp;(|tmp.arquivo|,&nbsp;?)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A estrutura do comando a ser executado &#233; dependente do banco de dados, podendo ser feitas chamadas a </span><span style="font-family:Courier New; font-size:10pt; color:#000000">stored&nbsp;procedures</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, rotinas M (atrav&#233;s do MJava), m&#233;todos de objetos do Cach&#233;Factory, execu&#231;&#227;o de instru&#231;&#245;es SQL, etc. Para saber maiores detalhes como fazer essas chamadas <a href=javaScript:parent.reDisplay('1.1.7',1,0)>clique aqui</a>.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Texto</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o nome ou &#237;ndice da coluna retornada pelo resultado donde ser&#227;o pegos os dados para serem populados como os textos (valores) da combo.
+<br>
+
+<br>
+Para gerar uma combo com as pastas IMAP de um servidor pode ser utilizada a op&#231;&#227;o Java de Banco de Dados e no comando sql coloca-se </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.database.impl.ResultSetImapFolders:[id_servidor]</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><i> </i>onde o id do servidor tanto pode estar fixo como ser uma vari&#225;vel entre pipes.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

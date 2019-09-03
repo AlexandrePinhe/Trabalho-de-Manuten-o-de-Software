@@ -1,0 +1,82 @@
+<html>
+<head>
+   <title>Transa&ccedil;&atilde;o</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Socket">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?pretra01.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Socket
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.4.13',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.4.14.1',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> Transa&#231;&#227;o</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O componente Transa&#231;&#227;o permite que o desenvolvedor defina um conjunto de elementos no pr&#233;-p&#225;gina ou p&#243;s-p&#225;gina que devem ser executados dentro de um contexto transacional. Os elementos internos da transa&#231;&#227;o podem usar diferentes Banco de Dados e caso todas as opera&#231;&#245;es ocorram com sucesso ser&#225; dado um <i>commit</i>  em todas as conex&#245;es e caso alguma opera&#231;&#227;o tenha falhado ser&#225; dado um <i>rollback</i>..
+<br>
+
+<br>
+Caso o elemento Finalizar Transa&#231;&#227;o n&#227;o tenha sido colocado ser&#225; for&#231;ada uma finaliza&#231;&#227;o depois do pr&#233;-p&#225;gina e depois do p&#243;s-p&#225;gina.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Descri&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor da aplica&#231;&#227;o escreva um breve coment&#225;rio sobre a transa&#231;&#227;o.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Resposta(objeto)</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor indique uma vari&#225;vel que ir&#225; conter a mensagem sobre como foi a execu&#231;&#227;o da transa&#231;&#227;o . O desenvolvedor pode usar  objeto.status() para ter detalhes da execu&#231;&#227;o, pois caso nada tenha sido feito estar&#225; vazio, estar&#225; TRUE se tudo deu certo e a mensagem de erro no BD caso tenha havido erro na execu&#231;&#227;o. As vari&#225;veis individuais de cada Update dentro da transa&#231;&#227;o continuam existindo normalmente.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Mensagem&nbsp;OK</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor informe a mensagem que deve ser colocada no objeto caso a transa&#231;&#227;o tenha sido executada com sucesso.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Mensagem&nbsp;de&nbsp;erro&nbsp;padr&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor informe a mensagem que deve ser colocada no objeto caso a transa&#231;&#227;o tenha falhado.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Mensagem&nbsp;caso&nbsp;nenhum&nbsp;condi&#231;&#227;o&nbsp;tenha&nbsp;sido&nbsp;atendida</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor informe a mensagem que deve ser colocada no objeto caso nenhum comando tenha sido executado nos BDs.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

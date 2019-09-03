@@ -1,0 +1,309 @@
+<html>
+<head>
+   <title>SQL</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?pretrv01.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>SQL
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.4.15',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.4.15.2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> TreeView SQL</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Com o componete TreeView o desenvolvedor poder&#225; criar menus hier&#225;rquicos semelhantes &#224; hierarquia de diret&#243;rios que &#233; exibida pelo Windows Explorer. Eles s&#227;o f&#225;ceis de usar e mais f&#225;ceis ainda de criar (isso se estiver usando o WebIntegrator). Visualmente, a sa&#237;da do componente TreeView ser&#225; algo semelhante com o que segue abaixo:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="277">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><img src="treeview.png" width="275" height="109" border="0" alt="treeview">
+<br>
+</span></td></tr></table>
+<br>
+
+<br>
+O exemplo de TreeView gerado acima possui apenas dois n&#237;veis hier&#225;rquicos sendo que o &#250;ltimo n&#237;vel &#233; sempre considerado como n&#237;vel de detalhe ou n&#243;-folha pois a partir dele n&#227;o h&#225; mais ramifica&#231;&#245;es. Al&#233;m das defini&#231;&#245;es que s&#227;o feitas diretamente pelo <b>WI Builder</b>, o componente TreeView oferece outras propriedades que podem ser alteradas pelo desenvolvedor. No momento em que as defini&#231;&#245;es s&#227;o gravadas, o WebIntegrator inseri no c&#243;digo-fonte da p&#225;gina WSP tags HTML que far&#227;o com que o TreeView seja montado e em uma dessas tags est&#227;o essas propriedades adicionais que o TreeView possui, a saber:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><b>Propriedade</b><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></div></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><b>Descri&#231;&#227;o</b><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></div></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">UniqueID<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que cont&#233;m o identificador &#250;nico para esse TreeView. <b>Recomenda-se n&#227;o alterar o valor dessa propriedade.</b>
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">DocRoot<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que informa o diret&#243;rio-base a ser levado em considera&#231;&#227;o nos links do TreeView.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">ImgRoot<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que informa o diret&#243;rio onde est&#225; instalada a "pele" que est&#225; sendo usada pelo TreeView. O componente TreeView possui atualmente 4 tipos de "peles":
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="14"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><img src="folder.png" width="15" height="13" border="0" alt="folder">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="14"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><img src="doc.png" width="16" height="16" border="0" alt="doc">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="14"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><img src="dir_folder.png" width="12" height="16" border="0" alt="dir_folder">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="14"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><img src="dir_folder2.png" width="12" height="15" border="0" alt="dir_folder2">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span><span style="font-family:MS Sans Serif; font-size:8pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">FrameSet<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que indica o nome da p&#225;gina que cont&#233;m o FRAMESET, caso algum esteja sendo usado. Se o TreeView n&#227;o fizer parte de um FRAMESET defina essa propriedade com uma <span style="font-family:Courier New; font-size:10pt; color:#000000"><i>string</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">  vazia ("").
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">ImgWidth<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define a largura padr&#227;o das imagens exibidas pelo TreeView. <b>Recomenda-se n&#227;o alterar o valor dessa propriedade.</b>
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">ImgHeight<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define a altura padr&#227;o das imagens exibidas pelo TreeView. <b>Recomenda-se n&#227;o alterar o valor dessa propriedade.</b><span style="font-family:MS Sans Serif; font-size:8pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">EntryHeight<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Recomenda-se n&#227;o alterar o valor dessa propriedade.</b>
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">InitialKey<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define o valor inicial da chave usada internamente pelo TreeView. <b>Recomenda-se n&#227;o alterar o valor dessa propriedade.</b>
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">CurrPageBG<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define o valor da cor de <span style="font-family:Courier New; font-size:10pt; color:#000000"><i>background</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> da p&#225;gina onde ser&#225; exibido o TreeView.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">CurrPageFG<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define o valor da cor de <span style="font-family:Courier New; font-size:10pt; color:#000000"><i>foreground</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> da p&#225;gina onde ser&#225; exibido o TreeView.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">LinkCurrPage<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que indica se os links ser&#227;o para a pr&#243;pria p&#225;gina onde est&#225; sendo exibido o TreeView.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">TreeRootHint<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define o texto a ser apresentado como dica do n&#243; raiz do TreeView.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">NormalPageHint<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define o texto a ser apresentado como dica de um link para uma p&#225;gina.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">LinkedPageHint<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define o texto a ser apresentado como dica de um link.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">OpenBookHint<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define o texto a ser apresentado como dica da figura que fecha um ramo da &#225;rvore do TreeView.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">ClosedBookHint<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define o texto a ser apresentado como dica da figura que abre um ramo da &#225;rvore do TreeView.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">OpenBookStatus<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define o texto a ser apresentado na barra de status do <span style="font-family:Courier New; font-size:10pt; color:#000000"><i>browser</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> em rela&#231;&#227;o &#224; figura que fecha um ramo da &#225;rvore do TreeView.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">ClosedBookStatus<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define o texto a ser apresentado na barra de status do <span style="font-family:Courier New; font-size:10pt; color:#000000"><i>browser</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> em rela&#231;&#227;o &#224; figura que abre um ramo da &#225;rvore do TreeView.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">window.defaultStatus<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define a mensagem que aparece na barra de status do <span style="font-family:Courier New; font-size:10pt; color:#000000"><i>browser</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">navExplain<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define a mensagem a ser exibida quando o TreeView n&#227;o fizer parte de um FRAMESET e a propriedade checkFrames estiver setada para <span style="font-family:Courier New; font-size:10pt; color:#000000">true</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+</span></span></span></td></tr></table><table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">FontFace<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que define a listagem das fontes a serem usadas pelo TreeView. Os nomes das fontes devem estar separados por v&#237;rgula.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">compactTree<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que indica se a &#225;rvore que simboliza o TreeView ser&#225; exibida numa forma compacta.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">viewMatchCnt<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">singleBranch<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que indica se apenas ser&#225; visualizado um ramo extendido da &#225;rvore, ou seja, caso o usu&#225;rio tente abrir um outro ramo da &#225;rvore e um j&#225; esteja aberto, esse &#250;ltimo ser&#225; fechado antes que o outro se ja expandido caso esta propriedade esteja definida como true.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">checkFrames<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000">Propriedade que indica se ser&#225; feita a verifica&#231;&#227;o se o TreeView faz parte de um FRAMESET.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="162" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">baseHref<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="412" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Propriedade que indica o nome do <span style="font-family:Courier New; font-size:10pt; color:#000000"><i>target</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> dos links do TreeView, ou seja, o local onde ser&#225; exibido o recurso para o qual o link aponta.
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Banco&nbsp;de&nbsp;Dados</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o identificador de um dos servidores de bancos de dados definidos para o projeto que ser&#225; usado para executar o comando.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Condi&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m a express&#227;o condicional a ser testada para saber se o componente dever&#225; ser processado. Para saber maiores detalhes sobre as poss&#237;veis constru&#231;&#245;es de condi&#231;&#245;es <a href=javaScript:parent.reDisplay('1.1.5',1,0)>clique aqui</a>.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Descri&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor da aplica&#231;&#227;o escreva um breve coment&#225;rio sobre a a&#231;&#227;o a ser executada pelo componente em quest&#227;o.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define quais os caracteres que dever&#227;o ser filtrados do conte&#250;do das vari&#225;veis de sess&#227;o do WebIntegrator que est&#227;o sendo referenciadas no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> antes da execu&#231;&#227;o do comando. O objetivo &#233; impedir que certos caracteres sejam passados para o comando a ser executada pelo banco de dados evitando que assim que o resultado do comando n&#227;o seja intencionalmente alterado.
+<br>
+
+<br>
+Como exemplo suponha que haja a instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;tabCadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;|tmp.nome|%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o usu&#225;rio da aplica&#231;&#227;o ao preencher o formul&#225;rio coloque no campo correspondente &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.nome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> um valor como </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Se o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> n&#227;o estiver definido com os caracteres </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o WebIntegrator ir&#225; processar a seguinte instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;cadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> retornando como resultado todos as linhas da tabela.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Inserir&nbsp;Defini&#231;&#227;o&nbsp;JS</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica se o arquivo de defini&#231;&#227;o JavaScript dever&#225; ser colocado na p&#225;gina. Recomenda-se que na primeira vez que se esteja definindo um treeview esta op&#231;&#227;o esteja marcada.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Link</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">(||&#185;)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define qual ser&#225; a a&#231;&#227;o do link podendo ser uma chamada a uma fun&#231;&#227;o JavaScript, um endere&#231;o de uma p&#225;gina a ser chamada, etc. O link apenas ser&#225; aplicado ao &#250;ltimo n&#237;vel da hierarquia.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">N&#237;veis</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para indicar at&#233; qual coluna ser&#227;o pegos os valores para a montagem do TreeView. Esse valor n&#227;o pode passar da quantidade m&#225;xima de colunas que &#233; retornada pela consulta definida no campo SQL. De acordo com o valor aqui digitado ser&#227;o criados tantos n&#237;veis de hierarquia, sendo o &#250;ltimo n&#237;vel considerado como detalhe.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Objeto</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define o nome do objeto que ser&#225; inserido na sess&#227;o do usu&#225;rio ap&#243;s a execu&#231;&#227;o do componente, a depender do componente o objeto poder&#225; possuir uma s&#233;rie de atributos e m&#233;todos. Por exemplo, o objeto definido em componentes do tipo Objeto possuem os m&#233;todos </span><span style="font-family:Courier New; font-size:10pt; color:#000000">size()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">columnNames()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> al&#233;m de uma s&#233;rie de atributos representados pelos nomes das colunas vindas do resultado da consulta ao banco de dados.
+<br>
+
+<br>
+No caso de um objeto declarado na defini&#231;&#227;o de um web service esse objeto ir&#225; conter os par&#226;metros de resposta que ser&#227;o retornados ap&#243;s a execu&#231;&#227;o da chamada ao web service. Para saber quais os poss&#237;veis atributos e m&#233;todos de um objeto leia a documenta&#231;&#227;o espec&#237;fica do componente.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m o comando que ser&#225; enviado para ser processado pelo banco de dados. Caso o comando seja composto por mais de uma instru&#231;&#227;o SQL separe-as por ponto-e-v&#237;rgula.
+<br>
+
+<br>
+No componente Upload de Banco de Dados o valor da coluna relativo ao conte&#250;do dever&#225; ser referenciado por um sinal de interroga&#231;&#227;o, exemplo: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">INSERT&nbsp;INTO&nbsp;MinhaTabela&nbsp;(arquivo,&nbsp;conteudo)&nbsp;VALUES&nbsp;(|tmp.arquivo|,&nbsp;?)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A estrutura do comando a ser executado &#233; dependente do banco de dados, podendo ser feitas chamadas a </span><span style="font-family:Courier New; font-size:10pt; color:#000000">stored&nbsp;procedures</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, rotinas M (atrav&#233;s do MJava), m&#233;todos de objetos do Cach&#233;Factory, execu&#231;&#227;o de instru&#231;&#245;es SQL, etc. Para saber maiores detalhes como fazer essas chamadas <a href=javaScript:parent.reDisplay('1.1.7',1,0)>clique aqui</a>.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Texto</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">(||&#185;)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define o texto a ser exibido no n&#237;vel da hierarquia que se encontra atualmente selecionado.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">T&#237;tulo</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000">(||&#185;)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para definir qual ser&#225; o texto que ser&#225; exibido como t&#237;tulo do TreeView.
+<br>
+
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<html>
+<head>
+   <title>Log de atualiza&ccedil;&otilde;es dos BDs</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?prjdbl01.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Log de atualiza&#231;&#245;es dos Banco de Dados
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.2.1.4',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.2.1.6',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Log de atualiza&#231;&#245;es dos banco de dados</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Este &#233; o local onde o desenvolvedor ativa o log autom&#225;tico do WI para atualiza&#231;&#245;es feitas nos banco de dados.
+<br>
+
+<br>
+O campo <span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Banco de Dados</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor indique qual ser&#225; o banco de dados utilizado para armazenar o log.
+<br>
+
+<br>
+O campo <span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Tabela</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor indique qual a tabela ser&#225; utilizada para os logs.
+<br>
+
+<br>
+A tabela dever&#225; ter no m&#237;nimo 8 campos seguindo a ordem e nomea&#231;&#227;o abaixo:
+<br>
+
+<br>
+- id = Id do registro (autoincrement)
+<br>
+- logdate = Data e hora
+<br>
+- databaseid = Banco de dados
+<br>
+- transactionid = Transacao
+<br>
+- sqlstatus = Status (T/F)
+<br>
+- sqlcommand = SQL
+<br>
+- sqlerror = Mensagem de Erro do BD (sqlerrormsg se for Cach&#233;)
+<br>
+- sqlparams = Par&#226;metros do SQL entre colchetes
+<br>
+
+<br>
+Al&#233;m das colunas obrigat&#243;rias o desenvolvedor pode definir outras colunas de texto e definir o valor a ser armazenado pela interface do builder. As colunas adicionais devem ser do tipo texto longo (Text ou CBLOB mas alguns BDs aceitam varchar) e n&#227;o podem ser NOT NULL.
+<br>
+
+<br>
+O campo <span style="font-family:MS Sans Serif; font-size:10pt; color:#0000FF">Valor</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor indique o valor a ser armazenado nas colunas espec&#237;ficas da aplica&#231;&#227;o.
+<br>
+
+<br>
+<u>Segue um exemplo do comando DDL para criar a tabela de logs no Mysql:
+<br>
+</u>
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">CREATE TABLE mylog (
+<br>
+    id INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+<br>
+    logdate DATETIME NOT NULL,
+<br>
+    databaseid VARCHAR(20) NOT NULL,
+<br>
+    transactionid VARCHAR(20) NOT NULL,
+<br>
+    sqlstatus CHAR(1) NOT NULL,
+<br>
+    sqlcommand TEXT NOT NULL,
+<br>
+    sqlerror TEXT NOT NULL,
+<br>
+    sqlparams TEXT NOT NULL,
+<br>
+    PRIMARY KEY (id)
+<br>
+)
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<u>Segue um exemplo do comando DDL para criar a tabela de logs no Postgres:
+<br>
+</u><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">
+<br>
+CREATE TABLE mylog ( 
+<br>
+    id serial NOT NULL, 
+<br>
+    logdate timestamp NOT NULL, 
+<br>
+    databaseid VARCHAR(20) NOT NULL, 
+<br>
+    transactionid VARCHAR(20) NOT NULL, 
+<br>
+    sqlstatus CHAR(1) NOT NULL, 
+<br>
+    sqlcommand TEXT NOT NULL, 
+<br>
+    sqlerror TEXT NOT NULL, 
+<br>
+    sqlparams TEXT NOT NULL, 
+<br>
+    PRIMARY KEY (id) 
+<br>
+)
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<u>Segue um exemplo do comando DDL para criar a classe de logs no Cach&#233;:
+<br>
+</u><span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">
+<br>
+Class User.MyLog Extends %Persistent [ ClassType = persistent, ProcedureBlock, SqlRowIdName = id ]
+<br>
+{
+<br>
+
+<br>
+Property logdate As %TimeStamp [ Required, SqlColumnNumber = 2 ];
+<br>
+Property databaseid As %String [ Required, SqlColumnNumber = 3 ];
+<br>
+Property transactionid As %String [ Required, SqlColumnNumber = 4 ];
+<br>
+Property sqlstatus As %String [ Required, SqlColumnNumber = 5 ];
+<br>
+Property sqlcommand [ Collection = characterstream, Required, SqlColumnNumber = 6 ];
+<br>
+Property sqlerrormsg [ Collection = characterstream, Required, SqlColumnNumber = 7 ];
+<br>
+Property sqlparams [ Collection = characterstream, Required, SqlColumnNumber = 8 ];
+<br>
+
+<br>
+}
+<br>
+
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><u>Segue um exemplo do comando DDL para criar a classe de logs no Oracle:
+<br>
+</u>
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#FF0000">CREATE TABLE mylog (
+<br>
+    id INTEGER NOT NULL,
+<br>
+    logdate TIMESTAMP NOT NULL,
+<br>
+    databaseid VARCHAR2(20) NOT NULL,
+<br>
+    transactionid VARCHAR2(20) NOT NULL,
+<br>
+    sqlstatus CHAR(1) NOT NULL,
+<br>
+    sqlcommand CLOB NOT NULL,
+<br>
+    sqlerror CLOB NOT NULL,
+<br>
+    sqlparams CLOB NOT NULL,
+<br>
+    CONSTRAINT pk_mylog PRIMARY KEY (id)
+<br>
+);
+<br>
+
+<br>
+CREATE SEQUENCE mylog_seq
+<br>
+    INCREMENT BY 1
+<br>
+    START WITH 1
+<br>
+    MAXVALUE 999999999
+<br>
+    MINVALUE 1
+<br>
+    nocycle
+<br>
+    nocache
+<br>
+    noorder;
+<br>
+
+<br>
+CREATE TRIGGER mylog_insert BEFORE INSERT ON mylog 
+<br>
+FOR EACH ROW BEGIN 
+<br>
+    select mylog_seq.nextval into :new.id from dual; 
+<br>
+END; 
+<br>
+
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

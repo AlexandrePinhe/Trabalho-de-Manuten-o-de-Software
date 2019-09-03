@@ -1,0 +1,254 @@
+<html>
+<head>
+   <title>Objeto</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Objeto">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?preobj01.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Objeto
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.4.10',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.4.12',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> Objeto</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Um componente do tipo Objeto representa um conjunto de atributos que ficam armazenados na sess&#227;odo usu&#225;rio possuindo como prefixo um identificador comum, sendo esse identificador comum o identificador definido para o Objeto. Os nomes e os valores dos atributos que fazem parte de um Objeto s&#227;o o resultado da execu&#231;&#227;o de uma consulta enviada a um banco de dados.
+<br>
+
+<br>
+Os nomes das colunas retornados pela pesquisa indicar&#227;o quais ser&#227;o os nomes dos atributos desse Objeto e para cada linha do resultado ser&#225; definido um &#237;ndice formando uma estrutura semelhante a uma matriz oferecendo assim uma maneira f&#225;cil e intuitiva para acessar um determinado valor.
+<br>
+
+<br>
+A depender do banco de dados e do driver usado para acess&#225;-lo o Objeto gerado tamb&#233;m possuir&#225; o m&#233;todo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">size()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que informa a quantidade de linhas retornada pela pesquisa enviada ao banco de dados. Um outro m&#233;todo disponibilizado &#233; o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">columnNames()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que ir&#225; retornar os nomes das colunas retornados pela pesquisa separados por v&#237;rgula.
+<br>
+
+<br>
+A sintaxe usada para acessar um determinado valor de um atributo armazenado num elemento Objeto do WebIntegrator &#233; a seguinte:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;identificador-do-objeto&gt;[&lt;&#237;ndice-da-linha&gt;].&lt;nome-ou-&#237;ndice-do-atributo&gt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+A ilustra&#231;&#227;o a seguir exibe uma estrutura semelhante a uma matriz representando um Objeto cujo identificador foi definido como </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.meuObj</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Para acessar o valor do atributo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">atrib2</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que est&#225; na segunda linha basta refenciar desta maneira </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|tmp.meuObj[2].atrib2</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="115" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:9pt; color:#000000"><b>atrib1</b><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:9pt; color:#000000"><b>atrib2</b><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></div></td><td align="left" valign="top" width="29" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:Courier New; font-size:10pt; color:#000000">...<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>
+<br>
+</b></span></span></span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:9pt; color:#000000"><b>atribN</b><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>
+<br>
+</b></span></span></span></div></td></tr><tr><td align="left" valign="top" width="115" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:9pt; color:#000000"><b>1</b><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:9pt; color:#000000">tmp.meuObj[1].atrib1<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:9pt; color:#000000">tmp.meuObj[1].atrib2<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="29" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:Courier New; font-size:10pt; color:#000000">...<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>
+<br>
+</b></span></span></span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:9pt; color:#000000">tmp.meuObj[1].atribN<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="115" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:9pt; color:#000000"><b>2</b><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:9pt; color:#000000">tmp.meuObj[2].atrib1<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:9pt; color:#000000">tmp.meuObj[2].atrib2<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="29" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:Courier New; font-size:10pt; color:#000000">...<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>
+<br>
+</b></span></span></span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:9pt; color:#000000">tmp.meuObj[2].atribN<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="115" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:Courier New; font-size:10pt; color:#000000">...<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:Courier New; font-size:10pt; color:#000000">...<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:Courier New; font-size:10pt; color:#000000">...<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></div></td><td align="left" valign="top" width="29" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:Courier New; font-size:10pt; color:#000000">...<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>
+<br>
+</b></span></span></span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:Courier New; font-size:10pt; color:#000000">...<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></div></td></tr><tr><td align="left" valign="top" width="115" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:9pt; color:#000000"><b>tmp.meuObj.size()
+<br>
+</b></span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:9pt; color:#000000">tmp.meuObj[size()].atrib1<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:9pt; color:#000000">tmp.meuObj[size()].atrib2<span style="font-family:Courier New; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="29" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:Courier New; font-size:10pt; color:#000000">...<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>
+<br>
+</b></span></span></span></div></td><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:9pt; color:#000000">tmp.meuObj[size()].atribN<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+
+<br>
+Para acessar os valores da primeira linha de um Objeto h&#225; uma sintaxe reduzida onde o valor do &#237;ndice da linha pode ser omitido, ent&#227;o referenciando </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.meuObj.atrib1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> seria retornado o valor do atributo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">atrib1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que est&#225; armazenado na primeira linha do Objeto tmp.meuObj.
+<br>
+
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Banco&nbsp;de&nbsp;Dados</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o identificador de um dos servidores de bancos de dados definidos para o projeto que ser&#225; usado para executar o comando.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Condi&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m a express&#227;o condicional a ser testada para saber se o componente dever&#225; ser processado. Para saber maiores detalhes sobre as poss&#237;veis constru&#231;&#245;es de condi&#231;&#245;es <a href=javaScript:parent.reDisplay('1.1.5',1,0)>clique aqui</a>.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Descri&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor da aplica&#231;&#227;o escreva um breve coment&#225;rio sobre a a&#231;&#227;o a ser executada pelo componente em quest&#227;o.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define quais os caracteres que dever&#227;o ser filtrados do conte&#250;do das vari&#225;veis de sess&#227;o do WebIntegrator que est&#227;o sendo referenciadas no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> antes da execu&#231;&#227;o do comando. O objetivo &#233; impedir que certos caracteres sejam passados para o comando a ser executada pelo banco de dados evitando que assim que o resultado do comando n&#227;o seja intencionalmente alterado.
+<br>
+
+<br>
+Como exemplo suponha que haja a instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;tabCadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;|tmp.nome|%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o usu&#225;rio da aplica&#231;&#227;o ao preencher o formul&#225;rio coloque no campo correspondente &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.nome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> um valor como </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Se o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> n&#227;o estiver definido com os caracteres </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o WebIntegrator ir&#225; processar a seguinte instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;cadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> retornando como resultado todos as linhas da tabela.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Objeto</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define o nome do objeto que ser&#225; inserido na sess&#227;o do usu&#225;rio ap&#243;s a execu&#231;&#227;o do componente, a depender do componente o objeto poder&#225; possuir uma s&#233;rie de atributos e m&#233;todos. Por exemplo, o objeto definido em componentes do tipo Objeto possuem os m&#233;todos </span><span style="font-family:Courier New; font-size:10pt; color:#000000">size()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">columnNames()</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> al&#233;m de uma s&#233;rie de atributos representados pelos nomes das colunas vindas do resultado da consulta ao banco de dados.
+<br>
+
+<br>
+No caso de um objeto declarado na defini&#231;&#227;o de um web service esse objeto ir&#225; conter os par&#226;metros de resposta que ser&#227;o retornados ap&#243;s a execu&#231;&#227;o da chamada ao web service. Para saber quais os poss&#237;veis atributos e m&#233;todos de um objeto leia a documenta&#231;&#227;o espec&#237;fica do componente.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Qtde.&nbsp;Colunas&nbsp;ID</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica quantas colunas ser&#227;o usadas para ajudar a formar o identicador de uma linha caso o resultado retorne mais de uma linha. Se esse campo for deixado em branco o desenvolvedor ainda poder&#225; referenciar uma determinada linha atrav&#233;s de seu &#237;ndice.
+<br>
+
+<br>
+Geralmente quando um objeto armazena o resultado de uma consulta que contenha mais de uma linha os valores desses resultados s&#227;o acessados atrav&#233;s do &#237;ndice da linha, configurando esse campo haver&#225; uma nova possibilidade de acessar uma determinada linha atrav&#233;s dos valores das colunas que foram especificadas. Como exemplo suponha que haja uma tabela com as seguintes informa&#231;&#245;es:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="436" bgcolor="#FFF7EF" colspan="2">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>mensagens</b><span style="font-family:MS Sans Serif; font-size:8pt; color:#000000">
+<br>
+</span></span></span></div></td></tr><tr><td align="left" valign="top" width="126" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>codigo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="309" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>mensagem</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="126" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">10
+<br>
+</span></td><td align="left" valign="top" width="309" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">Mensagem #10<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="126" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">20<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="309" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">Mensagem&nbsp;#20<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="126" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">30<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="309" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">Mensagem&nbsp;#30<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="126" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">40<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="309" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000">Mensagem&nbsp;#40<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Se um objeto identificado por </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.obj</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> executar uma instru&#231;&#227;o que retorne como resultado todos os dados da tabela acima e o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Qtde.&nbsp;Colunas&nbsp;ID</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> estivesse definido com </span><span style="font-family:Courier New; font-size:10pt; color:#000000">1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, ao referenciar </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.obj.mensagem.10</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> se recuperaria o valor da coluna </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>mensagem</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cujo valor da coluna </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>codigo</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> seja </span><span style="font-family:Courier New; font-size:10pt; color:#000000">10</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m o comando que ser&#225; enviado para ser processado pelo banco de dados. Caso o comando seja composto por mais de uma instru&#231;&#227;o SQL separe-as por ponto-e-v&#237;rgula.
+<br>
+
+<br>
+No componente Upload de Banco de Dados o valor da coluna relativo ao conte&#250;do dever&#225; ser referenciado por um sinal de interroga&#231;&#227;o, exemplo: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">INSERT&nbsp;INTO&nbsp;MinhaTabela&nbsp;(arquivo,&nbsp;conteudo)&nbsp;VALUES&nbsp;(|tmp.arquivo|,&nbsp;?)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A estrutura do comando a ser executado &#233; dependente do banco de dados, podendo ser feitas chamadas a </span><span style="font-family:Courier New; font-size:10pt; color:#000000">stored&nbsp;procedures</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, rotinas M (atrav&#233;s do MJava), m&#233;todos de objetos do Cach&#233;Factory, execu&#231;&#227;o de instru&#231;&#245;es SQL, etc. Para saber maiores detalhes como fazer essas chamadas <a href=javaScript:parent.reDisplay('1.1.7',1,0)>clique aqui</a>.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

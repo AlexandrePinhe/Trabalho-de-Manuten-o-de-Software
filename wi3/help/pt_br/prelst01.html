@@ -1,0 +1,130 @@
+<html>
+<head>
+   <title>Lista</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="Lista">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?prelst01.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Lista
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.4.9',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.4.11',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> Lista</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Este &#233; o local onde o desenvolvedor define sob qual condi&#231;&#227;o ser&#225; gerada uma lista de valores baseada no resultado de uma consulta SQL. A lista gerada seguir&#225; sempre o padr&#227;o descrito abaixo:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;antes-de-cada-elemento&gt;&lt;valor1&gt;&lt;depois-de-cada-elemento&gt;[&lt;separador-de-elementos&gt;&lt;antes-de-cada-elemento&gt;&lt;valor2&gt;&lt;depois-de-cada-elemento&gt;...]</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</div>
+<br>
+Caso se queira gerar uma lista onde os valores venham um abaixo do outro, o desenvolvedor poder&#225; fazer uso dos marcadores </span><span style="font-family:Courier New; font-size:10pt; color:#000000">\r</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (retorno do carro) ou </span><span style="font-family:Courier New; font-size:10pt; color:#000000">\n</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (nova linha). Se um elemento Lista for criado usando como separador de elementos a v&#237;rgula (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">,</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) e esta lista devendo retornar 5 linhas, alguns resultados poss&#237;veis s&#227;o:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;Se todas as linhas forem diferentes de vazio, o WI retorna: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">A,B,C,D,E,F</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;Se apenas as linhas 1 e 5 forem diferentes de vazio, o WI retorna: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">A,,,,,F</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><font face="Symbol" size="2" color="#000000">&#183;</font></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">&nbsp;&nbsp;&nbsp;Se apenas a linha 5 for diferente de vazio, o WI retorna: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">,,,,,F</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="28"></td><td width="14"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Antes&nbsp;de&nbsp;Cada&nbsp;Elemento</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define o conte&#250;do que ser&#225; colocado no in&#237;cio de cada elemento da lista.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Banco&nbsp;de&nbsp;Dados</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o identificador de um dos servidores de bancos de dados definidos para o projeto que ser&#225; usado para executar o comando.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Condi&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m a express&#227;o condicional a ser testada para saber se o componente dever&#225; ser processado. Para saber maiores detalhes sobre as poss&#237;veis constru&#231;&#245;es de condi&#231;&#245;es <a href=javaScript:parent.reDisplay('1.1.5',1,0)>clique aqui</a>.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Depois&nbsp;de&nbsp;cada&nbsp;Elemento</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define o conte&#250;do que ser&#225; colocado no final de cada elemento da lista.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Descri&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor da aplica&#231;&#227;o escreva um breve coment&#225;rio sobre a a&#231;&#227;o a ser executada pelo componente em quest&#227;o.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define quais os caracteres que dever&#227;o ser filtrados do conte&#250;do das vari&#225;veis de sess&#227;o do WebIntegrator que est&#227;o sendo referenciadas no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> antes da execu&#231;&#227;o do comando. O objetivo &#233; impedir que certos caracteres sejam passados para o comando a ser executado pelo banco de dados, evitando assim que o resultado do comando n&#227;o seja intencionalmente alterado.
+<br>
+
+<br>
+Como exemplo suponha que haja a instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;tabCadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;|tmp.nome|%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o usu&#225;rio da aplica&#231;&#227;o ao preencher o formul&#225;rio coloque no campo correspondente &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.nome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> um valor como </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Se o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> n&#227;o estiver definido com os caracteres </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o WebIntegrator ir&#225; processar a seguinte instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;cadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> retornando como resultado todos as linhas da tabela.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Objeto</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o nome do objeto que servir&#225; para fazer refer&#234;ncia &#224; lista a ser criada. O nome aqui digitado serve como um prefixo a ser colocado junto com o nome da coluna do banco de dados da qual queremos montar a lista.
+<br>
+
+<br>
+Para exemplificar suponha que tenha sido criada a lista com o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Objeto</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> definido como </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.minhaLista</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e que a consulta retorne um conjunto de valores nas colunas </span><span style="font-family:Courier New; font-size:10pt; color:#000000">colNome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">colFone</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, ent&#227;o para criar uma lista com os valores da coluna </span><span style="font-family:Courier New; font-size:10pt; color:#000000">colNome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> faria </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|tmp.minhaLista.colNome|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e para uma lista com os valores da coluna </span><span style="font-family:Courier New; font-size:10pt; color:#000000">colFone</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> faria </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|tmp.minhaLista.colFone|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m o comando que ser&#225; enviado para ser processado pelo banco de dados. Caso o comando seja composto por mais de uma instru&#231;&#227;o SQL separe-as por ponto-e-v&#237;rgula.
+<br>
+
+<br>
+No componente Upload de Banco de Dados o valor da coluna relativo ao conte&#250;do dever&#225; ser referenciado por um sinal de interroga&#231;&#227;o, exemplo: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">INSERT&nbsp;INTO&nbsp;MinhaTabela&nbsp;(arquivo,&nbsp;conteudo)&nbsp;VALUES&nbsp;(|tmp.arquivo|,&nbsp;?)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A estrutura do comando a ser executado &#233; dependente do banco de dados, podendo ser feitas chamadas a stored procedures, rotinas M (atrav&#233;s do MJava), m&#233;todos de objetos do Cach&#233;Factory, execu&#231;&#227;o de instru&#231;&#245;es SQL, etc. Para saber maiores detalhes como fazer essas chamadas <a href=javaScript:parent.reDisplay('1.1.7',1,0)>clique aqui</a>.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Separador&nbsp;de&nbsp;Elementos</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define qual ser&#225; o separador de elementos utilizado na contru&#231;&#227;o da lista.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

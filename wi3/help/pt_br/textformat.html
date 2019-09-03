@@ -1,0 +1,230 @@
+<html>
+<head>
+   <title>textformat</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?textformat.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>textformat
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.3.11',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.3.13',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>textformat</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+A fun&#231;&#227;o <b>textformat</b> serve para formatar textos e possui a seguinte sintaxe:
+<br>
+
+<br>
+<div align="center"></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$tf(&lt;texto&gt;,&nbsp;&lt;tipo-de-formata&#231;&#227;o&gt;[,&nbsp;&lt;par&#226;metros-de-formata&#231;&#227;o&gt;])$|
+<br>
+</div></span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+e a depender do tipo de formata&#231;&#227;o escolhido pelo usu&#225;rio, a fun&#231;&#227;o poder&#225; usar nenhum, um ou v&#225;rios par&#226;metros de formata&#231;&#227;o.
+<br>
+
+<br>
+<div align="center"><b>Tipos de Formata&#231;&#227;o
+<br>
+</b></div><div align="center"><b>
+<br>
+</b></div><div align="center"><b>2BR
+<br>
+</b></div>
+<br>
+Substitui </span><span style="font-family:Courier New; font-size:10pt; color:#000000">\r\n</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> por </span><span style="font-family:Courier New; font-size:10pt; color:#000000">&lt;br&gt;\r\n</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, ideal para se usar nas p&#225;ginas onde o texto tem mais de uma linha.
+<br>
+
+<br>
+<b>Sintaxe:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$tf(&lt;texto&gt;,&nbsp;2BR)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<b>Exemplos:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$tf(caos,&nbsp;2BR)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<div align="center"><b>REP
+<br>
+</b></div>
+<br>
+Substitui do texto uma sequ&#234;ncia de caracteres por uma outra.
+<br>
+
+<br>
+<b>Sintaxe:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$tf(&lt;texto&gt;,&nbsp;REP,&nbsp;&lt;sequ&#234;ncia-a-ser-trocada&gt;,&nbsp;&lt;sequ&#234;ncia-nova&gt;)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<b>Exemplos:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$tf(c&#227;o,&nbsp;REP,&nbsp;c,&nbsp;p)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<div align="center"><b>TRM
+<br>
+</b></div>
+<br>
+Retira do texto passado como par&#226;metro os espa&#231;os em branco que est&#227;o em excesso.
+<br>
+
+<br>
+<b>Sintaxe:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$tf(&lt;texto&gt;,&nbsp;TRM)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<b>Exemplos:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$tf(O&nbsp;&nbsp;rato&nbsp;&nbsp;&nbsp;&nbsp;roeu&nbsp;a&nbsp;&nbsp;roupa&nbsp;do&nbsp;&nbsp;rei&nbsp;de&nbsp;&nbsp;Roma&nbsp;&nbsp;!,&nbsp;TRM)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<div align="center"><b>FLT
+<br>
+</b></div>
+<br>
+Substitui todas as vogais acentuadas encontradas no texto passado como par&#226;metro pelas respectivas vogais sem acento.
+<br>
+
+<br>
+<b>Sintaxe:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$tf(&lt;texto&gt;,&nbsp;FLT)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<b>Exemplos:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$tf(Voc&#234;s,&nbsp;FLT)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<div align="center"><b>LWC
+<br>
+</b></div>
+<br>
+Converte todo o texto passado como par&#226;metro para caixa baixa.
+<br>
+
+<br>
+<b>Sintaxe:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$tf(&lt;texto&gt;,&nbsp;LWC)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<b>Exemplos:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$tf(TEXTO&nbsp;EM&nbsp;CAIXA&nbsp;ALTA,&nbsp;LWC)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<div align="center"><b>UPC
+<br>
+</b></div>
+<br>
+Converte todo o texto passado como par&#226;metro para caixa alta.
+<br>
+
+<br>
+<b>Sintaxe:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$tf(&lt;texto&gt;,&nbsp;UPC)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<b>Exemplos:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$tf(texto&nbsp;em&nbsp;caixa&nbsp;baixa,&nbsp;UPC)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<div align="center"><b>LCF
+<br>
+</b></div>
+<br>
+Converte todo o texto passado como par&#226;metro para caixa baixa e substitui todas as vogais acentuadas por vogais sem acento.
+<br>
+
+<br>
+<b>Sintaxe:</b>
+<br>
+    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$tf(&lt;texto&gt;,&nbsp;LCF)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<b>Exemplos:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$tf(TEXTO&nbsp;EM&nbsp;CAIXA&nbsp;ALTA&nbsp;COM&nbsp;ACENTUA&#199;&#195;O,&nbsp;LCF)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<div align="center"><b>UCF
+<br>
+</b></div>
+<br>
+Converte todo o texto passado como par&#226;metro para caixa alta e substitui todas as vogais acentuadas por vogais sem acento.
+<br>
+
+<br>
+<b>Sintaxe:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">|$tf(&lt;texto&gt;,&nbsp;UCF)$|
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<b>Exemplos:
+<br>
+</b>    </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">|$tf(texto&nbsp;em&nbsp;caixa&nbsp;baixa&nbsp;com&nbsp;acentua&#231;&#227;o,&nbsp;UCF)$|&nbsp;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

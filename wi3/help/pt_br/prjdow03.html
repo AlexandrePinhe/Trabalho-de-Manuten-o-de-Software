@@ -1,0 +1,120 @@
+<html>
+<head>
+   <title>Banco de Dados</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?prjdow03.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Banco de Dados
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.4.2',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.5',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> Download (Banco de Dados)</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O componente Download Banco de Dados oferece ao desenvolvedor a possibilidade da realiza&#231;&#227;o do download do conte&#250;do de um arquivo armazenado em banco de dados. Caso o conte&#250;do do arquivo seja textual e nele sejam feitas refer&#234;ncias a vari&#225;veis de sess&#227;o do WebIntegrator h&#225; a possibilidade de process&#225;-las.
+<br>
+
+<br>
+Algo a ser levado em considera&#231;&#227;o em rela&#231;&#227;o aos compoenentes de downloads &#233; que sempre que um download for executado com sucesso os restantes dos eventos que se encontram registrados num pr&#233;-p&#225;gina n&#227;o ser&#227;o processados.
+<br>
+
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Arquivo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o nome do arquivo que ser&#225; enviado ao usu&#225;rio.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Arquivo&nbsp;Substituto</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o nome do arquivo que ser&#225; enviado ao cliente caso o arquivo especificado no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Arquivo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> n&#227;o seja encontrado.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Banco&nbsp;de&nbsp;Dados</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o identificador de um dos servidores de bancos de dados definidos para o projeto que ser&#225; usado para executar o comando.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Descri&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor da aplica&#231;&#227;o escreva um breve coment&#225;rio sobre a a&#231;&#227;o a ser executada pelo componente em quest&#227;o.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define quais os caracteres que dever&#227;o ser filtrados do conte&#250;do das vari&#225;veis de sess&#227;o do WebIntegrator que est&#227;o sendo referenciadas no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> antes da execu&#231;&#227;o do comando. O objetivo &#233; impedir que certos caracteres sejam passados para o comando a ser executada pelo banco de dados evitando que assim que o resultado do comando n&#227;o seja intencionalmente alterado.
+<br>
+
+<br>
+Como exemplo suponha que haja a instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;tabCadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;|tmp.nome|%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o usu&#225;rio da aplica&#231;&#227;o ao preencher o formul&#225;rio coloque no campo correspondente &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.nome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> um valor como </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Se o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> n&#227;o estiver definido com os caracteres </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o WebIntegrator ir&#225; processar a seguinte instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;cadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> retornando como resultado todos as linhas da tabela.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Identificador</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor entre com um identificador &#250;nico para o componente de p&#225;gina ou de projeto que est&#225; sendo definido. Ser&#225; atrav&#233;s desse identificador que o componente e/ou seus valores ser&#227;o referenciados nas p&#225;ginas do projeto.
+<br>
+
+<br>
+A depender do componente que se estiver definindo para que o mesmo seja referenciado numa p&#225;gina ser&#225; necess&#225;rio o acr&#233;scimo de um prefixo como &#233; o caso dos componentes Grid e Combo, nesses dois casos &#233; obrigat&#243;rio o uso dos prefixos </span><span style="font-family:Courier New; font-size:10pt; color:#000000">grid.</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">combo.</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> antes dos respectivos identificadores para que o conte&#250;do correto seja exibido.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Nome&nbsp;ao&nbsp;Salvar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o nome que ser&#225; enviado ao cliente relativo ao conte&#250;do que est&#225; sendo feito o download.
+<br>
+
+<br>
+A op&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Processa&nbsp;Vari&#225;veis</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica se ser&#225; realizado o processamento de vari&#225;veis que possam existir no conte&#250;do do arquivo. Esta op&#231;&#227;o apenas ser&#225; v&#225;lida para arquivos com conte&#250;do textual, ou seja, que tipo MIME seja </span><span style="font-family:Courier New; font-size:10pt; color:#000000">text/*</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m o comando que ser&#225; enviado para ser processado pelo banco de dados. Caso o comando seja composto por mais de uma instru&#231;&#227;o SQL separe-as por ponto-e-v&#237;rgula.
+<br>
+
+<br>
+No componente Upload de Banco de Dados o valor da coluna relativo ao conte&#250;do dever&#225; ser referenciado por um sinal de interroga&#231;&#227;o, exemplo: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">INSERT&nbsp;INTO&nbsp;MinhaTabela&nbsp;(arquivo,&nbsp;conteudo)&nbsp;VALUES&nbsp;(|tmp.arquivo|,&nbsp;?)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A estrutura do comando a ser executado &#233; dependente do banco de dados, podendo ser feitas chamadas a </span><span style="font-family:Courier New; font-size:10pt; color:#000000">stored&nbsp;procedures</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, rotinas M (atrav&#233;s do MJava), m&#233;todos de objetos do Cach&#233;Factory, execu&#231;&#227;o de instru&#231;&#245;es SQL, etc. Para saber maiores detalhes como fazer essas chamadas <a href=javaScript:parent.reDisplay('1.1.7',1,0)>clique aqui</a>.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Tipo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define qual o tipo MIME que estar&#225; associado ao componente que estiver sendo definido. A especifica&#231;&#227;o do tipo MIME &#233; baseada numa extens&#227;o, para saber quais os tipos MIME suportados pelo WebIntegrator <a href=javaScript:parent.reDisplay('1.1.4',1,0)>clique aqui</a>. O valor "attachment" for&#231;a a janela de salvamento no browser.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

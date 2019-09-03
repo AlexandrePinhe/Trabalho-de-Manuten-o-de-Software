@@ -1,0 +1,214 @@
+<html>
+<head>
+   <title>SQL</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?prjgrd01.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>SQL
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.3',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.3.2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> Grid SQL</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O componente Grid oferece ao desenvolvedor a possibilidade de se processar as informa&#231;&#245;es vinda de uma fonte de dados podendo essa fonte de dados ser uma consulta a um banco de dados ou uma listagem de diret&#243;rio e podendo exib&#237;-las em uma forma tabular dispondo-as em linhas e colunas seguindo um modelo simples usando como base a estrutura de uma tabela HTML ou atrav&#233;s de modelos m&#250;ltiplos onde cada parte do grid (cabe&#231;alho, rodap&#233;, c&#233;lulas vazias, c&#233;lulas v&#225;lidas, etc) est&#225; representada em modelos distintos.
+<br>
+
+<br>
+Uma outra possibilidade que os grids possuem &#233; a de que uma determinada p&#225;gina do projeto seja executada para cada linha v&#225;lida retornada pela consulta &#224; fonte de dados (banco de dados, servidor FTP, etc) oferecendo assim uma maneira de iteragir pelo resultado da consulta e para cada passo dessa itera&#231;&#227;o ser&#225; a p&#225;gina correspondente ser&#225; executada.
+<br>
+
+<br>
+Ao utilizar o modelo simples a estrutura padr&#227;o a ser gerada ser&#225; a seguinte tomando como exemplo um grid cuja consulta a um banco de dados retorne 4 colunas com os nomes </span><span style="font-family:Courier New; font-size:10pt; color:#000000">coluna1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">coluna2</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000">coluna3</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">coluna4</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">In&#237;cio&nbsp;na&nbsp;Linha</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> esteja definido com o valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000">2</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;TABLE&gt;
+<br>
+&lt;!--&nbsp;Cabe&#231;alho&nbsp;(opcional)&nbsp;--&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TH&gt;Coluna&nbsp;#1&lt;/TH&gt;
+<br>
+&lt;TH&gt;Coluna&nbsp;#2&lt;/TH&gt;
+<br>
+&lt;TH&gt;Coluna&nbsp;#3&lt;/TH&gt;
+<br>
+&lt;TH&gt;Coluna&nbsp;#4&lt;/TH&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;!--&nbsp;Linha&nbsp;de&nbsp;detalhe&nbsp;--&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&gt;|coluna1|&amp;nbsp;&lt;/TD&gt;
+<br>
+&lt;TD&gt;|coluna2|&amp;nbsp;&lt;/TD&gt;
+<br>
+&lt;TD&gt;|coluna3|&amp;nbsp;&lt;/TD&gt;
+<br>
+&lt;TD&gt;|coluna4|&amp;nbsp;&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;!--&nbsp;Mensagem&nbsp;a&nbsp;ser&nbsp;exibida&nbsp;quando&nbsp;n&#227;o&nbsp;h&#225;&nbsp;dados&nbsp;a&nbsp;serem&nbsp;exibidos&nbsp;(opcional)&nbsp;--&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&nbsp;ALIGN="center"&nbsp;COLSPAN="4"&gt;Nenhum&nbsp;registro&nbsp;selecionado&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;!--&nbsp;Rodap&#233;&nbsp;(opcional)&nbsp;--&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&nbsp;ALIGN="center"&nbsp;COLSPAN="4"&gt;Mensagem&nbsp;do&nbsp;rodap&#233;&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;/TABLE&gt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+A principal funcionalidade do grid SQL &#233; exibir informa&#231;&#245;es vinda de uma consulta a um banco de dados aplicando sobre estas uma defini&#231;&#227;o de um modelo simples ou m&#250;ltiplo. Quando se usa o modelo simples uma das defini&#231;&#245;es a ser feita &#233; qual linha da tabela HTML desse modelo ir&#225; ser populada com os dados do resultado da consulta ao banco de dados, essa defini&#231;&#227;o &#233; feita atrav&#233;s do campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">In&#237;cio&nbsp;na&nbsp;Linha</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Baseado na defini&#231;&#227;o desse campo as linhas da tabela anteriores a essa, caso existam, formam o cabe&#231;alho do grid; a linha posterior &#224; linha de detalhe s&#243; ir&#225; aparecer caso o resultado da consulta n&#227;o retorne nada e as linhas logo abaixo dessa formam o rodap&#233;.
+<br>
+
+<br>
+A linha de detalhe definida pelo campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">In&#237;cio&nbsp;na&nbsp;Linha</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> al&#233;m de referenciar os nomes das colunas tamb&#233;m poder&#225; referenciar outras vari&#225;veis que estejam na sess&#227;o inclusive referenciar outro grid para criar a vis&#227;o de mestre-detalhe. Qualquer outra c&#233;lula do grid tamb&#233;m poder&#225; fazer refer&#234;ncia a vari&#225;veis de sess&#227;o do WebIntegrator.
+<br>
+
+<br>
+O modelo m&#250;ltiplo ao inv&#233;s de trabalhar com um &#250;nico modelo trabalha com a defini&#231;&#227;o das v&#225;rias partes que comp&#245;em o modelo do grid. Essas partes s&#227;o o cabe&#231;alho, in&#237;cio do registro, registro v&#225;lido, registro vazio, fim do registro, sem registros e rodap&#233;. Quando se usa o modelo m&#250;ltiplo a sequ&#234;ncia de evento de processamento das partes &#233; a seguinte: primeiro o <b>WI Engine</b> processa o modelo relativo ao cabe&#231;alho; em seguida se o resultado da consulta feita ao banco de dados retornou algum registro ent&#227;o os modelos relativos ao in&#237;cio do registro, registro v&#225;lido e fim do registro s&#227;o processados respectivamente e isso se repete at&#233; que todos os registros tenham sido processados ou que a contagem da itera&#231;&#227;o tenha alcan&#231;ado o valor definido no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Quantidade</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, sen&#227;o se o resultado da consulta n&#227;o retornar nenhum registro ent&#227;o o modelo "sem registros" &#233; processado; finalmente o modelo relativo ao rodap&#233; &#233; processado.
+<br>
+
+<br>
+O modelo relativo ao registro vazio apenas &#233; processado quando o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Horizontal</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> estiver definido e indica como ser&#227;o preenchidas as c&#233;lulas restantes da tabela.
+<br>
+
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Banco&nbsp;de&nbsp;Dados</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o identificador de um dos servidores de bancos de dados definidos para o projeto que ser&#225; usado para executar o comando.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Compartilhado</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica qual o grid que ter&#225; seu modelo compartilhado, as altera&#231;&#245;es feitas no modelo do grid-pai ir&#227;o se refletir nos grids-filhos. Nessa combo apenas ser&#227;o exibidos os grids que possuem modelo simples ou m&#250;ltiplo n&#227;o sendo exibido os grids que possuem modelo compartilhado.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Cor</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define o c&#243;digo hexadecimal de uma cor que ser&#225; aplicada nas linhas pares das linhas de detalhe do grid. A cor padr&#227;o &#233; aquela definida no arquivo que cont&#233;m o esquema visual do grid e a cor das linhas pares &#233; a definida neste campo. Lembrar que esse par&#226;metro altera a cor da linha, logo, se o desenvolvedor definir uma cor espec&#237;fica para uma c&#233;lula, ela ir&#225; sobrepor esta defini&#231;&#227;o.
+<br>
+
+<br>
+Clicando em </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Cor</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> aparecer&#225; uma janela com algumas gamas de cores que ao se passar o mouse sobre elas, exibe-se o c&#243;digo hexadecimal correspodente &#224; cor.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Descri&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor da aplica&#231;&#227;o escreva um breve coment&#225;rio sobre a a&#231;&#227;o a ser executada pelo componente em quest&#227;o.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Executar&nbsp;a&nbsp;Cada&nbsp;Registro</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica qual a p&#225;gina do projeto que ser&#225; executada a cada itera&#231;&#227;o nos registros retornados como resultado da consulta feita ao banco de dados.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define quais os caracteres que dever&#227;o ser filtrados do conte&#250;do das vari&#225;veis de sess&#227;o do WebIntegrator que est&#227;o sendo referenciadas no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> antes da execu&#231;&#227;o do comando. O objetivo &#233; impedir que certos caracteres sejam passados para o comando a ser executada pelo banco de dados evitando que assim que o resultado do comando n&#227;o seja intencionalmente alterado.
+<br>
+
+<br>
+Como exemplo suponha que haja a instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;tabCadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;|tmp.nome|%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o usu&#225;rio da aplica&#231;&#227;o ao preencher o formul&#225;rio coloque no campo correspondente &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.nome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> um valor como </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Se o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> n&#227;o estiver definido com os caracteres </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o WebIntegrator ir&#225; processar a seguinte instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;cadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> retornando como resultado todos as linhas da tabela.
+<br>
+
+<br>
+A op&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Gerar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica se o WebIntegrator ir&#225; gerar o modelo simples do grid baseado nas configura&#231;&#245;es atuais. O modelo s&#243; ser&#225; criado ap&#243;s a grava&#231;&#227;o da defini&#231;&#227;o. Esse campo apenas se refere aos grids que utilizem o modelo simples.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Colunado</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define em quantas colunas ser&#227;o exibidas as linhas de detalhe definidas no modelo do grid. Quando um grid &#233; colunado as linhas que formam o cabe&#231;alho e o rodap&#233; n&#227;o podem conter mais de uma c&#233;lula.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Disposi&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define a forma que os valores ser&#227;o dispostos quando o grid &#233; colunado.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Identificador</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor entre com um identificador &#250;nico para o componente de p&#225;gina ou de projeto que est&#225; sendo definido. Ser&#225; atrav&#233;s desse identificador que o componente e/ou seus valores ser&#227;o referenciado nas p&#225;ginas do projeto.
+<br>
+
+<br>
+A depender do componente que se estiver definindo para que o mesmo seja referenciado numa p&#225;gina ser&#225; necess&#225;rio o acr&#233;scimo de um prefixo como &#233; o caso dos componentes Grid e Combo, nesses dois casos &#233; obrigat&#243;rio o uso dos prefixos </span><span style="font-family:Courier New; font-size:10pt; color:#000000">grid.</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">combo.</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> antes dos respectivos identificadores para que o conte&#250;do correto seja exibido.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">In&#237;cio&nbsp;na&nbsp;Linha</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica qual linha da tabela HTML que est&#225; definida como modelo do grid que ser&#225; a linha de detalhe, ou seja, a linha que ter&#225; seu conte&#250;do processado e populado de acordo com o resultado da consulta. Esse campo apenas se refere aos grids que utilizem o modelo simples.
+<br>
+
+<br>
+A op&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">M&#250;ltiplo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> marcada indica que o grid usar&#225; o modelo m&#250;ltiplo para gera&#231;&#227;o do conte&#250;do, para editar as v&#225;rias partes do modelo m&#250;ltiplo clique no &#237;cone <img src="prop.png" width="14" height="13" border="0" alt="prop"> que aparece na sess&#227;o <b>Modelo</b>. O modelo m&#250;ltiplo trabalha com as v&#225;rias partes que em conjunto ir&#227;o criar o modelo do grid, as partes consistem na defini&#231;&#227;o do conte&#250;do do cabe&#231;alho, o conte&#250;do do &#237;n&#237;cio do registro, o conte&#250;do a ser iteragido quando forem encontrados registros v&#225;lidos, o conte&#250;do a ser exibido em registros vazios (apenas utilizado quando o deslocamento horizontal est&#225; configurado), o conte&#250;do que indica o fim de um registro, o conte&#250;do a ser exibido quando nenhum registro for retornado pela consulta e o rodap&#233; do grid.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Quantidade</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define quantas linhas ser&#227;o exibidas por p&#225;gina. Caso o n&#250;mero de linhas retornadas seja maior que a quantidade definida o usu&#225;rio poder&#225; fazer uso da propriedade </span><span style="font-family:Courier New; font-size:10pt; color:#000000">link</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> (</span><span style="font-family:Courier New; font-size:10pt; color:#000000">|grid.&lt;identificador-do-grid&gt;.link|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">) que gerar&#225; uma barra de navega&#231;&#227;o com links para acessar as pr&#243;ximas linhas ou retornar &#224;s linhas anteriores.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m o comando que ser&#225; enviado para ser processado pelo banco de dados. Caso o comando seja composto por mais de uma instru&#231;&#227;o SQL separe-as por ponto-e-v&#237;rgula.
+<br>
+
+<br>
+No componente Upload de Banco de Dados o valor da coluna relativo ao conte&#250;do dever&#225; ser referenciado por um sinal de interroga&#231;&#227;o, exemplo: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">INSERT&nbsp;INTO&nbsp;MinhaTabela&nbsp;(arquivo,&nbsp;conteudo)&nbsp;VALUES&nbsp;(|tmp.arquivo|,&nbsp;?)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A estrutura do comando a ser executado &#233; dependente do banco de dados, podendo ser feitas chamadas a stored procedures, rotinas M (atrav&#233;s do MJava), m&#233;todos de objetos do Cach&#233;Factory, execu&#231;&#227;o de instru&#231;&#245;es SQL, etc. Para saber maiores detalhes como fazer essas chamadas <a href=javaScript:parent.reDisplay('1.1.7',1,0)>clique aqui</a>.
+<br>
+
+<br>
+A op&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Simples</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> marcada indica que o grid usar&#225; o modelo simples para gera&#231;&#227;o do conte&#250;do, para editar o modelo do grid clique no &#237;cone <img src="prop.png" width="14" height="13" border="0" alt="prop"> que aparece na sess&#227;o <b>Modelo</b>. O modelo simples consiste na defini&#231;&#227;o de uma tabela HTML onde cada linha tem um fun&#231;&#227;o dependendo do valor definido no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">In&#237;cio&nbsp;na&nbsp;Linha</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. A linha indicada por esse campo ser&#225; iteragida e populada com os valores vindos da consulta &#224; fonte de dados, as linhas acima desta s&#227;o consideradas como o cabe&#231;alho do grid, as linhas que se encontrarem abaixo dela ser&#227;o consideradas como as linhas de rodap&#233;.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

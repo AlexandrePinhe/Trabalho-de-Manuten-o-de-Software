@@ -1,0 +1,384 @@
+<html>
+<head>
+   <title>Pesquisando no &Iacute;ndice</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?pesquisandonoindice.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Pesquisando no &#205;ndice
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.2.2',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.2.4',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+<span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Pesquisando no &#205;ndice</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Para realizar a busca nos documentos indexados vamos agora criar a p&#225;gina que realiza a busca e a que exibir&#225; os poss&#237;veis resultados dessa pesquisa. Crie a p&#225;gina de pesquisa com um formul&#225;rio HTML e que contenha obrigatoriamente as seguintes vari&#225;veis:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Vari&#225;vel</b>
+<br>
+</span></div></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Desci&#231;&#227;o</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>tmp.indexName</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">indica o nome do &#237;ndice que ser&#225; usado para realizar a pesquisa.
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>
+<br>
+tmp.search.query</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">cont&#233;m a <span style="font-family:Courier New; font-size:10pt; color:#000000"><i>query</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> de pesquisa. O mecanismo de busca adotado pelo WI Search suporta uma s&#233;rie de recursos tais como pesquisas booleanas, pesquisas por pr&#233;-fixos, constru&#231;&#227;o de </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>queries</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com uso de par&#234;ntesis, etc.
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+O processador de </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>queries</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que vem embutido no WI Search suporta a maioria dos padr&#245;es de </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>queries</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> adotados pelos mecanismos de buscas mais conhecidos, para conhecer as poss&#237;veis </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>queries</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que podem ser montadas <a href=javaScript:parent.reDisplay('1.4',1,0)>clique aqui</a>. Como exemplo:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="205"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>free AND "text search"</b></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Busca por documentos contendo "free" e a express&#227;o "text search"
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="205"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>+text search</b></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Busca por documentos contendo "text" e que preferencialmente tamb&#233;m contenha "search"
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="205"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>giants -football</b></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Busca por "giants" mas omite os documentos contendo "football"
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="205"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>author:gosling java</b></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Busca por documentos contendo "gosling" na propriedade adicional author e java no conte&#250;do do documento
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Logo abaixo segue uma sugest&#227;o para o c&#243;digo-fonte da p&#225;gina de pesquisa.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="569" bgcolor="#BFBFBF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;HTML&gt;&nbsp;
+<br>
+&lt;HEAD&gt;
+<br>
+&lt;TITLE&gt;Formul&#225;rio&nbsp;de&nbsp;Pesquisa&lt;/TITLE&gt;
+<br>
+&lt;META&nbsp;HTTP-EQUIV=PRAGMA&nbsp;CONTENT=NO-CACHE&gt;
+<br>
+&lt;META&nbsp;HTTP-EQUIV=EXPIRES&nbsp;CONTENT=0&gt;
+<br>
+&lt;/HEAD&gt;
+<br>
+&lt;BODY&nbsp;BGCOLOR="#D5EEE2"&gt;
+<br>
+&lt;FORM&nbsp;ACTION="pesquisa.wsp"&nbsp;METHOD="post"&gt;
+<br>
+&lt;INPUT&nbsp;TYPE="hidden"&nbsp;NAME="tmp.indexName"&nbsp;VALUE="modelo"&gt;
+<br>
+Express&#227;o:&lt;BR&gt;
+<br>
+&lt;INPUT&nbsp;TYPE="text"&nbsp;NAME="tmp.search.query"&nbsp;size='40'&nbsp;value="|tmp.search.query|"&gt;
+<br>
+&lt;input&nbsp;type="checkbox"&nbsp;value="AND"&nbsp;name="tmp.search.queryOperator"&nbsp;
+<br>
+&nbsp;&nbsp;|$if(|tmp.search.queryOperator|=AND,&nbsp;checked,)$|&nbsp;/&gt;
+<br>
+Com&nbsp;todas&nbsp;as&nbsp;palavras&nbsp;
+<br>
+&lt;br&gt;
+<br>
+&lt;INPUT&nbsp;TYPE="submit"&nbsp;NAME="tmp.procurar"&nbsp;VALUE="Procurar"&gt;
+<br>
+&lt;INPUT&nbsp;TYPE="reset"&nbsp;VALUE="Limpar&nbsp;Campos"&gt;
+<br>
+&lt;/FORM&gt;
+<br>
+|$if(|tmp.procurar|=Procurar,
+<br>
+&lt;P&nbsp;STYLE="FONT:&nbsp;8pt&nbsp;Verdana\,Arial;"&gt;|tmp.resposta|&lt;/P&gt;
+<br>
+|grid.resultadoPesquisa|
+<br>
+|grid.resultadoPesquisa.link|
+<br>
+,)$|
+<br>
+
+<br>
+&lt;/BODY&gt;
+<br>
+&lt;/HTML&gt;
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Note que na p&#225;gina acima aparece um grid Java com os resultados da pesquisa, a classe </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.modules.search.SearchGrid</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> &#233; a respons&#225;vel pela montagem desse grid Java. Primeiramente vamos criar um grid HTML do tipo JAVA, para isso clique no link Projeto / Grid, escolha a op&#231;&#227;o Grids HTML e preencha os seguintes valores:
+<br>
+
+<br>
+</span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="190">
+<div align="center"><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="275">
+<div align="center"><span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="190">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.3.3.2',1,0)>Identificador</a>
+<br>
+</span></td><td align="left" valign="top" width="275">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">resultadoPesquisa
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="190">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#7F007F"><b><a href=javaScript:parent.reDisplay('1.3.3.2',1,0)>Tipo</a></b></span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="275">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">JAVA
+<br>
+</span></td></tr></table>
+<br>
+
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000">O resultado de uma pesquisa usando a classe </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.modules.search.SearchGrid</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> retorna al&#233;m de todas as propriedades adicionais definidas para os documentos do &#237;ndice algumas outras propriedades que s&#227;o incorporadas automaticamente em cada documento durante a publica&#231;&#227;o, a saber:
+<br>
+
+<br>
+</span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="138">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Propriedade</b><span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="428">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Descri&#231;&#227;o</b><span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="138">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">iddoc<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="428">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">retorna o identificador &#250;nico do documento associado durante a publica&#231;&#227;o.<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="138">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">path<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="428">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">retorna o caminho absoluto do arquivo no servidor.<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="138">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">relativePath<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="428">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">retorna o caminho do diret&#243;rio do arquivo relativo ao reposit&#243;rio do &#237;ndice.<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="138">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">absolutePath<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="428">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">retorna o caminho absoluto (completo) do diret&#243;rio do arquivo no servidor.<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="138">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">fileName<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="428">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">retorna o nome do arquivo.<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="138">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">title<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="428">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">retorna o conte&#250;do tag TITLE de um arquivo HTML.<span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000">Al&#233;m da classe </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.modules.search.SearchGrid</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> o WISearch tamb&#233;m oferece ao desenvolvedor a classe </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.modules.search.SearchObjcet</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> para realizar pesquisas no &#237;ndice. A diferen&#231;a &#233; que atrav&#233;s da classe </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SearchObject</span><span style="font-family:Verdana; font-size:10pt; color:#000000"> o resultado da pesquisa &#233; estruturado na forma de um objeto do WebIntegrator onde o identificador do objeto &#233; configurado atrav&#233;s da vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.prefix</span><span style="font-family:Verdana; font-size:10pt; color:#000000">, o restante do funcionamento &#233; semelhante, inclusive as vari&#225;veis dispon&#237;veis.
+<br>
+
+<br>
+Logo abaixo, segue um exemplo de como poderia ser o modelo do grid a ser adotado para exibir o resultado da pesquisa:
+<br>
+</span><span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="807" bgcolor="#BFBFBF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;TABLE&nbsp;BORDER="1"&nbsp;CELLSPACING="0"&nbsp;CELLPADDING="3"&nbsp;WIDTH="100%"&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TH&nbsp;BGCOLOR="#c0c0c0"&gt;T&#237;tulo&nbsp;do&nbsp;documento&lt;/TH&gt;
+<br>
+&lt;TH&nbsp;BGCOLOR="#c0c0c0"&gt;Data&lt;/TH&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&gt;&lt;A&nbsp;HREF="visualizar.wsp?tmp.arquivo=|name|"&gt;|titulo|&nbsp;(|filename|)&lt;/A&gt;&nbsp;&lt;/TD&gt;
+<br>
+&lt;TD&nbsp;ALIGN="center"&gt;|dia|/|mes|/|ano|&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+&lt;TR&gt;
+<br>
+&lt;TD&nbsp;COLSPAN="2"&nbsp;ALIGN="center"&gt;Nenhum&nbsp;documento&nbsp;encontrado!&lt;/TD&gt;
+<br>
+&lt;/TR&gt;
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;/TABLE&gt;
+<br>
+</span></span></span></span></span></span></td></tr></table>
+<br>
+
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000">Definido o grid Java, no pr&#233;-p&#225;gina da p&#225;gina de pesquisa coloque um evento </span><span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Grid Java</span></span></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> com os seguintes campos preenchidos:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="176">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></td><td align="left" valign="top" width="275">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="176">
+<span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Condi&#231;&#227;o</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="275">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">true
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="176">
+<span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Nome da classe</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="275">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">br.com.itx.modules.search.SearchGrid
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="176">
+<span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Grid</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="275">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">resultadoPesquisa
+<br>
+</span></td></tr></table>&nbsp;&nbsp;&nbsp;</span><span style="font-family:Times New Roman; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000">Para exibir maiores informa&#231;&#245;es sobre a pesquisa feita, vamos criar uma vari&#225;vel que informar&#225; a <i>query</i> pesquisada, o tempo de dura&#231;&#227;o de pesquisa e a quantidade de documentos que foi encontrada. Para isso, adicione um elemento </span><span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Gravar</span></span></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> com as seguintes defini&#231;&#245;es:
+<br>
+<b>
+<br>
+</b><table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="177">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></td><td align="left" valign="top" width="386">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="177">
+<span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Condi&#231;&#227;o</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="386">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">|tmp.search.query| != 
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="177">
+<span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Objetos</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="386">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">tmp.resposta
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="177">
+<span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Se condi&#231;&#227;o verdadeira</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="386">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">A pesquisa por &lt;B&gt;|tmp.search.query|&lt;/B&gt; demorou &lt;B&gt;|tmp.search.time|&lt;/B&gt; ms para encontrar &lt;B&gt;|tmp.search.count|&lt;/B&gt; documento(s)!
+<br>
+</span></td></tr></table>
+<br>
+
+<br>
+O resultado de uma pesquisa feita pelo WISearch, por default, vem ordenado de acordo com a taxa de acerto (<i>hit</i>) baseada na <i>query</i> que foi realizada a pesquisa mas o desenvolvedor pode alterar esse comportamento para que o resultado venha ordenado por uma das propriedades do documento. Para isso atribua &#224; vari&#225;vel <b>tmp.searchResult.orderBy</b> o nome da propriedade cujos valores ser&#227;o ordenados, caso queira que os valores venham em ordem inversa (do maior para o menor) atribua &#224; vari&#225;vel <b>tmp.searchResult.reverse</b> o valor </span><span style="font-family:Courier New; font-size:10pt; color:#000000">true</span><span style="font-family:Verdana; font-size:10pt; color:#000000">. A vari&#225;vel tmp.searchResult.reverse apenas funciona em conjunto com a vari&#225;vel tmp.searchResult.orderBy e seu valor default &#233; </span><span style="font-family:Courier New; font-size:10pt; color:#000000">false</span><span style="font-family:Verdana; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+No modelo do grid existe um link para uma p&#225;gina chamada <i>visualizar.wsp</i>, p&#225;gina essa que pode ser usada para exibir o conte&#250;do do arquivo. Para isso defina um evento </span><span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Download</span></span></span><span style="font-family:Verdana; font-size:10pt; color:#000000"> do tipo Local com a seguinte configura&#231;&#227;o:
+<br>
+
+<br>
+</span><span style="font-family:Times New Roman; font-size:10pt; color:#000000"><table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="123">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></td><td align="left" valign="top" width="447">
+<span style="font-family:Verdana; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="123">
+<span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Identificador</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="447">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">downDoc
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="123">
+<span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Diret&#243;rio</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="447">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">|wi.proj.path|/documentos
+<br>
+</span></td></tr><tr><td align="left" valign="top" width="123">
+<span style="font-family:Verdana; font-size:8pt; color:#000000"><span style="font-family:Verdana; font-size:8pt; color:#000088">Arquivo</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td><td align="left" valign="top" width="447">
+<span style="font-family:Verdana; font-size:10pt; color:#000000">|tmp.arquivo| (perceba que no link que chama a p&#225;gina visualizar.wsp a vari&#225;vel tmp.arquivo &#233; passada com o nome do arquivo) 
+<br>
+</span></td></tr></table>
+<br>
+</span><span style="font-family:Verdana; font-size:10pt; color:#000000">
+<br>
+Ap&#243;s isso crie a p&#225;gina <i>visualizar.wsp</i> e em seu pr&#233;-p&#225;gina coloque o download rec&#233;m-configurado. Com isso tente fazer algumas pesquisas no &#237;ndice, a seguir veremos como criar uma p&#225;gina de remo&#231;&#227;o de documentos do &#237;ndice.
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

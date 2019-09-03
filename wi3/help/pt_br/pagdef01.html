@@ -1,0 +1,106 @@
+<html>
+<head>
+   <title>P&aacute;gina</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?pagdef01.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>P&#225;gina
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.1.1',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> Defini&#231;&#227;o de P&#225;gina
+<br>
+</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Times New Roman; font-size:1pt; color:#000000"><hr></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Nesta tela o desenvolvedor ir&#225; fazer as defini&#231;&#245;es iniciais de uma nova p&#225;gina que ser&#225; adicionada ao projeto. Essas defini&#231;&#245;es iniciais incluem um t&#237;tulo, um identificador &#250;nico para essa p&#225;gina, o arquivo ou URL que representa essa p&#225;gina, entre outras coisas.
+<br>
+
+<br>
+ O campo Acessa sem Login permite seja feito o acesso &#224; p&#225;gina sem validar se o cliente efetuou login no projeto. O WebIntegrator apenas far&#225; essa valida&#231;&#227;o automaticamente se o projeto estiver com a op&#231;&#227;o Ativar Login habilitada.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+ O campo Identificador serve para que o desenvolvedor entre com um identificador &#250;nico para o componente de p&#225;gina.
+<br>
+
+<br>
+ A op&#231;&#227;o Permitir Cache do Browser indica se os cabe&#231;alhos HTTP que instruem os browsers e servidores proxies a n&#227;o fazerem cache de p&#225;ginas ser&#227;o enviados na resposta ao cliente.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+ O campo P&#225;gina de Erro indica se a p&#225;gina &#233; uma p&#225;gina de erro. Uma p&#225;gina de erro tem acesso ao objeto exception que pode ser utilizado para colher maiores detalhes sobre a exce&#231;&#227;o gerada. Normalmente as p&#225;ginas de erro apenas dever&#227;o ser acessadas se ocorrer alguma exce&#231;&#227;o em outra p&#225;gina do projeto e essa p&#225;gina utilizar alguma p&#225;gina de erro para tratamento da exce&#231;&#227;o.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+ A op&#231;&#227;o P&#225;gina de Sistema indicar se a p&#225;gina que est&#225; sendo definida apenas poder&#225; ser acessada internamente pelo WI_Engine impedindo assim que os usu&#225;rios do projeto possam acess&#225;-la via URL. Recomenda-se habilitar esta op&#231;&#227;o quando a p&#225;gina que estiver sendo definida sirva como modelo de um componente grid.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+ A op&#231;&#227;o Seguran&#231;a Ativa indica se o controle de seguran&#231;a de acesso a p&#225;ginas do projeto nativo do WebIntegrator estar&#225; ativado para essa p&#225;gina em particular. Com esse controle ativado uma p&#225;gina WSP do projeto apenas ser&#225; acessada se a solicita&#231;&#227;o vier de uma outra p&#225;gina WSP. Quando se usam framesets poder&#225; haver necessidade de desativar essa op&#231;&#227;o.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+ A op&#231;&#227;o Suportar Renderiza&#231;&#227;o Parcial ativa para a p&#225;gina a capacidade de acionar por javascript a fun&#231;&#227;o rerender conforme <a href=javaScript:parent.reDisplay('1.9.16',1,0)>detalhes</a>.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+A op&#231;&#227;o Sincronizar Pr&#233;-P&#225;gina ativa  o sincronismo de execu&#231;&#227;o para o pr&#233; da p&#225;gina selecionada. Isto &#233;, existir&#225; um tunel associado por um objeto que representa esse pr&#233;-p&#225;gina  especifico  e todas as requisi&#231;&#245;es a esse pr&#233; passsaram por esse tunel, impedindo assim que (caso a l&#243;gica do desenvolvedor precise) duas  requisi&#231;&#245;es executem simultaneamente o mesmo trecho de c&#243;digo gerando inconsist&#234;ncias no BD.
+<br>
+
+<br>
+A op&#231;&#227;o Sincronizar Pos-P&#225;gina ativa  o sincronismo de execu&#231;&#227;o para o pos da p&#225;gina selecionada. Isto &#233;, existir&#225; um tunel associado por um objeto que representa esse pos-p&#225;gina especifico e todas as requisi&#231;&#245;es a esse pos passsaram por esse tunel, impedindo assim que (caso a l&#243;gica do desenvolvedor precise) duas  requisi&#231;&#245;es executem simultaneamente o mesmo trecho de c&#243;digo gerando inconsist&#234;ncias no BD.
+<br>
+
+<br>
+ O campo Tipo define qual o tipo MIME que estar&#225; associado ao componente que estiver sendo definido. A especifica&#231;&#227;o do tipo MIME &#233; baseada numa extens&#227;o, para saber quais os tipos MIME suportados pelo WebIntegrator <a href=javaScript:parent.reDisplay('1.1.4',1,0)>clique aqui</a>.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+ O campo T&#237;tulo define qual ser&#225; o t&#237;tulo da p&#225;gina. O t&#237;tulo da p&#225;gina estar&#225; acess&#237;vel ao desenvolvedor atrav&#233;s da vari&#225;vel wi.page.title.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+ O campo Usar P&#225;gina de Erro deve conter o identificador de uma p&#225;gina indicando qual p&#225;gina de erro do projeto ser&#225; usada caso ocorra algum tipo de erro ou exce&#231;&#227;o durante o processamento da p&#225;gina que est&#225; sendo definida. Na ocorr&#234;ncia de alguma exce&#231;&#227;o o processamento da p&#225;gina &#233; interrompido e a p&#225;gina de erro correspondente &#233; chamada, se nenhuma p&#225;gina de erro for utilizada e ocorrer algum tipo de erro durante o processamento de um componente da p&#225;gina o processamento da p&#225;gina como um todo n&#227;o &#233; interrompido.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

@@ -1,0 +1,296 @@
+<html>
+<head>
+   <title>Publicando um Documento</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?publicandoumdocumento.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Publicando um Documento
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.2.1',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.2.3',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Publicando um Documento</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+A principal finalidade de um &#237;ndice &#233; justamente poder indexar conte&#250;dos para que depois possam ser pesquisados de maneira r&#225;pida e precisa. A seguir iremos criar a p&#225;gina respons&#225;vel pela publica&#231;&#227;o dos documentos, as a&#231;&#245;es que essa p&#225;gina far&#225; ser&#227;o o upload do arquivo (atrav&#233;s do evento <a href=javaScript:parent.reDisplay('1.3.5',1,0)>Upload</a> do WebIntegrator) e em seguida a publica&#231;&#227;o do conte&#250;do desse arquivo no &#237;ndice (usando um evento <a href=javaScript:parent.reDisplay('1.4.5',1,0)>Conector Java</a> atrav&#233;s da classe </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.modules.search.WIPublisher</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">).
+<br>
+
+<br>
+Para a classe </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.modules.search.WIPublisher</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> fazer a publica&#231;&#227;o de um documento no &#237;ndice ela precisa saber de antem&#227;o o nome do &#237;ndice que ela ir&#225; atualizar e quais s&#227;o as propriedades adicionais do documento indexado. Para informar o nome do &#237;ndice atribua &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">tmp.indexName</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> o nome de um &#237;ndice que j&#225; foi criado para o projeto. Para a classe saber qual o arquivo a ser publicado atribua &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">tmp.arquivo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> o nome do arquivo que est&#225; sendo publicado representando o conte&#250;do do documento e caso os documentos desse &#237;ndice possuam propriedades adicionais crie vari&#225;veis tempor&#225;rias do WebIntegrator com o nome das propriedades adicionais definidas para o &#237;ndice.
+<br>
+
+<br>
+Logo abaixo segue uma sugest&#227;o para o modelo da p&#225;gina de publica&#231;&#227;o para esse estudo de caso, atente que nela est&#227;o as vari&#225;veis </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">tmp.indexName</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">, </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">tmp.arquivo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e as vari&#225;veis tempor&#225;rias com os nomes das propriedades adicionais.
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;HTML&gt;
+<br>
+&lt;HEAD&gt;
+<br>
+&lt;TITLE&gt;Publicador&nbsp;de&nbsp;Documentos&lt;/TITLE&gt;
+<br>
+&lt;/HEAD&gt;
+<br>
+&lt;BODY&nbsp;BGCOLOR="#D5EEE2"&nbsp;TEXT="#000000"&nbsp;LINK="#000000"&nbsp;VLINK="#000080"&gt;
+<br>
+&lt;DIV&nbsp;ALIGN="center"&gt;
+<br>
+&lt;TABLE&nbsp;BORDER="1"&nbsp;CELLSPACING="0"&nbsp;CELLPADDING="5"&gt;
+<br>
+&nbsp;&nbsp;&lt;TH&nbsp;BGCOLOR="#008080"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;B&gt;&lt;FONT&nbsp;FACE="Arial"&nbsp;COLOR="#FFFFFF"&nbsp;SIZE="3"&gt;Publica&#231;&#227;o&nbsp;de&nbsp;Documento&lt;/FONT&gt;&lt;/B&gt;
+<br>
+&nbsp;&nbsp;&lt;/TH&gt;
+<br>
+&nbsp;&nbsp;&lt;TR&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;TD&nbsp;BGCOLOR="#FFFFFF"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;FORM&nbsp;ACTION="|wi.page.id|.wsp"&nbsp;METHOD="post"&nbsp;ENCTYPE="multipart/form-data"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;variavel&nbsp;que&nbsp;indica&nbsp;o&nbsp;nome&nbsp;do&nbsp;indice&nbsp;que&nbsp;sera&nbsp;atualizado&nbsp;--&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;INPUT&nbsp;TYPE="hidden"&nbsp;NAME="wi.page.prev"&nbsp;VALUE="|wi.page.id|"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;INPUT&nbsp;TYPE="hidden"&nbsp;NAME="tmp.indexName"&nbsp;VALUE="modelo"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;P&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FONT&nbsp;FACE="Arial"&gt;&lt;STRONG&gt;&lt;SMALL&gt;Selecione&nbsp;o&nbsp;arquivo:&lt;BR&gt;&lt;/SMALL&gt;&lt;/STRONG&gt;&lt;/FONT&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;variavel&nbsp;que&nbsp;indica&nbsp;o&nbsp;documento&nbsp;a&nbsp;ser&nbsp;publicado&nbsp;--&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;INPUT&nbsp;TYPE="file"&nbsp;NAME="tmp.arquivo"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/P&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;P&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FONT&nbsp;FACE="Arial"&gt;&lt;STRONG&gt;&lt;SMALL&gt;T&#237;tulo:&lt;BR&gt;&lt;/SMALL&gt;&lt;/STRONG&gt;&lt;/FONT&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;variavel&nbsp;temporaria&nbsp;que&nbsp;indica&nbsp;o&nbsp;valor&nbsp;que&nbsp;sera&nbsp;indexado&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;como&nbsp;sendo&nbsp;parte&nbsp;da&nbsp;propriedade&nbsp;adicional&nbsp;titulo.&nbsp;--&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;INPUT&nbsp;TYPE="text"&nbsp;NAME="tmp.titulo"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/P&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;P&nbsp;ALIGN="left"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;FONT&nbsp;FACE="Arial"&gt;&lt;STRONG&gt;&lt;SMALL&gt;Data&nbsp;(dd/mm/aaaa):&lt;BR&gt;&lt;/SMALL&gt;&lt;/STRONG&gt;&lt;/FONT&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;variavel&nbsp;temporaria&nbsp;que&nbsp;indica&nbsp;o&nbsp;valor&nbsp;que&nbsp;sera&nbsp;indexado&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;como&nbsp;sendo&nbsp;parte&nbsp;da&nbsp;propriedade&nbsp;adicional&nbsp;dia.&nbsp;--&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;INPUT&nbsp;TYPE="text"&nbsp;NAME="tmp.dia"&nbsp;SIZE="2"&nbsp;MAXLENGTH="2"&gt;&nbsp;/
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;variavel&nbsp;temporaria&nbsp;que&nbsp;indica&nbsp;o&nbsp;valor&nbsp;que&nbsp;sera&nbsp;indexado&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;como&nbsp;sendo&nbsp;parte&nbsp;da&nbsp;propriedade&nbsp;adicional&nbsp;mes.&nbsp;--&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;SELECT&nbsp;NAME="tmp.mes"&nbsp;SIZE="1"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="01"&gt;Janeiro&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="02"&gt;Fevereiro&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="03"&gt;Mar&#231;o&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="04"&gt;Abril&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="05"&gt;Maio&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="06"&gt;Junho&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="07"&gt;Julho&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="08"&gt;Agosto&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="09"&gt;Setembro&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="10"&gt;Outubro&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="11"&gt;Novembro&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;OPTION&nbsp;VALUE="12"&gt;Dezembro&lt;/OPTION&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/SELECT&gt;&nbsp;/
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;!--&nbsp;variavel&nbsp;temporaria&nbsp;que&nbsp;indica&nbsp;o&nbsp;valor&nbsp;que&nbsp;sera&nbsp;indexado&nbsp;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;como&nbsp;sendo&nbsp;parte&nbsp;da&nbsp;propriedade&nbsp;adicional&nbsp;ano.&nbsp;--&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;INPUT&nbsp;TYPE="text"&nbsp;NAME="tmp.ano"&nbsp;SIZE="4"&nbsp;MAXLENGTH="4"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/P&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;P&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;INPUT&nbsp;TYPE="submit"&nbsp;VALUE="Publicar"&nbsp;NAME="tmp.publicar"&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/P&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/FORM&gt;
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/TD&gt;
+<br>
+&nbsp;&nbsp;&lt;/TR&gt;
+<br>
+&lt;/TABLE&gt;
+<br>
+&lt;/DIV&gt;
+<br>
+&lt;/BODY&gt;
+<br>
+&lt;/HTML&gt;
+<br>
+
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+Com a p&#225;gina pronta, vamos configurar os eventos <a href=javaScript:parent.reDisplay('1.3.5',1,0)>Upload</a> e <a href=javaScript:parent.reDisplay('1.4.5',1,0)>Conector Java</a>. Para criar o evento Upload clique no menu Projeto - Uploads e realize as seguintes configura&#231;&#245;es em um <a href=javaScript:parent.reDisplay('1.3.5',1,0)>Upload</a> do tipo </span><span style="font-family:Courier New; font-size:10pt; color:#000000">Local</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="199" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="199" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.3.5.1',1,0)>Identificador</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>UplDoc</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">
+<br>
+</span></span></span></span></span></span></td></tr><tr><td align="left" valign="top" width="199" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<a href=javaScript:parent.reDisplay('1.3.5.1',1,0)>Diret&oacute;rio</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>|wi.proj.path|/documentos</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">. Esse diret&#243;rio &#233; o local onde ser&#225; feito o upload do arquivo para que o seu conte&#250;do seja indexado.</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="199" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.3.5.1',1,0)>Nome do campo do formul&aacute;rio</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>tmp.arquivo</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="199" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.3.5.1',1,0)>Arquivo</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>|tmp.arquivo|</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+No p&#243;s-p&#225;gina da p&#225;gina de publica&#231;&#227;o coloque este evento Upload rec&#233;m-criado preenchendo os campos com os seguintes valores:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.4.11',1,0)>Condi&ccedil;&atilde;o</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>|tmp.publicar|&nbsp;=&nbsp;publicar&nbsp;&amp;&amp;&nbsp;|tmp.arquivo|&nbsp;!=</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.3.5',1,0)>Upload</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>UplDoc</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Tamb&#233;m no pr&#233;-p&#225;gina coloque agora o evento <a href=javaScript:parent.reDisplay('1.4.5',1,0)>Conector Java</a> preenchendo os campos com os seguintes valores:
+<br>
+
+<br>
+<table border="1" cellpadding="0" cellspacing="0"><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Campo</b>
+<br>
+</span></div></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<div align="center"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><b>Valor</b>
+<br>
+</span></div></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.4.5',1,0)>Condi&ccedil;&atilde;o</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>|tmp.publicar|&nbsp;=&nbsp;publicar&nbsp;&amp;&amp;&nbsp;|wi.upl.ok|&nbsp;=&nbsp;true&nbsp;&amp;&amp;&nbsp;|tmp.arquivo|&nbsp;!=</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr><tr><td align="left" valign="top" width="144" bgcolor="#FFF7EF">
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><a href=javaScript:parent.reDisplay('1.4.5',1,0)>Nome da classe</a>
+<br>
+</span></td><td align="left" valign="top" width="384" bgcolor="#FFF7EF">
+<span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#00007F"><b>br.com.itx.modules.search.WIPublisher</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span></td></tr></table>
+<br>
+
+<br>
+Com estes passos j&#225; criamos uma p&#225;gina de publica&#231;&#227;o de documentos do nosso &#237;ndice. Para testar voc&#234; pode come&#231;ar a publicar alguns documentos. Para verificar se a publica&#231;&#227;o est&#225; ocorrendo com sucesso o desenvolvedor pode fazer refer&#234;ncia &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>tmp.publisher.status</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que retornar&#225; o nome do arquivo que foi publicado precedido de </span><span style="font-family:Courier New; font-size:10pt; color:#000000">OK</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">;, caso tenha ocorrido algum erro durante a publica&#231;&#227;o o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>stack&nbsp;trace</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ser&#225; armazenado na vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>tmp.publisher.error</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> para que o desenvolvedor possa rastrear o que ocorreu.
+<br>
+
+<br>
+Se a publica&#231;&#227;o do documento no &#237;ndice for efetuada com sucesso a vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><b>tmp.publisher.iddoc</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> conter&#225; o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">ID</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> sob o qual o documento foi indxado, esse </span><span style="font-family:Courier New; font-size:10pt; color:#000000">ID</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> sempre ser&#225; &#250;nico para cada um dos documentos publicados.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

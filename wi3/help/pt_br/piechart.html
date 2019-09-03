@@ -1,0 +1,110 @@
+<html>
+<head>
+   <title>Gr&aacute;fico em fatias (torta)</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?piechart.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Gr&#225;fico em fatias (torta)
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.4.1',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.8.4.3',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Gr&#225;fico em fatias (torta)</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O nome do conector respons&#225;vel pela gera&#231;&#227;o de gr&#225;ficos em fatias &#233; </span><span style="font-family:Courier New; font-size:10pt; color:#000000">br.com.itx.modules.chart.PieChart</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. O gr&#225;fico em fatias gerado por esse conector assume que o objeto que servir&#225; como </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>dataset</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m a informa&#231;&#227;o de cada uma das fatias (se&#231;&#245;es) dispostas uma por linha, ou seja, cada linha do objeto deve conter o nome da sess&#227;o e o seu valor correspondente.
+<br>
+
+<br>
+Ao contr&#225;rio do conector <a href=javaScript:parent.reDisplay('1.8.4.1',1,0)>BarChart</a>, o conector </span><span style="font-family:Courier New; font-size:10pt; color:#000000">PieChart</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> espera que o objeto a ser utilizado como </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>dataset</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> disponha os dados de tal maneira que cada linha do objeto contenha as informa&#231;&#245;es das se&#231;&#245;es do gr&#225;fico onde na primeira coluna est&#227;o dispostos os nomes das se&#231;&#245;es e na segunda coluna os valores correspondentes. Como exemplo veja o gr&#225;fico a seguir.
+<br>
+
+<br>
+<div align="center"><img src="torta.png" width="622" height="462" border="0" alt="torta">
+<br>
+</div>
+<br>
+O objeto usado para gerar o gr&#225;fico acima possui a estrutura exibida abaixo. Perceba que os dados e os nomes de cada uma das fatias est&#227;o dispotos um por linha.
+<br>
+<div align="center">
+<br>
+<img src="dados_torta.png" width="586" height="191" border="0" alt="dados_torta">
+<br>
+</div>
+<br>
+Ent&#227;o um objeto a ser usado como dataset para gera&#231;&#227;o de gr&#225;fico de fatias deve ter o seguinte padr&#227;o:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">   1. Os valores da primeira coluna do objeto cont&#234;m os nomes das se&#231;&#245;es.
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">   2. Os valores da segunda coluna do obejto cont&#234;m os valores das se&#231;&#245;es.
+&nbsp;<br>
+</span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="25"></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"></span></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Al&#233;m das propriedades comuns a todos os gr&#225;ficos, os gr&#225;ficos em fatias possuem uma propriedade bastante peculiar:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Modo&nbsp;de&nbsp;exibi&#231;&#227;o&nbsp;dos&nbsp;r&#243;tulos&nbsp;das&nbsp;se&#231;&#245;es</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">: indica o modo de exibi&#231;&#227;o dos r&#243;tulos de cada se&#231;&#227;o do gr&#225;fico, e pode estar disposto segundo uma das especifica&#231;&#245;es, conforme descri&#231;&#227;o abaixo:
+<br>
+
+<br>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></b></span></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>no</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">: indica que n&#227;o ser&#225; exibido um r&#243;tulo
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>name</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">: indica que ser&#225; exibido um r&#243;tulo apenas com o nome
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>value</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">: indica que ser&#225; exibido um r&#243;tulo contendo apenas o valor
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>percent</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">: indica que ser&#225; exibido apenas a porcentagem no r&#243;tulo
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>name_and_value</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">: inidica a exibi&#231;&#227;o exibe nome e valor
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>name_and_percent</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">: exibe nome e porcentagem
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b></b><font face="Symbol" size="2" color="#000000">&#183;</font><b></b></span></b></span></span></td><td><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"><b>value_and_percent</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F">: exibe valor e porcentagem
+&nbsp;<br>
+</span></span></span></td></tr></table><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr valign="top"><td width="38"></td><td width="19"><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span></td><td></td></tr></table><span style="font-family:MS Sans Serif; font-size:10pt; color:#00007F"></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+<html>
+<head>
+   <title>UPDATE</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?prjevt02.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>UPDATE
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.6.1',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.7',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> WIEvent UPDATE</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O componente WIEvent SELECT consiste na defini&#231;&#227;o de um comando de atualiza&#231;&#227;o a ser executado pelo SGBD sendo que o resultado dessa consulta ser&#225; retornado ao cliente (browser) para manipula&#231;&#227;o. Para solicitar a execu&#231;&#227;o de um WIEvent e posteriormente manipular os resultados dessa execu&#231;&#227;o o desenvolvedor dever&#225; utilizar os m&#233;todos de um objeto WIEvent que dever&#225; ser instanciado na p&#225;gina. Para saber maiores detalhes sobre o funcionamento do WIEvent como um todo <a href=javaScript:parent.reDisplay('1.3.6',1,0)>clique aqui</a>.
+<br>
+
+<br>
+
+<br>
+O </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Auto-Commit</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica se um grupo de instru&#231;&#245;es SQL ser&#227;o executadas individualmente ou executadas agrupadamente em uma &#250;nica transa&#231;&#227;o.
+<br>
+
+<br>
+Se este campo estiver marcado ent&#227;o todas as instru&#231;&#245;es ser&#227;o executados individualmente, ou seja, a execu&#231;&#227;o de uma instru&#231;&#227;o n&#227;o influenciar&#225; na execu&#231;&#227;o da outra.
+<br>
+
+<br>
+Caso o campo n&#227;o esteja marcado as instru&#231;&#245;es ser&#227;o agrupados em uma &#250;nica transa&#231;&#227;o a ser enviada ao SGBD e ao t&#233;rmino da transa&#231;&#227;o um </span><span style="font-family:Courier New; font-size:10pt; color:#000000">commit</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ser&#225; executado para persistir todas as altera&#231;&#245;es, se ocorrer algum erro durante o processamento da transa&#231;&#227;o um </span><span style="font-family:Courier New; font-size:10pt; color:#000000">rollback</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ser&#225; automaticamente executado revertendo as tabelas para o estado em que se encontravam antes do in&#237;cio da execu&#231;&#227;o da transa&#231;&#227;o.
+<br>
+
+<br>
+Um detalhe a ser levado em considera&#231;&#227;o &#233; que o suporte ao controle de transa&#231;&#245;es depende exclusivamente do sistema gerenciador de banco de dados e/ou da vers&#227;o do driver JDBC que estejam sendo usados portanto assegure-se disso antes de desabilitar o </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><i>check-box</i></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Auto-Commit</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Banco&nbsp;de&nbsp;Dados</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o identificador de um dos servidores de bancos de dados definidos para o projeto que ser&#225; usado para executar o comando.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Condi&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m a express&#227;o condicional a ser testada para saber se o componente dever&#225; ser processado. Para saber maiores detalhes sobre as poss&#237;veis constru&#231;&#245;es de condi&#231;&#245;es <a href=javaScript:parent.reDisplay('1.1.5',1,0)>clique aqui</a>.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Condi&#231;&#227;o&nbsp;Para&nbsp;Cada&nbsp;Linha</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define a condi&#231;&#227;o a ser testada antes de que cada itera&#231;&#227;o do evento <b>Update M&#250;ltiplo</b> seja realizada. Caso o desenvolvedor tenha definido o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Quantidade</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> com </span><span style="font-family:Courier New; font-size:10pt; color:#000000">10</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> ent&#227;o durante as </span><span style="font-family:Courier New; font-size:10pt; color:#000000">10</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> itera&#231;&#245;es essa condi&#231;&#227;o ser&#225; testada.
+<br>
+
+<br>
+Se este campo for deixado em branco e o desenvolvedor queira utilizar o recurso de update m&#250;ltiplo a condi&#231;&#227;o ser&#225; avaliada como </span><span style="font-family:Courier New; font-size:10pt; color:#000000">FALSE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o Update n&#227;o ser&#225; realizado em nenhuma das itera&#231;&#245;es. Ent&#227;o caso se queira que sempre todos os Updates sejam executados coloque </span><span style="font-family:Courier New; font-size:10pt; color:#000000">TRUE</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> como sendo a condi&#231;&#227;o desse campo.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Descri&#231;&#227;o</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor da aplica&#231;&#227;o escreva um breve coment&#225;rio sobre a a&#231;&#227;o a ser executada pelo componente em quest&#227;o.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define quais os caracteres que dever&#227;o ser filtrados do conte&#250;do das vari&#225;veis de sess&#227;o do WebIntegrator que est&#227;o sendo referenciadas no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> antes da execu&#231;&#227;o do comando. O objetivo &#233; impedir que certos caracteres sejam passados para o comando a ser executado pelo banco de dados evitando assim que o resultado do comando n&#227;o seja intencionalmente alterado.
+<br>
+
+<br>
+Como exemplo suponha que haja a instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;tabCadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;|tmp.nome|%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o usu&#225;rio da aplica&#231;&#227;o ao preencher o formul&#225;rio coloque no campo correspondente &#224; vari&#225;vel </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.nome</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> um valor como </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Se o campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Filtrar</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> n&#227;o estiver definido com os caracteres </span><span style="font-family:Courier New; font-size:10pt; color:#000000">%</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e o WebIntegrator ir&#225; processar a seguinte instru&#231;&#227;o </span><span style="font-family:Courier New; font-size:10pt; color:#000000">SELECT&nbsp;*&nbsp;FROM&nbsp;cadastros&nbsp;WHERE&nbsp;nome&nbsp;LIKE&nbsp;%&nbsp;OR&nbsp;nome&nbsp;=&nbsp;%&nbsp;AND&nbsp;publico&nbsp;=&nbsp;1</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> retornando como resultado todos as linhas da tabela.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Identificador</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> serve para que o desenvolvedor entre com um identificador &#250;nico para o componente de p&#225;gina ou de projeto que est&#225; sendo definido. Ser&#225; atrav&#233;s desse identificador que o componente e/ou seus valores ser&#227;o referenciado nas p&#225;ginas do projeto.
+<br>
+
+<br>
+A depender do componente que se estiver definindo para que o mesmo seja referenciado numa p&#225;gina ser&#225; necess&#225;rio o acr&#233;scimo de um prefixo como &#233; o caso dos componentes Grid e Combo, nesses dois casos &#233; obrigat&#243;rio o uso dos prefixos </span><span style="font-family:Courier New; font-size:10pt; color:#000000">grid.</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> e </span><span style="font-family:Courier New; font-size:10pt; color:#000000">combo.</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> antes dos respectivos identificadores para que o conte&#250;do correto seja exibido.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Mensagem&nbsp;OK</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define a mensagem que ser&#225; gravada no objeto definido no campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Resposta&nbsp;(objeto)</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> caso o evento tenha sido executado com sucesso. Quando se usa o recurso de update m&#250;ltiplo &#233; gerada uma mensagem para cada itera&#231;&#227;o do evento, para obter a mensagem espec&#237;fica de um dos passos da itera&#231;&#227;o use a seguinte sintaxe:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;objeto-resposta&gt;.&lt;passo-da-itera&#231;&#227;o&gt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+Por exemplo, para acessar o segundo passo de uma itera&#231;&#227;o de um update m&#250;ltiplo cujo objeto-resposta seja </span><span style="font-family:Courier New; font-size:10pt; color:#000000">tmp.respObj</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> bastaria refenciar </span><span style="font-family:Courier New; font-size:10pt; color:#000000">|tmp.respObj.2|</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Prefixo</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica qual o prefixo comum dos nomes dos campos do formul&#225;rio que ser&#227;o usados durante a execu&#231;&#227;o do componente Update. Esse prefixo ir&#225; auxiliar o recurso de update m&#250;ltiplo a descobrir quais as vari&#225;veis que est&#227;o no contexto do WebIntegrator que ser&#227;o usadas durante a itera&#231;&#227;o.
+<br>
+
+<br>
+Para um correto funcionamento do recurso de update m&#250;ltiplo os nomes dos campos do formul&#225;rio referenciados pelo componente Update devem estar da seguinte forma:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;prefixo&gt;&lt;1..quantidade&gt;.&lt;identificador-do-campo&gt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+Para oferecer compatibilidade com a sintaxe de Objetos o desenvolvedor poder&#225; definir o prefixo finalizando com </span><span style="font-family:Courier New; font-size:10pt; color:#000000">[]</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">. Com o prefixo terminando com </span><span style="font-family:Courier New; font-size:10pt; color:#000000">[]</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> se est&#225; informando ao WebIntegrator que as vari&#225;veis do contexto do WebIntegrator a serem utlizadas pelo update m&#250;ltiplo est&#227;o na seguinte forma:
+<br>
+
+<br>
+</span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">&lt;prefixo&gt;[&lt;1..quantidade&gt;].&lt;identificador-do-campo&gt;</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+Com esta &#250;ltima forma o desenvolvedor poder&#225; fazer uso de resultados armazenados em um Objeto diretamente em update m&#250;ltiplo.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Quantidade</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> define quantas linhas ser&#227;o exibidas por p&#225;gina. Caso o n&#250;mero de linhas retornadas seja maior que a quantidade definida o usu&#225;rio poder&#225; fazer uso da propriedade </span><span style="font-family:Courier New; font-size:10pt; color:#000000">link&nbsp;(|grid.&lt;identificador-do-grid&gt;.link|)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> que gerar&#225; uma barra de navega&#231;&#227;o com links para acessar as pr&#243;ximas linhas ou retornar &#224;s linhas anteriores.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">Resposta&nbsp;(objeto)</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> indica o nome do objeto que receber&#225; uma das mensagens definidas para o componente de acordo com o resultado final (sucesso/falha) da execu&#231;&#227;o do comando enviado ao banco de dados.
+<br>
+
+<br>
+O campo </span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#0000FF">SQL</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"> cont&#233;m o comando que ser&#225; enviado para ser processado pelo banco de dados. Caso o comando seja composto por mais de uma instru&#231;&#227;o SQL separe-as por ponto-e-v&#237;rgula.
+<br>
+
+<br>
+No componente Upload de Banco de Dados o valor da coluna relativo ao conte&#250;do dever&#225; ser referenciado por um sinal de interroga&#231;&#227;o, exemplo: </span><span style="font-family:Courier New; font-size:10pt; color:#000000">INSERT&nbsp;INTO&nbsp;MinhaTabela&nbsp;(arquivo,&nbsp;conteudo)&nbsp;VALUES&nbsp;(|tmp.arquivo|,&nbsp;?)</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">.
+<br>
+
+<br>
+A estrutura do comando a ser executado &#233; dependente do banco de dados, podendo ser feitas chamadas a stored procedures, rotinas M (atrav&#233;s do MJava), m&#233;todos de objetos do Cach&#233;Factory, execu&#231;&#227;o de instru&#231;&#245;es SQL, etc. Para saber maiores detalhes como fazer essas chamadas <a href=javaScript:parent.reDisplay('1.1.7',1,0)>clique aqui</a>.
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

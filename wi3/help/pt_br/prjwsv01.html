@@ -1,0 +1,86 @@
+<html>
+<head>
+   <title>Servidor de WebServices</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="WebServices">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?prjwsv01.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Servidor de WebServices
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.6.2',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.3.7.1',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> Defini&#231;&#245;es de Servidor de WebServices
+<br>
+</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Times New Roman; font-size:1pt; color:#000000"><hr></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Este &#233; o local onde o desenvolvedor pode configurar um m&#233;todo de web service para executar a l&#243;gica associada a uma p&#225;gina. 
+<br>
+
+<br>
+ O campo Descri&#231;&#227;o serve para que o desenvolvedor da aplica&#231;&#227;o escreva um breve coment&#225;rio sobre a a&#231;&#227;o a ser executada pelo componente em quest&#227;o.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+ O campo M&#233;todo serve para informar o nome do m&#233;todo que se est&#225; definindo para esse Web Service.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+ O campo Objeto WI indica o nome do objeto que ser&#225; inserido na sess&#227;o do usu&#225;rio que servir&#225; como o prefixo a ser inserido nos par&#226;metros de requisi&#231;&#227;o de um cliente e em seguida esse objeto estar&#225; dispon&#237;vel para a p&#225;gina a ser processada representando a l&#243;gica desse m&#233;todo. Exemplo, se houver um objeto definido como tmp.ws e os par&#226;metros de requisi&#231;&#227;o desse web service estiverem definidos como: &lt;nome&gt;|tmp.nome|&lt;/nome&gt; Para recuperar o par&#226;metro nome que veio pela requisi&#231;&#227;o do cliente o desenvolvedor dever&#225; referenciar tmp.ws.nome.
+<br>
+
+<br>
+ O campo P&#225;gina indica qual p&#225;gina do projeto cont&#233;m a l&#243;gica de execu&#231;&#227;o respectiva a esse m&#233;todo desse web service. Dessa p&#225;gina apenas o pr&#233;-p&#225;gina ser&#225; executado e espera-se que ao final de seu processamento um grid XML seja gerado contendo a resposta a ser retornado ao solicitante da requisi&#231;&#227;o.&nbsp;&nbsp;&nbsp;
+<br>
+
+<br>
+ O campo Requisi&#231;&#227;o XML&#185; indica como ser&#225; o layout da mensagem que esse m&#233;todo espera receber. Pode ser definida a vari&#225;vel que vai receber o conte&#250;do como texto da tag. Ex: &lt;Nome&gt;|tmp.nome|&lt;/Nome&gt;
+<br>
+
+<br>
+ O campo Resposta XML&#185; indica como ser&#225; o layout da mensagem a ser enviada como resposta ao solicitante. Tanto a requisi&#231;&#227;o quanto a resposta podem ter um atributo type nas tags informando o tipo de dado que a tag cont&#233;m. Exemplo: &lt;codigo type="xsd:string"/&gt;.  Os poss&#237;veis valores para o atributo type s&#227;o: string, int, array, float e boolean.
+<br>
+
+<br>
+ O campo Web Service serve para informar o nome do web service que se est&#225; definindo ou que se deseja invocar. &#201; importante lembrar que ao fazer uma requisi&#231;&#227;o a esse servi&#231;o &#233; necess&#225;rio informar pela URL o projeto do qual ele faz parte. Se voc&#234; estiver definindo um web service pelo WebIntegrator esse servi&#231;o poder&#225; ser invocado bastando acessar a URL no padr&#227;o http://&lt;host&gt;[:&lt;porta&gt;]/&lt;projeto&gt;/&lt;nome-do-web-service&gt;.ws. Para acessar o WSDL de um web service definido pelo WebIntegrator use uma URL no padr&#227;o http://&lt;host&gt;[:&lt;porta&gt;]/&lt;projeto&gt;/&lt;nome-do-web-service&gt;.wsdl.</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">&nbsp;&nbsp;&nbsp;
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>

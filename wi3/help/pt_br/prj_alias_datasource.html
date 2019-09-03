@@ -1,0 +1,124 @@
+<html>
+<head>
+   <title>Alias de Banco de Dados (Datasource)</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?prj_alias_datasource.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Alias de Banco de Dados (MJava)
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.2.2.1',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.2.2.1.2',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>Alias de Banco de Dados (Datasource)</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Para utilizar a conex&#227;o Datasource o desenvolvedor precisa configurar no servidor de aplica&#231;&#245;es (Tomcat) as suas conex&#245;es com o BD e configurar o nome JNDI no alias do BD no WI.
+<br>
+
+<br>
+<b>1 - Configurando o Datasource para cada aplica&#231;&#227;o Web:
+<br>
+</b>
+<br>
+Ao utilizar esse tipo de configura&#231;&#227;o a aplica&#231;&#227;o wi3 (Builder) n&#227;o ter&#225; acesso ao datasource ent&#227;o caso deseje utiliz&#225;-lo essas configura&#231;&#245;es dever&#227;o ser repetidas em seu context.xml e lembrar-se que quando o WI for atualizado o seu context.xml voltar&#225; ao padr&#227;o original.
+<br>
+
+<br>
+- Criar dentro do projeto uma pasta META-INF com o arquivo context.xml conforme exemplo abaixo:
+<br>
+&lt;Context&gt;
+<br>
+    &lt;Resource name="jdbc/exemploDB" auth="Container" type="javax.sql.DataSource"
+<br>
+               maxActive="100" maxIdle="10" maxWait="10000"
+<br>
+               username="root" password="root" 
+<br>
+               driverClassName="com.mysql.jdbc.Driver"
+<br>
+               url="jdbc:mysql://localhost/teste"/&gt;
+<br>
+  &lt;/Context&gt;
+<br>
+
+<br>
+- Criar uma conex&#227;o com o BD no WI e utilizar em conex&#227;o o valor Datasource e em alias o endere&#231;o JNDI.
+<br>
+Ex: java:/comp/env/jdbc/exemploDB
+<br>
+
+<br>
+OBS: Lembrar que em certas configura&#231;&#245;es uma vez que o context.xml &#233; criado o Tomcat o copia para a pasta "conf/Catalina/localhost/&lt;app&gt;.xml" e qualquer modifica&#231;&#227;o feito nele n&#227;o ser&#225; refletida a menos que o arquivo &lt;app&gt;.xml seja removido.
+<br>
+
+<br>
+<b>2 - Configurando o Datasource compartilhado:
+<br>
+</b>
+<br>
+- Editar o arquivo server.xml na pasta <u>conf</u> do tomcat, localizar a tag  &lt;GlobalNamingResources&gt; e colocar dentro dela o conte&#250;do abaixo:
+<br>
+&lt;Resource name="jdbc/exemploDB" auth="Container" type="javax.sql.DataSource"
+<br>
+               maxActive="100" maxIdle="10" maxWait="10000"
+<br>
+               username="root" password="root" 
+<br>
+               driverClassName="com.mysql.jdbc.Driver"
+<br>
+               url="jdbc:mysql://localhost/teste"/&gt;
+<br>
+
+<br>
+- Editar o arquivo context.xml na pasta <u>conf</u> do tomcat e adicionar dentro da tag &lt;Context&gt; o conte&#250;do abaixo:
+<br>
+&lt;ResourceLink global="jdbc/exemploDB" name="jdbc/exemploDB" type="javax.sql.DataSource"/&gt;
+<br>
+
+<br>
+- Criar uma conex&#227;o com o BD no WI e utilizar em conex&#227;o o valor Datasource e em alias o endere&#231;o JNDI.
+<br>
+Ex: java:/comp/env/jdbc/exemploDB
+<br>
+
+<br>
+</span></span></span>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<html>
+<head>
+   <title>...utilizar o Apache Tiles</title>
+   <meta name="generator" content="Help & Manual">
+   <meta name="keywords" content="">
+</head>
+
+
+  <!-- Redirect browser to index page if page is not in the content frame.
+       This script is only valid for regular HTML export -->
+  <script language="JavaScript">
+       <!--
+           if(top.frames.length==0) top.location.href='index.html?tiles.html'
+       //-->
+  </script>
+
+
+<body bgcolor="#FFFFFF">
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="2" bgcolor="#C0C0C0">
+  <tr>
+    <td align="left">
+      
+<span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...utilizar a Renderiza&#231;&#227;o Parcial
+<br>
+</b></span>
+    </td>
+    <td align="right">
+     <font face="Arial" size="2">
+     <a href="javaScript:parent.reDisplay('1.1',1,0)">In&iacute;cio</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.9.18',1,0)">Anterior</a>&nbsp;
+     <a href="javaScript:parent.reDisplay('1.10',1,0)">Pr&oacute;ximo</a>
+     </font>
+    </td>
+  </tr>
+</table>
+<br>
+
+
+<div align="center"><span style="font-family:Helvetica,Arial; font-size:10pt; color:#000000"><img src="minilogowi.png" width="162" height="93" border="0" alt="minilogowi">
+<br>
+</div><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span><span style="font-family:Helvetica,Arial; font-size:12pt; color:#000000"><b><img src="seta.gif" width="15" height="15" border="0" alt="seta"> </b></span><span style="font-family:MS Sans Serif; font-size:12pt; color:#000000"><b>...utilizar o Apache Tiles</b></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:1pt; color:#000000"><hr></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+O Apache Tiles &#233; uma API que permite que o desenvolvedor crie p&#225;ginas modularizadas a partir da composi&#231;&#227;o de partes pr&#233;-definidas. Al&#233;m de facilitar o particionamento do layout do projeto, o Tiles tem amplo suporte para cria&#231;&#227;o de portais e de perspectivas, isto &#233;, o usu&#225;rio final definir a forma que deseja diagramar o site (ex: menu superior ou laterar em fun&#231;&#227;o da escolha do usu&#225;rio).
+<br>
+
+<br>
+<b>Layout em tempo de execu&#231;&#227;o</b>
+<br>
+
+<br>
+Para facilitar o entendimento monte o exemplo abaixo.
+<br>
+
+<br>
+Para maiores detalhes consulte a documenta&#231;&#227;o no site:
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#007F00">http://tiles.apache.org/2.1/framework/index.html</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000"><span style="font-family:MS Sans Serif; font-size:10pt; color:#007F7F">
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+OBS: Todas as p&#225;ginas com exce&#231;&#227;o da que ser&#225; chamada por url pode estar com seguran&#231;a ativa ou at&#233; mesmo como p&#225;gina de sistema que &#233; o ideal.
+<br>
+
+<br>
+Crie uma p&#225;gina tiles_frame1.wsp com o c&#243;digo abaixo:
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000"><span style="font-family:Times New Roman; font-size:12pt; color:#0000FF">&lt;html&gt;
+<br>
+  &lt;head&gt;
+<br>
+    &lt;title&gt;&lt;tiles:getAsString name="title"/&gt;&lt;/title&gt;
+<br>
+  &lt;/head&gt;
+<br>
+  &lt;body&gt;
+<br>
+    &lt;table width="100%" height="100%"&gt; 
+<br>
+      &lt;tr&gt;
+<br>
+        &lt;td bgcolor="yellow"&gt;
+<br>
+          &lt;tiles:insertAttribute name="menu"/&gt;
+<br>
+        &lt;/td&gt;
+<br>
+      &lt;/tr&gt;
+<br>
+      &lt;tr&gt;
+<br>
+        &lt;td bgcolor="gray"&gt;
+<br>
+          &lt;tiles:insertAttribute name="body"/&gt;
+<br>
+        &lt;/td&gt;
+<br>
+      &lt;/tr&gt;
+<br>
+    &lt;/table&gt;
+<br>
+  &lt;/body&gt;
+<br>
+&lt;/html&gt;</span></span></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Crie uma p&#225;gina tiles_frame2.wsp com o c&#243;digo abaixo:
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000"><span style="font-family:Times New Roman; font-size:12pt; color:#0000FF">&lt;html&gt;
+<br>
+  &lt;head&gt;
+<br>
+    &lt;title&gt;&lt;tiles:getAsString name="title"/&gt;&lt;/title&gt;
+<br>
+  &lt;/head&gt;
+<br>
+  &lt;body&gt;
+<br>
+    &lt;table width="100%" height="100%"&gt;
+<br>
+      &lt;tr&gt;
+<br>
+        &lt;td bgcolor="green"&gt;
+<br>
+          &lt;tiles:insertAttribute name="menu"/&gt;
+<br>
+        &lt;/td&gt;
+<br>
+        &lt;td bgcolor="gray"&gt;
+<br>
+          &lt;tiles:insertAttribute name="body"/&gt;
+<br>
+        &lt;/td&gt;
+<br>
+      &lt;/tr&gt;
+<br>
+    &lt;/table&gt;
+<br>
+  &lt;/body&gt;
+<br>
+&lt;/html&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Crie uma p&#225;gina tiles_modelo.wsp com o c&#243;digo abaixo:
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000"><span style="font-family:Times New Roman; font-size:12pt; color:#0000FF">&lt;wi:set var="template" value="/tiles_frame1.wsp"/&gt;
+<br>
+&lt;wi:set var="template" value="/tiles_frame2.wsp" test="|tmp.modelo|=2"/&gt;
+<br>
+&lt;tiles:insertTemplate template="${template}"&gt;
+<br>
+  &lt;tiles:putAttribute name="title" value="WSP Tiles"/&gt;
+<br>
+  &lt;tiles:putAttribute name="menu" value="/menu.wsp"/&gt;
+<br>
+&lt;/tiles:insertTemplate&gt;</span></span></span><span style="font-family:Times New Roman; font-size:12pt; color:#000000">
+<br>
+</span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Crie uma p&#225;gina menu.wsp com o c&#243;digo abaixo:
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000"><span style="font-family:Times New Roman; font-size:12pt; color:#0000FF">&lt;p&gt;menu&lt;/p&gt;
+<br>
+</span></span></span><span style="font-family:Courier New; font-size:10pt; color:#000000"><span style="font-family:Courier New; font-size:10pt; color:#FF0000">
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">Crie uma p&#225;gina teste.wsp com o c&#243;digo abaixo:
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000"><span style="font-family:Times New Roman; font-size:12pt; color:#0000FF">&lt;tiles:insertTemplate template="/tiles_modelo.wsp"&gt;
+<br>
+  &lt;tiles:putAttribute name="body" cascade="true"&gt;
+<br>
+    corpo da p&#225;gina
+<br>
+  &lt;/tiles:putAttribute&gt;  
+<br>
+&lt;/tiles:insertTemplate&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Agora &#233; s&#243; executar:
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#007F00">http://servidor:porta/projeto/teste.wsp
+<br>
+http://servidor:porta/projeto/teste.wsp?tmp.modelo=2
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+<b>Layout definido em arquivo XML
+<br>
+</b>
+<br>
+Caso o desenvolvedor deseje a montagem do modelo pode estar definida no arquivo <u>tiles.xml</u> dentro da pasta WEB-INF do projeto conforme abaixo:
+<br>
+<span style="font-family:MS Sans Serif; font-size:10pt; color:#7F007F">&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;
+<br>
+&lt;!DOCTYPE tiles-definitions PUBLIC
+<br>
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+<br>
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd"&gt;
+<br>
+&lt;tiles-definitions&gt;
+<br>
+  &lt;definition name="modelo" template="/tiles_frame1.wsp"&gt;
+<br>
+    &lt;put-attribute name="title" value="XML Tiles"/&gt;
+<br>
+    &lt;put-attribute name="menu" value="/menu.wsp"/&gt;
+<br>
+  &lt;/definition&gt;
+<br>
+&lt;/tiles-definitions&gt;
+<br>
+
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">OBS: Qualquer altera&#231;&#227;o nesse arquivo necessita a recarga da aplica&#231;&#227;o web por isso essa forma n&#227;o &#233; recomendada.<span style="font-family:MS Sans Serif; font-size:10pt; color:#7F007F">
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+Quando se usa defini&#231;&#227;o em XML a p&#225;gina teste.wsp deve ser criada da forma a seguir:
+<br>
+</span><span style="font-family:Times New Roman; font-size:12pt; color:#000000"><span style="font-family:Times New Roman; font-size:12pt; color:#0000FF">&lt;tiles:insertDefinition name="modelo"&gt;
+<br>
+  &lt;tiles:putAttribute name="body"&gt;
+<br>
+    corpinho da p&#225;gina
+<br>
+  &lt;/tiles:putAttribute&gt;  
+<br>
+&lt;/tiles:insertDefinition&gt;
+<br>
+</span></span></span><span style="font-family:MS Sans Serif; font-size:10pt; color:#000000">
+<br>
+</span></span></span>
+
+</body>
+</html>
